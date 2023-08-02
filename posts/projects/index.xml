@@ -1,0 +1,33 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>All Projects - OG Page</title>
+        <link>http://phonghuynh.github.io/posts/projects/</link>
+        <description>All Projects | OG Page</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
+            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Mon, 31 Jul 2023 16:23:24 &#43;0700</lastBuildDate><atom:link href="http://phonghuynh.github.io/posts/projects/" rel="self" type="application/rss+xml" /><item>
+    <title>Football ETL Analysis P2</title>
+    <link>http://phonghuynh.github.io/football_etl_2/</link>
+    <pubDate>Tue, 01 Aug 2023 15:01:16 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/football_etl_2/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="projects-football.jpg" referrerpolicy="no-referrer">
+            </div>Continuous of Football ETL series]]></description>
+</item><item>
+    <title>Football ETL Analysis</title>
+    <link>http://phonghuynh.github.io/football_etl/</link>
+    <pubDate>Mon, 31 Jul 2023 14:46:50 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/football_etl/</guid>
+    <description><![CDATA[A Data Engineer project building pipeline to analyze football data]]></description>
+</item><item>
+    <title>Stock_analysis</title>
+    <link>http://phonghuynh.github.io/stock_analysis/</link>
+    <pubDate>Mon, 31 Jul 2023 14:39:53 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/stock_analysis/</guid>
+    <description><![CDATA[Source github: Stock Analysis
+Hello! OG đây. Ở project lần này mình sẽ phân tích gia trị cổ phiếu phái sinh VN30 Index bằng cách sử dụng PCA và K-means.
+Warning  Bản demo nên mình chưa ghi gì :v Bạn đọc notebook ở source github trước nhé!    Related   Football ETL Analysis  A Data Engineer project building pipeline to analyze football data Read more...   ]]></description>
+</item></channel>
+</rss>

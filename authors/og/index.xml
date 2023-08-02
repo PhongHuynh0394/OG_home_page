@@ -1,0 +1,85 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>OG - Author - OG Page</title>
+        <link>http://phonghuynh.github.io/authors/og/</link>
+        <description>OG - Author - OG Page</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
+            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Tue, 01 Aug 2023 15:01:16 &#43;0700</lastBuildDate><atom:link href="http://phonghuynh.github.io/authors/og/" rel="self" type="application/rss+xml" /><item>
+    <title>Football ETL Analysis P2</title>
+    <link>http://phonghuynh.github.io/football_etl_2/</link>
+    <pubDate>Tue, 01 Aug 2023 15:01:16 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/football_etl_2/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="projects-football.jpg" referrerpolicy="no-referrer">
+            </div>Continuous of Football ETL series]]></description>
+</item><item>
+    <title>Projects</title>
+    <link>http://phonghuynh.github.io/posts/projects/</link>
+    <pubDate>Mon, 31 Jul 2023 16:23:24 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/posts/projects/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Blogs</title>
+    <link>http://phonghuynh.github.io/posts/blogs/</link>
+    <pubDate>Mon, 31 Jul 2023 16:21:23 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/posts/blogs/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Football ETL Analysis</title>
+    <link>http://phonghuynh.github.io/football_etl/</link>
+    <pubDate>Mon, 31 Jul 2023 14:46:50 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/football_etl/</guid>
+    <description><![CDATA[A Data Engineer project building pipeline to analyze football data]]></description>
+</item><item>
+    <title>Stock_analysis</title>
+    <link>http://phonghuynh.github.io/stock_analysis/</link>
+    <pubDate>Mon, 31 Jul 2023 14:39:53 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/stock_analysis/</guid>
+    <description><![CDATA[Source github: Stock Analysis
+Hello! OG đây. Ở project lần này mình sẽ phân tích gia trị cổ phiếu phái sinh VN30 Index bằng cách sử dụng PCA và K-means.
+Warning  Bản demo nên mình chưa ghi gì :v Bạn đọc notebook ở source github trước nhé!    Related   Football ETL Analysis  A Data Engineer project building pipeline to analyze football data Read more...   ]]></description>
+</item><item>
+    <title>Projects</title>
+    <link>http://phonghuynh.github.io/projects/</link>
+    <pubDate>Mon, 31 Jul 2023 14:12:19 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/projects/</guid>
+    <description><![CDATA[Data Engineering   Football ETL Analysis  A Data Engineer project building pipeline to analyze football data Read more...   Machine learning Basic   Stock Analysis  Basic Analyzing VN30 stock using PCA and K-Means Read more...   ]]></description>
+</item><item>
+    <title>Blog_01: Test blogs</title>
+    <link>http://phonghuynh.github.io/blog_02/</link>
+    <pubDate>Sun, 30 Jul 2023 22:13:58 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/blog_02/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Intro: Tui là ai ? Đây là đâu ?</title>
+    <link>http://phonghuynh.github.io/intro_blog/</link>
+    <pubDate>Sun, 30 Jul 2023 22:11:29 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/intro_blog/</guid>
+    <description><![CDATA[Giới thiệu về trang web này]]></description>
+</item><item>
+    <title>Home Page</title>
+    <link>http://phonghuynh.github.io/</link>
+    <pubDate>Sun, 30 Jul 2023 20:06:43 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/</guid>
+    <description><![CDATA[Welcome to OG Home Page Introduction BlogKhám phá nhiều hơn tại Blog nhé 😗
+ ]]></description>
+</item><item>
+    <title>About me</title>
+    <link>http://phonghuynh.github.io/about/</link>
+    <pubDate>Sun, 30 Jul 2023 19:53:42 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/about/</guid>
+    <description><![CDATA[Hello! Mình tên là Vĩnh Phong hay chính là OG (tác giả của các blogs ở trang này)
+ Hiện tại mình là sinh viên ngành Khoa học Dữ liệu (Data Science) tại Đại học Khoa học Tự nhiên, ĐHQG-HCM (HCMUS). Tuy nhiên mình cũng yêu thích công nghệ, code và mình đang trên con đường học tập mỗi ngày để trở thành một Data Engineer.
+OG hồi cuối lớp 12OG hồi cúi lớp 12 :))]]></description>
+</item></channel>
+</rss>

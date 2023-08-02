@@ -1,0 +1,1355 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>Football ETL Analysis - OG Page</title><meta name="Description" content="A Data Engineer project building pipeline to analyze football data"><meta property="og:title" content="Football ETL Analysis" />
+<meta property="og:description" content="A Data Engineer project building pipeline to analyze football data" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://phonghuynh.github.io/football_etl/" /><meta property="og:image" content="http://phonghuynh.github.io/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-07-31T14:46:50+07:00" />
+<meta property="article:modified_time" content="2023-07-31T14:46:50+07:00" /><meta property="og:site_name" content="OG Page" />
+<meta property="og:see_also" content="http://phonghuynh.github.io/football_etl_2/" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://phonghuynh.github.io/"/>
+
+<meta name="twitter:title" content="Football ETL Analysis"/>
+<meta name="twitter:description" content="A Data Engineer project building pipeline to analyze football data"/>
+<meta name="application-name" content="OG">
+<meta name="apple-mobile-web-app-title" content="OG">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://phonghuynh.github.io/football_etl/" /><link rel="prev" href="http://phonghuynh.github.io/stock_analysis/" /><link rel="next" href="http://phonghuynh.github.io/football_etl_2/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Football ETL Analysis",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/phonghuynh.github.io\/football_etl\/"
+        },"genre": "posts","keywords": "data engineer, etl, dagster, docker, Tech, data pipeline, streamlit, MySQL, PostgreSQL, MinIO","wordcount":  1691 ,
+        "url": "http:\/\/phonghuynh.github.io\/football_etl\/","datePublished": "2023-07-31T14:46:50+07:00","dateModified": "2023-07-31T14:46:50+07:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"authors": [{
+                        "@type": "Person",
+                        "name": "OG"                    
+                    }],"description": "A Data Engineer project building pipeline to analyze football data"
+    }
+    </script><script src="//instant.page/5.2.0" defer type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="OG Page"><img
+        class="logo"
+        loading="lazy"
+        src="/favicon.ico"
+        srcset="/favicon.ico, /favicon.ico 1.5x, /favicon.ico 2x"
+        sizes="auto"
+        alt="/favicon.ico"
+        title="/favicon.ico" >OG Page</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/blogs/" title="OG&#39;s blogs"> Blog </a><a class="menu-item" href="/tags/" title="Tags of blogs"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/projects/"> Projects </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="OG Page"><img
+        class="logo"
+        loading="lazy"
+        src="/favicon.ico"
+        srcset="/favicon.ico, /favicon.ico 1.5x, /favicon.ico 2x"
+        sizes="auto"
+        alt="/favicon.ico"
+        title="/favicon.ico" >OG Page</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/blogs/" title="OG&#39;s blogs">Blog</a><a class="menu-item" href="/tags/" title="Tags of blogs">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/projects/" title="">Projects</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">Contents</h2>
+        <div class="toc-content always-active" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduce">Introduce</a></li>
+    <li><a href="#set-up">Set up</a>
+      <ul>
+        <li><a href="#minio">MinIO</a></li>
+        <li><a href="#mysql">MySQL</a></li>
+        <li><a href="#postgesql">PostgeSQL</a></li>
+        <li><a href="#dagster">Dagster</a>
+          <ul>
+            <li><a href="#dagit">Dagit</a></li>
+            <li><a href="#dagster-deamon">Dagster Deamon</a></li>
+          </ul>
+        </li>
+        <li><a href="#pipeline">Pipeline</a></li>
+        <li><a href="#streamlit">Streamlit</a></li>
+        <li><a href="#hoàn-chỉnh-setup">Hoàn chỉnh setup</a></li>
+      </ul>
+    </li>
+    <li><a href="#to-be-continue">To be Continue</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Football ETL Analysis</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class='author'><span class="author fas fa-user-circle fa-fw"></span><span class='screen-reader-text'>  </span><a href='http://phonghuynh.github.io/authors/og'>OG</a></span>
+                </span>&nbsp;<span class="post-category">included in </span>&nbsp;<span class="post-category">category <a href="/categories/projects/"><i class="far fa-folder fa-fw"></i>projects</a></span>&nbsp;<span class="post-category">and</span>&nbsp;<span class="post-series">series <a href="/series/football-etl/"><i class="far fa-list-alt fa-fw"></i>Football ETL</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="31 Jul 2023">31 Jul 2023</time>&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;8 minutes&nbsp;</div>
+        </div><div class="details series-nav open">
+                                <div class="details-summary series-title">
+                                    <span>Series - Football ETL</span>
+                                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                                </div>
+                                <div class="details-content series-content">
+                                    <nav>
+                                        <ul><li><span class="active">Football ETL Analysis</span></li>
+                                                    <li><a href="/football_etl_2/">Football ETL Analysis P2</a></li></ul>
+                                    </nav>
+                                </div>
+                            </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduce">Introduce</a></li>
+    <li><a href="#set-up">Set up</a>
+      <ul>
+        <li><a href="#minio">MinIO</a></li>
+        <li><a href="#mysql">MySQL</a></li>
+        <li><a href="#postgesql">PostgeSQL</a></li>
+        <li><a href="#dagster">Dagster</a>
+          <ul>
+            <li><a href="#dagit">Dagit</a></li>
+            <li><a href="#dagster-deamon">Dagster Deamon</a></li>
+          </ul>
+        </li>
+        <li><a href="#pipeline">Pipeline</a></li>
+        <li><a href="#streamlit">Streamlit</a></li>
+        <li><a href="#hoàn-chỉnh-setup">Hoàn chỉnh setup</a></li>
+      </ul>
+    </li>
+    <li><a href="#to-be-continue">To be Continue</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Source code: <a href="https://github.com/PhongHuynh0394/Football_ETL_Analysis" target="_blank" rel="noopener noreferrer">Football_ETL_Analysis</a></p>
+<h2 id="introduce" class="headerLink">
+    <a href="#introduce" class="header-mark"></a>Introduce</h2><p>Trong project này, OG sẽ build end-to-end ETL data pipeline hoàn chỉnh để phân tích football data từ Kaggle với data pipeline như sau:</p>
+<p><figure><a class="lightgallery" href="https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/ETL.png" title="data pipeline" data-thumbnail="https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/ETL.png" data-sub-html="<h2>Data pipeline</h2><p>data pipeline</p>">
+        <img
+            
+            loading="lazy"
+            src="https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/ETL.png"
+            srcset="https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/ETL.png, https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/ETL.png 1.5x, https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/ETL.png 2x"
+            sizes="auto"
+            alt="data pipeline">
+    </a><figcaption class="image-caption">Data pipeline</figcaption>
+    </figure></p>
+<p>Các bước cụ thể:</p>
+<ol>
+<li><strong>Set up</strong>: Dùng <code>Docker</code> tạo container và các images cần thiết cho pipeline, trong đó có cả <code>Dagster</code> dùng xây dựng pipeline.</li>
+<li><strong>Chuẩn bị data source</strong>: load các file csv (có được từ Kaggle) vào <code>MySQL</code> nhằm mục đích lưu trữ raw data (mô phỏng source data)</li>
+<li><strong>Extract</strong>: Lấy data từ <code>MySQL</code> và load vào <code>MinIO</code> chuẩn bị cho bước transform</li>
+<li><strong>Transform</strong>: Sử dụng <code>Pandas</code> để truy vấn các file từ <code>MinIO</code></li>
+<li><strong>Load</strong>: Cleaned và transformed data được load vào warehouse <code>PostgreSQL</code></li>
+<li><strong>Visualization</strong>: Sử dụng <code>Streamlit</code> để làm Dashboard</li>
+</ol>
+<h2 id="set-up" class="headerLink">
+    <a href="#set-up" class="header-mark"></a>Set up</h2><p>Bắt đầu với <code>Docker</code>, ta sẽ xây dựng lần lượt từng image bằng cách viết <code>docker-compose.yml</code></p>
+<div class="details admonition Tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Tip nho nhỏ<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Hãy <sup>pull</sup>/<sub>build</sub> lần lượt từng loại framework lần lượt để chắc chắn rằng chúng hoạt động trơn tru nhất trước</p>
+<p>Hoặc bạn cũng có thể xem luôn phần hoàn chỉnh <a href="#ho%c3%a0n-ch%e1%bb%89nh-setup" rel="">Hoàn chỉnh set up</a></p>
+</div>
+        </div>
+    </div>
+<h3 id="minio" class="headerLink">
+    <a href="#minio" class="header-mark"></a>MinIO</h3><p>MinIO là một server lưu trữ đối tượng dạng phân tán với hiệu năng cao và cung cấp các api giống với <code>Amazon S3</code>, ta có thể upload, download file,&hellip; một cách đơn giản.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="w">  </span><span class="nt">minio</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l">minio</span><span class="w">
+</span><span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">minio/minio</span><span class="w">
+</span><span class="w">      </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">minio</span><span class="w">
+</span><span class="w">      </span><span class="nt">volumes</span><span class="p">:</span><span class="w"> 
+</span><span class="w">        </span>- <span class="l">./MinIO/storage:/data</span><span class="w">
+</span><span class="w">        </span>- <span class="l">./MinIO/config:/root/.minio</span><span class="w">
+</span><span class="w">      </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="s2">&#34;9000:9000&#34;</span><span class="w">
+</span><span class="w">        </span>- <span class="s2">&#34;9090:9090&#34;</span><span class="w">
+</span><span class="w">      </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="l">./.env</span><span class="w">
+</span><span class="w">      </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l">server /data --console-address &#34;:9090&#34;</span><span class="w">
+</span><span class="w">      </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="l">de_network</span><span class="w">
+</span><span class="w">    </span><span class="nt">mc</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">minio/mc</span><span class="w">
+</span><span class="w">      </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">mc</span><span class="w">
+</span><span class="w">      </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l">mc</span><span class="w">
+</span><span class="w">      </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="l">./.env</span><span class="w">
+</span><span class="w">      </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w"> </span><span class="p">&gt;</span><span class="sd">
+</span><span class="sd">            </span><span class="w">            </span><span class="l">/bin/sh -c &#34; until (/usr/bin/mc config host add minio http://minio:9000 minio minio123) do echo &#39;...waiting...&#39; &amp;&amp; sleep 1;done; /usr/bin/mc mb minio/warehouse; /usr/bin/mc policy set public minio/warehouse; exit 0; &#34;</span><span class="w">
+</span><span class="w">      </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="l">minio</span><span class="w">
+</span><span class="w">      </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="l">de_network</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Về <code>.env</code> file, đây là file chứa thông tin các biến môi trường thiết lập cho từng image, mình sẽ nói sau</div>
+        </div>
+    </div>
+<h3 id="mysql" class="headerLink">
+    <a href="#mysql" class="header-mark"></a>MySQL</h3><p>MySQL là một trong số các phần mềm RDBMS (Relational DataBase Management Systems) phổ biến nhất, ta sẽ sử dụng database này để lưu raw data mô phỏng cho source data cần ingest</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="w">  </span><span class="nt">de_mysql</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">mysql:8.0</span><span class="w">
+</span><span class="w">      </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">de_mysql</span><span class="w">
+</span><span class="w">      </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="s2">&#34;3306:3306&#34;</span><span class="w">
+</span><span class="w">      </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="l">./storage/mysql_data:/var/lib/mysql</span><span class="w">
+</span><span class="w">        </span>- <span class="l">./dataset:/tmp/dataset</span><span class="w">
+</span><span class="w">      </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="l">./.env</span><span class="w">
+</span><span class="w">      </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="l">de_network</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="postgesql" class="headerLink">
+    <a href="#postgesql" class="header-mark"></a>PostgeSQL</h3><p>PostgreSQL là một hệ thống quản trị cơ sở dữ liệu quan hệ-đối tượng (object-relational database management system), và ta sẽ dung nó làm data warehouse cho project lần này.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="w">  </span><span class="nt">de_psql</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">de_psql</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">postgres:15-alpine</span><span class="w">
+</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="s1">&#39;5432:5432&#39;</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"> 
+</span><span class="w">      </span>- <span class="l">./storage/postgres_data:/var/lib/postgresql/data</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">de_network    </span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="dagster" class="headerLink">
+    <a href="#dagster" class="header-mark"></a>Dagster</h3><p>Dagster là một công cụ mã nguồn mở hỗ trợ Orchestrate Task (quản lý, tổ chức, điều phối các tác vụ và công việc), hỗ trợ giúp xây dựng <code>data pipeline</code> khá tốt. Mình thấy công cụ này gọn nhẹ hơn <code>Apache Airflow</code> và cũng đơn giản hơn.</p>
+<p>Đầu tiên hãy viết trong <code>docker-compose.yml</code> về dagster như sau:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="w">  </span><span class="nt">de_dagster</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l">./dagster/</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">de_dagster</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">de_dagster</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Đối với Dagster, ta sẽ tự config bằng <code>Dockerfile</code>, hãy tạo 1 folder <code>./dagster/</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash">mkdir dagster
+<span class="nb">cd</span> dagster
+touch Dockerfile requirements.txt
+</code></pre></td></tr></table>
+</div>
+</div><p>Sau đó tạo <code>Dockerfile</code> có nội dung sau:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Dockerfile" data-lang="Dockerfile"><span class="c"># Dagster libraries to run both dagit and the dagster-daemon. Does not</span><span class="err">
+</span><span class="err"></span><span class="c"># need to have access to any pipeline code.</span><span class="err">
+</span><span class="err"></span><span class="k">FROM</span><span class="s"> python:3.10-slim</span><span class="err">
+</span><span class="err"></span><span class="c"># Set $DAGSTER_HOME and copy dagster instance and workspace YAML there</span><span class="err">
+</span><span class="err"></span><span class="k">ENV</span> <span class="nv">DAGSTER_HOME</span><span class="o">=</span>/opt/dagster/dagster_home<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> mkdir -p <span class="nv">$DAGSTER_HOME</span> <span class="o">&amp;&amp;</span> <span class="se">\
+</span><span class="se"></span>    mkdir -p <span class="nv">$DAGSTER_HOME</span>/storage <span class="o">&amp;&amp;</span> <span class="se">\
+</span><span class="se"></span>    mkdir -p <span class="nv">$DAGSTER_HOME</span>/compute_logs <span class="o">&amp;&amp;</span> <span class="se">\
+</span><span class="se"></span>    mkdir -p <span class="nv">$DAGSTER_HOME</span>/local_artifact_storage<span class="err">
+</span><span class="err"></span><span class="k">WORKDIR</span><span class="s"> $DAGSTER_HOME</span><span class="err">
+</span><span class="err"></span><span class="k">COPY</span> requirements.txt <span class="nv">$DAGSTER_HOME</span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> pip install --upgrade pip <span class="o">&amp;&amp;</span> pip install -r requirements.txt<span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>và <code>requirement.txt</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">dagster==1.1.20
+dagit==1.1.20
+dagster-postgres==0.17.20
+dagster-dbt==0.17.20
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="dagit" class="headerLink">
+    <a href="#dagit" class="header-mark"></a>Dagit</h4><p>Dagit là giao diện UI của Dagster, và ta sẽ thao tác trên Dagit để quản lý các assets, jobs,&hellip;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="w">  </span><span class="nt">de_dagster_dagit</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">de_dagster:latest</span><span class="w">
+</span><span class="w">    </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">dagit</span><span class="w">
+</span><span class="w">      </span>- -<span class="l">h</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;0.0.0.0&#34;</span><span class="w">
+</span><span class="w">      </span>- -<span class="l">p</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;3001&#34;</span><span class="w">
+</span><span class="w">      </span>- -<span class="l">w</span><span class="w">
+</span><span class="w">      </span>- <span class="l">workspace.yaml</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">de_dagster_dagit</span><span class="w">
+</span><span class="w">    </span><span class="nt">expose</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;3001&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;3001:3001&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"> </span><span class="c"># Make docker client accessible so we can terminate containers from dagit</span><span class="w">
+</span><span class="w">      </span>- <span class="l">/var/run/docker.sock:/var/run/docker.sock</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./dagster_home:/opt/dagster/dagster_home</span><span class="w">
+</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">de_network</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Sau đó hãy tạo 1 folder <code>./dagster_home</code>, trong đó tạo 2 file config cho workspace của dagster:
+<code>dagster.yaml</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">run_coordinator</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">module</span><span class="p">:</span><span class="w"> </span><span class="l">dagster.core.run_coordinator</span><span class="w">
+</span><span class="w">  </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l">QueuedRunCoordinator</span><span class="w">
+</span><span class="w">  </span><span class="nt">config</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">max_concurrent_runs</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="nt">scheduler</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">module</span><span class="p">:</span><span class="w"> </span><span class="l">dagster.core.scheduler</span><span class="w">
+</span><span class="w">  </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l">DagsterDaemonScheduler</span><span class="w">
+</span><span class="w">  </span><span class="nt">config</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">max_catchup_runs</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="nt">storage</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">postgres</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">postgres_db</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">username</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">env</span><span class="p">:</span><span class="w"> </span><span class="l">DAGSTER_PG_USERNAME</span><span class="w">
+</span><span class="w">      </span><span class="nt">password</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">env</span><span class="p">:</span><span class="w"> </span><span class="l">DAGSTER_PG_PASSWORD</span><span class="w">
+</span><span class="w">      </span><span class="nt">hostname</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">env</span><span class="p">:</span><span class="w"> </span><span class="l">DAGSTER_PG_HOSTNAME</span><span class="w">
+</span><span class="w">      </span><span class="nt">db_name</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">env</span><span class="p">:</span><span class="w"> </span><span class="l">DAGSTER_PG_DB</span><span class="w">
+</span><span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">5432</span><span class="w">
+</span><span class="w"></span><span class="nt">run_launcher</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">module</span><span class="p">:</span><span class="w"> </span><span class="l">dagster.core.launcher</span><span class="w">
+</span><span class="w">  </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l">DefaultRunLauncher</span><span class="w">
+</span><span class="w"></span><span class="nt">compute_logs</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">module</span><span class="p">:</span><span class="w"> </span><span class="l">dagster.core.storage.local_compute_log_manager</span><span class="w">
+</span><span class="w">  </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l">LocalComputeLogManager</span><span class="w">
+</span><span class="w">  </span><span class="nt">config</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">base_dir</span><span class="p">:</span><span class="w"> </span><span class="l">/opt/dagster/dagster_home/compute_logs</span><span class="w">
+</span><span class="w"></span><span class="nt">local_artifact_storage</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">module</span><span class="p">:</span><span class="w"> </span><span class="l">dagster.core.storage.root</span><span class="w">
+</span><span class="w">  </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l">LocalArtifactStorage</span><span class="w">
+</span><span class="w">  </span><span class="nt">config</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">base_dir</span><span class="p">:</span><span class="w"> </span><span class="l">/opt/dagster/dagster_home/local_artifact_storage</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>và <code>workspace.yaml</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">load_from</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">grpc_server</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l">etl_pipeline</span><span class="w">
+</span><span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">4000</span><span class="w">
+</span><span class="w">      </span><span class="nt">location_name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;etl_pipeline&#34;</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="dagster-deamon" class="headerLink">
+    <a href="#dagster-deamon" class="header-mark"></a>Dagster Deamon</h4><p>Để quản lý các Schedules, sensors,&hellip; ta cần phải có <code>dagster-deamon</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="w">  </span><span class="nt">de_dagster_daemon</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">de_dagster:latest</span><span class="w">
+</span><span class="w">    </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">dagster-daemon</span><span class="w">
+</span><span class="w">      </span>- <span class="l">run</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">de_dagster_daemon</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"> </span><span class="c"># Make docker client accessible so we can launch containers using host docker</span><span class="w">
+</span><span class="w">      </span>- <span class="l">/var/run/docker.sock:/var/run/docker.sock</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./dagster_home:/opt/dagster/dagster_home</span><span class="w">
+</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">de_network</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="pipeline" class="headerLink">
+    <a href="#pipeline" class="header-mark"></a>Pipeline</h3><p>Tất cả mọi việc xây dựng pipeline ta sẽ hoạt động ở đây</p>
+<p>Đầu tiên ta cần init một dagster project</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">dagster project scaffold --name etl_pipeline
+</code></pre></td></tr></table>
+</div>
+</div><p>và thư mục mới tạo sẽ trông như thế này:
+<figure><a class="lightgallery" href="/img/projects-tree.png" title="tree" data-thumbnail="/img/projects-tree.png">
+        <img
+            
+            loading="lazy"
+            src="/img/projects-tree.png"
+            srcset="/img/projects-tree.png, /img/projects-tree.png 1.5x, /img/projects-tree.png 2x"
+            sizes="auto"
+            alt="tree" height="213"  width="339" >
+    </a></figure></p>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Để chạy được lệnh dagster ở bước tạo dagster project, ta cần phải có <code>dagster package</code>, nếu chưa có hãy cài đặt bằng: <code>pip install dagster</code></p>
+<p>&ndash;&gt; Nên cài đặt trong môi trường ảo</p>
+</div>
+        </div>
+    </div>
+<p>Sau đó vào thư mục vừa tạo vào viết <code>Dockerfile</code> thôi:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Dockerfile" data-lang="Dockerfile"><span class="k">FROM</span><span class="s"> python:3.10-slim</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># Add repository code</span><span class="err">
+</span><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /opt/dagster/app</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="k">COPY</span> requirements.txt /opt/dagster/app<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> pip install --upgrade pip <span class="o">&amp;&amp;</span> pip install -r requirements.txt<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /opt/dagster/app</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="k">COPY</span> . /opt/dagster/app/etl_pipeline<span class="err">
+</span><span class="err"></span><span class="c"># CMD allows this to be overridden from run launchers or executors that want to run other commands against your repository</span><span class="err">
+</span><span class="err"></span><span class="k">CMD</span> <span class="p">[</span><span class="s2">&#34;dagster&#34;</span><span class="p">,</span> <span class="s2">&#34;api&#34;</span><span class="p">,</span> <span class="s2">&#34;grpc&#34;</span><span class="p">,</span> <span class="s2">&#34;-h&#34;</span><span class="p">,</span> <span class="s2">&#34;0.0.0.0&#34;</span><span class="p">,</span> <span class="s2">&#34;-p&#34;</span><span class="p">,</span> <span class="s2">&#34;4000&#34;</span><span class="p">,</span> <span class="s2">&#34;-m&#34;</span><span class="p">,</span> <span class="s2">&#34;etl_pipeline&#34;</span><span class="p">]</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>cùng với <code>requirements.txt</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dagster==1.1.20
+dagit==1.1.20
+dagster-postgres==0.17.20
+dagster-aws==0.17.20
+dagster-dbt==0.17.20
+pandas==1.5.3
+SQLAlchemy==1.4.46
+pymysql==1.0.2
+cryptography==39.0.0
+pyarrow==10.0.1
+boto3==1.26.57
+fsspec==2023.1.0
+s3fs==0.4.2
+minio==7.1.13
+</code></pre></td></tr></table>
+</div>
+</div><p>Cuối cùng là viết vào <code>docker-compose.yml</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="w">  </span><span class="nt">etl_pipeline</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l">./etl_pipeline</span><span class="w">
+</span><span class="w">      </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l">./Dockerfile</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">etl_pipeline</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">etl_pipeline:latest</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./etl_pipeline:/opt/dagster/app</span><span class="w">
+</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">de_network</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="streamlit" class="headerLink">
+    <a href="#streamlit" class="header-mark"></a>Streamlit</h3><p>Cuối cùng là việc là Dashboard, Streamlit chắc chắc là công cụ siêu phù hợp làm việc này. Đây là framework hỗ trợ việc xây dựng giao diện ưu nhìn chỉ bằng Python, quá đã phải không nào :))</p>
+<p>Hãy tạo folder <code>./streamlit/scr/</code> cùng với  <code>./streamlit/Dockerfile</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Dockerfile" data-lang="Dockerfile"><span class="k">FROM</span><span class="s"> python:3.10</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 8501</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /usr/src/app</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="k">COPY</span> requirements.txt ./<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> pip install -r requirements.txt<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="k">COPY</span> . .<span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>và <code>streamlit/requirements.txt</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">pandas
+plotly
+matplotlib
+numpy
+streamlit
+psycopg2-binary
+sqlalchemy
+python-dotenv
+</code></pre></td></tr></table>
+</div>
+</div><p>Cuối cùng là ghi trong yml</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="w">  </span><span class="nt">streamlit</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l">./streamyml</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">streamlit</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">streamlit:latest</span><span class="w">
+</span><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;streamlit run src/main.py&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;8501:8501&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;./streamlit/src:/usr/src/app/src&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">de_network</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="hoàn-chỉnh-setup" class="headerLink">
+    <a href="#ho%c3%a0n-ch%e1%bb%89nh-setup" class="header-mark"></a>Hoàn chỉnh setup</h3><p>Cuối cùng, file yaml sẽ trông như thế này:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># version: &#39;3.9&#39;</span><span class="w">
+</span><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">minio</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l">minio</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">minio/minio</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">minio</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"> 
+</span><span class="w">      </span>- <span class="l">./MinIO/storage:/data</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./MinIO/config:/root/.minio</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;9000:9000&#34;</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;9090:9090&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l">server /data --console-address &#34;:9090&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">de_network</span><span class="w">
+</span><span class="w">  </span><span class="nt">mc</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">minio/mc</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">mc</span><span class="w">
+</span><span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l">mc</span><span class="w">
+</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w"> </span><span class="p">&gt;</span><span class="sd">
+</span><span class="sd">          </span><span class="w">          </span><span class="l">/bin/sh -c &#34; until (/usr/bin/mc config host add minio http://minio:9000 minio minio123) do echo &#39;...waiting...&#39; &amp;&amp; sleep 1;done; /usr/bin/mc mb minio/warehouse; /usr/bin/mc policy set public minio/warehouse; exit 0; &#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">minio</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">de_network</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="nt">de_mysql</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">mysql:8.0</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">de_mysql</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;3306:3306&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./storage/mysql_data:/var/lib/mysql</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./dataset:/tmp/dataset</span><span class="w">
+</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">de_network</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="nt">de_psql</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">de_psql</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">postgres:15-alpine</span><span class="w">
+</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="s1">&#39;5432:5432&#39;</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"> 
+</span><span class="w">      </span>- <span class="l">./storage/postgres_data:/var/lib/postgresql/data</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">de_network</span><span class="w">
+</span><span class="w">    
+</span><span class="w">  </span><span class="nt">streamlit</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l">./streamlit</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">streamlit</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">streamlit:latest</span><span class="w">
+</span><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;streamlit run src/main.py&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;8501:8501&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;./streamlit/src:/usr/src/app/src&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">de_network</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="nt">de_dagster</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l">./dagster/</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">de_dagster</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">de_dagster</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="nt">de_dagster_dagit</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">de_dagster:latest</span><span class="w">
+</span><span class="w">    </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">dagit</span><span class="w">
+</span><span class="w">      </span>- -<span class="l">h</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;0.0.0.0&#34;</span><span class="w">
+</span><span class="w">      </span>- -<span class="l">p</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;3001&#34;</span><span class="w">
+</span><span class="w">      </span>- -<span class="l">w</span><span class="w">
+</span><span class="w">      </span>- <span class="l">workspace.yaml</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">de_dagster_dagit</span><span class="w">
+</span><span class="w">    </span><span class="nt">expose</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;3001&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;3001:3001&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"> </span><span class="c"># Make docker client accessible so we can terminate containers from dagit</span><span class="w">
+</span><span class="w">      </span>- <span class="l">/var/run/docker.sock:/var/run/docker.sock</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./dagster_home:/opt/dagster/dagster_home</span><span class="w">
+</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">de_network</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="nt">de_dagster_daemon</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">de_dagster:latest</span><span class="w">
+</span><span class="w">    </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">dagster-daemon</span><span class="w">
+</span><span class="w">      </span>- <span class="l">run</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">de_dagster_daemon</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"> </span><span class="c"># Make docker client accessible so we can launch containers using host docker</span><span class="w">
+</span><span class="w">      </span>- <span class="l">/var/run/docker.sock:/var/run/docker.sock</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./dagster_home:/opt/dagster/dagster_home</span><span class="w">
+</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">de_network</span><span class="w">
+</span><span class="w">    
+</span><span class="w">  </span><span class="c"># Pipelines</span><span class="w">
+</span><span class="w">  </span><span class="nt">etl_pipeline</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l">./etl_pipeline</span><span class="w">
+</span><span class="w">      </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l">./Dockerfile</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">etl_pipeline</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">etl_pipeline:latest</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./etl_pipeline:/opt/dagster/app</span><span class="w">
+</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">de_network</span><span class="w">
+</span><span class="w">  
+</span><span class="w"></span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">de_network</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">bridge</span><span class="w">
+</span><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">de_network</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Và <code>.env</code> file:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># PostgreSQL
+POSTGRES_HOST=de_psql
+POSTGRES_PORT=5432
+POSTGRES_DB=football
+POSTGRES_USER=admin
+POSTGRES_PASSWORD=admin123
+POSTGRES_HOST_AUTH_METHOD=trust
+
+# Dagster
+DAGSTER_PG_HOSTNAME=de_psql
+DAGSTER_PG_USERNAME=admin
+DAGSTER_PG_PASSWORD=admin123
+DAGSTER_PG_DB=football
+
+# MySQL
+MYSQL_HOST=de_mysql
+MYSQL_PORT=3306
+MYSQL_DATABASE=football
+MYSQL_ROOT_PASSWORD=admin123
+MYSQL_USER=admin
+MYSQL_PASSWORD=admin123
+
+# MinIO
+MINIO_ENDPOINT=minio:9000
+MINIO_ROOT_USER=minio
+MINIO_ROOT_PASSWORD=minio123
+MINIO_ACCESS_KEY=minio
+MINIO_SECRET_KEY=minio123
+DATALAKE_BUCKET=warehouse
+AWS_ACCESS_KEY_ID=minio
+AWS_SECRET_ACCESS_KEY=minio123
+AWS_REGION=us-east-1
+</code></pre></td></tr></table>
+</div>
+</div><div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw"></i>Warning<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Nếu bạn chỉ đọc phần <a href="#ho%c3%a0n-ch%e1%bb%89nh-setup" rel="">Hoàn chỉnh setup</a> thì có thể hệ thống vễ sẽ gặp lỗi vì có thể thiếu các configuration cần thiết cho <code>dagster</code>, <code>dagit</code> hay <code>pipeline</code>. Bạn cần đọc qua phần <a href="#dagster" rel="">Dagster</a>, <a href="#dagit" rel="">Dagit</a>, <a href="#pipeline" rel="">Pipeline</a></div>
+        </div>
+    </div>
+<p><strong>Chạy thử</strong>: sau khi hoàn tất toàn bộ set up dài ngoằn, cũng đã đến lúc chạy chương trình thôi.</p>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Note nho nhỏ<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Nếu bạn đã build lần lượt các images rồi, thì chỉ cần compose up thôi, nếu không, hãy build bằng lệnh <code>docker compose build</code> trước khi chạy compose up.</div>
+        </div>
+    </div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker compose --env-file .env up -d
+</code></pre></td></tr></table>
+</div>
+</div><div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Lại là một tip có thể hữu ích<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Để đơn giản hóa việc ghi lệnh dài dòng, hãy tạo một make file tên <code>Makefile</code> với nội dung sau:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Makefile" data-lang="Makefile"><span class="err">include</span> <span class="err">.env</span>
+
+<span class="nf">build</span><span class="o">:</span>
+	docker compose build
+
+<span class="nf">up</span><span class="o">:</span>
+	docker compose --env-file .env up -d
+
+<span class="nf">down</span><span class="o">:</span>
+	docker compose --env-file .env down
+
+<span class="nf">restart</span><span class="o">:</span>
+	make down <span class="o">&amp;&amp;</span> make up
+
+<span class="nf">to_psql</span><span class="o">:</span>
+	docker <span class="nb">exec</span> -ti de_psql psql postgres://<span class="si">${</span><span class="nv">POSTGRES_USER</span><span class="si">}</span>:<span class="si">${</span><span class="nv">POSTGRES_PASSWORD</span><span class="si">}</span>@<span class="si">${</span><span class="nv">POSTGRES_HOST</span><span class="si">}</span>:<span class="si">${</span><span class="nv">POSTGRES_PORT</span><span class="si">}</span>/<span class="si">${</span><span class="nv">POSTGRES_DB</span><span class="si">}</span>
+
+<span class="nf">psql_create</span><span class="o">:</span>
+	docker <span class="nb">exec</span> -ti de_psql psql postgres://<span class="si">${</span><span class="nv">POSTGRES_USER</span><span class="si">}</span>:<span class="si">${</span><span class="nv">POSTGRES_PASSWORD</span><span class="si">}</span>@<span class="si">${</span><span class="nv">POSTGRES_HOST</span><span class="si">}</span>:<span class="si">${</span><span class="nv">POSTGRES_PORT</span><span class="si">}</span>/<span class="si">${</span><span class="nv">POSTGRES_DB</span><span class="si">}</span> -f /tmp/psql_schema.sql
+
+<span class="nf">to_mysql</span><span class="o">:</span>
+	docker <span class="nb">exec</span> -it de_mysql mysql --local-infile<span class="o">=</span><span class="m">1</span> -u<span class="s2">&#34;</span><span class="si">${</span><span class="nv">MYSQL_USER</span><span class="si">}</span><span class="s2">&#34;</span> -p<span class="s2">&#34;</span><span class="si">${</span><span class="nv">MYSQL_PASSWORD</span><span class="si">}</span><span class="s2">&#34;</span> <span class="si">${</span><span class="nv">MYSQL_DATABASE</span><span class="si">}</span>
+
+<span class="nf">to_mysql_root</span><span class="o">:</span>
+	docker <span class="nb">exec</span> -it de_mysql mysql -u<span class="s2">&#34;root&#34;</span> -p<span class="s2">&#34;</span><span class="si">${</span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="si">}</span><span class="s2">&#34;</span> <span class="si">${</span><span class="nv">MYSQL_DATABASE</span><span class="si">}</span>
+
+<span class="nf">mysql_load</span><span class="o">:</span>
+	docker <span class="nb">exec</span> -it de_mysql mysql --local_infile -u<span class="s2">&#34;</span><span class="si">${</span><span class="nv">MYSQL_USER</span><span class="si">}</span><span class="s2">&#34;</span> -p<span class="s2">&#34;</span><span class="si">${</span><span class="nv">MYSQL_PASSWORD</span><span class="si">}</span><span class="s2">&#34;</span> <span class="si">${</span><span class="nv">MYSQL_DATABASE</span><span class="si">}</span> -e<span class="s2">&#34;source /tmp/dataset/load_data/load_mysql_data.sql&#34;</span>
+
+<span class="nf">mysql_create</span><span class="o">:</span>
+	docker <span class="nb">exec</span> -it de_mysql mysql --local_infile -u<span class="s2">&#34;</span><span class="si">${</span><span class="nv">MYSQL_USER</span><span class="si">}</span><span class="s2">&#34;</span> -p<span class="s2">&#34;</span><span class="si">${</span><span class="nv">MYSQL_PASSWORD</span><span class="si">}</span><span class="s2">&#34;</span> <span class="si">${</span><span class="nv">MYSQL_DATABASE</span><span class="si">}</span> -e<span class="s2">&#34;source /tmp/dataset/load_data/mysql_schema.sql&#34;</span>
+
+<span class="nf">mysql_create_relation</span><span class="o">:</span>
+	docker <span class="nb">exec</span> -it de_mysql mysql --local_infile -u<span class="s2">&#34;</span><span class="si">${</span><span class="nv">MYSQL_USER</span><span class="si">}</span><span class="s2">&#34;</span> -p<span class="s2">&#34;</span><span class="si">${</span><span class="nv">MYSQL_PASSWORD</span><span class="si">}</span><span class="s2">&#34;</span> <span class="si">${</span><span class="nv">MYSQL_DATABASE</span><span class="si">}</span> -e<span class="s2">&#34;source /tmp/dataset/load_data/mysql_foreign.sql&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Sau đó chỉ cần <code>make up</code> ở terminal là xong. Nó hoạt động như alias vậy.</p>
+</div>
+        </div>
+    </div>
+<h2 id="to-be-continue" class="headerLink">
+    <a href="#to-be-continue" class="header-mark"></a>To be Continue</h2><p>Bài đến đây cũng quá là dài rồi, mình sẽ viết tiếp ở phần 2 :)))</p>
+<p>Chúc bạn một ngày tốt lành</p>
+<p><strong>-Mew-</strong></p>
+<hr>
+<h1 id="related-content" class="headerLink">
+    <a href="#related-content" class="header-mark"></a>Related Content</h1>
+<div class="showcase-box column-2">
+    <div class="showcase-image">
+        <a href=/stock_analysis/><img
+        
+        loading="lazy"
+        src="/img/projects-stock.jpg"
+        srcset="/img/projects-stock.jpg, /img/projects-stock.jpg 1.5x, /img/projects-stock.jpg 2x"
+        sizes="auto"
+        alt="Stock Analysis"
+        title="Stock Analysis" height="200"   width="400" ></a>
+    </div>
+    <h2 class="showcase-title">
+        <a href=/stock_analysis/>Stock Analysis</a>
+    </h2>
+    <p class="showcase-summary">
+        Basic Analyzing VN30 stock using PCA and K-Means
+    </p>
+    <a class="showcase-link" href=/stock_analysis/>
+        Read more...
+    </a>
+</div>
+
+<div class="showcase-box column-2">
+    <div class="showcase-image">
+        <a href=/football_etl_2/><img
+        
+        loading="lazy"
+        src="/img/projects-football.jpg"
+        srcset="/img/projects-football.jpg, /img/projects-football.jpg 1.5x, /img/projects-football.jpg 2x"
+        sizes="auto"
+        alt="Football ETL Analysis P2"
+        title="Football ETL Analysis P2" height="200"   width="400" ></a>
+    </div>
+    <h2 class="showcase-title">
+        <a href=/football_etl_2/>Football ETL Analysis P2</a>
+    </h2>
+    <p class="showcase-summary">
+        Continuous of Football ETL series
+    </p>
+    <a class="showcase-link" href=/football_etl_2/>
+        Read more...
+    </a>
+</div></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 31 Jul 2023</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><button title="Share on Facebook" data-sharer="facebook" data-url="http://phonghuynh.github.io/football_etl/" data-hashtag="data engineer"><span class="fab fa-facebook-square fa-fw"></span></button><button title="Share on Linkedin" data-sharer="linkedin" data-url="http://phonghuynh.github.io/football_etl/"><span class="fab fa-linkedin fa-fw"></span></button></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/data-engineer/">data engineer</a>,&nbsp;<a href="/tags/etl/">etl</a>,&nbsp;<a href="/tags/dagster/">dagster</a>,&nbsp;<a href="/tags/docker/">docker</a>,&nbsp;<a href="/tags/tech/">Tech</a>,&nbsp;<a href="/tags/data-pipeline/">data pipeline</a>,&nbsp;<a href="/tags/streamlit/">streamlit</a>,&nbsp;<a href="/tags/mysql/">MySQL</a>,&nbsp;<a href="/tags/postgresql/">PostgreSQL</a>,&nbsp;<a href="/tags/minio/">MinIO</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/stock_analysis/" class="prev" rel="prev" title="Stock_analysis"><i class="fas fa-angle-left fa-fw"></i>Stock_analysis</a>
+            <a href="/football_etl_2/" class="next" rel="next" title="Football ETL Analysis P2">Football ETL Analysis P2<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">OG</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="Back to Top">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"sharerjs":true,"table":{"sort":true}};</script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

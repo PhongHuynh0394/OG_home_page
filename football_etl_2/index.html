@@ -1,0 +1,2057 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>Football ETL Analysis P2 - OG Page</title><meta name="Description" content="Continuous of Football ETL series"><meta property="og:title" content="Football ETL Analysis P2" />
+<meta property="og:description" content="Continuous of Football ETL series" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://phonghuynh.github.io/football_etl_2/" /><meta property="og:image" content="http://phonghuynh.github.io/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-08-01T15:01:16+07:00" />
+<meta property="article:modified_time" content="2023-08-01T15:01:16+07:00" /><meta property="og:site_name" content="OG Page" />
+<meta property="og:see_also" content="http://phonghuynh.github.io/football_etl/" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://phonghuynh.github.io/"/>
+
+<meta name="twitter:title" content="Football ETL Analysis P2"/>
+<meta name="twitter:description" content="Continuous of Football ETL series"/>
+<meta name="application-name" content="OG">
+<meta name="apple-mobile-web-app-title" content="OG">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://phonghuynh.github.io/football_etl_2/" /><link rel="prev" href="http://phonghuynh.github.io/football_etl/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Football ETL Analysis P2",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/phonghuynh.github.io\/football_etl_2\/"
+        },"genre": "posts","wordcount":  3524 ,
+        "url": "http:\/\/phonghuynh.github.io\/football_etl_2\/","datePublished": "2023-08-01T15:01:16+07:00","dateModified": "2023-08-01T15:01:16+07:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"authors": [{
+                        "@type": "Person",
+                        "name": "OG"                    
+                    }],"description": "Continuous of Football ETL series"
+    }
+    </script><script src="//instant.page/5.2.0" defer type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="OG Page"><img
+        class="logo"
+        loading="lazy"
+        src="/favicon.ico"
+        srcset="/favicon.ico, /favicon.ico 1.5x, /favicon.ico 2x"
+        sizes="auto"
+        alt="/favicon.ico"
+        title="/favicon.ico" >OG Page</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/blogs/" title="OG&#39;s blogs"> Blog </a><a class="menu-item" href="/tags/" title="Tags of blogs"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/projects/"> Projects </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="OG Page"><img
+        class="logo"
+        loading="lazy"
+        src="/favicon.ico"
+        srcset="/favicon.ico, /favicon.ico 1.5x, /favicon.ico 2x"
+        sizes="auto"
+        alt="/favicon.ico"
+        title="/favicon.ico" >OG Page</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/blogs/" title="OG&#39;s blogs">Blog</a><a class="menu-item" href="/tags/" title="Tags of blogs">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/projects/" title="">Projects</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">Contents</h2>
+        <div class="toc-content always-active" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#data-source">Data Source</a>
+      <ul>
+        <li><a href="#chuẩn-bị-file-làm-raw-data">Chuẩn bị file làm raw data</a></li>
+        <li><a href="#load-data-vào-mysql">Load data vào MySQL</a></li>
+        <li><a href="#init-postgresql-schema">Init PostgreSQL Schema</a></li>
+      </ul>
+    </li>
+    <li><a href="#implement">Implement</a>
+      <ul>
+        <li><a href="#extraction">Extraction</a></li>
+        <li><a href="#transformation">Transformation</a></li>
+        <li><a href="#load">Load</a></li>
+        <li><a href="#run-system">Run system</a></li>
+        <li><a href="#check-ui">Check UI</a></li>
+      </ul>
+    </li>
+    <li><a href="#visualization">Visualization</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Football ETL Analysis P2</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class='author'><span class="author fas fa-user-circle fa-fw"></span><span class='screen-reader-text'>  </span><a href='http://phonghuynh.github.io/authors/og'>OG</a></span>
+                </span>&nbsp;<span class="post-category">included in </span>&nbsp;<span class="post-series">series <a href="/series/football-etl/"><i class="far fa-list-alt fa-fw"></i>Football ETL</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="01 Aug 2023">01 Aug 2023</time>&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;17 minutes&nbsp;</div>
+        </div><div class="details series-nav open">
+                                <div class="details-summary series-title">
+                                    <span>Series - Football ETL</span>
+                                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                                </div>
+                                <div class="details-content series-content">
+                                    <nav>
+                                        <ul>
+                                                    <li><a href="/football_etl/">Football ETL Analysis</a></li><li><span class="active">Football ETL Analysis P2</span></li></ul>
+                                    </nav>
+                                </div>
+                            </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#data-source">Data Source</a>
+      <ul>
+        <li><a href="#chuẩn-bị-file-làm-raw-data">Chuẩn bị file làm raw data</a></li>
+        <li><a href="#load-data-vào-mysql">Load data vào MySQL</a></li>
+        <li><a href="#init-postgresql-schema">Init PostgreSQL Schema</a></li>
+      </ul>
+    </li>
+    <li><a href="#implement">Implement</a>
+      <ul>
+        <li><a href="#extraction">Extraction</a></li>
+        <li><a href="#transformation">Transformation</a></li>
+        <li><a href="#load">Load</a></li>
+        <li><a href="#run-system">Run system</a></li>
+        <li><a href="#check-ui">Check UI</a></li>
+      </ul>
+    </li>
+    <li><a href="#visualization">Visualization</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Hello! Hello! OG đây, sau phần 1 chúng ta đã setup các kiểu và đảm bảo mọi thứ trơn tru rồi, ở phần này chúng ta sẽ chuẩn bị <a href="#data-source" rel="">Data Source</a>, và khởi chạy pipeline ở <a href="#implement" rel="">Implement</a> sau đó sẽ <a href="#visualization" rel="">Visualize</a> cleaned data có được từ data warehouse thành Dashboard.</p>
+<p>Bắt đầu thôi nào !</p>
+<h2 id="data-source" class="headerLink">
+    <a href="#data-source" class="header-mark"></a>Data Source</h2><h3 id="chuẩn-bị-file-làm-raw-data" class="headerLink">
+    <a href="#chu%e1%ba%a9n-b%e1%bb%8b-file-l%c3%a0m-raw-data" class="header-mark"></a>Chuẩn bị file làm raw data</h3><p>Các file csv sử dụng làm dữ liệu được tải từ <a href="https://www.kaggle.com/datasets/technika148/football-database" target="_blank" rel="noopener noreferrer">Football Database - Kaggle</a>. Đây là dữ liệu thống kê của cầu thủ, đội bóng đến từ 5 giải bóng hàng đầu Châu Âu (Premier League, Laliga, Seria A, Budesliga, League 1)</p>
+<p>Ta sẽ có schema như sau:</p>
+<p><figure><a class="lightgallery" href="https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/football_schema.png" title="Schema" data-thumbnail="https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/football_schema.png" data-sub-html="<h2>Schema</h2><p>Schema</p>">
+        <img
+            
+            loading="lazy"
+            src="https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/football_schema.png"
+            srcset="https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/football_schema.png, https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/football_schema.png 1.5x, https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/football_schema.png 2x"
+            sizes="auto"
+            alt="Schema">
+    </a><figcaption class="image-caption">Schema</figcaption>
+    </figure></p>
+<p>trong đó:</p>
+<ul>
+<li><code>games</code>: bảng chứa thông tin thống kê của từng trận đấu (<strong>gameID</strong>)</li>
+<li><code>teams</code>: Bảng chứa tên các đội bóng (<strong>teamID</strong>)</li>
+<li><code>players</code>: Bảng chứa tên các cầu thủ (<strong>playerID</strong>)</li>
+<li><code>leagues</code>: Bảng chưa tên các giải đấu (<strong>leagueID</strong>)</li>
+<li><code>appearances</code>: Bảng thống kê của cầu thủ ở các game mà họ tham gia (<strong>gameID</strong>, <strong>playerID</strong>)</li>
+<li><code>teamstats</code>: Bảng thống kê của đội bóng ở từng game (<strong>gameID</strong>, <strong>teamID</strong>)</li>
+</ul>
+<h3 id="load-data-vào-mysql" class="headerLink">
+    <a href="#load-data-v%c3%a0o-mysql" class="header-mark"></a>Load data vào MySQL</h3><p>Có nhiều cách để load data vào MySQL, ở đây mình sẽ sử dụng cách LOAD LOCAL_INFILE của MySQL luôn.</p>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Hãy đảm bảo bạn đã <code>make up</code> lần đầu rồi nhé !</div>
+        </div>
+    </div>
+<p>Hãy copy folder chứa các file csv vào de_mysql container:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker cp /football de_mysql:/tmp/dataset/
+docker cp /load_data de_mysql:/tmp/dataset/
+</code></pre></td></tr></table>
+</div>
+</div><p>Sau đó tạo bảng trống sẵn trong MySQL:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash">make mysql_create <span class="c1">#Create table in mysql</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Tiếp tục với lệnh:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash">make to_mysql_root
+<span class="c1"># ----- You will access to MySQL container</span>
+SET GLOBAL <span class="nv">LOCAL_INFILE</span><span class="o">=</span>TRUE<span class="p">;</span> <span class="c1">#Set local_infile variable to load data from local</span>
+exit<span class="p">;</span>
+<span class="c1"># ----- Exit container</span>
+make mysql_load <span class="c1">#load data</span>
+make mysql_create_relation <span class="c1">#create table relation</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Thế là đã chuẩn bị xong dữ liệu cho MySQL.</p>
+<h3 id="init-postgresql-schema" class="headerLink">
+    <a href="#init-postgresql-schema" class="header-mark"></a>Init PostgreSQL Schema</h3><p>Ta cũng cần phải tạo sẵn schema sẵn trong Posgres như sau:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash">make to_psql
+CREATE SCHEMA IF NOT EXISTS analysis<span class="p">;</span>
+exit<span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Thế là đã hoàn tất việc chuẩn bị data, giờ thì ta bắt đầu vào phần việc chính thôi</p>
+<h2 id="implement" class="headerLink">
+    <a href="#implement" class="header-mark"></a>Implement</h2><p>Công việc chính trong phần này là xây dựng các data pipeline bằng dagster. Cơ bản có thể hiểu là ta tạo các <a href="https://docs.dagster.io/concepts/assets/software-defined-assets" target="_blank" rel="noopener noreferrer">Asset</a> và chuyển chúng từ database này sang database khác.</p>
+<h3 id="extraction" class="headerLink">
+    <a href="#extraction" class="header-mark"></a>Extraction</h3><p>Để có thể quản lý việc truy xuất dữ liệu từ <code>MySQL</code> và load vào <code>MinIO</code> để  lưu tạm, ta sẽ xây dựng một <a href="https://docs.dagster.io/concepts/io-management/io-managers" target="_blank" rel="noopener noreferrer">I/O Manager</a> phục vụ việc đó.</p>
+<p>Đầu tiên, hãy vào đường dẫn: <code>./etl_pipeline/etl_pipeline/resources/</code></p>
+<p>Ta sẽ xây dựng <code>MySQL io manager</code> bằng cách tạo file <code>mysql_io_manager.py</code> với nội dung sau:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">dagster</span> <span class="kn">import</span> <span class="n">IOManager</span><span class="p">,</span> <span class="n">OutputContext</span><span class="p">,</span> <span class="n">InputContext</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">connect_mysql</span><span class="p">(</span><span class="n">config</span><span class="p">):</span>
+    <span class="n">conn_info</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&#34;mysql+pymysql://</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&#34;@</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;host&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;port&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&#34;/</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;database&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span>
+    <span class="p">)</span>
+
+    <span class="n">db_conn</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">conn_info</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">db_conn</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="k">raise</span>
+
+<span class="k">class</span> <span class="nc">MySQLIOManager</span><span class="p">(</span><span class="n">IOManager</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span> 
+       <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">config</span>
+
+    <span class="k">def</span> <span class="nf">handle_output</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">OutputContext</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+       <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">load_input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">InputContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+       <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">extract_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sql</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">connect_mysql</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">)</span> <span class="k">as</span> <span class="n">db_conn</span><span class="p">:</span>
+            <span class="n">pd_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">db_conn</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">pd_data</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Sau đó, tiếp tục đối với <code>minio_io_manager.py</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">pyarrow</span> <span class="k">as</span> <span class="nn">pa</span>
+<span class="kn">import</span> <span class="nn">pyarrow.parquet</span> <span class="k">as</span> <span class="nn">pq</span>
+<span class="kn">from</span> <span class="nn">dagster</span> <span class="kn">import</span> <span class="n">IOManager</span><span class="p">,</span> <span class="n">InputContext</span><span class="p">,</span> <span class="n">OutputContext</span>
+<span class="kn">from</span> <span class="nn">minio</span> <span class="kn">import</span> <span class="n">Minio</span>
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">connect_minio</span><span class="p">(</span><span class="n">config</span><span class="p">):</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">Minio</span><span class="p">(</span>
+        <span class="n">endpoint</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;endpoint_url&#34;</span><span class="p">),</span>
+        <span class="n">access_key</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;aws_access_key_id&#34;</span><span class="p">),</span>
+        <span class="n">secret_key</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;aws_secret_access_key&#34;</span><span class="p">),</span>
+        <span class="n">secure</span><span class="o">=</span><span class="kc">False</span>   
+    <span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">client</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="k">raise</span>
+
+<span class="k">class</span> <span class="nc">MinIOIOManager</span><span class="p">(</span><span class="n">IOManager</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">=</span> <span class="n">config</span>
+    
+    <span class="k">def</span> <span class="nf">_get_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">InputContext</span><span class="p">,</span> <span class="n">OutputContext</span><span class="p">]):</span>
+        <span class="n">layer</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">table</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">asset_key</span><span class="o">.</span><span class="n">path</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="s2">&#34;/&#34;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">layer</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">table</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">layer</span><span class="si">}</span><span class="s2">_&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)])</span>
+        <span class="n">tmp_file_path</span> <span class="o">=</span> <span class="s2">&#34;/tmp/file-</span><span class="si">{}</span><span class="s2">-</span><span class="si">{}</span><span class="s2">.parquet&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&#34;%Y%m</span><span class="si">%d</span><span class="s2">%H%M%S&#34;</span><span class="p">),</span>
+            <span class="s2">&#34;-&#34;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">context</span><span class="o">.</span><span class="n">asset_key</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">context</span><span class="o">.</span><span class="n">has_asset_partitions</span><span class="p">:</span>
+            <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">asset_partitions_time_window</span>
+            <span class="n">dt_format</span> <span class="o">=</span> <span class="s2">&#34;%Y%m</span><span class="si">%d</span><span class="s2">%H%M%S&#34;</span>
+            <span class="n">partition_str</span> <span class="o">=</span> <span class="n">start</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">dt_format</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;_&#34;</span> <span class="o">+</span> <span class="n">end</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">dt_format</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">partition_str</span><span class="si">}</span><span class="s2">.pq&#34;</span><span class="p">),</span> <span class="n">tmp_file_path</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">.pq&#34;</span><span class="p">,</span> <span class="n">tmp_file_path</span>
+    
+    <span class="k">def</span> <span class="nf">handle_output</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">OutputContext</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+        <span class="c1"># convert to parquet format</span>
+        <span class="n">key_name</span><span class="p">,</span> <span class="n">tmp_file_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">Table</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+        <span class="n">pq</span><span class="o">.</span><span class="n">write_table</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">tmp_file_path</span><span class="p">)</span>
+
+        <span class="c1"># upload to MinIO</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">bucket_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;bucket&#34;</span><span class="p">)</span>
+            <span class="k">with</span> <span class="n">connect_minio</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">)</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+                <span class="c1"># Make bucket if not exist.</span>
+                <span class="n">found</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">bucket_exists</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">found</span><span class="p">:</span>
+                    <span class="n">client</span><span class="o">.</span><span class="n">make_bucket</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Bucket </span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2"> already exists&#34;</span><span class="p">)</span>
+                <span class="n">client</span><span class="o">.</span><span class="n">fput_object</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">key_name</span><span class="p">,</span> <span class="n">tmp_file_path</span><span class="p">)</span>
+                <span class="n">row_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+                <span class="n">context</span><span class="o">.</span><span class="n">add_output_metadata</span><span class="p">({</span><span class="s2">&#34;path&#34;</span><span class="p">:</span> <span class="n">key_name</span><span class="p">,</span> <span class="s2">&#34;tmp&#34;</span><span class="p">:</span> <span class="n">tmp_file_path</span><span class="p">})</span>
+                
+                <span class="c1"># clean up tmp file</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">tmp_file_path</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">raise</span>
+
+    
+    <span class="k">def</span> <span class="nf">load_input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">InputContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+        <span class="n">bucket_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;bucket&#34;</span><span class="p">)</span> 
+        <span class="n">key_name</span><span class="p">,</span> <span class="n">tmp_file_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_path</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">with</span> <span class="n">connect_minio</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">)</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+                <span class="c1">#Make bucket if not exist</span>
+                <span class="n">found</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">bucket_exists</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">found</span><span class="p">:</span>
+                    <span class="n">client</span><span class="o">.</span><span class="n">make_bucket</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Bucket </span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2"> already exist&#34;</span><span class="p">)</span>
+                <span class="n">client</span><span class="o">.</span><span class="n">fget_object</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">key_name</span><span class="p">,</span> <span class="n">tmp_file_path</span><span class="p">)</span>
+                <span class="n">pd_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">tmp_file_path</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">pd_data</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+           <span class="k">raise</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Sau khi đã tạo thành công các io manager cho mysql và minio, ta sẽ bắt đầu xây dựng <code>bronze layer</code></p>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Note nho nhỏ<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Trong project này mình chia các giai đoạn transformation thành các layer:</p>
+<ul>
+<li><code>bronze layer</code>: Giai đoạn chỏ mới load raw data, có thể hiểu đây là data chưa transform gì cả</li>
+<li><code>siler layer</code>: Transform một phần từ bronze layer, ở đoạn này data đã được cleaning sơ</li>
+<li><code>gold layer</code>: Sau khi transform một lần nữa từ silver layer, giai đoạn này sẽ truy vấn ra các thông tin hữu ích nhất để phân tích và data hoàn toàn sạch sẽ sẵn sàng được load vào warehouse</li>
+</ul>
+<p><figure><a class="lightgallery" href="https://www.databricks.com/wp-content/uploads/2019/08/Delta-Lake-Multi-Hop-Architecture-Bronze.png" title="data flow" data-thumbnail="https://www.databricks.com/wp-content/uploads/2019/08/Delta-Lake-Multi-Hop-Architecture-Bronze.png" data-sub-html="<h2>Nguồn từ databrick.com</h2><p>data flow</p>">
+        <img
+            
+            loading="lazy"
+            src="https://www.databricks.com/wp-content/uploads/2019/08/Delta-Lake-Multi-Hop-Architecture-Bronze.png"
+            srcset="https://www.databricks.com/wp-content/uploads/2019/08/Delta-Lake-Multi-Hop-Architecture-Bronze.png, https://www.databricks.com/wp-content/uploads/2019/08/Delta-Lake-Multi-Hop-Architecture-Bronze.png 1.5x, https://www.databricks.com/wp-content/uploads/2019/08/Delta-Lake-Multi-Hop-Architecture-Bronze.png 2x"
+            sizes="auto"
+            alt="data flow">
+    </a><figcaption class="image-caption">Nguồn từ databrick.com</figcaption>
+    </figure></p>
+</div>
+        </div>
+    </div>
+<p>Vào foler assets, ta sẽ tạo các assets là các bảng được load từ MySQL, hãy tạo một file <code>bronze_layer.py</code> ư sau:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">dagster</span> <span class="kn">import</span> <span class="n">asset</span><span class="p">,</span> <span class="n">Output</span><span class="p">,</span> <span class="n">AssetIn</span><span class="p">,</span> <span class="n">AssetOut</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&#34;leagues&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;players&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;games&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;appearances&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;teamstats&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;teams&#34;</span>
+<span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">asset_factory</span> <span class="p">(</span><span class="n">table</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="nd">@asset</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="n">table</span><span class="p">,</span>
+        <span class="n">io_manager_key</span><span class="o">=</span><span class="s2">&#34;minio_io_manager&#34;</span><span class="p">,</span>
+        <span class="n">required_resource_keys</span><span class="o">=</span><span class="p">{</span><span class="s2">&#34;mysql_io_manager&#34;</span><span class="p">},</span>
+        <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;bronze&#34;</span><span class="p">],</span>
+        <span class="n">compute_kind</span><span class="o">=</span><span class="s2">&#34;SQL&#34;</span><span class="p">,</span>
+        <span class="n">group_name</span><span class="o">=</span><span class="s2">&#34;bronze_layer&#34;</span>
+    <span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_asset</span><span class="p">(</span><span class="n">context</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Output</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]:</span>
+        <span class="n">sql_stm</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;SELECT * FROM </span><span class="si">{</span><span class="n">table</span><span class="si">}</span><span class="s2">&#34;</span>
+        <span class="n">pd_data</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">resources</span><span class="o">.</span><span class="n">mysql_io_manager</span><span class="o">.</span><span class="n">extract_data</span><span class="p">(</span><span class="n">sql_stm</span><span class="p">)</span>
+        <span class="n">context</span><span class="o">.</span><span class="n">log</span>
+        <span class="k">return</span> <span class="n">Output</span><span class="p">(</span>
+            <span class="n">pd_data</span><span class="p">,</span>
+            <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">&#34;table&#34;</span><span class="p">:</span> <span class="n">table</span><span class="p">,</span>
+                <span class="s2">&#34;records&#34;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">pd_data</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">_asset</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip có thể sẽ hữu ích<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Trong đoạn script bên trên, mình đang tạo một <code>asset factory</code>. Nghĩa là thay vì tạo 6 assets giống nhau bằng cách viết 6 function cho từng asset, mình sẽ làm 1 template chung rồi lần lượt loop tên các bảng thôi :)) Việc loop đó sẽ thực hiện trong <code>__init__.py</code></div>
+        </div>
+    </div>
+<p>Lúc này các bảng đã được load vào MinIO, các bước sau chỉ cần lấy từ MinIO ra và xử lý tiếp thôi</p>
+<h3 id="transformation" class="headerLink">
+    <a href="#transformation" class="header-mark"></a>Transformation</h3><p>Tiếp tục tạo file <code>silver_layer.py</code> cùng folder với bronze layer:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">dagster</span> <span class="kn">import</span> <span class="n">asset</span><span class="p">,</span> <span class="n">Output</span><span class="p">,</span> <span class="n">AssetIn</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="nd">@asset</span><span class="p">(</span>
+    <span class="n">io_manager_key</span><span class="o">=</span><span class="s2">&#34;minio_io_manager&#34;</span><span class="p">,</span>
+    <span class="n">required_resource_keys</span><span class="o">=</span><span class="p">{</span><span class="s2">&#34;minio_io_manager&#34;</span><span class="p">},</span>
+    <span class="n">ins</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&#34;teamstats&#34;</span><span class="p">:</span> <span class="n">AssetIn</span><span class="p">(</span>
+            <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;bronze&#34;</span><span class="p">]</span>
+        <span class="p">),</span>
+        <span class="s2">&#34;games&#34;</span><span class="p">:</span> <span class="n">AssetIn</span><span class="p">(</span>
+            <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;bronze&#34;</span><span class="p">]</span>
+        <span class="p">),</span>
+        <span class="s2">&#34;leagues&#34;</span><span class="p">:</span> <span class="n">AssetIn</span><span class="p">(</span>
+            <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;bronze&#34;</span><span class="p">]</span>
+        <span class="p">)</span>
+    <span class="p">},</span>
+    <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;silver&#34;</span><span class="p">],</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Statistic of teams in games&#39;</span><span class="p">,</span>
+    <span class="n">group_name</span><span class="o">=</span><span class="s2">&#34;Silver_layer&#34;</span><span class="p">,</span>
+    <span class="n">compute_kind</span><span class="o">=</span><span class="s2">&#34;Pandas&#34;</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">silver_statsTeamOnGames</span><span class="p">(</span><span class="n">teamstats</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">games</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">leagues</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Output</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]:</span>
+    <span class="n">ts</span> <span class="o">=</span> <span class="n">teamstats</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">gs</span> <span class="o">=</span> <span class="n">games</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">lgs</span> <span class="o">=</span> <span class="n">leagues</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="c1">#Drop unsusable columns in games</span>
+    <span class="n">gs</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">gs</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()[</span><span class="mi">13</span><span class="p">:],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="c1">#create StatperLeagueSeason</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">gs</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&#34;gameID&#34;</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">lgs</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&#34;leagueID&#34;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&#34;left&#34;</span><span class="p">)</span>
+    <span class="n">result</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;season_y&#39;</span><span class="p">,</span> <span class="s1">&#39;date_y&#39;</span><span class="p">],</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;season_x&#39;</span><span class="p">:</span> <span class="s1">&#39;season&#39;</span><span class="p">,</span> <span class="s1">&#39;date_x&#39;</span><span class="p">:</span> <span class="s1">&#39;date&#39;</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">Output</span><span class="p">(</span>
+        <span class="n">result</span><span class="p">,</span>
+        <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">&#34;table&#34;</span><span class="p">:</span> <span class="s2">&#34;statsTeamOnGames&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;records&#34;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+    
+
+<span class="nd">@asset</span><span class="p">(</span>
+    <span class="n">io_manager_key</span><span class="o">=</span><span class="s2">&#34;minio_io_manager&#34;</span><span class="p">,</span>
+    <span class="n">required_resource_keys</span><span class="o">=</span><span class="p">{</span><span class="s2">&#34;minio_io_manager&#34;</span><span class="p">},</span>
+    <span class="n">ins</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&#34;appearances&#34;</span><span class="p">:</span> <span class="n">AssetIn</span><span class="p">(</span>
+            <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;bronze&#34;</span><span class="p">]</span>
+        <span class="p">),</span>
+        <span class="s2">&#34;games&#34;</span><span class="p">:</span> <span class="n">AssetIn</span><span class="p">(</span>
+            <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;bronze&#34;</span><span class="p">]</span>
+        <span class="p">),</span>
+        <span class="s2">&#34;players&#34;</span><span class="p">:</span> <span class="n">AssetIn</span><span class="p">(</span>
+            <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;bronze&#34;</span><span class="p">]</span>
+        <span class="p">)</span>
+    <span class="p">},</span>
+    <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;silver&#34;</span><span class="p">],</span>
+    <span class="n">group_name</span><span class="o">=</span><span class="s2">&#34;Silver_layer&#34;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;statistic of players in games&#39;</span><span class="p">,</span>
+    <span class="n">compute_kind</span><span class="o">=</span><span class="s2">&#34;Pandas&#34;</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">silver_playerAppearances</span><span class="p">(</span><span class="n">appearances</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">games</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">players</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Output</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]:</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">appearances</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">ga</span> <span class="o">=</span> <span class="n">games</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">pla</span> <span class="o">=</span> <span class="n">players</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="c1">#Drop unusable column</span>
+    <span class="n">ga</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">ga</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()[</span><span class="mi">13</span><span class="p">:],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1">#Merge </span>
+    <span class="n">player_appearances</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">pla</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&#34;playerID&#34;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&#34;left&#34;</span><span class="p">)</span>
+    <span class="n">player_appearances</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">player_appearances</span><span class="p">,</span> <span class="n">ga</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&#34;gameID&#34;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&#34;left&#34;</span><span class="p">)</span>
+
+    <span class="c1">#drop unecessary columns and rename</span>
+    <span class="n">player_appearances</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;leagueID_y&#39;</span><span class="p">],</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">player_appearances</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;leagueID_x&#39;</span><span class="p">:</span> <span class="s1">&#39;leagueID&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Output</span><span class="p">(</span>
+        <span class="n">player_appearances</span><span class="p">,</span>
+        <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">&#34;table&#34;</span><span class="p">:</span> <span class="s2">&#34;playerAppearances&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;records&#34;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">player_appearances</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+
+<span class="nd">@asset</span><span class="p">(</span>
+    <span class="n">io_manager_key</span><span class="o">=</span><span class="s2">&#34;minio_io_manager&#34;</span><span class="p">,</span>
+    <span class="n">required_resource_keys</span><span class="o">=</span><span class="p">{</span><span class="s2">&#34;minio_io_manager&#34;</span><span class="p">},</span>
+    <span class="n">ins</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&#34;teams&#34;</span><span class="p">:</span> <span class="n">AssetIn</span><span class="p">(</span>
+            <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;bronze&#34;</span><span class="p">]</span>
+        <span class="p">)</span>
+    <span class="p">},</span>
+    <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;silver&#34;</span><span class="p">],</span>
+    <span class="n">group_name</span><span class="o">=</span><span class="s2">&#34;Silver_layer&#34;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Teams&#39;</span><span class="p">,</span>
+    <span class="n">compute_kind</span><span class="o">=</span><span class="s2">&#34;Pandas&#34;</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">silver_teams</span><span class="p">(</span><span class="n">teams</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Output</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]:</span>
+    <span class="k">return</span> <span class="n">Output</span><span class="p">(</span>
+        <span class="n">teams</span><span class="p">,</span>
+        <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">&#34;table&#34;</span><span class="p">:</span> <span class="s1">&#39;teams&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;records&#39;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">teams</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Lúc này mình có 3 silver assets, được join từ các bảng ở bronze</p>
+<p>Tiếp đến là <code>gold_layer</code>, lúc này ta sẽ tính các thông số thống kê của từng giải đâu từng mùa, các thống kê của cầu thủ trong 90 phút thi đấu, và cả thống kê của từng cầu thủ trong từng mùa giải</p>
+<p><code>gold_layer.py</code> sẽ có nội dung:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">dagster</span> <span class="kn">import</span> <span class="n">asset</span><span class="p">,</span> <span class="n">Output</span><span class="p">,</span> <span class="n">AssetIn</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="nd">@asset</span><span class="p">(</span>
+    <span class="n">io_manager_key</span><span class="o">=</span><span class="s2">&#34;minio_io_manager&#34;</span><span class="p">,</span>
+    <span class="n">ins</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&#34;silver_statsTeamOnGames&#34;</span><span class="p">:</span> <span class="n">AssetIn</span><span class="p">(</span>
+            <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;silver&#34;</span><span class="p">]</span>
+        <span class="p">)</span>
+    <span class="p">},</span>
+    <span class="n">group_name</span><span class="o">=</span><span class="s2">&#34;Gold_layer&#34;</span><span class="p">,</span>
+    <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;gold&#34;</span><span class="p">],</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Statistic of all league in each season&#39;</span><span class="p">,</span>
+    <span class="n">compute_kind</span><span class="o">=</span><span class="s2">&#34;Pandas&#34;</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">gold_statsPerLeagueSeason</span><span class="p">(</span><span class="n">silver_statsTeamOnGames</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Output</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]:</span> 
+    <span class="n">st</span> <span class="o">=</span> <span class="n">silver_statsTeamOnGames</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;season&#39;</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&#34;goals&#34;</span><span class="p">:</span> <span class="s2">&#34;sum&#34;</span><span class="p">,</span> <span class="s2">&#34;xGoals&#34;</span><span class="p">:</span> <span class="s2">&#34;sum&#34;</span><span class="p">,</span> <span class="s2">&#34;shots&#34;</span><span class="p">:</span> <span class="s2">&#34;sum&#34;</span><span class="p">,</span> <span class="s2">&#34;shotsOnTarget&#34;</span><span class="p">:</span> <span class="s2">&#34;sum&#34;</span><span class="p">,</span> <span class="s2">&#34;fouls&#34;</span><span class="p">:</span> <span class="s2">&#34;sum&#34;</span><span class="p">,</span> <span class="s2">&#34;yellowCards&#34;</span><span class="p">:</span> <span class="s2">&#34;sum&#34;</span><span class="p">,</span> <span class="s2">&#34;redCards&#34;</span><span class="p">:</span> <span class="s2">&#34;sum&#34;</span><span class="p">,</span><span class="s1">&#39;corners&#39;</span><span class="p">:</span> <span class="s1">&#39;sum&#39;</span><span class="p">,</span> <span class="s2">&#34;gameID&#34;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">})</span>
+        <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="p">)</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;gameID&#39;</span><span class="p">:</span><span class="s2">&#34;games&#34;</span><span class="p">})</span>
+    <span class="n">result</span><span class="p">[</span><span class="s1">&#39;goalPerGame&#39;</span><span class="p">]</span><span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">goals</span><span class="o">/</span><span class="n">result</span><span class="o">.</span><span class="n">games</span>
+    <span class="n">result</span><span class="p">[</span><span class="s1">&#39;season&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;season&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Output</span><span class="p">(</span>
+        <span class="n">result</span><span class="p">,</span>
+        <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+            <span class="s1">&#39;table&#39;</span><span class="p">:</span> <span class="s1">&#39;statPerLeagueSeason&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;records&#39;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+
+
+<span class="nd">@asset</span><span class="p">(</span>
+    <span class="n">io_manager_key</span><span class="o">=</span><span class="s2">&#34;minio_io_manager&#34;</span><span class="p">,</span>
+    <span class="n">ins</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&#34;silver_playerAppearances&#34;</span><span class="p">:</span> <span class="n">AssetIn</span><span class="p">(</span>
+            <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;silver&#34;</span><span class="p">]</span>
+        <span class="p">)</span>
+    <span class="p">},</span>
+    <span class="n">group_name</span><span class="o">=</span><span class="s2">&#34;Gold_layer&#34;</span><span class="p">,</span>
+    <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;gold&#34;</span><span class="p">],</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Statistic of all player in each season&#39;</span><span class="p">,</span>
+    <span class="n">compute_kind</span><span class="o">=</span><span class="s2">&#34;Pandas&#34;</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">gold_statsPerPlayerSeason</span><span class="p">(</span><span class="n">silver_playerAppearances</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Output</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]:</span> 
+    <span class="n">st</span> <span class="o">=</span> <span class="n">silver_playerAppearances</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">statsPerPlayerSeason</span> <span class="o">=</span> <span class="p">(</span>
+       <span class="n">st</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;playerID&#39;</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;season&#39;</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;goals&#39;</span><span class="p">:</span> <span class="s1">&#39;sum&#39;</span><span class="p">,</span><span class="s1">&#39;shots&#39;</span><span class="p">:</span> <span class="s1">&#39;sum&#39;</span><span class="p">,</span><span class="s1">&#39;xGoals&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span><span class="s1">&#39;xGoalsChain&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span><span class="s1">&#39;xGoalsBuildup&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span><span class="s1">&#39;assists&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span><span class="s1">&#39;keyPasses&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span><span class="s1">&#39;xAssists&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="s1">&#39;sum&#39;</span><span class="p">})</span>
+        <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">statsPerPlayerSeason</span><span class="p">[</span><span class="s1">&#39;gDiff&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">statsPerPlayerSeason</span><span class="p">[</span><span class="s1">&#39;goals&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">statsPerPlayerSeason</span><span class="p">[</span><span class="s1">&#39;xGoals&#39;</span><span class="p">]</span>
+    <span class="n">statsPerPlayerSeason</span><span class="p">[</span><span class="s1">&#39;gDiffRatio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">statsPerPlayerSeason</span><span class="p">[</span><span class="s1">&#39;goals&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">statsPerPlayerSeason</span><span class="p">[</span><span class="s1">&#39;xGoals&#39;</span><span class="p">]</span>
+    <span class="n">statsPerPlayerSeason</span><span class="p">[</span><span class="s1">&#39;gDiffRatio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">statsPerPlayerSeason</span><span class="p">[</span><span class="s1">&#39;gDiffRatio&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">Output</span><span class="p">(</span>
+        <span class="n">statsPerPlayerSeason</span><span class="p">,</span>
+        <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+            <span class="s1">&#39;table&#39;</span><span class="p">:</span> <span class="s1">&#39;statsPerPlayerSeason&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;records&#39;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">statsPerPlayerSeason</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+    
+
+<span class="nd">@asset</span><span class="p">(</span>
+    <span class="n">io_manager_key</span><span class="o">=</span><span class="s2">&#34;minio_io_manager&#34;</span><span class="p">,</span>
+    <span class="n">ins</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&#34;gold_statsPerPlayerSeason&#34;</span><span class="p">:</span> <span class="n">AssetIn</span><span class="p">(</span>
+            <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;gold&#34;</span><span class="p">]</span>
+        <span class="p">)</span>
+    <span class="p">},</span>
+    <span class="n">group_name</span><span class="o">=</span><span class="s2">&#34;Gold_layer&#34;</span><span class="p">,</span>
+    <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;gold&#34;</span><span class="p">],</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Statistic of all player in 90 min&#39;</span><span class="p">,</span>
+    <span class="n">compute_kind</span><span class="o">=</span><span class="s2">&#34;Pandas&#34;</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">gold_statsPlayerPer90</span><span class="p">(</span><span class="n">gold_statsPerPlayerSeason</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Output</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]:</span> 
+    <span class="n">statsPerPLayerSeason</span> <span class="o">=</span> <span class="n">gold_statsPerPlayerSeason</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    
+    <span class="n">statsPlayerPer90</span> <span class="o">=</span> <span class="n">statsPerPLayerSeason</span><span class="p">[</span><span class="n">statsPerPLayerSeason</span><span class="p">[</span><span class="s1">&#39;season&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;2018&#39;</span><span class="p">,</span><span class="s1">&#39;2019&#39;</span><span class="p">,</span><span class="s1">&#39;2020&#39;</span><span class="p">])]</span>
+    <span class="n">statsPlayerPer90</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">statsPlayerPer90</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;playerID&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">total_goals</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;goals&#39;</span><span class="p">,</span><span class="s1">&#39;sum&#39;</span><span class="p">),</span><span class="n">total_assists</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;assists&#39;</span><span class="p">,</span><span class="s1">&#39;sum&#39;</span><span class="p">),</span><span class="n">total_time</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="s1">&#39;sum&#39;</span><span class="p">))</span>
+        <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">statsPlayerPer90</span><span class="p">[</span><span class="s1">&#39;goalsPer90&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">statsPlayerPer90</span><span class="p">[</span><span class="s1">&#39;total_goals&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">statsPlayerPer90</span><span class="p">[</span><span class="s1">&#39;total_time&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">90</span>
+    <span class="n">statsPlayerPer90</span><span class="p">[</span><span class="s1">&#39;assistsPer90&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">statsPlayerPer90</span><span class="p">[</span><span class="s1">&#39;total_assists&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">statsPlayerPer90</span><span class="p">[</span><span class="s1">&#39;total_time&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">90</span>
+    <span class="n">statsPlayerPer90</span><span class="p">[</span><span class="s1">&#39;scorers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">statsPlayerPer90</span><span class="p">[</span><span class="s1">&#39;total_goals&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">statsPlayerPer90</span><span class="p">[</span><span class="s1">&#39;total_assists&#39;</span><span class="p">]</span>
+    <span class="n">statsPlayerPer90</span> <span class="o">=</span> <span class="n">statsPlayerPer90</span><span class="p">[</span><span class="n">statsPlayerPer90</span><span class="p">[</span><span class="s1">&#39;scorers&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">Output</span><span class="p">(</span>
+        <span class="n">statsPlayerPer90</span><span class="p">,</span>
+        <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+            <span class="s1">&#39;table&#39;</span><span class="p">:</span> <span class="s1">&#39;statsPerPlayerSeason&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;records&#39;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">statsPlayerPer90</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Cuối cùng sau khi đã tạo ra data có giá trị phân tích và sạch sẽ, ta sẽ load vào data warehouse (Postgres)</p>
+<h3 id="load" class="headerLink">
+    <a href="#load" class="header-mark"></a>Load</h3><p>Trước hết hãy tạo IO Manager cho Postgres để quản lý việc load cleaned data. Ta tạo file <code>psql_io_manager.py</code> ở vị trí mà ta đã tạo 2 io manager trước với nội dung:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">dagster</span> <span class="kn">import</span> <span class="n">IOManager</span><span class="p">,</span> <span class="n">OutputContext</span><span class="p">,</span> <span class="n">InputContext</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">connect_psql</span><span class="p">(</span><span class="n">config</span><span class="p">):</span>
+    <span class="n">conn_info</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&#34;postgresql+psycopg2://</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&#34;@</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;host&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;port&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&#34;/</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;database&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span>
+    <span class="p">)</span>
+    <span class="n">db_conn</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">conn_info</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">db_conn</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="k">raise</span>
+
+<span class="k">class</span> <span class="nc">PostgreSQLIOManager</span><span class="p">(</span><span class="n">IOManager</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="n">config</span>
+    <span class="k">def</span> <span class="nf">load_input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">InputContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">def</span> <span class="nf">handle_output</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">OutputContext</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+        <span class="n">schema</span><span class="p">,</span> <span class="n">table</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">asset_key</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">context</span><span class="o">.</span><span class="n">asset_key</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">with</span> <span class="n">connect_psql</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+        <span class="c1"># insert new data</span>
+            <span class="n">ls_columns</span> <span class="o">=</span> <span class="p">(</span><span class="n">context</span><span class="o">.</span><span class="n">metadata</span> <span class="ow">or</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;columns&#34;</span><span class="p">,</span> <span class="p">[])</span>
+            <span class="n">obj</span><span class="p">[</span><span class="n">ls_columns</span><span class="p">]</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">table</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">,</span>
+                <span class="n">con</span><span class="o">=</span><span class="n">conn</span><span class="p">,</span>
+                <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span>
+                <span class="n">if_exists</span><span class="o">=</span><span class="s2">&#34;replace&#34;</span><span class="p">,</span>
+                <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="n">chunksize</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span>
+                <span class="n">method</span><span class="o">=</span><span class="s2">&#34;multi&#34;</span>
+            <span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Sau đó, tạo một asset <code>warehouse_layer.py</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">dagster</span> <span class="kn">import</span> <span class="n">multi_asset</span><span class="p">,</span> <span class="n">Output</span><span class="p">,</span> <span class="n">AssetIn</span><span class="p">,</span> <span class="n">AssetOut</span><span class="p">,</span> <span class="n">asset</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="nd">@multi_asset</span><span class="p">(</span>
+    <span class="n">ins</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&#34;gold_statsPerLeagueSeason&#34;</span><span class="p">:</span> <span class="n">AssetIn</span><span class="p">(</span>
+            <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;gold&#34;</span><span class="p">]</span>
+        <span class="p">)</span>
+    <span class="p">},</span>
+    <span class="n">outs</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&#34;statsperleagueseason&#34;</span><span class="p">:</span> <span class="n">AssetOut</span><span class="p">(</span>
+            <span class="n">io_manager_key</span><span class="o">=</span><span class="s2">&#34;psql_io_manager&#34;</span><span class="p">,</span>
+            <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;statsPerLeagueSeason&#34;</span><span class="p">,</span> <span class="s1">&#39;analysis&#39;</span><span class="p">],</span>
+            <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">&#34;columns&#34;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&#34;name&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;season&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;goals&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;xGoals&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;shots&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;shotsOnTarget&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;fouls&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;yellowCards&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;redCards&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;corners&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;games&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;goalPerGame&#34;</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">),</span>
+    <span class="p">},</span>
+    <span class="n">compute_kind</span><span class="o">=</span><span class="s2">&#34;PostgreSQL&#34;</span><span class="p">,</span>
+    <span class="n">group_name</span><span class="o">=</span><span class="s2">&#34;Warehouse_layer&#34;</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">statsPerLeagueSeason</span><span class="p">(</span><span class="n">gold_statsPerLeagueSeason</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Output</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]:</span>
+    <span class="k">return</span> <span class="n">Output</span><span class="p">(</span>
+        <span class="n">gold_statsPerLeagueSeason</span><span class="p">,</span>
+        <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">&#34;schema&#34;</span><span class="p">:</span> <span class="s2">&#34;analysis&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;table&#34;</span><span class="p">:</span> <span class="s2">&#34;statsPerLeagueSeason&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;records&#34;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">gold_statsPerLeagueSeason</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+
+
+<span class="nd">@multi_asset</span><span class="p">(</span>
+    <span class="n">ins</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&#34;gold_statsPerPlayerSeason&#34;</span><span class="p">:</span> <span class="n">AssetIn</span><span class="p">(</span>
+            <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;football&#39;</span><span class="p">,</span> <span class="s1">&#39;gold&#39;</span><span class="p">]</span>
+        <span class="p">)</span>
+    <span class="p">},</span>
+    <span class="n">outs</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&#34;statsperplayerseason&#34;</span><span class="p">:</span> <span class="n">AssetOut</span><span class="p">(</span>
+            <span class="n">io_manager_key</span><span class="o">=</span><span class="s2">&#34;psql_io_manager&#34;</span><span class="p">,</span>
+            <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;statsPerPlayerSeason&#34;</span><span class="p">,</span> <span class="s1">&#39;analysis&#39;</span><span class="p">],</span>
+            <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">&#34;columns&#34;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&#34;playerID&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;name&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;season&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;goals&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;shots&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;xGoals&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;xGoalsChain&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;xGoalsBuildup&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;assists&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;keyPasses&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;xAssists&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;gDiff&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;gDiffRatio&#34;</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+    <span class="p">},</span>
+    <span class="n">compute_kind</span><span class="o">=</span><span class="s2">&#34;PostgreSQL&#34;</span><span class="p">,</span>
+    <span class="n">group_name</span><span class="o">=</span><span class="s2">&#34;Warehouse_layer&#34;</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">statsPerPlayerSeason</span><span class="p">(</span><span class="n">gold_statsPerPlayerSeason</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Output</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]:</span>
+    <span class="k">return</span> <span class="n">Output</span><span class="p">(</span>
+        <span class="n">gold_statsPerPlayerSeason</span><span class="p">,</span>
+        <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">&#34;schema&#34;</span><span class="p">:</span> <span class="s2">&#34;analysis&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;table&#34;</span><span class="p">:</span> <span class="s2">&#34;statsPerPlayerSeason&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;records&#34;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">gold_statsPerPlayerSeason</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+
+
+<span class="nd">@multi_asset</span><span class="p">(</span>
+    <span class="n">ins</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&#34;gold_statsPlayerPer90&#34;</span><span class="p">:</span> <span class="n">AssetIn</span><span class="p">(</span>
+            <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;football&#39;</span><span class="p">,</span> <span class="s1">&#39;gold&#39;</span><span class="p">]</span>
+        <span class="p">)</span>
+    <span class="p">},</span>
+    <span class="n">outs</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&#34;statsplayerper90&#34;</span><span class="p">:</span> <span class="n">AssetOut</span><span class="p">(</span>
+            <span class="n">io_manager_key</span><span class="o">=</span><span class="s2">&#34;psql_io_manager&#34;</span><span class="p">,</span>
+            <span class="n">key_prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;statsPlayerPer90&#34;</span><span class="p">,</span> <span class="s1">&#39;analysis&#39;</span><span class="p">],</span>
+            <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">&#34;columns&#34;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s1">&#39;playerID&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;total_goals&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;total_assists&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;total_time&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;goalsPer90&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;assistsPer90&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;scorers&#39;</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+    <span class="p">},</span>
+    <span class="n">compute_kind</span><span class="o">=</span><span class="s2">&#34;PostgreSQL&#34;</span><span class="p">,</span>
+    <span class="n">group_name</span><span class="o">=</span><span class="s2">&#34;Warehouse_layer&#34;</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">statsPlayerPer90</span><span class="p">(</span><span class="n">gold_statsPlayerPer90</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Output</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]:</span>
+    <span class="k">return</span> <span class="n">Output</span><span class="p">(</span>
+        <span class="n">gold_statsPlayerPer90</span><span class="p">,</span>
+        <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">&#34;schema&#34;</span><span class="p">:</span> <span class="s2">&#34;analysis&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;table&#34;</span><span class="p">:</span> <span class="s2">&#34;statsPlayerPer90&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;records&#34;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">gold_statsPlayerPer90</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="run-system" class="headerLink">
+    <a href="#run-system" class="header-mark"></a>Run system</h3><p>Cuối cùng, ta sẽ kết hợp tất cả các asset lại giúp dagster nhận diện và quản lý với file <code>__init__.py</code> ở <code>etl_pipeline/etl_pipeline/__init__.py</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">dagster</span> <span class="kn">import</span> <span class="n">Definitions</span>
+<span class="kn">from</span> <span class="nn">.assets.silver_layer</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.assets.gold_layer</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.assets.bronze_layer</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.assets.warehouse_layer</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.resources.minio_io_manager</span> <span class="kn">import</span> <span class="n">MinIOIOManager</span>
+<span class="kn">from</span> <span class="nn">.resources.mysql_io_manager</span> <span class="kn">import</span> <span class="n">MySQLIOManager</span>
+<span class="kn">from</span> <span class="nn">.resources.psql_io_manager</span> <span class="kn">import</span> <span class="n">PostgreSQLIOManager</span>
+
+<span class="n">MYSQL_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&#34;host&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;MYSQL_HOST&#34;</span><span class="p">),</span>
+    <span class="s2">&#34;port&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;MYSQL_PORT&#34;</span><span class="p">),</span>
+    <span class="s2">&#34;database&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;MYSQL_DATABASE&#34;</span><span class="p">),</span>
+    <span class="s2">&#34;user&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;MYSQL_USER&#34;</span><span class="p">),</span>
+    <span class="s2">&#34;password&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;MYSQL_PASSWORD&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">MINIO_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&#34;endpoint_url&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;MINIO_ENDPOINT&#34;</span><span class="p">),</span>
+    <span class="s2">&#34;bucket&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;DATALAKE_BUCKET&#34;</span><span class="p">),</span>
+    <span class="s2">&#34;aws_access_key_id&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;AWS_ACCESS_KEY_ID&#34;</span><span class="p">),</span>
+    <span class="s2">&#34;aws_secret_access_key&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;AWS_SECRET_ACCESS_KEY&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">PSQL_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&#34;host&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;POSTGRES_HOST&#34;</span><span class="p">),</span>
+    <span class="s2">&#34;port&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;POSTGRES_PORT&#34;</span><span class="p">),</span>
+    <span class="s2">&#34;database&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;POSTGRES_DB&#34;</span><span class="p">),</span>
+    <span class="s2">&#34;user&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;POSTGRES_USER&#34;</span><span class="p">),</span>
+    <span class="s2">&#34;password&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;POSTGRES_PASSWORD&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">ls_asset</span><span class="o">=</span><span class="p">[</span><span class="n">asset_factory</span><span class="p">(</span><span class="n">table</span><span class="p">)</span> <span class="k">for</span> <span class="n">table</span> <span class="ow">in</span> <span class="n">tables</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">silver_statsTeamOnGames</span><span class="p">,</span> 
+                                                       <span class="n">silver_teams</span> <span class="p">,</span>
+                                                       <span class="n">silver_playerAppearances</span><span class="p">,</span>
+                                                       <span class="n">gold_statsPerLeagueSeason</span><span class="p">,</span>
+                                                       <span class="n">gold_statsPerPlayerSeason</span><span class="p">,</span> 
+                                                       <span class="n">gold_statsPlayerPer90</span><span class="p">,</span>
+                                                       <span class="n">statsPerLeagueSeason</span><span class="p">,</span>
+                                                       <span class="n">statsPerPlayerSeason</span><span class="p">,</span>
+                                                       <span class="n">statsPlayerPer90</span><span class="p">]</span>
+
+<span class="n">defs</span> <span class="o">=</span> <span class="n">Definitions</span><span class="p">(</span>
+    <span class="n">assets</span><span class="o">=</span><span class="n">ls_asset</span><span class="p">,</span>
+    <span class="n">resources</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&#34;mysql_io_manager&#34;</span><span class="p">:</span> <span class="n">MySQLIOManager</span><span class="p">(</span><span class="n">MYSQL_CONFIG</span><span class="p">),</span>
+        <span class="s2">&#34;minio_io_manager&#34;</span><span class="p">:</span> <span class="n">MinIOIOManager</span><span class="p">(</span><span class="n">MINIO_CONFIG</span><span class="p">),</span>
+        <span class="s2">&#34;psql_io_manager&#34;</span><span class="p">:</span> <span class="n">PostgreSQLIOManager</span><span class="p">(</span><span class="n">PSQL_CONFIG</span><span class="p">),</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>sau đó hãy dùng lệnh sau để cập nhật các assets</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash">docker restart etl_pipeline
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="check-ui" class="headerLink">
+    <a href="#check-ui" class="header-mark"></a>Check UI</h3><p>Hãy kiểm tra Dagit UI ở <code>localhost:3001</code> để chắc chắn rằng mọi thứ vẫn ổn</p>
+<p><figure><a class="lightgallery" href="https://github.com/PhongHuynh0394/Football_ETL_Analysis/blob/master/images/pipeline.png?raw=true" title="UI" data-thumbnail="https://github.com/PhongHuynh0394/Football_ETL_Analysis/blob/master/images/pipeline.png?raw=true">
+        <img
+            
+            loading="lazy"
+            src="https://github.com/PhongHuynh0394/Football_ETL_Analysis/blob/master/images/pipeline.png?raw=true"
+            srcset="https://github.com/PhongHuynh0394/Football_ETL_Analysis/blob/master/images/pipeline.png?raw=true, https://github.com/PhongHuynh0394/Football_ETL_Analysis/blob/master/images/pipeline.png?raw=true 1.5x, https://github.com/PhongHuynh0394/Football_ETL_Analysis/blob/master/images/pipeline.png?raw=true 2x"
+            sizes="auto"
+            alt="UI">
+    </a></figure></p>
+<p>Ngoài ra cũng có thể check MinIO: <code>localhost:9000</code></p>
+<h2 id="visualization" class="headerLink">
+    <a href="#visualization" class="header-mark"></a>Visualization</h2><p>Cuối cùng là vẽ dashboard, đầu tiên ta cần phải lấy được data từ psql, hãy vào tạo file: <code>./streamlit/src/psql_connect.py</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">psycopg2</span>
+<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1">#load environment</span>
+<span class="n">load_dotenv</span><span class="p">()</span>
+
+<span class="c1">#list table in database</span>
+<span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;statsperleagueseason&#39;</span><span class="p">,</span><span class="s1">&#39;statsperplayerseason&#39;</span><span class="p">,</span> <span class="s1">&#39;statsplayerper90&#39;</span><span class="p">]</span>
+
+<span class="n">PSQL_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&#34;host&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;POSTGRES_HOST&#34;</span><span class="p">),</span>
+    <span class="s2">&#34;port&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;POSTGRES_PORT&#34;</span><span class="p">),</span>
+    <span class="s2">&#34;database&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;POSTGRES_DB&#34;</span><span class="p">),</span>
+    <span class="s2">&#34;user&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;POSTGRES_USER&#34;</span><span class="p">),</span>
+    <span class="s2">&#34;password&#34;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;POSTGRES_PASSWORD&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">#create connection</span>
+<span class="k">def</span> <span class="nf">init_connection</span><span class="p">(</span><span class="n">config</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+        <span class="n">database</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;database&#39;</span><span class="p">],</span>
+        <span class="n">user</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">],</span>
+        <span class="n">password</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">],</span>
+        <span class="n">host</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;host&#39;</span><span class="p">],</span>
+        <span class="n">port</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;port&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">extract_data</span><span class="p">():</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">init_connection</span><span class="p">(</span><span class="n">PSQL_CONFIG</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;SELECT * FROM analysis.</span><span class="si">{</span><span class="n">tab</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span> <span class="k">for</span> <span class="n">tab</span> <span class="ow">in</span> <span class="n">table</span><span class="p">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Cuối cùng là tạo main.py ngay trong thư mục <code>scr</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">from</span> <span class="nn">psql_connect</span> <span class="kn">import</span> <span class="n">extract_data</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<span class="c1"># #extract data from PostgreSQL</span>
+<span class="n">ls_df</span> <span class="o">=</span> <span class="n">extract_data</span><span class="p">()</span>
+<span class="n">l_season</span> <span class="o">=</span> <span class="n">ls_df</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">p_season</span> <span class="o">=</span> <span class="n">ls_df</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">p_match</span> <span class="o">=</span> <span class="n">ls_df</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">st</span><span class="o">.</span><span class="n">set_page_config</span><span class="p">(</span><span class="n">page_title</span> <span class="o">=</span> <span class="s1">&#39;Dashboard Football&#39;</span><span class="p">,</span> 
+    <span class="n">layout</span><span class="o">=</span><span class="s1">&#39;wide&#39;</span><span class="p">,</span>
+    <span class="n">page_icon</span><span class="o">=</span><span class="s1">&#39;chart_with_upwards_trend&#39;</span><span class="p">)</span>
+
+
+<span class="c1">#Overview</span>
+<span class="k">def</span> <span class="nf">overview</span><span class="p">(</span><span class="n">table</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">detail</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">checkbox</span><span class="p">(</span><span class="s1">&#39;Do you want to see Data ?&#39;</span><span class="p">)):</span>
+        <span class="n">table</span>
+    <span class="n">col1</span><span class="p">,</span> <span class="n">col2</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">co_df</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">col1</span><span class="p">:</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">bar_chart</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">checkbox</span><span class="p">(</span><span class="s1">&#39;Do you want to see describe each column ?&#39;</span><span class="p">)):</span>
+            <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">co_df</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">table</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">dtypes</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;int64&#39;</span><span class="p">,</span> <span class="s1">&#39;float64&#39;</span><span class="p">]:</span>
+                        <span class="k">continue</span>
+                    <span class="n">st</span><span class="o">.</span><span class="n">bar_chart</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+    <span class="k">with</span> <span class="n">col2</span><span class="p">:</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">caption</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;:red[Columns]: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">co_df</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">caption</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;:red[Records]: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">table</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">caption</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;:red[Description]: </span><span class="si">{</span><span class="n">detail</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">caption</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;:red[Columns name]:</span><span class="si">{</span><span class="n">co_df</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1">#league statistic</span>
+<span class="k">def</span> <span class="nf">statleague</span><span class="p">():</span>
+    <span class="n">Cards</span> <span class="o">=</span> <span class="n">l_season</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;season&#39;</span><span class="p">,</span><span class="s1">&#39;yellowCards&#39;</span><span class="p">,</span> <span class="s1">&#39;redCards&#39;</span><span class="p">,</span> <span class="s1">&#39;fouls&#39;</span><span class="p">]]</span>
+    <span class="c1">#Card_fouls</span>
+    <span class="n">col1</span><span class="p">,</span> <span class="n">col2</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">col1</span><span class="p">:</span>
+        <span class="c1">#Goals per games</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">l_season</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&#34;name&#34;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&#34;goalPerGame&#34;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&#34;name&#34;</span><span class="p">,</span> <span class="n">barmode</span><span class="o">=</span><span class="s2">&#34;stack&#34;</span><span class="p">,</span>
+                     <span class="n">facet_col</span><span class="o">=</span><span class="s2">&#34;season&#34;</span><span class="p">,</span> 
+                     <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;League&#34;</span><span class="p">,</span> <span class="s2">&#34;goals/games&#34;</span><span class="p">:</span> <span class="s2">&#34;GPG&#34;</span><span class="p">})</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Goals per Game&#39;</span><span class="p">)</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">plotly_chart</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+        <span class="c1">#fouls</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">Cards</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;season&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;fouls&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Fouls of leagues&#39;</span><span class="p">,</span>
+                        <span class="n">xaxis_title</span><span class="o">=</span><span class="s1">&#39;Season&#39;</span><span class="p">,</span>
+                        <span class="n">yaxis_title</span><span class="o">=</span><span class="s1">&#39;Fouls&#39;</span><span class="p">,</span>
+                        <span class="n">legend_title</span><span class="o">=</span><span class="s1">&#39;League&#39;</span><span class="p">)</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">plotly_chart</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">col2</span><span class="p">:</span>
+        <span class="c1">#Red card</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">Cards</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;season&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;redCards&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Red Cards of leagues&#39;</span><span class="p">,</span>
+                        <span class="n">xaxis_title</span><span class="o">=</span><span class="s1">&#39;Season&#39;</span><span class="p">,</span>
+                        <span class="n">yaxis_title</span><span class="o">=</span><span class="s1">&#39;RedCards&#39;</span><span class="p">,</span>
+                        <span class="n">legend_title</span><span class="o">=</span><span class="s1">&#39;League&#39;</span><span class="p">)</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">plotly_chart</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+        <span class="c1">#yellow card</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">Cards</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;season&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;yellowCards&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Yellow Cards of leagues&#39;</span><span class="p">,</span>
+                        <span class="n">xaxis_title</span><span class="o">=</span><span class="s1">&#39;Season&#39;</span><span class="p">,</span>
+                        <span class="n">yaxis_title</span><span class="o">=</span><span class="s1">&#39;YellowCards&#39;</span><span class="p">,</span>
+                        <span class="n">legend_title</span><span class="o">=</span><span class="s1">&#39;League&#39;</span><span class="p">)</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">plotly_chart</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+
+
+<span class="c1">#Player statistic</span>
+<span class="k">def</span> <span class="nf">statplayer</span><span class="p">():</span>
+    <span class="n">col1</span><span class="p">,</span> <span class="n">col2</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">col1</span><span class="p">:</span>
+        <span class="c1">#Best offensive player</span>
+        <span class="n">top_player90</span><span class="o">=</span> <span class="n">p_match</span><span class="p">[(</span><span class="n">p_match</span><span class="p">[</span><span class="s1">&#39;goalsPer90&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.8</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">p_match</span><span class="p">[</span><span class="s1">&#39;assistsPer90&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.4</span><span class="p">)]</span>
+
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">p_match</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;goalsPer90&#39;</span><span class="p">,</span> <span class="s1">&#39;assistsPer90&#39;</span><span class="p">]],</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;goalsPer90&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;assistsPer90&#39;</span><span class="p">,</span> <span class="n">hover_name</span><span class="o">=</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+            <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">top_player90</span><span class="p">[</span><span class="s1">&#39;goalsPer90&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">top_player90</span><span class="p">[</span><span class="s1">&#39;assistsPer90&#39;</span><span class="p">],</span>
+                       <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers+text&#39;</span><span class="p">,</span> <span class="n">marker_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="n">top_player90</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span>
+                       <span class="n">textposition</span><span class="o">=</span><span class="s1">&#39;bottom center&#39;</span><span class="p">,</span> <span class="n">textfont</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">15</span><span class="p">))</span>
+        <span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Best offensive Players (2018-2020)&#39;</span><span class="p">,</span> <span class="n">xaxis_title</span><span class="o">=</span><span class="s1">&#39;Goals Per 90min&#39;</span><span class="p">,</span> <span class="n">yaxis_title</span><span class="o">=</span><span class="s1">&#39;Assists Per 90min&#39;</span><span class="p">)</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">plotly_chart</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+
+        <span class="c1">#goals-xgoal</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">p_season</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&#34;xGoals&#34;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&#34;goals&#34;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="n">p_season</span><span class="p">[</span><span class="s1">&#39;xGoals&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">p_season</span><span class="p">[</span><span class="s1">&#39;goals&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">),</span>
+                         <span class="n">color_discrete_sequence</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;red&#34;</span><span class="p">,</span> <span class="s2">&#34;green&#34;</span><span class="p">],</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&#34;Goals (G) and Expected Goals (xG)&#34;</span><span class="p">,</span>
+                          <span class="n">xaxis_title</span><span class="o">=</span><span class="s2">&#34;xG&#34;</span><span class="p">,</span>
+                          <span class="n">yaxis_title</span><span class="o">=</span><span class="s2">&#34;G&#34;</span><span class="p">,</span>
+        <span class="p">)</span> 
+        <span class="n">st</span><span class="o">.</span><span class="n">plotly_chart</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+        
+
+    <span class="k">with</span> <span class="n">col2</span><span class="p">:</span>
+        <span class="c1">#Top score player</span>
+        <span class="n">topPlayer</span> <span class="o">=</span> <span class="n">p_season</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;name&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;goals&#39;</span><span class="p">:</span> <span class="s1">&#39;sum&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;goals&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+        <span class="n">topPlayer</span> <span class="o">=</span> <span class="n">p_season</span><span class="p">[</span><span class="n">p_season</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">topPlayer</span><span class="o">.</span><span class="n">name</span><span class="p">[:</span><span class="mi">5</span><span class="p">])]</span>
+
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">topPlayer</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;season&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;goals&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+                        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Top score player (season 2014 - 2020)&#39;</span><span class="p">,</span>
+                        <span class="n">xaxis_title</span><span class="o">=</span><span class="s1">&#39;Season&#39;</span><span class="p">,</span>
+                        <span class="n">yaxis_title</span><span class="o">=</span><span class="s1">&#39;Goals&#39;</span><span class="p">,</span>
+                        <span class="n">legend_title</span><span class="o">=</span><span class="s1">&#39;PLayers&#39;</span>
+        <span class="p">)</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">plotly_chart</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+
+<span class="c1"># Page status</span>
+<span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&#34;# Main page 📌&#34;</span><span class="p">)</span>
+<span class="n">introduction</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;
+</span><span class="s1">Đây là trang thông tin tổng quan về phân tích dữ </span><span class="se">\
+</span><span class="se"></span><span class="s1">liệu của **dataset Football**.
+</span><span class="s1">
+</span><span class="s1">Dữ liệu được load từ database __PostgreSQL__ (localhost:5432) để làm phân tích.
+</span><span class="s1">
+</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">introduction</span><span class="p">)</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s1">&#39;# Football Analysis ⚽&#39;</span><span class="p">)</span>
+<span class="s1">&#39;&#39;&#39;
+</span><span class="s1">Tổng hợp phân tích data được transform từ 5 giải vô dịch quốc gia hàng đầu châu Âu từ mùa 2014 - 2020 </span><span class="se">\
+</span><span class="se"></span><span class="s1">từ bộ dataset **Football**
+</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">container</span><span class="p">():</span>
+
+    <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&#34;&lt;hr/&gt;&#34;</span><span class="p">,</span> <span class="n">unsafe_allow_html</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="c1">## Data overview</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&#34;## Data Overview 📊&#34;</span><span class="p">)</span>
+
+    <span class="n">first_col</span><span class="p">,</span> <span class="n">second_col</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="n">first_col</span><span class="p">:</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&#34;### **Tables**&#34;</span><span class="p">)</span>
+        <span class="n">num</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">ls_df</span><span class="p">)</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;&lt;h2 style=&#39;text-align: left; color: red;&#39;&gt;</span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2">&lt;/h2&gt;&#34;</span><span class="p">,</span> <span class="n">unsafe_allow_html</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="n">second_col</span><span class="p">:</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&#34;### **DataBase**&#34;</span><span class="p">)</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;##### **PostgreSQL**&#34;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">st</span><span class="o">.</span><span class="n">checkbox</span><span class="p">(</span><span class="s1">&#39;Click to overview detail tables&#39;</span><span class="p">):</span>
+        <span class="n">option</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">selectbox</span><span class="p">(</span>
+            <span class="s1">&#39;Choose table you want to see ?&#39;</span><span class="p">,</span>
+             <span class="p">[</span><span class="s1">&#39;statsPerLeagueSeason&#39;</span><span class="p">,</span> <span class="s1">&#39;statsPerPlayerSeason&#39;</span><span class="p">,</span> <span class="s1">&#39;statsPlayerPer90&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s1">&#39;statsPerLeagueSeason&#39;</span><span class="p">:</span>
+            <span class="n">detail</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;
+</span><span class="s1">            Đây là bảng mô tả thống kê của các giải đấu từ mùa 2014 - 2020
+</span><span class="s1">            &#39;&#39;&#39;</span>
+            <span class="n">overview</span><span class="p">(</span><span class="n">l_season</span><span class="p">,</span> <span class="n">detail</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">option</span> <span class="o">==</span> <span class="s1">&#39;statsPerPlayerSeason&#39;</span><span class="p">:</span>
+            <span class="n">detail</span><span class="o">=</span><span class="s1">&#39;&#39;&#39;
+</span><span class="s1">            Bảng dữ liệu thống kê các chỉ số của một cầu thủ đạt được trong từng mùa giải ở cả 5 giải đấu
+</span><span class="s1">            &#39;&#39;&#39;</span>
+            <span class="n">overview</span><span class="p">(</span><span class="n">p_season</span><span class="p">,</span> <span class="n">detail</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">detail</span><span class="o">=</span><span class="s1">&#39;&#39;&#39;
+</span><span class="s1">            Bảng dữ liệu thống kê chỉ số của một cầu thủ trong 90 phút ở tất cả các mùa giải ở tất cả giải đấu
+</span><span class="s1">
+</span><span class="s1">            &#39;&#39;&#39;</span>
+            <span class="n">overview</span><span class="p">(</span><span class="n">p_match</span><span class="p">,</span><span class="n">detail</span><span class="p">)</span>
+
+
+
+<span class="c1">### Statistic </span>
+<span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">container</span><span class="p">():</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&#34;&lt;hr/&gt;&#34;</span><span class="p">,</span> <span class="n">unsafe_allow_html</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&#34;## Football Statistic 📊&#34;</span><span class="p">)</span>
+    <span class="n">option</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">selectbox</span><span class="p">(</span>
+        <span class="s1">&#39;**Choose statistic**&#39;</span><span class="p">,</span>
+        <span class="p">[</span><span class="s1">&#39;Leagues&#39;</span><span class="p">,</span> <span class="s1">&#39;Players&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s1">&#39;Leagues&#39;</span><span class="p">:</span>
+        <span class="n">statleague</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">statplayer</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Đã xong rồi, hãy check <code>localhost:8501</code> để xem thành quả nhé :))))</p>
+<h2 id="conclusion" class="headerLink">
+    <a href="#conclusion" class="header-mark"></a>Conclusion</h2><p>Cuối cùng cũng đã xong một project xây dựng data pipeline cơ bản, trong lúc  thực hiện chắc chắn sẽ có cả tấn lỗi xảy ra, nhưng OG tin là mọi gian khó đều sẽ vượt quan được, thứ đọng lại chính là kiến thức và kỹ năng của chúng ta. Chúc bạn thành công và đón xem tiếp các dự án tiếp theo của OG nhé !</p>
+<p><strong>-Mew-</strong></p>
+<hr>
+<h1 id="related-content" class="headerLink">
+    <a href="#related-content" class="header-mark"></a>Related Content</h1>
+<div class="showcase-box column-2">
+    <div class="showcase-image">
+        <a href=/football_etl/><img
+        
+        loading="lazy"
+        src="/img/projects-football.jpg"
+        srcset="/img/projects-football.jpg, /img/projects-football.jpg 1.5x, /img/projects-football.jpg 2x"
+        sizes="auto"
+        alt="Football ETL Analysis "
+        title="Football ETL Analysis " height="200"   width="400" ></a>
+    </div>
+    <h2 class="showcase-title">
+        <a href=/football_etl/>Football ETL Analysis </a>
+    </h2>
+    <p class="showcase-summary">
+        A Data Engineer project building pipeline to analyze football data
+    </p>
+    <a class="showcase-link" href=/football_etl/>
+        Read more...
+    </a>
+</div>
+
+<div class="showcase-box column-2">
+    <div class="showcase-image">
+        <a href=/stock_analysis/><img
+        
+        loading="lazy"
+        src="/img/projects-stock.jpg"
+        srcset="/img/projects-stock.jpg, /img/projects-stock.jpg 1.5x, /img/projects-stock.jpg 2x"
+        sizes="auto"
+        alt="Stock Analysis"
+        title="Stock Analysis" height="200"   width="400" ></a>
+    </div>
+    <h2 class="showcase-title">
+        <a href=/stock_analysis/>Stock Analysis</a>
+    </h2>
+    <p class="showcase-summary">
+        Basic Analyzing VN30 stock using PCA and K-Means
+    </p>
+    <a class="showcase-link" href=/stock_analysis/>
+        Read more...
+    </a>
+</div></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 01 Aug 2023</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/football_etl/" class="prev" rel="prev" title="Football ETL Analysis"><i class="fas fa-angle-left fa-fw"></i>Football ETL Analysis</a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">OG</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="Back to Top">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"table":{"sort":true}};</script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

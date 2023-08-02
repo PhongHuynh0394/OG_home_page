@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>All Posts - OG Page</title>
+        <link>http://phonghuynh.github.io/posts/</link>
+        <description>All Posts | OG Page</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
+            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Tue, 01 Aug 2023 15:01:16 &#43;0700</lastBuildDate><atom:link href="http://phonghuynh.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Projects</title>
+    <link>http://phonghuynh.github.io/posts/projects/</link>
+    <pubDate>Mon, 31 Jul 2023 16:23:24 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/posts/projects/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Blogs</title>
+    <link>http://phonghuynh.github.io/posts/blogs/</link>
+    <pubDate>Mon, 31 Jul 2023 16:21:23 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/posts/blogs/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

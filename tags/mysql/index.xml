@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>MySQL - Tag - OG Page</title>
+        <link>http://phonghuynh.github.io/tags/mysql/</link>
+        <description>MySQL - Tag - OG Page</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
+            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Mon, 31 Jul 2023 14:46:50 &#43;0700</lastBuildDate><atom:link href="http://phonghuynh.github.io/tags/mysql/" rel="self" type="application/rss+xml" /><item>
+    <title>Football ETL Analysis</title>
+    <link>http://phonghuynh.github.io/football_etl/</link>
+    <pubDate>Mon, 31 Jul 2023 14:46:50 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/football_etl/</guid>
+    <description><![CDATA[A Data Engineer project building pipeline to analyze football data]]></description>
+</item></channel>
+</rss>
