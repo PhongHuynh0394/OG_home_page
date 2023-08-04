@@ -5,7 +5,7 @@
 
 Hiện tại mình là sinh viên ngành **Khoa học Dữ liệu (Data Science)** tại [Đại học Khoa học Tự nhiên, ĐHQG-HCM](https://www.hcmus.edu.vn/) (HCMUS). Tuy nhiên mình cũng yêu thích công nghệ, code và mình đang trên con đường học tập mỗi ngày để trở thành một **Data Engineer**.
 
-![OG hồi cúi lớp 12 :))](https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/267466105_2993716157556816_1490194410641163359_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=2PRyCvIeNXwAX9p0v-2&_nc_ht=scontent.fsgn5-9.fna&oh=00_AfCLOuL4keQLAu4-8Lp2Dco6e6XH57G6f8tq3Gc7onRJbw&oe=64CBF9E5 "OG hồi cuối lớp 12")
+![OG hồi cúi lớp 12 :))](about-ava.jpg "OG hồi cuối lớp 12")
 
 
 # Mình của hiện tại
