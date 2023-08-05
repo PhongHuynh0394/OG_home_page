@@ -37,11 +37,11 @@ Và mình hy vọng trang cũng này sẽ là nơi mang lại sự thoải mái 
 
 ### Thế ở đây có gì hay?
 Tóm tắt các trang:
-- [**OG Main Page**](../../): Một trang chính với visual mặt mình hii 
-- [**Blogs**](/posts/): bạn có thể tìm thấy các bài blogs mình viết ở đây
+- [**Blog**](/posts/): bạn có thể tìm thấy các bài blogs mình viết ở đây
+- [**Projects**](/projects): Những dự án mình đã làm
 - [**About**](/about/): Nếu bạn muốn hiểu thêm về mình
 
-Đó là tổng quan vè các "thứ có thể sẽ xuất hiện" ở trang web này.
+Đó là tổng quan "các thứ có thể sẽ xuất hiện" ở trang web này.
 
 À bạn cũng có thể thử ghé qua trang github của mình ở đây nghen: [**Github**](https://github.com/PhongHuynh0394)
 
