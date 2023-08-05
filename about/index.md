@@ -19,7 +19,7 @@ Và điều đó đã truyền cảm hứng mình rất nhiều, thúc đẩy b�
 
 Tiếp đến chính là xây dựng trang web này và viết các bài blogs giúp cho các bạn có thể học thêm kiến thức ngành, biết thêm điều thú vị và thư giãn.
 
-> **Hiện tại thì OG vẫn còn ngồi trên ghế giảng đường, và vừa đặt những viên gạch đầu tiên trên con đường trự trưởng thành. Hãy luôn theo dõi OG nhé!**
+> **Hiện tại thì OG vẫn còn ngồi trên ghế giảng đường, và vừa đặt những viên gạch đầu tiên trên con đường tự trưởng thành. Hãy luôn theo dõi OG nhé!**
 
 **-Mew-**
 
