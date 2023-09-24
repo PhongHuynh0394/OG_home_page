@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "/home/phong_huynh/Desktop/Tech/Home_page/OG_page",
+	"sourceRoot": "/home/phonghuynh/Desktop/Tech/Home_page/OG_background",
 	"sources": [
 		"themes/DoIt/assets/css/style.scss",
 		"themes/DoIt/assets/css/_variables.scss",

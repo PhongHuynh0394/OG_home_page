@@ -37,17 +37,24 @@ Và mình hy vọng trang cũng này sẽ là nơi mang lại sự thoải mái 
 
 ### Thế ở đây có gì hay?
 Tóm tắt các trang:
-- [**Blog**](/posts/): bạn có thể tìm thấy các bài blogs mình viết ở đây
+- [**Blogs**](/posts/blogs): bạn có thể tìm thấy các bài blogs mình viết ở đây
 - [**Projects**](/projects): Những dự án mình đã làm
 - [**About**](/about/): Nếu bạn muốn hiểu thêm về mình
 
 Đó là tổng quan "các thứ có thể sẽ xuất hiện" ở trang web này.
 
-À bạn cũng có thể thử ghé qua trang github của mình ở đây nghen: [**Github**](https://github.com/PhongHuynh0394)
-
 ## Cuối cùng {#cuoi-cung}
-OG hy vọng đây sẽ là nơi giúp bạn thư giãn hay học hỏi được nhiều điều thú vị nhé.
+OG hy vọng đây sẽ là nơi giúp bạn thư giãn hay học hỏi được nhiều điều thú vị nhé :smile:
+
 
 -Mew-
 
+---
+Contact me:
+- Mail: phonghuynh9403@gmail.com 
+- Linkedin: [Huỳnh Lưu Vĩnh Phong](https://www.linkedin.com/in/hu%E1%BB%B3nh-l%C6%B0u-v%C4%A9nh-phong-3524b127a/)
+- Facebook: [Phong Huynh](https://www.facebook.com/profile.php?id=100007553837967)
+- Instagram: [phong_huynh](https://www.instagram.com/phong_huynhh/)
+
+Hoặc bạn cũng có thể ghé thăm Github của mình: [PhongHuynh0394](https://github.com/PhongHuynh0394)
 

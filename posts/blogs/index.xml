@@ -5,18 +5,18 @@
         <description>All Blogs | OG Page</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
             <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Mon, 31 Jul 2023 16:21:23 &#43;0700</lastBuildDate><atom:link href="http://phonghuynh.github.io/posts/blogs/" rel="self" type="application/rss+xml" /><item>
-    <title>Blog_01: Test blogs</title>
-    <link>http://phonghuynh.github.io/blog_02/</link>
-    <pubDate>Sun, 30 Jul 2023 22:13:58 &#43;0700</pubDate><author>
+    <title>Thằng nhóc thích code và data</title>
+    <link>http://phonghuynh.github.io/start_journey/</link>
+    <pubDate>Wed, 30 Aug 2023 22:13:58 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>http://phonghuynh.github.io/blog_02/</guid>
+                </author><guid>http://phonghuynh.github.io/start_journey/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Intro: Tui là ai ? Đây là đâu ?</title>
     <link>http://phonghuynh.github.io/intro_blog/</link>
-    <pubDate>Sun, 30 Jul 2023 22:11:29 &#43;0700</pubDate><author>
+    <pubDate>Wed, 30 Aug 2023 22:11:29 &#43;0700</pubDate><author>
                     <name>OG</name>
                 </author><guid>http://phonghuynh.github.io/intro_blog/</guid>
-    <description><![CDATA[Giới thiệu về trang web này]]></description>
+    <description><![CDATA[Giới thiệu về trang web đáng yêu này]]></description>
 </item></channel>
 </rss>

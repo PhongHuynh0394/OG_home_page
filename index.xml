@@ -7,6 +7,29 @@
             <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Sun, 30 Jul 2023 20:06:43 &#43;0700</lastBuildDate>
             <atom:link href="http://phonghuynh.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Stock analysis</title>
+    <link>http://phonghuynh.github.io/stock_analysis/</link>
+    <pubDate>Thu, 31 Aug 2023 14:39:53 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/stock_analysis/</guid>
+    <description><![CDATA[Source github: Stock Analysis
+Hello! OG đây. Ở project lần này mình sẽ phân tích gia trị cổ phiếu phái sinh VN30 Index bằng cách sử dụng PCA và K-means. Xin vô cùng cảm ơn sự đóng góp của 5 thành viên team OG và thầy Minh Mẫn và thầy Hoàng Đức đã tận tình hướng dẫn để team có thể hoàn thành đồ án một cách tốt nhất.
+Rồi bây giờ gét gô thooiii 😄 Stock AnalysisStock Analysis]]></description>
+</item><item>
+    <title>Thằng nhóc thích code và data</title>
+    <link>http://phonghuynh.github.io/start_journey/</link>
+    <pubDate>Wed, 30 Aug 2023 22:13:58 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/start_journey/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Intro: Tui là ai ? Đây là đâu ?</title>
+    <link>http://phonghuynh.github.io/intro_blog/</link>
+    <pubDate>Wed, 30 Aug 2023 22:11:29 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/intro_blog/</guid>
+    <description><![CDATA[Giới thiệu về trang web đáng yêu này]]></description>
+</item><item>
     <title>Football ETL Analysis P2</title>
     <link>http://phonghuynh.github.io/football_etl_2/</link>
     <pubDate>Tue, 01 Aug 2023 15:01:16 &#43;0700</pubDate><author>
@@ -22,28 +45,5 @@
                     <name>OG</name>
                 </author><guid>http://phonghuynh.github.io/football_etl/</guid>
     <description><![CDATA[A Data Engineer project building pipeline to analyze football data]]></description>
-</item><item>
-    <title>Stock_analysis</title>
-    <link>http://phonghuynh.github.io/stock_analysis/</link>
-    <pubDate>Mon, 31 Jul 2023 14:39:53 &#43;0700</pubDate><author>
-                    <name>OG</name>
-                </author><guid>http://phonghuynh.github.io/stock_analysis/</guid>
-    <description><![CDATA[Source github: Stock Analysis
-Hello! OG đây. Ở project lần này mình sẽ phân tích gia trị cổ phiếu phái sinh VN30 Index bằng cách sử dụng PCA và K-means.
-Warning  Bản demo nên mình chưa ghi gì :v Bạn đọc notebook ở source github trước nhé!    Related   Football ETL Analysis  A Data Engineer project building pipeline to analyze football data Read more...   ]]></description>
-</item><item>
-    <title>Blog_01: Test blogs</title>
-    <link>http://phonghuynh.github.io/blog_02/</link>
-    <pubDate>Sun, 30 Jul 2023 22:13:58 &#43;0700</pubDate><author>
-                    <name>OG</name>
-                </author><guid>http://phonghuynh.github.io/blog_02/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Intro: Tui là ai ? Đây là đâu ?</title>
-    <link>http://phonghuynh.github.io/intro_blog/</link>
-    <pubDate>Sun, 30 Jul 2023 22:11:29 &#43;0700</pubDate><author>
-                    <name>OG</name>
-                </author><guid>http://phonghuynh.github.io/intro_blog/</guid>
-    <description><![CDATA[Giới thiệu về trang web này]]></description>
 </item></channel>
 </rss>
