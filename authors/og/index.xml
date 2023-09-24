@@ -4,15 +4,28 @@
         <link>http://phonghuynh.github.io/authors/og/</link>
         <description>OG - Author - OG Page</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
-            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Thu, 31 Aug 2023 14:39:53 &#43;0700</lastBuildDate><atom:link href="http://phonghuynh.github.io/authors/og/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Sun, 24 Sep 2023 23:27:49 &#43;0700</lastBuildDate><atom:link href="http://phonghuynh.github.io/authors/og/" rel="self" type="application/rss+xml" /><item>
+    <title>Blogs</title>
+    <link>http://phonghuynh.github.io/blogs/</link>
+    <pubDate>Sun, 24 Sep 2023 23:27:49 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/blogs/</guid>
+    <description><![CDATA[   Thằng nhóc thích code và data  Ngành Data có gì hot mà mình lại dính Read more...   ]]></description>
+</item><item>
+    <title>Stock Analysis P2</title>
+    <link>http://phonghuynh.github.io/stock_analysis_2/</link>
+    <pubDate>Tue, 05 Sep 2023 23:15:54 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/stock_analysis_2/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>Stock analysis</title>
     <link>http://phonghuynh.github.io/stock_analysis/</link>
     <pubDate>Thu, 31 Aug 2023 14:39:53 &#43;0700</pubDate><author>
                     <name>OG</name>
                 </author><guid>http://phonghuynh.github.io/stock_analysis/</guid>
-    <description><![CDATA[Source github: Stock Analysis
-Hello! OG đây. Ở project lần này mình sẽ phân tích gia trị cổ phiếu phái sinh VN30 Index bằng cách sử dụng PCA và K-means. Xin vô cùng cảm ơn sự đóng góp của 5 thành viên team OG và thầy Minh Mẫn và thầy Hoàng Đức đã tận tình hướng dẫn để team có thể hoàn thành đồ án một cách tốt nhất.
-Rồi bây giờ gét gô thooiii 😄 Stock AnalysisStock Analysis]]></description>
+    <description><![CDATA[Warning  Đây là kiến thức tích góp từ nhiều nguồn và nghiên cứu của nhóm OG, tất nhiên không thể tránh khỏi sai sót. Hy vọng bài viết lần này thú vị và giúp bạn đọc thư giãn, tham khảo.   Source github: Stock Analysis
+Hello! OG đây. Ở project lần này mình sẽ phân tích gia trị cổ phiếu phái sinh VN30 Index bằng cách sử dụng PCA và K-means.]]></description>
 </item><item>
     <title>Thằng nhóc thích code và data</title>
     <link>http://phonghuynh.github.io/start_journey/</link>
@@ -64,22 +77,5 @@ Rồi bây giờ gét gô thooiii 😄 Stock AnalysisStock Analysis]]></descript
                     <name>OG</name>
                 </author><guid>http://phonghuynh.github.io/projects/</guid>
     <description><![CDATA[Data Engineering   Football ETL Analysis  A Data Engineer project building pipeline to analyze football data Read more...   Machine learning Basic   Stock Analysis  Basic Analyzing VN30 stock using PCA and K-Means Read more...   ]]></description>
-</item><item>
-    <title>Home Page</title>
-    <link>http://phonghuynh.github.io/</link>
-    <pubDate>Sun, 30 Jul 2023 20:06:43 &#43;0700</pubDate><author>
-                    <name>OG</name>
-                </author><guid>http://phonghuynh.github.io/</guid>
-    <description><![CDATA[IntroductionNếu đây là lần đâu bạn ghé thăm trang, hãy đọc Intro Blog bên dưới và khám phá nhiều hơn tại Blog nhé 😗
- ]]></description>
-</item><item>
-    <title>About me</title>
-    <link>http://phonghuynh.github.io/about/</link>
-    <pubDate>Sun, 30 Jul 2023 19:53:42 &#43;0700</pubDate><author>
-                    <name>OG</name>
-                </author><guid>http://phonghuynh.github.io/about/</guid>
-    <description><![CDATA[Hello! Mình tên là Vĩnh Phong hay chính là OG (tác giả của các blogs ở trang này)
- Hiện tại mình là sinh viên ngành Khoa học Dữ liệu (Data Science) tại Đại học Khoa học Tự nhiên, ĐHQG-HCM (HCMUS). Tuy nhiên mình cũng yêu thích công nghệ, code và mình đang trên con đường học tập mỗi ngày để trở thành một Data Engineer.
-OG hồi cuối lớp 12OG hồi cúi lớp 12 :))]]></description>
 </item></channel>
 </rss>

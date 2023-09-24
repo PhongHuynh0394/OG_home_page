@@ -5,14 +5,20 @@
         <description>All Projects | OG Page</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
             <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Mon, 31 Jul 2023 16:23:24 &#43;0700</lastBuildDate><atom:link href="http://phonghuynh.github.io/posts/projects/" rel="self" type="application/rss+xml" /><item>
+    <title>Stock Analysis P2</title>
+    <link>http://phonghuynh.github.io/stock_analysis_2/</link>
+    <pubDate>Tue, 05 Sep 2023 23:15:54 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>http://phonghuynh.github.io/stock_analysis_2/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>Stock analysis</title>
     <link>http://phonghuynh.github.io/stock_analysis/</link>
     <pubDate>Thu, 31 Aug 2023 14:39:53 &#43;0700</pubDate><author>
                     <name>OG</name>
                 </author><guid>http://phonghuynh.github.io/stock_analysis/</guid>
-    <description><![CDATA[Source github: Stock Analysis
-Hello! OG đây. Ở project lần này mình sẽ phân tích gia trị cổ phiếu phái sinh VN30 Index bằng cách sử dụng PCA và K-means. Xin vô cùng cảm ơn sự đóng góp của 5 thành viên team OG và thầy Minh Mẫn và thầy Hoàng Đức đã tận tình hướng dẫn để team có thể hoàn thành đồ án một cách tốt nhất.
-Rồi bây giờ gét gô thooiii 😄 Stock AnalysisStock Analysis]]></description>
+    <description><![CDATA[Warning  Đây là kiến thức tích góp từ nhiều nguồn và nghiên cứu của nhóm OG, tất nhiên không thể tránh khỏi sai sót. Hy vọng bài viết lần này thú vị và giúp bạn đọc thư giãn, tham khảo.   Source github: Stock Analysis
+Hello! OG đây. Ở project lần này mình sẽ phân tích gia trị cổ phiếu phái sinh VN30 Index bằng cách sử dụng PCA và K-means.]]></description>
 </item><item>
     <title>Football ETL Analysis P2</title>
     <link>http://phonghuynh.github.io/football_etl_2/</link>

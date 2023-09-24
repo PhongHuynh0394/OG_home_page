@@ -44,10 +44,14 @@ hai ngành này chỉ là anh em xã hội với nhau mà thôi :joy:
 ### Data Scientist vs Data Analyst
 Sẵn tiện kể một chút về vai trò của một người Data Analyst. Về cơ bản, vai trò của họ cũng giống với các data scientist, họ
 cũng phân tích dữ liệu, cố gắng tìm kiếm và rút ra giá trị từ chúng. Nhưng sẽ có một số điểm khác biệt:
-- **Data Analyst**: hay thường được biết đến là chuyên viên phân tích dữ liệu, họ làm công việc của data science nhưng họ không bắt buộc phải biết nhiều về lập trình. Họ được
-đòi hỏi phải có nhiều kiến thức hơn về hoạt động kinh doanh và vững về kiến thức thống kê. 
-- **Data Scientist**: Nhà khoa học dữ liệu, họ đảm nhận công việc với quy mô lớn hơn rất nhiều (Bigdata) và họ được đào tạo để phát triển "data product" 
-nhằm đưa ra quyết định có ích cho công ty từ lượng dữ liệu khổng lồ từ tập dữ liệu lớn. Ngoài ra nhà khoa học dữ liệu cũng cần phải biết một số ngôn ngữ lập trình nhất đinh và có kiến thức về computer science.
+| Data Analyst                        | Data Science            |
+|:-------------------------------------:|:-------------------------:|
+| Chuyên viên phân tích dữ liệu       | Nhà khoa học dữ liệu    |
+| Vẫn làm công việc của DS nhưng với quy mô nhỏ | Tỏa sáng với lượng data khổng lồ (BigData) |
+| Không cần nhiều kiến thức lập trình | Cần kiến thức lập trình |
+| Cần có kiến thức về hoạt động kinh doanh nhiều hơn và vững về kiến thức thống kê | Cần có kiến thức không chỉ toán thống kê, ứng dụng mà còn phải có kiến thức về computer science, AI/ML,... |
+| Dựa vào dữ liệu đưa ra các giá trị có ích và cái nhìn trực quan về dữ liệu | Được yêu cầu phát triển "data product" để đưa ra quyết định có ích từ tập dữ liệu lớn |
+
 
 ![Source: https://www.datascience-pm.com/wp-content/uploads/2021/05/data-scientist-vs-analyst-venn-diagram.png](/img/DSvDA.png "Data Science and Data Analytic")
 

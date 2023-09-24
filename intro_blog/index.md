@@ -26,7 +26,7 @@ Nếu bạn hong biết, thì con mèo xanh lè này tên là Oggy và nickname 
 Biết mình là ai rồi, thế thì...
 
 ## Đây là nơi nào đây ? {#day-la-dau}
-Đây trang mà mình đăng lên các bài [**blogs**](/posts/) về **công nghệ**, về **ngành Data** nói chung và về hành trình học tập của OG để trở thành một **Data Engineer** trong tương lai.
+Đây trang mà mình đăng lên các bài [**Blogs**](/blogs/) về **công nghệ**, về **ngành Data** nói chung và về hành trình học tập của OG để trở thành một **Data Engineer** trong tương lai.
 
 **Tất nhiên không chỉ như vậy**
 
@@ -37,7 +37,7 @@ Và mình hy vọng trang cũng này sẽ là nơi mang lại sự thoải mái 
 
 ### Thế ở đây có gì hay?
 Tóm tắt các trang:
-- [**Blogs**](/posts/blogs): bạn có thể tìm thấy các bài blogs mình viết ở đây
+- [**Blogs**](/blogs/): bạn có thể tìm thấy các bài blogs mình viết ở đây
 - [**Projects**](/projects): Những dự án mình đã làm
 - [**About**](/about/): Nếu bạn muốn hiểu thêm về mình
 
