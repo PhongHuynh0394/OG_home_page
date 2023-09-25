@@ -1,7 +1,8 @@
 # Football ETL Analysis
 
 <!--more-->
-Source code: [Football_ETL_Analysis](https://github.com/PhongHuynh0394/Football_ETL_Analysis)
+**Source**
+{{< friend name="PhongHuynh0394" url="https://github.com/PhongHuynh0394/Football_ETL_Analysis" avatar="/img/github-logo.png" bio="Football_ETL_Analysis">}}
 
 ## Introduce
 Trong project này, OG sẽ build end-to-end ETL data pipeline hoàn chỉnh để phân tích football data từ Kaggle với data pipeline như sau:

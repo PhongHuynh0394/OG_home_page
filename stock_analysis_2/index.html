@@ -37,7 +37,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/phonghuynh.github.io\/stock_analysis_2\/"
-        },"genre": "posts","keywords": "Machine learning, math","wordcount":  0 ,
+        },"genre": "posts","keywords": "Machine learning, math","wordcount":  4603 ,
         "url": "http:\/\/phonghuynh.github.io\/stock_analysis_2\/","datePublished": "2023-09-05T23:15:54+07:00","dateModified": "2023-09-05T23:15:54+07:00","publisher": {
             "@type": "Organization",
             "name": ""},"authors": [{
@@ -105,11 +105,46 @@
     <div id="search-dropdown-mobile"></div>
 </div>
 <main class="main">
-            <div class="container"><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "false")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Stock Analysis P2</h1><div class="post-meta">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">Contents</h2>
+        <div class="toc-content always-active" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#k-means-clustering">K-Means Clustering</a>
+      <ul>
+        <li><a href="#k-means-step-by-step">K-Means step by step</a></li>
+        <li><a href="#the-k-means-algorithm-is-written-in-object-oriented-form">The K-means algorithm is written in object-oriented form</a></li>
+        <li><a href="#finding-the-optimal-k-in-a-k-means-clustering">Finding the optimal &lsquo;K&rsquo; in a K-Means clustering</a></li>
+        <li><a href="#evaluation-metrics-of-k-means-clustering">Evaluation Metrics of K-Means Clustering</a></li>
+        <li><a href="#visualize">Visualize</a></li>
+      </ul>
+    </li>
+    <li><a href="#data-analysis">Data Analysis</a>
+      <ul>
+        <li><a href="#analytical-overview">Analytical Overview</a></li>
+        <li><a href="#cluster-b">Cluster B</a>
+          <ul>
+            <li><a href="#biến-động-thị-trường">Biến động thị trường</a></li>
+            <li><a href="#các-sự-kiện-ảnh-hưởng">Các sự kiện ảnh hưởng</a></li>
+            <li><a href="#kết-luận-xu-hướng">Kết luận xu hướng</a></li>
+          </ul>
+        </li>
+        <li><a href="#cluster-a">Cluster A</a>
+          <ul>
+            <li><a href="#biến-động-thị-trường-1">Biến động thị trường</a></li>
+            <li><a href="#sự-kiện-ảnh-hưởng">Sự kiện ảnh hưởng</a></li>
+            <li><a href="#kết-luận-xu-hướng-1">Kết luận xu hướng</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#kết-thúc">Kết thúc</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Stock Analysis P2</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'><span class="author fas fa-user-circle fa-fw"></span><span class='screen-reader-text'>  </span><a href='http://phonghuynh.github.io/authors/og'>OG</a></span>
                 </span>&nbsp;<span class="post-category">included in </span>&nbsp;<span class="post-series">series <a href="/series/stock-analysis/"><i class="far fa-list-alt fa-fw"></i>Stock Analysis</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="05 Sep 2023">05 Sep 2023</time>&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;0 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="05 Sep 2023">05 Sep 2023</time>&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;22 minutes&nbsp;</div>
         </div><div class="details series-nav open">
                                 <div class="details-summary series-title">
                                     <span>Series - Stock Analysis</span>
@@ -121,7 +156,987 @@
                                                     <li><a href="/stock_analysis/">Stock analysis</a></li><li><span class="active">Stock Analysis P2</span></li></ul>
                                     </nav>
                                 </div>
-                            </div><div class="content" id="content"></div>
+                            </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#k-means-clustering">K-Means Clustering</a>
+      <ul>
+        <li><a href="#k-means-step-by-step">K-Means step by step</a></li>
+        <li><a href="#the-k-means-algorithm-is-written-in-object-oriented-form">The K-means algorithm is written in object-oriented form</a></li>
+        <li><a href="#finding-the-optimal-k-in-a-k-means-clustering">Finding the optimal &lsquo;K&rsquo; in a K-Means clustering</a></li>
+        <li><a href="#evaluation-metrics-of-k-means-clustering">Evaluation Metrics of K-Means Clustering</a></li>
+        <li><a href="#visualize">Visualize</a></li>
+      </ul>
+    </li>
+    <li><a href="#data-analysis">Data Analysis</a>
+      <ul>
+        <li><a href="#analytical-overview">Analytical Overview</a></li>
+        <li><a href="#cluster-b">Cluster B</a>
+          <ul>
+            <li><a href="#biến-động-thị-trường">Biến động thị trường</a></li>
+            <li><a href="#các-sự-kiện-ảnh-hưởng">Các sự kiện ảnh hưởng</a></li>
+            <li><a href="#kết-luận-xu-hướng">Kết luận xu hướng</a></li>
+          </ul>
+        </li>
+        <li><a href="#cluster-a">Cluster A</a>
+          <ul>
+            <li><a href="#biến-động-thị-trường-1">Biến động thị trường</a></li>
+            <li><a href="#sự-kiện-ảnh-hưởng">Sự kiện ảnh hưởng</a></li>
+            <li><a href="#kết-luận-xu-hướng-1">Kết luận xu hướng</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#kết-thúc">Kết thúc</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw"></i>Warning<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Đây là kiến thức tích góp từ nhiều nguồn và tìm hiểu của nhóm OG, tất nhiên không thể tránh khỏi sai sót.
+Hy vọng bài viết lần này thú vị và giúp bạn đọc thư giãn, tham khảo.</div>
+        </div>
+    </div>
+<a target="_blank" href="https://github.com/PhongHuynh0394/Stock-Analysis" title="PhongHuynh0394" class="friend-link" rel="noopener noreferrer">
+    <div class="friend-link-div">
+        <div class="friend-link-avatar"><img
+        
+        loading="lazy"
+        src="/img/github-logo.png"
+        srcset="/img/github-logo.png, /img/github-logo.png 1.5x, /img/github-logo.png 2x"
+        sizes="auto"
+        alt="/img/github-logo.png"
+        title="/img/github-logo.png" height="560"   width="560" ></div>
+        <div class="friend-link-info">
+            <div class="friend-name-div">
+                <i class="fas fa-user-circle fa-fw"></i>
+                <i class="friend-name">PhongHuynh0394</i>
+            </div>
+            <p class="friend-bio">Stock-Analysis</p>
+        </div>
+    </div>
+</a>
+<p>Hé lô hé lô là OG đâyy, ở phần 1, ta đã giảm chiều dữ liệu bằng PCA rồi, tiếp đến phần này, chúng ta sẽ dùng K-means để phân cụm rồi tìm ra điểm
+chung của dữ liệu nhé, cuối cùng là phân tích các &ldquo;sự kiện&rdquo; đã diễn ra trong từng cụm. Lét gô !</p>
+<p>Một lần nữa xin cảm ơn thầy Nguyễn Hoàng Đức và thầy Ngô Minh Mẫn đã hỗ trợ để đồ án được hoàn thiện. Đồng thời cảm ơn các thành viên nhóm 7
+đã cùng làm việc hết mình.</p>
+<h2 id="k-means-clustering" class="headerLink">
+    <a href="#k-means-clustering" class="header-mark"></a>K-Means Clustering</h2><p>Nhắc lại chút xíu, ở <a href="/stock_analysis/" rel="">Phần 1</a> chúng ta đã dùng PCA làm giảm chiều dữ liệu nhưng xét về mặt ý nghĩa, dữ liệu sau PCA chưa
+thể phân tích được mà ta sẽ chỉ dùng nó để áp vào một kỹ thuật tiếp theo. Kỹ thuật này sẽ &ldquo;gộp nhóm&rdquo; dữ liệu và trả lời câu hỏi &ldquo;<strong>làm thể nào để phân dữ liệu thành các cụm (cluster) khác nhau, sao cho dữ liệu trong cùng một cụm có tính chất giống nhau?</strong>&rdquo;</p>
+<p>Bản chất của việc phân nhóm này dựa trên những biến động, sự kiện nào đó trên thị trường mà chúng ta chưa biết nhưng nó chi phối trực tiếp hay gián tiếp, nhiều hay ít đến với các cổ phiếu có liên quan.
+Chính vì lý do đó, chúng ta tiến hành sử dụng thuật toán K-Means Clustering để phân cụm dữ liệu phục vụ mục tiêu đề ra.</p>
+<p>Trong bài này chúng ta sẽ thực hiện thuật K-means <code>step by step</code>, nào bắt đầu thoaii 😄</p>
+<h3 id="k-means-step-by-step" class="headerLink">
+    <a href="#k-means-step-by-step" class="header-mark"></a>K-Means step by step</h3><p><strong>Step 1: Lựa chọn số clusters $K$</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># initialize labels</span>
+<span class="n">N</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">X_pca</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">pre_labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># Hyper-parameters</span>
+<span class="n">K_CLUSTERS</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># &lt;&lt; N</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Step 2: Chọn K điểm ngẫu nhiên từ dữ liệu làm trọng tâm</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">random</span>
+<span class="c1"># random K-samples to be centroids</span>
+<span class="n">k_indices</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">N</span><span class="p">),</span> <span class="n">K_CLUSTERS</span><span class="p">)</span>
+<span class="n">centroids</span> <span class="o">=</span> <span class="n">X_pca</span><span class="p">[</span><span class="n">k_indices</span><span class="p">]</span>    <span class="c1"># shape: (K, d)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Step 3: Gán tất cả các điểm cho tâm cụm gần nhất</strong></p>
+<p>Hàm <code>assign_cluster()</code> giúp ta phân mỗi điểm dữ liệu vào cluster có center gần nó nhất với K điểm bất kỳ được chọn làm các center ban đầu</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">assign_cluster</span><span class="p">(</span><span class="n">distances</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+    <span class="c1"># distances: (N, K)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># return min value from distances array</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Cụ thể:</p>
+<ul>
+<li>Mảng <strong>distances</strong> chứa khoảng cách từ điểm $i$ đến cụm $k$, đây là khoảng cách Euclid với công thức distance$(x,y)=||x-y||$</li>
+<li>Hàm <strong>np.argmin()</strong> trả về giá trị của biến số để hàm số đó đạt giá trị nhỏ nhất. Nói cách khác, nó giúp chúng ta tìm ra được vị trí mà điểm dữ liệu phải thuộc về dựa trên quy tắc gần cụm nào nhất thì chọn cụm đó. Ví dụ:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Example for np.argmin()</span>
+       <span class="c1"># k =   0  1  2</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>   <span class="c1"># min = 0 and it locate in 1 -&gt; x_1 y_1 = 1</span>
+              <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span> <span class="c1"># min =-1 and it locate in 0 -&gt; x_2 y_2 = 0</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># --&gt; array([1,0])</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Step 4: Tính toán lại các trọng tâm của các cụm mới được hình thành</strong>
+Hàm <strong>update_centroids()</strong> dùng cập nhật lại tâm cụm và trả về 1 bộ các tâm cụm mới bằng cách lấy trung bình cộng của tất các các điểm dữ liệu đã được gán vào cluster đó.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">update_centroids</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="n">new_centroids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">X</span><span class="p">[</span><span class="n">labels</span> <span class="o">==</span> <span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">K_CLUSTERS</span><span class="p">)])</span>
+    <span class="k">return</span> <span class="n">new_centroids</span> <span class="c1"># (3, 13)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Cuối cùng: lặp lại step 3 và step 4</strong>
+<div class="details admonition question open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-question-circle fa-fw"></i>Question<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><strong>Khi nào thì bài toán hội tụ vậy OG ? Khi nào thì chúng ta mới dừng lại thuật toán ?</strong></p>
+<p>&ndash;&gt; Câu trả lời là khi việc phân cụm không còn sự thay đổi nào nữa hoặc giá trị <em>hàm mất mát</em> không thay đổi nhiều sau mỗi lần update tâm cụm.</p>
+</div>
+        </div>
+    </div>
+Chúng ta sẽ viết một hàm kiểm tra tính hội tụ của bài toán là <strong>has_convert()</strong>. Hàm này kiểm tra cụm trước và sau có giống nhau không.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Check convergence</span>
+<span class="k">def</span> <span class="nf">has_convert</span><span class="p">(</span><span class="n">pre_labels</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">cur_labels</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span> 
+    <span class="k">return</span> <span class="p">(</span><span class="n">pre_labels</span> <span class="o">==</span> <span class="n">cur_labels</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Hàm <strong>get_total_wcv()</strong> là một hàm mất mát, tính tổng các phương sai bên trong của 1 cluster</p>
+<p>Nếu ta coi $m_k$ là center (representation) của mỗi cluster và ước lượng tất cả các điểm được phân vào cluster này bởi $m_k$, thì
+một điểm dữ liệu $x_i$ được phân vào cluster $k$ sẽ bị sai số là $(x_i-m_k)$. Chúng ta mong muốn sai số này có trị tuyệt đối bé nhất nên ta sẽ tìm
+cách để đại lượng sau đây đạt min: $||x_i - m_k||^2_2$</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">get_total_wcv</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">centroids</span><span class="p">):</span>
+    <span class="c1"># Total within cluster variance </span>
+    <span class="n">WCVs</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">labels</span> <span class="o">==</span> <span class="n">k</span><span class="p">]</span> <span class="o">-</span> <span class="n">centroids</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> \
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">K_CLUSTERS</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">WCVs</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Nhìn chung về điều kiện hội tụ có thể thấy mối liên hệ giữa các điều kiện là gần tương đồng như nhau.
+Khi có ít điểm dữ liệu được gán sang cluster khác có thể khiến điểm trung tâm không thay đổi nhiều và từ đó hàm mất mát cũng sẽ ít bị ảnh hưởng.</p>
+<h3 id="the-k-means-algorithm-is-written-in-object-oriented-form" class="headerLink">
+    <a href="#the-k-means-algorithm-is-written-in-object-oriented-form" class="header-mark"></a>The K-means algorithm is written in object-oriented form</h3><p>Ta sẽ kết hợp tất cả các bước thuật toán vào một đối tượng <code>KMeansClustering</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">distance</span>
+
+<span class="k">class</span> <span class="nc">KMeansClustering</span><span class="p">:</span>
+    <span class="s2">&#34;&#34;&#34;
+</span><span class="s2">        An instance of K-Means Clustering algorithm
+</span><span class="s2">    &#34;&#34;&#34;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_clusters</span><span class="o">=</span><span class="mi">29</span><span class="p">):</span>
+        <span class="s2">&#34;&#34;&#34;
+</span><span class="s2">            n_clusters: number of clusters
+</span><span class="s2">            _centroids: center/ centroid of clusters
+</span><span class="s2">            inertia_: sum of squared distances of samples to their closest cluster center
+</span><span class="s2">            labels_: labels of input samples
+</span><span class="s2">            X: input data
+</span><span class="s2">        &#34;&#34;&#34;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_clusters</span> <span class="o">=</span> <span class="n">n_clusters</span>
+    
+    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+      <span class="s2">&#34;&#34;&#34;
+</span><span class="s2">          K-means execution
+</span><span class="s2">      &#34;&#34;&#34;</span>
+      <span class="n">N</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">X</span> <span class="o">=</span> <span class="n">X</span>
+
+      <span class="c1"># random K-samples to be centroids</span>
+      <span class="n">k_indices</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">N</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_clusters</span><span class="p">)</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">_centroids</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">[</span><span class="n">k_indices</span><span class="p">]</span>
+
+      <span class="c1"># initialize labels</span>
+      <span class="n">pre_labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+      <span class="c1"># training</span>
+      <span class="n">it</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+          <span class="c1"># compute distances from X_i to</span>
+          <span class="n">distances</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calc_dists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_centroids</span><span class="p">)</span>
+          <span class="c1"># assign new labels</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">labels_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_assign_cluster</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>  <span class="c1"># assign new labels</span>
+          <span class="c1"># check convergence</span>
+          <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_has_convert</span><span class="p">(</span><span class="n">pre_labels</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels_</span><span class="p">):</span>
+              <span class="k">break</span>
+          <span class="c1"># update centroids</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">_update_centroids</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels_</span><span class="p">)</span>
+          <span class="n">pre_labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels_</span>
+          <span class="n">it</span> <span class="o">+=</span> <span class="mi">1</span>
+
+      <span class="c1"># compute total Within Cluster Variance (WCV)</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">inertia_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calc_total_WCV</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels_</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_centroids</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_calc_dists</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">centroids</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">distance</span><span class="o">.</span><span class="n">cdist</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">centroids</span><span class="p">,</span> <span class="s2">&#34;euclidean&#34;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_assign_cluster</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">distances</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_update_centroids</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_centroids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">X</span><span class="p">[</span><span class="n">labels</span> <span class="o">==</span> <span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_clusters</span><span class="p">)]</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_calc_total_WCV</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">centroids</span><span class="p">):</span>
+        <span class="n">WCVs</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">labels</span> <span class="o">==</span> <span class="n">k</span><span class="p">]</span> <span class="o">-</span> <span class="n">centroids</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_clusters</span><span class="p">)</span>
+        <span class="p">]</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">WCVs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_has_convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pre_labels</span><span class="p">,</span> <span class="n">cur_labels</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">pre_labels</span> <span class="o">==</span> <span class="n">cur_labels</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X_test</span><span class="p">):</span>
+        <span class="n">dist_test</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calc_dists</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_centroids</span><span class="p">)</span>
+        <span class="n">test_labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_assign_cluster</span><span class="p">(</span><span class="n">dist_test</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">test_labels</span>
+
+    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X_test</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Trước khi thật sự áp dụng thuật toán này cho dataset của chúng ta, có một câu hỏi đặt ra là: <strong>Thuật toán này thực hiện với đầu vào
+là số $K$ tức là số lượng cluster, thế thì $K$ bằng bao nhiêu là tốt nhất?</strong></p>
+<h3 id="finding-the-optimal-k-in-a-k-means-clustering" class="headerLink">
+    <a href="#finding-the-optimal-k-in-a-k-means-clustering" class="header-mark"></a>Finding the optimal &lsquo;K&rsquo; in a K-Means clustering</h3><p>Có một phương pháp tên là <code>Elbow</code> aka cái khuỷa tay 😄</p>
+<p>Phương pháp <code>Elbow</code> là một cách giúp ta lựa chọn được số lượng các cụm phù hợp dựa vào đồ thị trực quan hoá bằng cách nhìn vào sự suy giảm của hàm biến dạng và lựa chọn ra điểm khuỷu tay (elbow point).</p>
+<p>Đối với mỗi giá trị của $K$, ta tính toán <strong>WCSS (Tổng bình phương trong cụm)</strong>. WCSS là tổng bình phương khoảng cách giữa mỗi điểm và tâm trong một cụm.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">elbow_method</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">k_clusters</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">))):</span>
+    <span class="n">total_wcss</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">k_clusters</span><span class="p">:</span>
+        <span class="c1"># Train with k cluster</span>
+        <span class="n">kmeans_model</span> <span class="o">=</span> <span class="n">KMeansClustering</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">k</span><span class="p">)</span>
+        <span class="n">kmeans_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+        <span class="c1"># calculate WCSS</span>
+        <span class="n">total_wcss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kmeans_model</span><span class="o">.</span><span class="n">inertia_</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k_clusters</span><span class="p">,</span> <span class="n">total_wcss</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;WCSS&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Number of clusters K&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">elbow_method</span><span class="p">(</span><span class="n">X_pca</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Khi ta vẽ đồ thị WCSS với giá trị K, đồ thị trông giống như một khuỷu tay. Khi số cụm tăng lên, giá trị WCSS sẽ bắt đầu giảm. Giá trị WCSS lớn nhất khi $K=1$</p>
+<figure><a class="lightgallery" href="https://media.discordapp.net/attachments/1155749221677400085/1155749659281727489/stock-elbow.png?width=800&amp;height=625" title="elbow_method" data-thumbnail="https://media.discordapp.net/attachments/1155749221677400085/1155749659281727489/stock-elbow.png?width=800&amp;height=625" data-sub-html="<h2>Giá trị WCSS lớn nhất khi $K=1$</h2><p>elbow_method</p>">
+        <img
+            
+            loading="lazy"
+            src="https://media.discordapp.net/attachments/1155749221677400085/1155749659281727489/stock-elbow.png?width=800&amp;height=625"
+            srcset="https://media.discordapp.net/attachments/1155749221677400085/1155749659281727489/stock-elbow.png?width=800&amp;height=625, https://media.discordapp.net/attachments/1155749221677400085/1155749659281727489/stock-elbow.png?width=800&amp;height=625 1.5x, https://media.discordapp.net/attachments/1155749221677400085/1155749659281727489/stock-elbow.png?width=800&amp;height=625 2x"
+            sizes="auto"
+            alt="elbow_method" height="500"  width="800" >
+    </a><figcaption class="image-caption">Giá trị WCSS lớn nhất khi $K=1$</figcaption>
+    </figure>
+<p>Chúng ta có thể thấy rằng biểu đồ sẽ thay đổi nhanh chóng tại $K=2$ và do đó tạo ra hình dạng khuỷu tay. Từ thời điểm này, đồ thị di chuyển gần như song song với trục $X$</p>
+<p>Giá trị $K$ tương ứng với điểm này là giá trị tối ưu của $K$ hoặc cụm tối ưu.</p>
+<h3 id="evaluation-metrics-of-k-means-clustering" class="headerLink">
+    <a href="#evaluation-metrics-of-k-means-clustering" class="header-mark"></a>Evaluation Metrics of K-Means Clustering</h3><p><code>Silhouette Score</code>: cho chúng ta biết những điểm dữ liệu hay những quan sát nào nằm gọn bên trong cụm (tốt) hay nằm gần ngoài rìa cụm (không tốt) để đánh giá hiệu quả phân cụm.</p>
+<p>Giả sử có 2 cluster A, B thì Silhouette score là:
+$$ s_i = \frac{(b_i - a_i)}{max(b_i - a_i)} $$</p>
+<p>Với $a_i, b_i$ lần lượt là khoảng cách của điể $i$ đến tâm cụm A và B</p>
+<p>Giá trị này nằm trong khoảng [-1, 1]:</p>
+<ul>
+<li>Điểm dữ liệu có Silhouette cao, gần bằng 1: nằm đúng trong cluster.</li>
+<li>Điểm dữ liệu có Silhouette gần bằng 0: nằm giữa 2 cluster</li>
+<li>Điểm dữ liệu có Silhouette thấp, có giá trị âm: thì khả năng đã nằm sai cluster.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+<span class="n">kmeans_train</span> <span class="o">=</span> <span class="n">KMeansClustering</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">kmeans_train</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_pca</span><span class="p">)</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">kmeans_train</span><span class="o">.</span><span class="n">labels_</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Silhouette Score (n = 2): </span><span class="si">{</span><span class="n">metrics</span><span class="o">.</span><span class="n">silhouette_score</span><span class="p">(</span><span class="n">X_pca</span><span class="p">,</span><span class="n">labels</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1">#--&gt; Silhouette Score (n = 2): 0.265365408366845</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">kmeans_train</span> <span class="o">=</span> <span class="n">KMeansClustering</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">kmeans_train</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_pca</span><span class="p">)</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">kmeans_train</span><span class="o">.</span><span class="n">labels_</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Silhouette Score (n = 3): </span><span class="si">{</span><span class="n">metrics</span><span class="o">.</span><span class="n">silhouette_score</span><span class="p">(</span><span class="n">X_pca</span><span class="p">,</span><span class="n">labels</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># --&gt; Silhouette Score (n = 3): 0.22528216696570613</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Ở Phương pháp Elbow, chúng ta cũng đã thấy được $K$ tối ưu cho bài toán chính là khi chọn $K=2$.
+Nhưng ở bước này, ta cũng thấy được rõ ràng hơn giữa 2 sự lựa chọn $K=2$ và $K=3$  bằng cách so sánh chỉ số Silhouette giữa bọn chúng.</p>
+<p>So sánh: $0.265(K=2) &gt; 0.225(K=3)$</p>
+<p>Từ đó, một lần nữa ta thấy được $K$ tối ưu nhất cho bài toán này là $K=2$</p>
+<h3 id="visualize" class="headerLink">
+    <a href="#visualize" class="header-mark"></a>Visualize</h3><p>Sau tất cả các bước trên, dữ liệu đã được chia thành 2 label chính tương ứng với từng màu sắc được biểu thị dưới hình vẽ sau đây:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># K means</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+
+<span class="n">K_CLUSTERS</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">kmeans_train</span> <span class="o">=</span> <span class="n">KMeansClustering</span><span class="p">(</span><span class="n">K_CLUSTERS</span><span class="p">)</span>
+<span class="n">kmeans_train</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_pca</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter_matrix</span><span class="p">(</span>
+    <span class="n">X_pca</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="n">pca_scree</span><span class="p">,</span>
+    <span class="n">dimensions</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">kmeans_train</span><span class="o">.</span><span class="n">labels_</span>
+<span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">diagonal_visible</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><figure><a class="lightgallery" href="https://cdn.discordapp.com/attachments/1155749221677400085/1155757661774688316/stock-kmean-viual.png" title="Kmeans Clustering" data-thumbnail="https://cdn.discordapp.com/attachments/1155749221677400085/1155757661774688316/stock-kmean-viual.png" data-sub-html="<h2>K-means cluster with 2 Clusters and various PC</h2><p>Kmeans Clustering</p>">
+        <img
+            
+            loading="lazy"
+            src="https://cdn.discordapp.com/attachments/1155749221677400085/1155757661774688316/stock-kmean-viual.png"
+            srcset="https://cdn.discordapp.com/attachments/1155749221677400085/1155757661774688316/stock-kmean-viual.png, https://cdn.discordapp.com/attachments/1155749221677400085/1155757661774688316/stock-kmean-viual.png 1.5x, https://cdn.discordapp.com/attachments/1155749221677400085/1155757661774688316/stock-kmean-viual.png 2x"
+            sizes="auto"
+            alt="Kmeans Clustering" width="900" >
+    </a><figcaption class="image-caption">K-means cluster with 2 Clusters and various PC</figcaption>
+    </figure>
+<p>Sau khi chia cụm, chúng ta đến với bước cuối cùng thôi</p>
+<h2 id="data-analysis" class="headerLink">
+    <a href="#data-analysis" class="header-mark"></a>Data Analysis</h2><p>Sau khi K-means, ta có được một tập nhãn (labels), ta sẽ gán các nhãn này vào bộ data có giá trị và tiến hành phân tích từng cụm.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Data</span>
+<span class="c1">#set label</span>
+<span class="n">value_data</span> <span class="o">=</span> <span class="n">new_market</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kmeans_train</span><span class="o">.</span><span class="n">labels_</span>
+<span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;B&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># get specific columns</span>
+<span class="n">gtb</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">value_data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span> <span class="k">if</span> <span class="s1">&#39;gttb_&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">]</span>
+<span class="n">mua</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">value_data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span> <span class="k">if</span> <span class="s1">&#39;total_mua&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">]</span>
+<span class="n">ban</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">value_data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span> <span class="k">if</span> <span class="s1">&#39;total_ban&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">]</span>
+
+<span class="c1"># create new valuabel column</span>
+<span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;total_ban_30&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">value_data</span><span class="p">[</span><span class="n">ban</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;total_mua_30&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">value_data</span><span class="p">[</span><span class="n">mua</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;total_volume_30&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;total_ban_30&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;total_mua_30&#39;</span><span class="p">]</span>
+<span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;mua_ban_ratio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;total_mua_30&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;total_ban_30&#39;</span><span class="p">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>value_data bao gồm các cột:</p>
+<ul>
+<li>label: nhãn nhận được từ K means (gồm &lsquo;A&rsquo; và &lsquo;B&rsquo;)</li>
+<li>gttb_{mã}: Trung bình giá của một {mã} cổ phiếu</li>
+<li>total_mua_{mã}: Tổng khối lượng mua của {mã} cổ phiếu</li>
+<li>total_ban_{mã}: Tổng khối lượng bán của {mã} cổ phiếu</li>
+<li>total_mua_30: Tổng khối lượng mua của tất cả 30 cổ phiếu</li>
+<li>total_ban_30: Tổng khối lượng bán của tất cả 30 cổ phiếu</li>
+<li>total_volume_30: Tổng khối lượng giao dịch của 30 cổ phiếu (total_mua_30 + total_ban_30)</li>
+<li>mua_ban_ratio: tỉ số total_mua_30 / total_ban_30</li>
+<li>Gia KL: Giá phái sinh gần với VN30</li>
+</ul>
+<p>Time-series Data theo phút (5154 dòng)</p>
+<h3 id="analytical-overview" class="headerLink">
+    <a href="#analytical-overview" class="header-mark"></a>Analytical Overview</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">from</span> <span class="nn">plotly.subplots</span> <span class="kn">import</span> <span class="n">make_subplots</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">vertical_spacing</span><span class="o">=</span><span class="mf">0.03</span><span class="p">)</span>
+
+<span class="c1"># plot A</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="n">value_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span><span class="p">],</span> 
+                     <span class="n">y</span><span class="o">=</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;total_volume_30&#39;</span><span class="p">][</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span><span class="p">]),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">value_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span><span class="p">],</span> 
+                         <span class="n">y</span><span class="o">=</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;Gia KL&#39;</span><span class="p">][</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span><span class="p">],</span> 
+                         <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines&#39;</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="c1"># plot B</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="n">value_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">],</span> 
+                     <span class="n">y</span><span class="o">=</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;total_volume_30&#39;</span><span class="p">][</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">]),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">value_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">],</span> 
+                         <span class="n">y</span><span class="o">=</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;Gia KL&#39;</span><span class="p">][</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">],</span> 
+                         <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines&#39;</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># update layout</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s2">&#34;Stock Data Visualization&#34;</span><span class="p">,</span> <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">barmode</span><span class="o">=</span><span class="s1">&#39;stack&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s2">&#34;Total Volume 30&#34;</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s2">&#34;Gia KL&#34;</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s2">&#34;Total Volume 30&#34;</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s2">&#34;Gia KL&#34;</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><figure><a class="lightgallery" href="https://media.discordapp.net/attachments/1105503055916564572/1105552168716615804/Stock_Data_Visualization.png?width=831&amp;height=452" title="Stock Data Visualization" data-thumbnail="https://media.discordapp.net/attachments/1105503055916564572/1105552168716615804/Stock_Data_Visualization.png?width=831&amp;height=452" data-sub-html="<h2>Stock Data Visualization</h2><p>Stock Data Visualization</p>">
+        <img
+            
+            loading="lazy"
+            src="https://media.discordapp.net/attachments/1105503055916564572/1105552168716615804/Stock_Data_Visualization.png?width=831&amp;height=452"
+            srcset="https://media.discordapp.net/attachments/1105503055916564572/1105552168716615804/Stock_Data_Visualization.png?width=831&amp;height=452, https://media.discordapp.net/attachments/1105503055916564572/1105552168716615804/Stock_Data_Visualization.png?width=831&amp;height=452 1.5x, https://media.discordapp.net/attachments/1105503055916564572/1105552168716615804/Stock_Data_Visualization.png?width=831&amp;height=452 2x"
+            sizes="auto"
+            alt="Stock Data Visualization" width="800" >
+    </a><figcaption class="image-caption">Stock Data Visualization</figcaption>
+    </figure>
+Cluster B chứa các dữ liệu trong giai đoạn từ <strong>20/3 đến 6/4/2023</strong></p>
+<p><strong>Nhìn nhận một cách tổng quát:</strong></p>
+<ul>
+<li>Đối với cluster B, thị trường luôn trong thế &ldquo;giằng co&rdquo; với khoảng 6 đợt giảm mạnh và chừng ấy đợt phục hồi liên tục trong suốt 18 ngày. Mặc dù GiaKL duy trì được đà tăng (Giá KL từ 1036 tăng đến 1080) tạo tích cực cho thị trường song thế giằng co vẫn có chiều hướng kéo dài.</li>
+</ul>
+<p>Cluster A chứa các dữ liệu trong giai đoạn từ <strong>1/4 đến 19/4/2023</strong>:</p>
+<p><strong>Nhìn nhận một cách tổng quát:</strong></p>
+<ul>
+<li>Đối với cluster A các khoảng giảm kéo dài trong nhiều ngày dẫn đến việc phục hồi gặp khó khăn đáng kể. Cụ thể, GiaKL có mức &ldquo;vùng dậy&rdquo; đến ngưỡng 1086 điểm tại 6/4 nhưng lại bị đẩy về 1054 vào cuối giai đoạn.</li>
+</ul>
+<p>Ta sẽ phân tích sâu hơn từng cluster một</p>
+<h3 id="cluster-b" class="headerLink">
+    <a href="#cluster-b" class="header-mark"></a>Cluster B</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+
+<span class="n">gtb</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">value_data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span> <span class="k">if</span> <span class="s1">&#39;gttb_&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">]</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">value_data</span><span class="p">[</span><span class="n">gtb</span><span class="p">][</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">gtb</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Mean Values by Label B&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">xaxis_title</span><span class="o">=</span><span class="s2">&#34;Times&#34;</span><span class="p">,</span> <span class="n">yaxis_title</span><span class="o">=</span><span class="s2">&#34;Mean Values&#34;</span><span class="p">,</span>
+<span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&#34;Courier New, monospace&#34;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&#34;RebeccaPurple&#34;</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><figure><a class="lightgallery" href="https://media.discordapp.net/attachments/1105503055916564572/1105552168993427626/Mean_Values_by_Label_B.png?width=807&amp;height=452" title="Mean Values by Label B" data-thumbnail="https://media.discordapp.net/attachments/1105503055916564572/1105552168993427626/Mean_Values_by_Label_B.png?width=807&amp;height=452" data-sub-html="<h2>Mean Values by Label B</h2><p>Mean Values by Label B</p>">
+        <img
+            
+            loading="lazy"
+            src="https://media.discordapp.net/attachments/1105503055916564572/1105552168993427626/Mean_Values_by_Label_B.png?width=807&amp;height=452"
+            srcset="https://media.discordapp.net/attachments/1105503055916564572/1105552168993427626/Mean_Values_by_Label_B.png?width=807&amp;height=452, https://media.discordapp.net/attachments/1105503055916564572/1105552168993427626/Mean_Values_by_Label_B.png?width=807&amp;height=452 1.5x, https://media.discordapp.net/attachments/1105503055916564572/1105552168993427626/Mean_Values_by_Label_B.png?width=807&amp;height=452 2x"
+            sizes="auto"
+            alt="Mean Values by Label B" width="800" >
+    </a><figcaption class="image-caption">Mean Values by Label B</figcaption>
+    </figure>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
+
+<span class="c1"># Create first trace</span>
+<span class="n">trace1</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;mua&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">value_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;total_ban_30&#39;</span><span class="p">][</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">])</span>
+
+<span class="c1"># Create second trace</span>
+<span class="n">trace2</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;ban&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">value_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;total_mua_30&#39;</span><span class="p">][</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">])</span>
+
+<span class="c1"># Create third trace</span>
+<span class="n">trace3</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&#34;GiaKL&#34;</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="n">value_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;Gia KL&#39;</span><span class="p">][</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">],</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines&#39;</span><span class="p">,</span> <span class="n">yaxis</span><span class="o">=</span><span class="s1">&#39;y2&#39;</span><span class="p">)</span>
+
+<span class="c1"># Create layout</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;The chart shows the correlation between Total Volumn and GiaKL&#39;</span><span class="p">,</span> <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Times&#39;</span><span class="p">),</span> <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Total Volumn&#39;</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">),</span> <span class="n">yaxis2</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Gia KL&#39;</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">overlaying</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">),</span> <span class="n">barmode</span><span class="o">=</span><span class="s2">&#34;stack&#34;</span><span class="p">)</span>
+
+<span class="c1"># Add traces to figure</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">trace1</span><span class="p">,</span> <span class="n">trace2</span><span class="p">,</span> <span class="n">trace3</span><span class="p">],</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
+
+<span class="c1"># Show figure</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><figure><a class="lightgallery" href="https://media.discordapp.net/attachments/1105503055916564572/1105552169840689152/correlation_between_Total_Volumn_and_GiaKL_B.png?width=831&amp;height=452" title="B-Correlation between Total Volumn and GiaKL" data-thumbnail="https://media.discordapp.net/attachments/1105503055916564572/1105552169840689152/correlation_between_Total_Volumn_and_GiaKL_B.png?width=831&amp;height=452" data-sub-html="<h2>B-Correlation between Total Volumn and GiaKL</h2><p>B-Correlation between Total Volumn and GiaKL</p>">
+        <img
+            
+            loading="lazy"
+            src="https://media.discordapp.net/attachments/1105503055916564572/1105552169840689152/correlation_between_Total_Volumn_and_GiaKL_B.png?width=831&amp;height=452"
+            srcset="https://media.discordapp.net/attachments/1105503055916564572/1105552169840689152/correlation_between_Total_Volumn_and_GiaKL_B.png?width=831&amp;height=452, https://media.discordapp.net/attachments/1105503055916564572/1105552169840689152/correlation_between_Total_Volumn_and_GiaKL_B.png?width=831&amp;height=452 1.5x, https://media.discordapp.net/attachments/1105503055916564572/1105552169840689152/correlation_between_Total_Volumn_and_GiaKL_B.png?width=831&amp;height=452 2x"
+            sizes="auto"
+            alt="B-Correlation between Total Volumn and GiaKL" width="800" >
+    </a><figcaption class="image-caption">B-Correlation between Total Volumn and GiaKL</figcaption>
+    </figure>
+<h4 id="biến-động-thị-trường" class="headerLink">
+    <a href="#bi%e1%ba%bfn-%c4%91%e1%bb%99ng-th%e1%bb%8b-tr%c6%b0%e1%bb%9dng" class="header-mark"></a>Biến động thị trường</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">phantramtangtruong</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1081.55</span> <span class="o">-</span> <span class="mf">1014.331</span><span class="p">)</span><span class="o">/</span><span class="mf">1014.331</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Gia tri cua phien cao nhat so voi phien nho nhat: &#34;</span><span class="p">,</span><span class="n">phantramtangtruong</span><span class="p">)</span> <span class="c1"># --&gt; 0.06626929473712223</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Giai đoạn này cho thấy sự gia tăng của giá trị các cổ phiếu, với sức tăng lớn nhất trong ngưỡng tiệm cận 0.07%
+cho thấy sự hấp dẫn của thị trường đang trên đà phục hồi.</p>
+<p>Vào cuối tháng 3, nhóm dịch vụ tài chính tiếp tục tăng điểm khá mạnh, nhóm ngân hàng cũng có diễn biến tích cực, nhóm bất động sản với thông tin khả năng tiếp tục hạ lãi suất gúp thanh khoản cải thiện tốt, nhiều mã có tín hiệu thoát khỏi xu hướng giảm giá trung hạn kéo dài&hellip;</p>
+<p>Với các phiên tăng giảm đan xen, khối lượng giao dịch về tổng thể trung hạn vẫn đang ở mức thấp.</p>
+<p>Giai đoạn cuối tháng 3, khối lượng giao dịch đang trong xu hướng giảm, cho thấy các trader đang giảm dần các vị thế nắm giữ và có thể dịch chuyển sang ở thị trường cơ sở khi trên thị trường cơ sở đang có nhiều cơ hội sinh lợi ngắn hạn tốt.
+Thị trường đã hồi phục 6 phiên liên tiếp dù điểm số tăng từng phiên không lớn nhưng đủ giúp thị trường quay trở lại kênh tăng giá ngắn hạn và nằm trên đường MA20.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">total_ban_theo_ngay</span> <span class="o">=</span> <span class="n">value_data</span><span class="o">.</span><span class="n">total_ban_30</span><span class="p">[</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+
+<span class="n">ngay_dau</span> <span class="o">=</span> <span class="n">total_ban_theo_ngay</span><span class="p">[</span><span class="s1">&#39;total_ban_30&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ngay_cuoi</span> <span class="o">=</span> <span class="n">total_ban_theo_ngay</span><span class="p">[</span><span class="s1">&#39;total_ban_30&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iat</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">phantramtangtruong</span> <span class="o">=</span> <span class="p">(</span><span class="n">ngay_cuoi</span> <span class="o">-</span> <span class="n">ngay_dau</span><span class="p">)</span><span class="o">/</span><span class="n">ngay_dau</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Tong so co phieu ban ra cua ngay cuoi giai doan so voi ngay dau co muc tang truong la: &#34;</span><span class="p">,</span><span class="n">phantramtangtruong</span><span class="p">)</span> 
+<span class="c1"># --&gt; -0.637694475209741</span>
+
+<span class="n">total_ban_theo_ngay</span> <span class="o">=</span> <span class="n">value_data</span><span class="o">.</span><span class="n">total_mua_30</span><span class="p">[</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+
+<span class="n">ngay_dau</span> <span class="o">=</span> <span class="n">total_ban_theo_ngay</span><span class="p">[</span><span class="s1">&#39;total_mua_30&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ngay_cuoi</span> <span class="o">=</span> <span class="n">total_ban_theo_ngay</span><span class="p">[</span><span class="s1">&#39;total_mua_30&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iat</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">phantramtangtruong</span> <span class="o">=</span> <span class="p">(</span><span class="n">ngay_cuoi</span> <span class="o">-</span> <span class="n">ngay_dau</span><span class="p">)</span><span class="o">/</span><span class="n">ngay_dau</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Tong so co phieu mua vao cua ngay cuoi giai doan so voi ngay dau co muc tang truong la: &#34;</span><span class="p">,</span><span class="n">phantramtangtruong</span><span class="p">)</span> 
+<span class="c1"># --&gt; -0.8043500703402909</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Có thể thấy, số cổ phiếu được bán ra ở cuối giai đoạn (đầu tháng 4) so với tháng 3 có sự sụt giảm.
+Cổ phiếu được mua vào cũng tăng trưởng âm, các nhà đầu tư buộc phải giữ lại các cổ phiếu còn tồn đọng tạo nên một thế kìm hãm thanh khoản. Do đó, trong tương lai gần sẽ chịu tác động của sự chênh lệch này.</p>
+<h4 id="các-sự-kiện-ảnh-hưởng" class="headerLink">
+    <a href="#c%c3%a1c-s%e1%bb%b1-ki%e1%bb%87n-%e1%ba%a3nh-h%c6%b0%e1%bb%9fng" class="header-mark"></a>Các sự kiện ảnh hưởng</h4><ul>
+<li>Ngày 22-23/3/2023, lần thứ 9 liên tiếp FED tăng lãi suất, nâng phạm vi lãi suất lên mức dao động từ 4,75% đến 5%. Mục đích để trấn an thị trường, giữ uy tín và chống lạm phát. Trong bối cảnh thanh khoản trên thị trường tài chính quốc tế thắt chặt hơn, Chính phủ và các doanh nghiệp Việt Nam sẽ khó huy động vốn trên thị trường quốc tế và phải chịu mức chi phí tài chính cao hơn.</li>
+<li>Ngày 31/3/2023, Ngân hàng Nhà nước Việt Nam điều chỉnh giảm các mức lãi suất điều hành, có hiệu lực từ ngày 03/4/2023&hellip;.</li>
+<li>Từ đầu năm đến nay, VNĐ chỉ giảm giá 0.6% so với USD, trong khi đó các đồng tiền khác giảm giá nhiều hơn so với USD từ 20-30% cho thấy nội tại vững chắc của kinh tế Việt Nam trên đường dài.</li>
+</ul>
+<h4 id="kết-luận-xu-hướng" class="headerLink">
+    <a href="#k%e1%ba%bft-lu%e1%ba%adn-xu-h%c6%b0%e1%bb%9bng" class="header-mark"></a>Kết luận xu hướng</h4><p>Ở giai đoạn này chiều hướng tăng nhẹ đã diễn ra do đó thị trường có xu thế đi lên. Thị trường phái sinh có tiềm năng hồi phục về mức điểm tiệm cận 1100. Có thể cho rằng thị trường sẽ theo xu hướng tích lũy với biến động hẹp ít rủi ro nhưng những nhịp hồi phục sẽ không quá mạnh và khó kỳ vọng VN30 vượt qua mức 1.150 điểm. Về ngắn hạn thị trường đang cho thấy việc trở lại kênh tăng giá ngắn hạn với xung lực khá tốt, tuy nhiên nhà đầu tư nên hạn chế mua đuổi cổ phiếu ở các vùng giá cao mà nên giải ngân theo hướng tích lũy và duy trì tỷ trọng cổ phiếu ở dưới mức trung bình. Có thể kết luận, nửa cuối tháng 3 có xu hướng <strong>UPTREND</strong>, nhưng về đầu tháng 4 sẽ trở về <strong>DOWNTREND</strong>.</p>
+<h3 id="cluster-a" class="headerLink">
+    <a href="#cluster-a" class="header-mark"></a>Cluster A</h3><p>Hãy cùng xem qua Cluster A nhé</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+
+<span class="n">gtb</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">value_data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span> <span class="k">if</span> <span class="s1">&#39;gttb_&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">]</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">value_data</span><span class="p">[</span><span class="n">gtb</span><span class="p">][</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">gtb</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Mean Values by Label A&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">xaxis_title</span><span class="o">=</span><span class="s2">&#34;Times&#34;</span><span class="p">,</span> <span class="n">yaxis_title</span><span class="o">=</span><span class="s2">&#34;Mean Values&#34;</span><span class="p">,</span>
+<span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&#34;Courier New, monospace&#34;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&#34;RebeccaPurple&#34;</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><figure><a class="lightgallery" href="https://media.discordapp.net/attachments/1105503055916564572/1105552169488351293/Mean_Values_by_Label_A.png?width=807&amp;height=452" title="A-Correlation between Total Volumn and GiaKL" data-thumbnail="https://media.discordapp.net/attachments/1105503055916564572/1105552169488351293/Mean_Values_by_Label_A.png?width=807&amp;height=452" data-sub-html="<h2>A-Correlation between Total Volumn and GiaKL</h2><p>A-Correlation between Total Volumn and GiaKL</p>">
+        <img
+            
+            loading="lazy"
+            src="https://media.discordapp.net/attachments/1105503055916564572/1105552169488351293/Mean_Values_by_Label_A.png?width=807&amp;height=452"
+            srcset="https://media.discordapp.net/attachments/1105503055916564572/1105552169488351293/Mean_Values_by_Label_A.png?width=807&amp;height=452, https://media.discordapp.net/attachments/1105503055916564572/1105552169488351293/Mean_Values_by_Label_A.png?width=807&amp;height=452 1.5x, https://media.discordapp.net/attachments/1105503055916564572/1105552169488351293/Mean_Values_by_Label_A.png?width=807&amp;height=452 2x"
+            sizes="auto"
+            alt="A-Correlation between Total Volumn and GiaKL" width="800" >
+    </a><figcaption class="image-caption">A-Correlation between Total Volumn and GiaKL</figcaption>
+    </figure>
+<h4 id="biến-động-thị-trường-1" class="headerLink">
+    <a href="#bi%e1%ba%bfn-%c4%91%e1%bb%99ng-th%e1%bb%8b-tr%c6%b0%e1%bb%9dng-1" class="header-mark"></a>Biến động thị trường</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">tb_SAB</span> <span class="o">=</span> <span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;gttb_SAB&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Gia tri trung binh cua co phieu SAB&#34;</span><span class="p">,</span><span class="n">tb_SAB</span><span class="p">)</span> <span class="c1"># --&gt; 179.1409610698177</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Đối với giá cổ phiếu trung bình:</strong></p>
+<p>Có thể thấy giá trung bình của cổ phiếu SAB (Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn SABECO) có giao động khá ổn định xung quanh giá trị 165K. Hơn nữa giá trung bình của SABECO trong tháng 4/2023 là cao hơn hẳn so với các cổ phiếu khác trong VN30, chứng tỏ thị phần của công ty đó trong ngành có thể đang tăng lên, và có thể được đánh giá cao bởi các nhà đầu tư vì nó có khả năng tăng trưởng mạnh trong tương lai.</p>
+<p>Tuy nhiên từ đầu tháng 4 về sau, đồng hành cùng với SAB là khoảng 13 mã cổ phiếu khác như VJC, GAS, VCB&hellip; đang có xu hướng giảm giá nhẹ.</p>
+<p>Một số mã cổ phiếu như VCB có sự giao động khá mạnh mẽ khi liên tục xuống ngưỡng 44K/1 cổ phiếu trong các ngày 20, 21/03/2023. Và từ đầu tháng 4 là sự tuột dốc khá nhanh khi từ khoảng 93K xuống còn tầm 52K.</p>
+<p>Ngoài ra có thể thấy rằng cổ phiếu NVL của Tập đoàn Đầu tư Địa ốc NOVA khá &ldquo;ảm đạm&rdquo; khi ngưỡng thấp nhất là vào ngày 03/04/2023 với 2.7K và cao nhất là xấp xỉ 11K. Có lẽ cổ phiếu NVL đang ngày càng &ldquo;rớt giá&rdquo;, chính vì vậy mà các nhà đầu tư nên bán tháo, thị trường chung cũng nhận định nên BÁN mạnh.</p>
+<p><strong>Đối với khối lượng mua bán cổ phiếu:</strong></p>
+<p>Từ biểu đồ trên, nhìn sơ lược qua thì ta có thể thấy được khối lượng giao dịch có xu hương tăng dần từ ngày 1/4, chạm mốc cao nhất vào ngày 6/4. Trong khoảng thời gian này, khối lượng giao dịch mua nhiều, điều này chứng tỏ thị trường đang rất quan tâm và kỳ vọng vào sự tăng giá của các cổ phiếu. Giá phái sinh và khối lượng giao dịch có một sự tương quan với nhau, việc khối lượng giao dịch mua tăng lên, giá phái sinh trong khoảng thời gian này cũng đã được đẩy lên.</p>
+<p>Sau sự gia tăng giá đến một mức cao nhất là vào ngày 6/4, thì sau đó giá phái sinh lại khá ảm đạm. Sau ngày 17/4 thì bắt đầu có dấu hiệu giảm mạnh và thấp nhất vào ngày 19/4. Trong khoảng thời gian này, khối lượng giao dịch cũng giảm dần, khối lượng giao dịch bán tăng nhiều hơn so với kì trước. Mức giảm này nhận định là khá mạnh, trong khi khối lượng giao dịch mua lại không nhiều. Thị trường không có nhiều điểm nhấn trong bối cảnh phục hồi thanh khoán thấp.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">total_ban_theo_ngay</span> <span class="o">=</span> <span class="n">value_data</span><span class="o">.</span><span class="n">total_ban_30</span><span class="p">[</span><span class="n">value_data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+
+<span class="n">ngay_dau</span> <span class="o">=</span> <span class="n">total_ban_theo_ngay</span><span class="p">[</span><span class="s1">&#39;total_ban_30&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ngay_cuoi</span> <span class="o">=</span> <span class="n">total_ban_theo_ngay</span><span class="p">[</span><span class="s1">&#39;total_ban_30&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iat</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">phantramtangtruong</span> <span class="o">=</span> <span class="p">(</span><span class="n">ngay_cuoi</span> <span class="o">-</span> <span class="n">ngay_dau</span><span class="p">)</span><span class="o">/</span><span class="n">ngay_dau</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Tong so co phieu ban ra cua ngay cuoi giai doan so voi ngay dau co muc tang truong la: &#34;</span><span class="p">,</span><span class="n">phantramtangtruong</span><span class="p">)</span>
+<span class="c1"># --&gt; -0.7704310701624562</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Về biến động giá phái sinh</strong>:</p>
+<p>VN30Index phiên mở đầu tháng 4 giao dịch tăng điểm tích cực và duy trì đà tăng đến cuối phiên. Số liệu cuối cùng ghi nhận được vào ngày 03/04/2023 là 1.081,28 điểm (+1.38% so với 1.070,14 vào 31/03/2023) để hướng đến 1.085-1.095 điểm.</p>
+<p>Tuy nhiên, vào tuần thứ 2 từ 14/04/2023 VN30Index biến động tiêu cực hơn. Phiên đầu tuần, mở cửa ở vùng giá 1.073 điểm và chịu áp lực điều chỉnh ở vùng giá 1.070-1.075 điểm để kết thúc tuần giao dịch với phiên giảm điểm mạnh. Tuần điều chỉnh đã diễn ra như dự đoán khi trong tuần qua Vn30Index giảm 16.82 điểm (-1,57%) với khối lượng giao dịch tiếp tục ở mức cao, điểm số điều chỉnh tuy không lớn nhưng trong bối cảnh thị trường đang trong khu vực giao động hẹp thì đợt điều chỉnh này cũng tạo ra cảm giác bất an cho nhà đầu tư.</p>
+<p>Đến ngày 19/04/2023. Nỗ lực phục hồi từ 2 phiên đầu tuần đã không được tiếp tục duy trì trong phiên này khi Thời điểm cuối cùng là xấp xỉ 1.055 điểm. Sụt giảm (-0,77%) và đối diện với nguy cơ đánh mất kênh tăng giá ngắn hạn</p>
+<h4 id="sự-kiện-ảnh-hưởng" class="headerLink">
+    <a href="#s%e1%bb%b1-ki%e1%bb%87n-%e1%ba%a3nh-h%c6%b0%e1%bb%9fng" class="header-mark"></a>Sự kiện ảnh hưởng</h4><ul>
+<li>
+<p>Ngày 31/3, thông tin sẽ có thêm một đợt giảm lãi suất từ phía các NHTM, đề xuất triển khai giãn hoãn nợ cho doanh nghiệp. Đây là động lực tích cực hỗ trợ cho thanh khoản của thị trường cải thiện thể hiện ở nhóm dịch vụ tài chính tiếp tục tăng điểm khá mạnh như BSI (+27,20%), FTS (18,01%), AGR (+14,51%),&hellip;</p>
+</li>
+<li>
+<p>Ngày 14/4, Bộ Tài Chính trình Chính phủ báo cáo Quốc hội xem xét tiếp tục chính sách giảm 2% thuế GTGT năm 2023. Cho thấy các trader đang giảm dần các vị thế nắm giữ và chưa có kỳ vọng lạc quan đối với chỉ số VN30.</p>
+</li>
+<li>
+<p>Ngày 17/4, thanh khoản trên hai sàn niêm yết đạt gần 8.900 tỉ đồng, giảm 30% so với phiên trước, mức giảm khá mạnh đặc biệt là trong thời điểm thị trường sắp kết thúc đáo hạn phái sinh.</p>
+</li>
+<li>
+<p>Ngày 18/4, thị trường đón nhận thông tin khá tích cực khi Chính phủ đồng ý trình Quốc hội giảm 2% thuế VAT cho tất cả hàng hóa, dịch vụ đang chịu thuế 10%.</p>
+</li>
+</ul>
+<h4 id="kết-luận-xu-hướng-1" class="headerLink">
+    <a href="#k%e1%ba%bft-lu%e1%ba%adn-xu-h%c6%b0%e1%bb%9bng-1" class="header-mark"></a>Kết luận xu hướng</h4><p><strong>DOWNTREND</strong></p>
+<p>Nhìn chung, Công ty Cổ phần Chứng khoán SSI đánh giá thị trường trong tháng 4 không quá lạc quan nhưng cũng không quá tiêu cực. Thách thức với thị trường trong ngắn hạn lại tiếp tục hình thành cơ hội tốt cho các nhà đầu tư dài hạn.</p>
+<p>Khi thị trường chứng khoán có xu hướng downtrend, nhiều nhà đầu tư có thể rơi vào trạng thái sợ hãi, lo lắng về mức độ rủi ro và có thể bán ra cổ phiếu của mình, dẫn đến sự suy giảm của giá trị cổ phiếu. Tuy nhiên, đối với nhà đầu tư thông thạo, thị trường downtrend cũng cung cấp cơ hội để mua vào các cổ phiếu ở mức giá thấp hơn, đồng thời nắm bắt các cơ hội đầu tư mới có thể xuất hiện trong thời gian tới.</p>
+<h2 id="kết-thúc" class="headerLink">
+    <a href="#k%e1%ba%bft-th%c3%bac" class="header-mark"></a>Kết thúc</h2><p>Qua đồ án “Stock Analysis” chúng ta đã thực hành dùng các kỹ thuật như Cleaning data, Scaling, PCA, K-means Clustering… cùng các kỹ năng phân tích dữ liệu để làm rõ insight cùng với tình hình của thị trường chứng khoán phái sinh VN30 trong 31 ngày. Từ đây có thể nhận định xu hướng của chứng khoán trong thời gian tới, đó là xu hướng tích lũy. Một số hợp đồng có thể tham khảo như VN30F2306 và VN30F2Q được dẫn dắt bởi các cổ phiếu thuộc nhóm ngành xây dựng (DIG), ngân hàng (VCB), chứng khoán (SSI)&hellip;</p>
+<p>Cảm ơn bạn đã đọc đến giờ phút này, OG cảm động quá 😄 Hy vọng bài viết này sẽ giúp cho bạn cảm thấy thú vị.</p>
+<p>Chúc bạn một ngày tốt lành 😄</p>
+<p><strong>-Mew-</strong></p>
+<hr>
+<h1 id="related" class="headerLink">
+    <a href="#related" class="header-mark"></a>Related</h1>
+<div class="showcase-box column-2">
+    <div class="showcase-image">
+        <a href=/football_etl/><img
+        
+        loading="lazy"
+        src="/img/projects-football.jpg"
+        srcset="/img/projects-football.jpg, /img/projects-football.jpg 1.5x, /img/projects-football.jpg 2x"
+        sizes="auto"
+        alt="Football ETL Analysis"
+        title="Football ETL Analysis" height="200"   width="400" ></a>
+    </div>
+    <h2 class="showcase-title">
+        <a href=/football_etl/>Football ETL Analysis</a>
+    </h2>
+    <p class="showcase-summary">
+        A Data Engineer project building pipeline to analyze football data
+    </p>
+    <a class="showcase-link" href=/football_etl/>
+        Read more...
+    </a>
+</div>
+
+<div class="showcase-box column-2">
+    <div class="showcase-image">
+        <a href=/stock_analysis/><img
+        
+        loading="lazy"
+        src="/img/projects-stock.jpg"
+        srcset="/img/projects-stock.jpg, /img/projects-stock.jpg 1.5x, /img/projects-stock.jpg 2x"
+        sizes="auto"
+        alt="Stock Analysis"
+        title="Stock Analysis" height="200"   width="400" ></a>
+    </div>
+    <h2 class="showcase-title">
+        <a href=/stock_analysis/>Stock Analysis</a>
+    </h2>
+    <p class="showcase-summary">
+        Stock Analysis using PCA and K-means
+    </p>
+    <a class="showcase-link" href=/stock_analysis/>
+        Read more...
+    </a>
+</div></div>
 
         <div class="post-footer" id="post-footer">
     <div class="post-info">

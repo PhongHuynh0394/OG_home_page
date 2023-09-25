@@ -1,6 +1,9 @@
 # Football ETL Analysis P2
 
 <!--more-->
+**Source**
+{{< friend name="PhongHuynh0394" url="https://github.com/PhongHuynh0394/Football_ETL_Analysis" avatar="/img/github-logo.png" bio="Football_ETL_Analysis">}}
+
 Hello! Hello! OG đây, sau phần 1 chúng ta đã setup các kiểu và đảm bảo mọi thứ trơn tru rồi, ở phần này chúng ta sẽ chuẩn bị [Data Source](#data-source), và khởi chạy pipeline ở [Implement](#implement) sau đó sẽ [Visualize](#visualization) cleaned data có được từ data warehouse thành Dashboard.
 
 Bắt đầu thôi nào !

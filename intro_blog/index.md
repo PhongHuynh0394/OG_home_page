@@ -56,5 +56,6 @@ Contact me:
 - Facebook: [Phong Huynh](https://www.facebook.com/profile.php?id=100007553837967)
 - Instagram: [phong_huynh](https://www.instagram.com/phong_huynhh/)
 
-Hoặc bạn cũng có thể ghé thăm Github của mình: [PhongHuynh0394](https://github.com/PhongHuynh0394)
+Hoặc bạn cũng có thể ghé thăm Github của mình:
+{{< friend name="PhongHuynh0394" url="https://github.com/PhongHuynh0394" avatar="https://avatars.githubusercontent.com/u/111982291?s=400&u=909cd3197c02deca63dedc9ab6172b440a743ae3&v=4" bio="Huỳnh Lưu Vĩnh Phong" >}}
 
