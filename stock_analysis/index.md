@@ -27,7 +27,7 @@ Dưới đây là tóm tắt sơ lược từng bước để xử lý và phân
 3. PCA (Principle Component Analysis)
 4. K-Means Clustering
 5. Data Analysis
-6. References
+6. References (chi tiết trong notebook ở github)
 
 {{< admonition type=note title="Raw Data" >}}
 Source: [df_merged.pkl](https://github.com/PhongHuynh0394/My-respository/blob/main/df_merged.pkl)
