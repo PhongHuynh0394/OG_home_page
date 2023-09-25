@@ -1,22 +1,22 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Machine learning - Tag - OG Page</title>
-        <link>http://phonghuynh.github.io/tags/machine-learning/</link>
+        <link>https://phonghuynh.netlify.app/tags/machine-learning/</link>
         <description>Machine learning - Tag - OG Page</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
-            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Tue, 05 Sep 2023 23:15:54 &#43;0700</lastBuildDate><atom:link href="http://phonghuynh.github.io/tags/machine-learning/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Tue, 05 Sep 2023 23:15:54 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/tags/machine-learning/" rel="self" type="application/rss+xml" /><item>
     <title>Stock Analysis P2</title>
-    <link>http://phonghuynh.github.io/stock_analysis_2/</link>
+    <link>https://phonghuynh.netlify.app/stock_analysis_2/</link>
     <pubDate>Tue, 05 Sep 2023 23:15:54 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>http://phonghuynh.github.io/stock_analysis_2/</guid>
+                </author><guid>https://phonghuynh.netlify.app/stock_analysis_2/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Stock analysis</title>
-    <link>http://phonghuynh.github.io/stock_analysis/</link>
+    <link>https://phonghuynh.netlify.app/stock_analysis/</link>
     <pubDate>Thu, 31 Aug 2023 14:39:53 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>http://phonghuynh.github.io/stock_analysis/</guid>
+                </author><guid>https://phonghuynh.netlify.app/stock_analysis/</guid>
     <description><![CDATA[Warning  Đây là kiến thức tích góp từ nhiều nguồn và nghiên cứu của nhóm OG, tất nhiên không thể tránh khỏi sai sót. Hy vọng bài viết lần này thú vị và giúp bạn đọc thư giãn, tham khảo.   Source   PhongHuynh0394  Stock-Analysis
   
 Hello! OG đây. Ở project lần này mình sẽ phân tích gia trị cổ phiếu phái sinh VN30 Index bằng cách sử dụng PCA và K-means.]]></description>
