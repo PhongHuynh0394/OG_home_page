@@ -4,13 +4,20 @@
         <link>https://phonghuynh.netlify.app/authors/og/</link>
         <description>OG - Author - OG Page</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
-            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Sun, 24 Sep 2023 23:27:49 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/authors/og/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Wed, 27 Sep 2023 22:04:36 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/authors/og/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux - tiếng sét ái tình</title>
+    <link>https://phonghuynh.netlify.app/linux/</link>
+    <pubDate>Wed, 27 Sep 2023 22:04:36 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/linux/</guid>
+    <description><![CDATA[Khi biết đến Linux, tôi đã yêu em lúc nào không hay]]></description>
+</item><item>
     <title>Blogs</title>
     <link>https://phonghuynh.netlify.app/blogs/</link>
     <pubDate>Sun, 24 Sep 2023 23:27:49 &#43;0700</pubDate><author>
                     <name>OG</name>
                 </author><guid>https://phonghuynh.netlify.app/blogs/</guid>
-    <description><![CDATA[   Thằng nhóc thích code và data  Ngành Data có gì hot mà mình lại dính Read more...   ]]></description>
+    <description><![CDATA[Data lú   #1 Thằng nhóc thích code và data  Ngành Data có gì hot mà mình lại dính Read more...     #2 Linux - Tiếng sét ái tình  Khi biết đến Linux, tôi đã yêu em lúc nào không hay Read more...   ]]></description>
 </item><item>
     <title>Stock Analysis P2</title>
     <link>https://phonghuynh.netlify.app/stock_analysis_2/</link>
@@ -71,12 +78,5 @@ Hello! OG đây. Ở project lần này mình sẽ phân tích gia trị cổ ph
                     <name>OG</name>
                 </author><guid>https://phonghuynh.netlify.app/football_etl/</guid>
     <description><![CDATA[A Data Engineer project building pipeline to analyze football data]]></description>
-</item><item>
-    <title>Projects</title>
-    <link>https://phonghuynh.netlify.app/projects/</link>
-    <pubDate>Mon, 31 Jul 2023 14:12:19 &#43;0700</pubDate><author>
-                    <name>OG</name>
-                </author><guid>https://phonghuynh.netlify.app/projects/</guid>
-    <description><![CDATA[Data Engineering   Football ETL Analysis  A Data Engineer project building pipeline to analyze football data Read more...   Machine learning Basic   Stock Analysis  Basic Analyzing VN30 stock using PCA and K-Means Read more...   ]]></description>
 </item></channel>
 </rss>

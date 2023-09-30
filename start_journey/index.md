@@ -2,7 +2,17 @@
 
 <!--more-->
 
-Hellooo OG đâyy ! Ở bài này, mình sẽ kể cơ duyên đưa mình đến với ngành `Data` và quyết định dấn thân vào con đường trở thành một Data Engineer :smile:
+{{< admonition info "Quảng Cáo" >}}
+Chào mừng đến với "Data lú"
+
+Giới thiệu với mọi người đây là series đầu tiên của kênh này kể mấy câu chuyện kì thú
+ảo ma canada của OG trong thế giới data rộng lớn :joy: Đùa chút thôi, đây sẽ là series vui vẻ về câu chuyện Data mà OG trải nghiệm, góp nhặt được. Hy vọng bạn sẽ thích nó hihi :heart_eyes:
+
+Gòi dzo
+{{< /admonition >}}
+
+Hellooo OG đâyy ! 
+Chào mừng bạn đến với số đầu tiên, lần đầu còn bỡ ngỡ, nên mình sẽ kể cơ duyên đưa mình đến với ngành `Data` và quyết định dấn thân vào con đường trở thành một Data Engineer :kissing:
 
 Gét Goo!
 

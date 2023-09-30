@@ -2,21 +2,23 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://phonghuynh.netlify.app/authors/</loc><lastmod>2023-09-24T23:27:49&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/authors/</loc><lastmod>2023-09-27T22:04:36&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/series/data-l%C3%BA/</loc><lastmod>2023-09-27T22:04:36&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/linux/</loc><lastmod>2023-09-27T22:04:36&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/authors/og/</loc><lastmod>2023-09-27T22:04:36&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/posts/</loc><lastmod>2023-09-27T22:04:36&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/series/</loc><lastmod>2023-09-27T22:04:36&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://phonghuynh.netlify.app/blogs/</loc><lastmod>2023-09-24T23:27:49&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/authors/og/</loc><lastmod>2023-09-24T23:27:49&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/tags/machine-learning/</loc><lastmod>2023-09-05T23:15:54&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/tags/math/</loc><lastmod>2023-09-05T23:15:54&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/posts/</loc><lastmod>2023-09-05T23:15:54&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/series/</loc><lastmod>2023-09-05T23:15:54&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/series/stock-analysis/</loc><lastmod>2023-09-05T23:15:54&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/stock_analysis_2/</loc><lastmod>2023-09-05T23:15:54&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/tags/</loc><lastmod>2023-09-05T23:15:54&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/categories/</loc><lastmod>2023-08-31T14:39:53&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/categories/projects/</loc><lastmod>2023-08-31T14:39:53&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/stock_analysis/</loc><lastmod>2023-08-31T14:39:53&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/start_journey/</loc><lastmod>2023-08-30T22:13:58&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/intro_blog/</loc><lastmod>2023-08-30T22:11:29&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/tags/machine-learning/</loc><lastmod>2023-09-05T23:15:54&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/tags/math/</loc><lastmod>2023-09-05T23:15:54&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/series/stock-analysis/</loc><lastmod>2023-09-05T23:15:54&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/stock_analysis_2/</loc><lastmod>2023-09-05T23:15:54&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/tags/</loc><lastmod>2023-09-05T23:15:54&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/categories/</loc><lastmod>2023-08-31T14:39:53&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/categories/projects/</loc><lastmod>2023-08-31T14:39:53&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/stock_analysis/</loc><lastmod>2023-08-31T14:39:53&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/start_journey/</loc><lastmod>2023-08-30T22:13:58&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/intro_blog/</loc><lastmod>2023-08-30T22:11:29&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
             <loc>https://phonghuynh.netlify.app/series/football-etl/</loc><lastmod>2023-08-01T15:01:16&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://phonghuynh.netlify.app/football_etl_2/</loc><lastmod>2023-08-01T15:01:16&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://phonghuynh.netlify.app/posts/projects/</loc><lastmod>2023-07-31T16:23:24&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
