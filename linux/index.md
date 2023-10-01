@@ -30,7 +30,7 @@ Và sau một thời gian học tập và làm việc với anh bạn :penguin: 
 ### Hệ điều hành chất chơi người dơi
 Linux là một hệ điều hành được phát triển từ năm 1991 bởi Linus Torvalds dựa trên hệ điều hành Unix. Chú cánh cụt này được viết bằng C và đảm nhận nhiệm vụ nhận các request từ chương trình trên máy tính và chuyển chúng đến phần cứng.
 
-Điều đặc biệt nhất có lẽ là nó được phát hành miễn phí (open source). Nghĩa là bạn có thể dễ dàng cài Linux một cách quang minh chính đại mà không cần phải crack hay "Đi cửa sau" với nhiều rủi ro lỗi như khi sử dụng hđh khác. Thậm chí bạn có thể chỉnh sửa, đóng góp xây dựng thêm cho hệ điều hành này nếu muốn.
+Điều đặc biệt nhất có lẽ là nó được phát hành **miễn phí** (open source). Nghĩa là bạn có thể dễ dàng cài Linux một cách quang minh chính đại mà không cần phải crack hay "Đi cửa sau" với nhiều rủi ro lỗi như khi sử dụng hđh khác. Thậm chí bạn có thể chỉnh sửa, đóng góp xây dựng thêm cho hệ điều hành này nếu muốn.
 Không những vậy, cộng đồng hỗ trợ của hệ điều hành này cũng rộng lớn và vô cùng "bá đạo" về nhiều khía cạnh :joy: Bạn sẽ có thể gần như ngay lập tức được giải đáp hầu hết các thắc mắc hay trục trặc khi sử dụng linux.
 Cộng đồng này đa số là các lập trình viên, nhà phát triển,... Vì chú cánh cụt này hệ điều hành ưu thích và thích hợp để phát triển sản phẩm hoặc xây dựng hệ thống nhờ là ứng dụng
 mã nguồn mở và tính bảo mật cao.
@@ -50,6 +50,8 @@ với máy tính dưới dạng văn bản. Và trên các máy tính Ubuntu th�
 Đối với người dùng Linux, việc thao tác với terminal là điều gần như hiển nhiên. Đặc biệt thích hợp cho các "cót đơ" hay nhà phát triển. Việc chạy lệnh trên Terminal
 ngoài việc trông có vẻ "nguy hiểm" hơn, trải nghiệm sử dụng shell cũng được cho là thoải mái hơn trên window rất nhiều. Không những vậy, với một cộng đồng cực lớn, việc làm quen với
 shell dường như đã trở nên dễ dàng hơn bao giờ hết.
+
+Việc sử dụng shell như thế nào có lẽ OG sẽ để dành lại vào 1 bài khác nhé hihi
 
 ### Đa dạng phiên bản
 Vì là sản phẩm mã nguồn mở, Linux có rất nhiều phiên bản khác nhau. Các **Linux Distro** là phần đã góp phần vào sự thú vị nói chung của hệ điều hành này và giúp cho chúng ta có đa dạng
@@ -112,11 +114,28 @@ Okay nói quá trời nói thì tóm gọn qua bảng sau đây:
 Việc học lập trình hay quản lý hệ thông, có lẽ Linux sẽ là lựa chọn hoàn hảo hơn (hoặc nếu có điều kiện, hãy mua Mac :smile: thật đấy !). Còn nếu bạn là người dùng phổ thông,
 không có nhu cầu phải biết về lập trình, quản lý hạ tầng,... thì cứ cửa sổ mà dùng thôi hihi
 
+## Muốn thì tìm cách
+Nếu bạn là một người dùng Mac, chúc mừng bạn đã quay vào ô an toàn :smile: sướng nhất bạn rồi hi. Còn nếu sử dụng Window mà bất giác có một tình yêu với Linux thì phải làm sao đây ?
+Không lẽ phải bỏ Win cài lại Linux sao ?
+
+Câu trả lời là **Không**. Hiện nay có 3 cách chính để bạn có thể sử dụng Linux mà không cần phải từ bỏ chiếc cửa sổ của mình:
+1. **Dùng máy ảo**: Việc đầu tiên mà hầu hết mọi người nghĩ tới khi dùng một hệ điều hành khác với hệ điều hành chính của máy chính là dùng một con máy ảo. Bạn có thể sử dụng
+VirtualBox hoặc VMware PLayer một cách miễn phí để cài đặt. Nhưng với OG, sử dụng máy ảo chả khác nào một cực hình, vì nó chậm kinh khủng khiếp. Vì loại máy ảo này chạy trên hệ điều hành máy và sử dụng công nghệ
+ảo hóa của CPU để tạo ra các máy ảo khác. Cơ bản là phải thông qua một OS trung gian (Window), do đó tốc độ của nó thực sự như rùa.
+2. **Dùng dual boot**: Cơ bản cách này là cài đặt cho máy tính bạn chạy được cả 2 hệ điều hành cùng một lúc, cách này được khá nhiều người sử dụng và tất nhiên là nhanh hơn việc sử dụng máy ảo.
+3. **Dùng WSL**: hay còn được gọi là Window Subsystem for Linux, về bản chất mà nói thì đây cũng là một loại máy ảo. Tuy nhiên nó là loại máy ảo chạy trên một
+nền tảng ảo hóa của CPU là Hyper-V, và không hề thông qua hệ điều hành trung gian nào. Có thể hiểu là công nghệ Hyper-V là công nghệ ảo hóa của CPU cung cấp các tầng ảo hóa, kể cả cho chính Window của bạn.
+Việc sử dụng máy ảo loại này thực sự nhanh hơn rất nhiều và cũng không cần phải restart máy để chuyển sang OS khác như cách dual boot mà đơn giản chỉ là tắt wsl trên PowerShell đi là xong. Quá đã phải không nào.
+
+Đối với OG thì mình đang dùng cách 3 để có thể sử dụng Linux trên Window một cách hoàn toàn miễn phí và trải nghiệm vô cùng ổn định. Microsoft đã tạo ra WSL để giúp giải tỏa cơn khát Linux của người dùng Window và 
+giúp cho cuộc sống các lập trình viên thêm ngọt ngào dễ sống hơn :joy:
+
+> Hoặc bạn có thể ghé thăm page [**Ubunchuu trường ú**](https://www.facebook.com/ubunchuu.club.hcmus) để tìm hiểu tất tần tật mọi thứ về Linux và Ubuntu nhé. Đây là kênh
+do một nhóm các sinh viên đam mê với linux của HCMUS thành lập nhằm tạo cộng đồng linux giúp đỡ lẫn nhau. Và tất nhiên là hướng đến các bạn người mới, newbie với Ubuntu rồi.
+
 ## Cúng cùi
 Và đó là tất cả cảm nhận của OG về việc sử dụng Linux, cũng như là giới thiệu một chút về chú cánh cụt :penguin: cư tê này. Tất cả chỉ là cảm nhận cá nhân của OG trong quá trình
 sử dụng Linux, hy vọng rằng sẽ giúp bạn cảm thấy thú vị.
 
 -Mew-
-
----
 
