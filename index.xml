@@ -1,63 +1,63 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>OG Page</title>
-        <link>/</link>
+        <link>https://phonghuynh.netlify.app/</link>
         <description>OG page</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
             <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Sun, 30 Jul 2023 20:06:43 &#43;0700</lastBuildDate>
-            <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+            <atom:link href="https://phonghuynh.netlify.app/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Linux - tiếng sét ái tình</title>
-    <link>/linux/</link>
+    <link>https://phonghuynh.netlify.app/linux/</link>
     <pubDate>Wed, 27 Sep 2023 22:04:36 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>/linux/</guid>
+                </author><guid>https://phonghuynh.netlify.app/linux/</guid>
     <description><![CDATA[Khi biết đến Linux, tôi đã yêu em lúc nào không hay]]></description>
 </item><item>
     <title>Stock Analysis P2</title>
-    <link>/stock_analysis_2/</link>
+    <link>https://phonghuynh.netlify.app/stock_analysis_2/</link>
     <pubDate>Tue, 05 Sep 2023 23:15:54 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>/stock_analysis_2/</guid>
+                </author><guid>https://phonghuynh.netlify.app/stock_analysis_2/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Stock analysis</title>
-    <link>/stock_analysis/</link>
+    <link>https://phonghuynh.netlify.app/stock_analysis/</link>
     <pubDate>Thu, 31 Aug 2023 14:39:53 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>/stock_analysis/</guid>
+                </author><guid>https://phonghuynh.netlify.app/stock_analysis/</guid>
     <description><![CDATA[Warning  Đây là kiến thức tích góp từ nhiều nguồn và nghiên cứu của nhóm OG, tất nhiên không thể tránh khỏi sai sót. Hy vọng bài viết lần này thú vị và giúp bạn đọc thư giãn, tham khảo.   Source   PhongHuynh0394  Stock-Analysis
   
 Hello! OG đây. Ở project lần này mình sẽ phân tích gia trị cổ phiếu phái sinh VN30 Index bằng cách sử dụng PCA và K-means.]]></description>
 </item><item>
     <title>Thằng nhóc thích code và data</title>
-    <link>/start_journey/</link>
+    <link>https://phonghuynh.netlify.app/start_journey/</link>
     <pubDate>Wed, 30 Aug 2023 22:13:58 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>/start_journey/</guid>
+                </author><guid>https://phonghuynh.netlify.app/start_journey/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Intro: Tui là ai ? Đây là đâu ?</title>
-    <link>/intro_blog/</link>
+    <link>https://phonghuynh.netlify.app/intro_blog/</link>
     <pubDate>Wed, 30 Aug 2023 22:11:29 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>/intro_blog/</guid>
+                </author><guid>https://phonghuynh.netlify.app/intro_blog/</guid>
     <description><![CDATA[Giới thiệu về trang web đáng yêu này]]></description>
 </item><item>
     <title>Football ETL Analysis P2</title>
-    <link>/football_etl_2/</link>
+    <link>https://phonghuynh.netlify.app/football_etl_2/</link>
     <pubDate>Tue, 01 Aug 2023 15:01:16 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>/football_etl_2/</guid>
+                </author><guid>https://phonghuynh.netlify.app/football_etl_2/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="projects-football.jpg" referrerpolicy="no-referrer">
             </div>Continuous of Football ETL series]]></description>
 </item><item>
     <title>Football ETL Analysis</title>
-    <link>/football_etl/</link>
+    <link>https://phonghuynh.netlify.app/football_etl/</link>
     <pubDate>Mon, 31 Jul 2023 14:46:50 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>/football_etl/</guid>
+                </author><guid>https://phonghuynh.netlify.app/football_etl/</guid>
     <description><![CDATA[A Data Engineer project building pipeline to analyze football data]]></description>
 </item></channel>
 </rss>

@@ -1,22 +1,22 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>All Posts - OG Page</title>
-        <link>/posts/</link>
+        <link>https://phonghuynh.netlify.app/posts/</link>
         <description>All Posts | OG Page</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
-            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Wed, 27 Sep 2023 22:04:36 &#43;0700</lastBuildDate><atom:link href="/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Wed, 27 Sep 2023 22:04:36 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Projects</title>
-    <link>/posts/projects/</link>
+    <link>https://phonghuynh.netlify.app/posts/projects/</link>
     <pubDate>Mon, 31 Jul 2023 16:23:24 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>/posts/projects/</guid>
+                </author><guid>https://phonghuynh.netlify.app/posts/projects/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Blogs</title>
-    <link>/posts/blogs/</link>
+    <link>https://phonghuynh.netlify.app/posts/blogs/</link>
     <pubDate>Mon, 31 Jul 2023 16:21:23 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>/posts/blogs/</guid>
+                </author><guid>https://phonghuynh.netlify.app/posts/blogs/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>
