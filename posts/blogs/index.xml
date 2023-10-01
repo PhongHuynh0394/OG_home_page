@@ -1,29 +1,29 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>All Blogs - OG Page</title>
-        <link>https://phonghuynh.netlify.app/posts/blogs/</link>
+        <link>/posts/blogs/</link>
         <description>All Blogs | OG Page</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
-            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Mon, 31 Jul 2023 16:21:23 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/posts/blogs/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Mon, 31 Jul 2023 16:21:23 &#43;0700</lastBuildDate><atom:link href="/posts/blogs/" rel="self" type="application/rss+xml" /><item>
     <title>Linux - tiếng sét ái tình</title>
-    <link>https://phonghuynh.netlify.app/linux/</link>
+    <link>/linux/</link>
     <pubDate>Wed, 27 Sep 2023 22:04:36 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>https://phonghuynh.netlify.app/linux/</guid>
+                </author><guid>/linux/</guid>
     <description><![CDATA[Khi biết đến Linux, tôi đã yêu em lúc nào không hay]]></description>
 </item><item>
     <title>Thằng nhóc thích code và data</title>
-    <link>https://phonghuynh.netlify.app/start_journey/</link>
+    <link>/start_journey/</link>
     <pubDate>Wed, 30 Aug 2023 22:13:58 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>https://phonghuynh.netlify.app/start_journey/</guid>
+                </author><guid>/start_journey/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Intro: Tui là ai ? Đây là đâu ?</title>
-    <link>https://phonghuynh.netlify.app/intro_blog/</link>
+    <link>/intro_blog/</link>
     <pubDate>Wed, 30 Aug 2023 22:11:29 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>https://phonghuynh.netlify.app/intro_blog/</guid>
+                </author><guid>/intro_blog/</guid>
     <description><![CDATA[Giới thiệu về trang web đáng yêu này]]></description>
 </item></channel>
 </rss>

@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>streamlit - Tag - OG Page</title>
-        <link>https://phonghuynh.netlify.app/tags/streamlit/</link>
+        <link>/tags/streamlit/</link>
         <description>streamlit - Tag - OG Page</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
-            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Mon, 31 Jul 2023 14:46:50 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/tags/streamlit/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Mon, 31 Jul 2023 14:46:50 &#43;0700</lastBuildDate><atom:link href="/tags/streamlit/" rel="self" type="application/rss+xml" /><item>
     <title>Football ETL Analysis</title>
-    <link>https://phonghuynh.netlify.app/football_etl/</link>
+    <link>/football_etl/</link>
     <pubDate>Mon, 31 Jul 2023 14:46:50 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>https://phonghuynh.netlify.app/football_etl/</guid>
+                </author><guid>/football_etl/</guid>
     <description><![CDATA[A Data Engineer project building pipeline to analyze football data]]></description>
 </item></channel>
 </rss>

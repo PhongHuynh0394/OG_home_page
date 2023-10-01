@@ -1,40 +1,40 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>All Projects - OG Page</title>
-        <link>https://phonghuynh.netlify.app/posts/projects/</link>
+        <link>/posts/projects/</link>
         <description>All Projects | OG Page</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
-            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Mon, 31 Jul 2023 16:23:24 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/posts/projects/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Mon, 31 Jul 2023 16:23:24 &#43;0700</lastBuildDate><atom:link href="/posts/projects/" rel="self" type="application/rss+xml" /><item>
     <title>Stock Analysis P2</title>
-    <link>https://phonghuynh.netlify.app/stock_analysis_2/</link>
+    <link>/stock_analysis_2/</link>
     <pubDate>Tue, 05 Sep 2023 23:15:54 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>https://phonghuynh.netlify.app/stock_analysis_2/</guid>
+                </author><guid>/stock_analysis_2/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Stock analysis</title>
-    <link>https://phonghuynh.netlify.app/stock_analysis/</link>
+    <link>/stock_analysis/</link>
     <pubDate>Thu, 31 Aug 2023 14:39:53 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>https://phonghuynh.netlify.app/stock_analysis/</guid>
+                </author><guid>/stock_analysis/</guid>
     <description><![CDATA[Warning  Đây là kiến thức tích góp từ nhiều nguồn và nghiên cứu của nhóm OG, tất nhiên không thể tránh khỏi sai sót. Hy vọng bài viết lần này thú vị và giúp bạn đọc thư giãn, tham khảo.   Source   PhongHuynh0394  Stock-Analysis
   
 Hello! OG đây. Ở project lần này mình sẽ phân tích gia trị cổ phiếu phái sinh VN30 Index bằng cách sử dụng PCA và K-means.]]></description>
 </item><item>
     <title>Football ETL Analysis P2</title>
-    <link>https://phonghuynh.netlify.app/football_etl_2/</link>
+    <link>/football_etl_2/</link>
     <pubDate>Tue, 01 Aug 2023 15:01:16 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>https://phonghuynh.netlify.app/football_etl_2/</guid>
+                </author><guid>/football_etl_2/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="projects-football.jpg" referrerpolicy="no-referrer">
             </div>Continuous of Football ETL series]]></description>
 </item><item>
     <title>Football ETL Analysis</title>
-    <link>https://phonghuynh.netlify.app/football_etl/</link>
+    <link>/football_etl/</link>
     <pubDate>Mon, 31 Jul 2023 14:46:50 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>https://phonghuynh.netlify.app/football_etl/</guid>
+                </author><guid>/football_etl/</guid>
     <description><![CDATA[A Data Engineer project building pipeline to analyze football data]]></description>
 </item></channel>
 </rss>
