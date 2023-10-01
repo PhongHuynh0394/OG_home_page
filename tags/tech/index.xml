@@ -10,8 +10,6 @@
     <pubDate>Mon, 31 Jul 2023 14:46:50 &#43;0700</pubDate><author>
                     <name>OG</name>
                 </author><guid>https://phonghuynh.netlify.app/football_etl/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/ETL.png" referrerpolicy="no-referrer">
-            </div>A Data Engineer project building pipeline to analyze football data]]></description>
+    <description><![CDATA[A Data Engineer project building pipeline to analyze football data]]></description>
 </item></channel>
 </rss>
