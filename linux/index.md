@@ -68,7 +68,7 @@ Và OG cũng đãng sử dụng Distro này :smile:
 {{< image src="https://cdn.discordapp.com/attachments/1155749221677400085/1157340523330281565/Ubuntu_23.04_Lunar_Lobster_English_1.png?ex=651840db&is=6516ef5b&hm=d3e9676b70fbd59b20bfc94cc0437938b398644d631a1f30a9606d796bcfee8e&" caption="Ubuntu 23.04 Lunar Lobster" title="Ubuntu" >}}
 
 2. **Linux Mint**: Là một trong những distro tốt nhất dành do người dùng Linux mới. Giao diện Desktop của Mint rất là Window, tạo cảm giác vô cùng quen thuộc và dễ thích nghi đối với
-người dùng mới chuyển hoặc ưu thích Window. Đây cũng là một trong những điểm đặc sắc của distro này. Ngoài ra Linux Mint dựa trên Ubuntu, do đó cũng có thể chạy ứng dụng dành cho Ubuntu.
+người dùng mới chuyển hoặc ưu thích Window. Đây cũng là một trong những điểm đặc cắc của distro này. Ngoài ra Linux Mint dựa trên Ubuntu, do đó cũng có thể chạy ứng dụng dành cho Ubuntu.
 {{< image src="https://cdn.discordapp.com/attachments/1155749221677400085/1157342184375320648/linux_mint.png?ex=65184267&is=6516f0e7&hm=49208e455955eec0d3028630bfc85f0c28287732ae6bc77fe06c3b5cec5d384d&" title="Mint" caption="Linux Mint 21 \"Vanessa\"">}}
 
 3. **Fedora**: Trước đây gọi là `Fedora core`, được phát triển dựa trên cộng đồng theo Fedora Project và được bảo trợ bởi Red Hat (Công ty con của IBM). Đây là một trong
