@@ -107,5 +107,5 @@ Hành trình nào khi bắt đầu cũng gian nan, cả bản thân OG khi bắt
 
 Hy vọng bài viết này giúp bạn thư giãn và có một cái nhìn chung về ngành data nhé. Hẹn gặp lại trong bài tiếp theo hehe
 
--Meww
+**-Meww-**
 

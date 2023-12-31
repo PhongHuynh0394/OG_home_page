@@ -4,7 +4,31 @@
         <link>https://phonghuynh.netlify.app/authors/og/</link>
         <description>OG - Author - OG Page</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
-            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Wed, 27 Sep 2023 22:04:36 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/authors/og/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Sun, 31 Dec 2023 14:30:10 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/authors/og/" rel="self" type="application/rss+xml" /><item>
+    <title>Nhìn lại 2023</title>
+    <link>https://phonghuynh.netlify.app/recap2023/</link>
+    <pubDate>Sun, 31 Dec 2023 14:30:10 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/recap2023/</guid>
+    <description><![CDATA[<p>Năm 2023 vừa qua thật sự là một cột mốc đáng nhớ đối với bản thân OG. Đó là một chặng đường rất dài thăng trầm buồn vui
+lẫn lộn. Vào những giây phút cuối cùng, OG sẽ dùng bài viết này để nhìn lại cuộc hành trình đã qua để rồi sau cuối chính
+là hướng đến một tương lai với nhiều kế hoạch mới phía trước ở năm mới 2024 ❤️</p>]]></description>
+</item><item>
+    <title>Spotify_analysis</title>
+    <link>https://phonghuynh.netlify.app/spotify_analysis/</link>
+    <pubDate>Sun, 10 Dec 2023 18:41:00 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/spotify_analysis/</guid>
+    <description><![CDATA[<div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw"></i>Đang thi công<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Bài viết vẫn đang trong quá trình&hellip;. viết :)) Sẽ hoàn tất trong thời gian sớm nhất. Bạn có thể ghé qua link
+Github xem trước nhea ❤️</div>
+        </div>
+    </div>]]></description>
+</item><item>
     <title>Linux - tiếng sét ái tình</title>
     <link>https://phonghuynh.netlify.app/linux/</link>
     <pubDate>Wed, 27 Sep 2023 22:04:36 &#43;0700</pubDate><author>
@@ -17,7 +41,7 @@
     <pubDate>Sun, 24 Sep 2023 23:27:49 &#43;0700</pubDate><author>
                     <name>OG</name>
                 </author><guid>https://phonghuynh.netlify.app/blogs/</guid>
-    <description><![CDATA[Data lú   #1 Thằng nhóc thích code và data  Ngành Data có gì hot mà mình lại dính Read more...     #2 Linux - Tiếng sét ái tình  Khi biết đến Linux, tôi đã yêu em lúc nào không hay Read more...   ]]></description>
+    <description><![CDATA[Data lú   #1 Thằng nhóc thích code và data  Ngành Data có gì hot mà mình lại dính Read more...     #2 Linux - Tiếng sét ái tình  Khi biết đến Linux, tôi đã yêu em lúc nào không hay Read more...   Câu chuyện đời sống   Nhìn lại 2023  Quả là một năm gian nan nhưng thật mừng vì mình đã không đầu hàng Read more.]]></description>
 </item><item>
     <title>Stock Analysis P2</title>
     <link>https://phonghuynh.netlify.app/stock_analysis_2/</link>
@@ -64,19 +88,5 @@ Hello! OG đây. Ở project lần này mình sẽ phân tích gia trị cổ ph
                     <name>OG</name>
                 </author><guid>https://phonghuynh.netlify.app/posts/projects/</guid>
     <description><![CDATA[]]></description>
-</item><item>
-    <title>Blogs</title>
-    <link>https://phonghuynh.netlify.app/posts/blogs/</link>
-    <pubDate>Mon, 31 Jul 2023 16:21:23 &#43;0700</pubDate><author>
-                    <name>OG</name>
-                </author><guid>https://phonghuynh.netlify.app/posts/blogs/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Football ETL Analysis</title>
-    <link>https://phonghuynh.netlify.app/football_etl/</link>
-    <pubDate>Mon, 31 Jul 2023 14:46:50 &#43;0700</pubDate><author>
-                    <name>OG</name>
-                </author><guid>https://phonghuynh.netlify.app/football_etl/</guid>
-    <description><![CDATA[A Data Engineer project building pipeline to analyze football data]]></description>
 </item></channel>
 </rss>

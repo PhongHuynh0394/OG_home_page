@@ -137,5 +137,5 @@ do một nhóm các sinh viên đam mê với linux của HCMUS thành lập nh�
 Và đó là tất cả cảm nhận của OG về việc sử dụng Linux, cũng như là giới thiệu một chút về chú cánh cụt :penguin: cư tê này. Tất cả chỉ là cảm nhận cá nhân của OG trong quá trình
 sử dụng Linux, hy vọng rằng sẽ giúp bạn cảm thấy thú vị.
 
--Mew-
+**-Mew-**
 
