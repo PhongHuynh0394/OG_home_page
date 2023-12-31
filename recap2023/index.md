@@ -34,7 +34,7 @@ quay lại Nha Trang để xả hơi trong kỳ hè.
 Đã có những lần đi thật xa, và tất cả những chuyến đi đó, đều đọng lại trong OG những điều đáng quý như là một phần
 của năm 2023 quá đáng nhớ.
 
-## Là năm của sự nổ lực
+## Là năm của sự nỗ lực
 Mình đi chơi nhiều, thì đổi lại mình học cũng nhiều. Năm vừa qua chính là năm mà mình có rất nhiều cơ hội được học hỏi, dấn thân trải nghiệm nhiều thứ.
 Thật sự, OG muốn cảm ơn bản thân mình vì đã không bao giờ bỏ cuộc và luôn dấn thân làm những điều mới mẻ và học tập không ngừng.
 
