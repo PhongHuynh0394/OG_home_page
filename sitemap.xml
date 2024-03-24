@@ -2,13 +2,13 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://phonghuynh.netlify.app/authors/</loc><lastmod>2023-12-31T14:30:10&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/tags/lifestory/</loc><lastmod>2023-12-31T14:30:10&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/recap2023/</loc><lastmod>2023-12-31T14:30:10&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/authors/og/</loc><lastmod>2023-12-31T14:30:10&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/posts/</loc><lastmod>2023-12-31T14:30:10&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/tags/</loc><lastmod>2023-12-31T14:30:10&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/spotify_analysis/</loc><lastmod>2023-12-10T18:41:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/authors/</loc><lastmod>2023-12-31T14:30:10&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/tags/lifestory/</loc><lastmod>2023-12-31T14:30:10&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/recap2023/</loc><lastmod>2023-12-31T14:30:10&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/authors/og/</loc><lastmod>2023-12-31T14:30:10&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/posts/</loc><lastmod>2023-12-31T14:30:10&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/tags/</loc><lastmod>2023-12-31T14:30:10&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/spotify_analysis/</loc><lastmod>2023-12-10T18:41:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://phonghuynh.netlify.app/series/data-l%C3%BA/</loc><lastmod>2023-09-27T22:04:36&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://phonghuynh.netlify.app/linux/</loc><lastmod>2023-09-27T22:04:36&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://phonghuynh.netlify.app/series/</loc><lastmod>2023-09-27T22:04:36&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

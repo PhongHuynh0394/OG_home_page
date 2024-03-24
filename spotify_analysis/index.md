@@ -7,7 +7,8 @@ Github xem trước nhea :heart:
 <!--more-->
 **Source (Nếu thấy hay, ngại gì tặng chúng tớ 1 sao :joy:)**
 {{< friend name="PhongHuynh0394" url="https://github.com/PhongHuynh0394/pythonDS" avatar="/img/github-logo.png" bio="Spotify_analysis">}}
-<!-- {{< admonition info "Shout out cho anh em">}} -->
+
+<!--{{< admonition info "Shout out cho anh em">}}-->
 <!-- Dự án này là sự đóng góp không hề nhỏ của các thành viên team OG: **Trần Ngọc Tuấn, Phạm Duy Sơn, -->
 <!-- Mai Chiến Vĩ Thiên**. Cảm ơn sự đóng góp của các bạn đã giúp cho dự án hoàn thiện :joy: -->
 <!-- {{< /admonition >}} -->
