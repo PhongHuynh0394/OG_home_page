@@ -42,7 +42,7 @@
                             "url": "https:\/\/phonghuynh.netlify.app\/img\/oggy.png",
                             "width":  240 ,
                             "height":  240 
-                        }],"genre": "posts","wordcount":  3527 ,
+                        }],"genre": "posts","wordcount":  3525 ,
         "url": "https:\/\/phonghuynh.netlify.app\/football_etl_2\/","datePublished": "2023-08-01T15:01:16+07:00","dateModified": "2023-08-01T15:01:16+07:00","publisher": {
             "@type": "Organization",
             "name": "OG Page","logo": "https:\/\/phonghuynh.netlify.app\/favicon.icon"},"authors": [{
@@ -66,14 +66,7 @@
     <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="OG Page"><img
-        class="logo"
-        loading="lazy"
-        src="/favicon.ico"
-        srcset="/favicon.ico, /favicon.ico 1.5x, /favicon.ico 2x"
-        sizes="auto"
-        alt="/favicon.ico"
-        title="/favicon.ico" >OG Page</a>
+            <a href="/" title="OG Page">OG Page</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/blogs/" title="OG&#39;s blogs"> Blogs </a><a class="menu-item" href="/tags/" title="Tags of blogs"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/projects/"> Projects </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
@@ -85,14 +78,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="OG Page"><img
-        class="logo"
-        loading="lazy"
-        src="/favicon.ico"
-        srcset="/favicon.ico, /favicon.ico 1.5x, /favicon.ico 2x"
-        sizes="auto"
-        alt="/favicon.ico"
-        title="/favicon.ico" >OG Page</a>
+                <a href="/" title="OG Page">OG Page</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -203,16 +189,11 @@
     <a href="#data-source" class="header-mark"></a>Data Source</h2><h3 id="chuẩn-bị-file-làm-raw-data" class="headerLink">
     <a href="#chu%e1%ba%a9n-b%e1%bb%8b-file-l%c3%a0m-raw-data" class="header-mark"></a>Chuẩn bị file làm raw data</h3><p>Các file csv sử dụng làm dữ liệu được tải từ <a href="https://www.kaggle.com/datasets/technika148/football-database" target="_blank" rel="noopener noreferrer">Football Database - Kaggle</a>. Đây là dữ liệu thống kê của cầu thủ, đội bóng đến từ 5 giải bóng hàng đầu Châu Âu (Premier League, Laliga, Seria A, Budesliga, League 1)</p>
 <p>Ta sẽ có schema như sau:</p>
-<p><figure><a class="lightgallery" href="https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/football_schema.png" title="Schema" data-thumbnail="https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/football_schema.png" data-sub-html="<h2>Schema</h2><p>Schema</p>">
-        <img
-            
-            loading="lazy"
-            src="https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/football_schema.png"
-            srcset="https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/football_schema.png, https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/football_schema.png 1.5x, https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/football_schema.png 2x"
-            sizes="auto"
-            alt="Schema">
-    </a><figcaption class="image-caption">Schema</figcaption>
-    </figure></p>
+<figure><img src="https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/football_schema.png"/><figcaption>
+            <h4>Schema</h4>
+        </figcaption>
+</figure>
+
 <p>trong đó:</p>
 <ul>
 <li><code>games</code>: bảng chứa thông tin thống kê của từng trận đấu (<strong>gameID</strong>)</li>
@@ -1533,15 +1514,9 @@ exit<span class="p">;</span>
 </div>
 </div><h3 id="check-ui" class="headerLink">
     <a href="#check-ui" class="header-mark"></a>Check UI</h3><p>Hãy kiểm tra Dagit UI ở <code>localhost:3001</code> để chắc chắn rằng mọi thứ vẫn ổn</p>
-<p><figure><a class="lightgallery" href="https://github.com/PhongHuynh0394/Football_ETL_Analysis/blob/master/images/pipeline.png?raw=true" title="UI" data-thumbnail="https://github.com/PhongHuynh0394/Football_ETL_Analysis/blob/master/images/pipeline.png?raw=true">
-        <img
-            
-            loading="lazy"
-            src="https://github.com/PhongHuynh0394/Football_ETL_Analysis/blob/master/images/pipeline.png?raw=true"
-            srcset="https://github.com/PhongHuynh0394/Football_ETL_Analysis/blob/master/images/pipeline.png?raw=true, https://github.com/PhongHuynh0394/Football_ETL_Analysis/blob/master/images/pipeline.png?raw=true 1.5x, https://github.com/PhongHuynh0394/Football_ETL_Analysis/blob/master/images/pipeline.png?raw=true 2x"
-            sizes="auto"
-            alt="UI">
-    </a></figure></p>
+<figure><img src="https://github.com/PhongHuynh0394/Football_ETL_Analysis/blob/master/images/pipeline.png?raw=true"/>
+</figure>
+
 <p>Ngoài ra cũng có thể check MinIO: <code>localhost:9000</code></p>
 <h2 id="visualization" class="headerLink">
     <a href="#visualization" class="header-mark"></a>Visualization</h2><p>Cuối cùng là vẽ dashboard, đầu tiên ta cần phải lấy được data từ psql, hãy vào tạo file: <code>./streamlit/src/psql_connect.py</code>:</p>

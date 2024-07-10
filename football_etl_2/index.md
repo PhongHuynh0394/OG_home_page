@@ -15,7 +15,7 @@ Các file csv sử dụng làm dữ liệu được tải từ [Football Databas
 
 Ta sẽ có schema như sau:
 
-![Schema](https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/football_schema.png "Schema")
+{{< figure src="https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/football_schema.png" title="Schema">}}
 
 trong đó:
 - `games`: bảng chứa thông tin thống kê của từng trận đấu (**gameID**) 
@@ -702,7 +702,9 @@ docker restart etl_pipeline
 ### Check UI
 Hãy kiểm tra Dagit UI ở `localhost:3001` để chắc chắn rằng mọi thứ vẫn ổn
 
-![UI](https://github.com/PhongHuynh0394/Football_ETL_Analysis/blob/master/images/pipeline.png?raw=true)
+
+{{< figure src="https://github.com/PhongHuynh0394/Football_ETL_Analysis/blob/master/images/pipeline.png?raw=true" >}}
+
 
 Ngoài ra cũng có thể check MinIO: `localhost:9000`
 

@@ -25,7 +25,7 @@ Trước khi được giới thiệu về Linux, OG hoàn toàn không biết g�
 
 Và sau một thời gian học tập và làm việc với anh bạn :penguin: cư tê thì OG đã không còn muốn quay lại cửa sổ (window) lần nào nữa. Vậy Linux có gì hay hãy đọc tiếp nhé
 
-![Linux](https://cdn.discordapp.com/attachments/1155749221677400085/1156609682962653255/linux-logo.jpg?ex=660d7235&is=65fafd35&hm=fbce02245b9db794fbdd7a40e80c7c5d5532c4292d75f5fadcfc620ee5d15935&)
+{{< figure src="https://i.imgur.com/O5QX1fQ.jpg">}}
 
 ### Hệ điều hành chất chơi người dơi
 Linux là một hệ điều hành được phát triển từ năm 1991 bởi Linus Torvalds dựa trên hệ điều hành Unix. Chú cánh cụt này được viết bằng C và đảm nhận nhiệm vụ nhận các request từ chương trình trên máy tính và chuyển chúng đến phần cứng.
@@ -42,7 +42,7 @@ Bạn vẫn có thể thao tác với giao diện hệ điều hành, vẫn sử
 Hẳn là có thể đâu đó, bạn thấy một anh chàng ngầu lòi nào đó bấm vài dòng lệnh, Bụp enter. Rồi tự nhiên một đống chữ xuất hiện dồn dập trên cái nền terminal tím. Ồ có thể anh ta đang sử dụng shell đấy. Hoặc
 là một lập trình viên, bạn đã quá chán với giao diện Command Prompt và PowerShell ? Hãy chuyển sang Linux và bạn sẽ bước vào thế giới huyền diệu khi sử dụng terminal.
 
-{{< image src="https://cdn.discordapp.com/attachments/1155749221677400085/1157633553908105277/Screenshot_7.png?ex=66112bc3&is=65feb6c3&hm=e84f30054ef550b87f38b3c2a0329818e0e6f957cd0f84a007e38df6ee0cb6de&" caption="Terminal của OG" title="Ubuntu 22.04.3 LTS" >}}
+{{< figure src="https://i.imgur.com/bz36WQc.png" >}}
 
 Shell là một chương trình phát triển dành cho các máy tính chạy trên hệ điều hành Unix và Linux. Phần mềm này cũng cấp giao diện người dùng nhập và giao tiếp
 với máy tính dưới dạng văn bản. Và trên các máy tính Ubuntu thì Shell cũng có thể gọi là Terminal.
@@ -57,30 +57,29 @@ Việc sử dụng shell như thế nào có lẽ OG sẽ để dành lại vào
 Vì là sản phẩm mã nguồn mở, Linux có rất nhiều phiên bản khác nhau. Các **Linux Distro** là phần đã góp phần vào sự thú vị nói chung của hệ điều hành này và giúp cho chúng ta có đa dạng
 sự chọn lựa cho phiên bản mình yêu thích. Hiện có khoảng 600 bản Distro và hơn nửa trong số đó được liên tục phát triển và cải thiện.
 
-{{< image src="https://cdn.discordapp.com/attachments/1155749221677400085/1156992218054266900/linux-distro-stickers.png?ex=660ed678&is=65fc6178&hm=c2628c109ff0b16c36436e8433f840840a4b6c43378d9691df831120ef4c108c&" title="Linux distro" width=1000 >}}
-
+{{< figure src="https://i.imgur.com/YIb7n6V.png" >}}
 Có đa dạng các distro và phù hợp với đa dạng các nền tảng khác nhau từ desktop, laptop, di động,... Và cũng nhắm tới phục vụ cho đa dạng các đối tượng khác nhau. Hãy cùng xem qua một số distro phổ biến
 nhất nào
 
 1. **Ubuntu**: đây là phiên bản đông đảo người dùng sủ dụng nhất. Đây chính là một nhánh của Debian Linux. Ubuntu có giao diện dễ nhìn và dễ tiếp cận, do đó người dùng mới
 không khó để làm quen và sử dụng. Hơn nữa là cộng đồng sử dụng lớn nên bạn sẽ dễ dàng tìm được giải đáp cho các thắc mắc mình trong khi sử dụng.
 Và OG cũng đang sử dụng Distro này :smile:
-{{< image src="https://cdn.discordapp.com/attachments/1155749221677400085/1157340523330281565/Ubuntu_23.04_Lunar_Lobster_English_1.png?ex=66101adb&is=65fda5db&hm=8f9b7823f631f5ca59bc6b7cb9cab70539d58a6bd5cf11c580ac35eecf03ed95&" caption="Ubuntu 23.04 Lunar Lobster" title="Ubuntu" >}}
+{{< figure src="https://i.imgur.com/xxZSS2L.png" >}}
 
 2. **Linux Mint**: Là một trong những distro tốt nhất dành do người dùng Linux mới. Giao diện Desktop của Mint rất là Window, tạo cảm giác vô cùng quen thuộc và dễ thích nghi đối với
 người dùng mới chuyển hoặc ưu thích Window. Đây cũng là một trong những điểm đặc sắc của distro này. Ngoài ra Linux Mint dựa trên Ubuntu, do đó cũng có thể chạy ứng dụng dành cho Ubuntu.
-{{< image src="https://cdn.discordapp.com/attachments/1155749221677400085/1157342184375320648/linux_mint.png?ex=66101c67&is=65fda767&hm=44f1396c7a0f9fdb6c1e2c10521ef6b37f2db6586cf244a57585ce414e8bc6a2&" title="Mint" caption="Linux Mint 21 \"Vanessa\"">}}
+{{< figure src="https://i.imgur.com/BfvFF3g.png" >}}
 
 3. **Fedora**: Trước đây gọi là `Fedora core`, được phát triển dựa trên cộng đồng theo Fedora Project và được bảo trợ bởi Red Hat (Công ty con của IBM). Đây là một trong
 những bản phân phối có tốc độ nhanh và ổn định nhất. Được ưu chuộng bởi các nhà phát triển.
-{{< image src="https://cdn.discordapp.com/attachments/1155749221677400085/1157621812289613896/Fedora_Linux_35_About_3840px_2160px_Zoom2.5.png?ex=661120d3&is=65feabd3&hm=2cdb1f278133220cb62abbd2d673b293c71bda8c461d3b5d093831e56901c847&" caption="Fedora Linux 35" title="Fedora" >}}
+{{< figure src="https://i.imgur.com/uqqXSEB.jpeg" >}}
 
 4. **CentOS**: Một trong những phân phối Linux dành cho môi trường server, CentOS dựa trên mã nguồn mở của Red Hat Enterprise Linux (RHEL) và miễn phí. CentOS có độ ổn định cao và được nhiều công ty ưu chuộng.
-{{< image src="https://cdn.discordapp.com/attachments/1155749221677400085/1157624014601203742/CentOS_7.0_GNOME.png?ex=661122e0&is=65feade0&hm=f27eff6bfa937eb8c3bd7641bf7979a7c60e9d61cbbe3e51cb574bc20018816c&" caption="CentOS 7.0" title="CentOS" width=1000 height=700 >}}
+{{< figure src="https://i.imgur.com/arsNK5R.png" >}}
 
 5. **Arch Linux**: Bản phân phối này là một "Rolling Release", đại loại như là nó sẽ luôn được cung cấp bản cập nhật phần mềm sớm nhất có thể và cải thiện tốt nhất. Điều
 đặc biệt của distro này là khả năng cá nhân hóa rất cao, bạn thậm chí sẽ không nhận được giao diện đồ họa khi mới bắt đầu. Đổi lại bạn sẽ có thể thiết kế, xây dựng theo sở thích của chính mình.
-{{< image src="https://cdn.discordapp.com/attachments/1155749221677400085/1157626560338210886/ykf1z3vebaw71.png?ex=6611253f&is=65feb03f&hm=a10a296a63b9a5760399c7af2d945d2a31dced31ba47c0333b96658fe3539e05&" caption="Arch Linux" title="Arch Linux" >}}
+{{< figure src="https://i.imgur.com/CnxxfMA.png" >}}
 
 Và còn rất rất nhiều phân phối khác thú vị nữa mà kể ra chắc phải thành sách mất :joy:
 

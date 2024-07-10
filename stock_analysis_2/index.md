@@ -212,7 +212,7 @@ elbow_method(X_pca)
 ```
 Khi ta vẽ đồ thị WCSS với giá trị K, đồ thị trông giống như một khuỷu tay. Khi số cụm tăng lên, giá trị WCSS sẽ bắt đầu giảm. Giá trị WCSS lớn nhất khi $K=1$
 
-{{< image src="https://media.discordapp.net/attachments/1155749221677400085/1155749659281727489/stock-elbow.png?width=800&height=625" title="elbow_method" caption="Giá trị WCSS lớn nhất khi $K=1$" width=800 height=500 >}}
+{{< figure src="https://i.imgur.com/LaQvUnb.png" title="elbow_method" >}}
 
 Chúng ta có thể thấy rằng biểu đồ sẽ thay đổi nhanh chóng tại $K=2$ và do đó tạo ra hình dạng khuỷu tay. Từ thời điểm này, đồ thị di chuyển gần như song song với trục $X$
 
@@ -269,7 +269,7 @@ fig = px.scatter_matrix(
 fig.update_traces(diagonal_visible=False)
 fig.show()
 ```
-{{< image src="https://cdn.discordapp.com/attachments/1155749221677400085/1155757661774688316/stock-kmean-viual.png" title="Kmeans Clustering" caption="K-means cluster with 2 Clusters and various PC" width=900 >}}
+{{< figure src="https://i.imgur.com/affWhfh.png" title="Kmeans Clustering" >}}
 
 Sau khi chia cụm, chúng ta đến với bước cuối cùng thôi
 
@@ -340,7 +340,7 @@ fig.update_yaxes(title_text="Gia KL", row=2, col=2)
 
 fig.show()
 ```
-{{< image src="https://media.discordapp.net/attachments/1105503055916564572/1105552168716615804/Stock_Data_Visualization.png?width=831&height=452" title="Stock Data Visualization" caption="Stock Data Visualization" width=800 >}}
+{{< figure src="https://i.imgur.com/FRTgHhs.png" title="Stock Data Visualization" >}}
 Cluster B chứa các dữ liệu trong giai đoạn từ **20/3 đến 6/4/2023**
 
 **Nhìn nhận một cách tổng quát:**
@@ -364,7 +364,7 @@ fig.update_layout(xaxis_title="Times", yaxis_title="Mean Values",
 font=dict(family="Courier New, monospace", size=10, color="RebeccaPurple"))
 fig.show()
 ```
-{{< image src="https://media.discordapp.net/attachments/1105503055916564572/1105552168993427626/Mean_Values_by_Label_B.png?width=807&height=452" title="Mean Values by Label B" caption="Mean Values by Label B" width=800 >}}
+{{< figure src="https://i.imgur.com/mZgwwZL.png" title="Mean Values by Label B" >}}
 
 ```python
 import plotly.graph_objs as go
@@ -387,7 +387,7 @@ fig = go.Figure(data=[trace1, trace2, trace3], layout=layout)
 # Show figure
 fig.show()
 ```
-{{< image src="https://media.discordapp.net/attachments/1105503055916564572/1105552169840689152/correlation_between_Total_Volumn_and_GiaKL_B.png?width=831&height=452" title="B-Correlation between Total Volumn and GiaKL" caption="B-Correlation between Total Volumn and GiaKL" width=800 >}}
+{{< figure src="https://i.imgur.com/zb7qIkn.png" title="B-Correlation between Total Volumn and GiaKL" >}}
 
 #### Biến động thị trường
 ```python
@@ -446,7 +446,9 @@ fig.update_layout(xaxis_title="Times", yaxis_title="Mean Values",
 font=dict(family="Courier New, monospace", size=10, color="RebeccaPurple"))
 fig.show()
 ```
-{{< image src="https://media.discordapp.net/attachments/1105503055916564572/1105552169488351293/Mean_Values_by_Label_A.png?width=807&height=452" title="A-Correlation between Total Volumn and GiaKL" caption="A-Correlation between Total Volumn and GiaKL" width=800 >}}
+{{< figure src="https://i.imgur.com/kfDqxRX.png" title="Mean Values by Label A" >}}
+
+{{< figure src="https://i.imgur.com/1HWRxDL.png" title="A-Correlation between Total Volumn and GiaKL" >}}
 
 #### Biến động thị trường
 ```python

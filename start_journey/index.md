@@ -16,7 +16,7 @@ Chào mừng bạn đến với số đầu tiên, lần đầu còn bỡ ngỡ,
 
 Gét Goo!
 
-![Data Engineer](https://img.freepik.com/free-vector/big-data-center-server-room-rack-engineering-process-teamwork-computer-technology-cloud-storage_39422-1032.jpg?w=900&t=st=1695310448~exp=1695311048~hmac=06d4aafb2c53e29401a869c5be880a2e4bd533634fc8c7fcce634954a6f0623b)
+{{< figure src="https://img.freepik.com/free-vector/big-data-center-server-room-rack-engineering-process-teamwork-computer-technology-cloud-storage_39422-1032.jpg?w=900&t=st=1695310448~exp=1695311048~hmac=06d4aafb2c53e29401a869c5be880a2e4bd533634fc8c7fcce634954a6f0623b" >}}
 
 ## Ủa ngành Data Science ?
 Khoan Khoan ...  Bên trên là Engineer, qua đây là Science là sao OG ?
@@ -31,7 +31,8 @@ Ngành Khoa học dữ liệu hay Data Science là một lĩnh vực liên ngàn
 thống kê để tìm kiếm ý nghĩa từ dữ liệu. Hay nói bằng cách dễ hiểu, Data Science là ngành tìm kiếm, phân tích dữ liệu để khai thác tất cả những 
 giá trị mà dữ liệu mang lại để phục vụ nhiều mục đích khác nhau.
 
-![Data Science là ứng dụng khoa học để tìm kiếm ý nghĩa của dữ liệu để dự đoán](https://img.freepik.com/free-vector/illustration-social-media-concept_53876-18140.jpg?w=1060&t=st=1695312575~exp=1695313175~hmac=bab1eebfcb1ff8c7517d014e517ec11a53efd8c001f9393170db08deb168c4a9 "Data Science là ứng dụng khoa học để tìm kiếm ý nghĩa của dữ liệu để dự đoán tương lai")
+
+{{< figure src="https://img.freepik.com/free-vector/illustration-social-media-concept_53876-18140.jpg?w=1060&t=st=1695312575~exp=1695313175~hmac=bab1eebfcb1ff8c7517d014e517ec11a53efd8c001f9393170db08deb168c4a9" title="Data Science là ứng dụng khoa học để tìm kiếm ý nghĩa của dữ liệu để dự đoán tương lai" >}}
 
 Một nhà khoa học dữ liệu (Data Scientist) là người chịu trách nhiệm đưa ra các dẫn chứng từ dữ liệu, để từ đó đề xuất các giải pháp, kế hoạch
  hay định hướng từ ý nghĩa tìm được từ dữ liệu để giải quyết các bài toán kinh doanh khác nhau.
@@ -62,8 +63,7 @@ cũng phân tích dữ liệu, cố gắng tìm kiếm và rút ra giá trị t�
 | Cần có kiến thức về hoạt động kinh doanh nhiều hơn và vững về kiến thức thống kê | Cần có kiến thức không chỉ toán thống kê, ứng dụng mà còn phải có kiến thức về computer science, AI/ML,... |
 | Dựa vào dữ liệu đưa ra các giá trị có ích và cái nhìn trực quan về dữ liệu | Được yêu cầu phát triển "data product" để đưa ra quyết định có ích từ tập dữ liệu lớn |
 
-
-![Source: https://www.datascience-pm.com/wp-content/uploads/2021/05/data-scientist-vs-analyst-venn-diagram.png](/img/DSvDA.png "Data Science and Data Analytic")
+{{< figure src="/img/DSvDA.png" title="Data Science and Data Analytic" >}}
 
 Rồi okay nãy giờ là cả data science (DS) và data analytic (DA) rồi. Giờ là mới đến data engineer của tui nè hihi :smile:
 ## Data Engineer là gì ?
@@ -73,7 +73,7 @@ lập trình viên một tay cafe một tay chém code bình loạn thiên hạ 
 Và thế là tìm được một ngành thích hợp được coi là "Software engineer cho data", ngành này là một trong các ngành có xu hướng phát triển
 nhanh nhất trong nhóm ngành công nghệ. Vâng đó chính là Data Engineer
 
-![Data Engineer được coi là Software Engineer ở Data field](https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150062008.jpg?w=1060&t=st=1695490514~exp=1695491114~hmac=aa42473c5c14cf93805576f86fb8c371f3b22af2263a82567afab8a6a0032771 "Data Engineer")
+{{< figure src="https://k21academy.com/wp-content/uploads/2022/04/Napa-Data-Engineering-Image.jpg">}}
 
 Đầu tiên, Data Engineer hay DE được gọi là kỹ sư dữ liệu. Đây là vai trò đảm nhiệm việc phân tích nguồn dữ liệu, xây dựng và duy trì hệ thống
 cơ sở dữ liệu hiệu quả. Ngoài ra cũng là người đảm bảo chất lượng dữ liệu cho các phòng ban khác sử dụng.

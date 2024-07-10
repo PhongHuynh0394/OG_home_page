@@ -26,10 +26,13 @@ Mở đầu cho năm 2023, mình và những người bạn đã cùng dắt nha
 
 Nhờ những chuyến đi như vậy, mình đã làm quen nhiều những người bạn mới. Sau đó (hẳn nửa năm sau :joy:) mình lại có dịp
 quay lại Nha Trang để xả hơi trong kỳ hè.
+
+<!-- {{< figure src="img/recap2023-nt1.jfif" >}} -->
 <div style="display: flex; justify-content: space-between;">
 
-![nha trang](img/recap2023-nt1.jfif "Chuẩn bị ra biển bắt ốc")
-![nha trang](img/recap2023-nt2.jfif "Tham quan nhà thờ đá mệt luôn")
+![nha trang](img/recap2023-nt1.png "Chuẩn bị ra biển bắt ốc")
+![nha trang](img/recap2023-nt2.png "Tham quan nhà thờ đá mệt luôn")
+
 </div>
 Đã có những lần đi thật xa, và tất cả những chuyến đi đó, đều đọng lại trong OG những điều đáng quý như là một phần
 của năm 2023 quá đáng nhớ.

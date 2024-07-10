@@ -7,7 +7,7 @@
 ## Introduce
 Trong project này, OG sẽ build end-to-end ETL data pipeline hoàn chỉnh để phân tích football data từ Kaggle với data pipeline như sau:
 
-![data pipeline](https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/ETL.png "Data pipeline")
+{{< figure src="https://github.com/PhongHuynh0394/Football_ETL_Analysis/raw/master/images/ETL.png" title="Data Pipeline" >}}
 
 Các bước cụ thể:
 1. **Set up**: Dùng `Docker` tạo container và các images cần thiết cho pipeline, trong đó có cả `Dagster` dùng xây dựng pipeline.
