@@ -1,25 +1,23 @@
 # About me
 
 
-> Hello! Mình tên là **Vĩnh Phong** hay chính là **OG** (tác giả của các blogs ở trang này)
+# Background
+Hey there! My name is Huynh Luu Vinh Phong, the author of this page. I am currently a final year student at [University of Science Ho Chi Minh City](https://en.hcmus.edu.vn/), majoring in Data Science. My love for math and solving problems is what first got me interested in data, but over time, I discovered that coding is what truly excites me. Now, my goal is to become a **Data Engineer**, where I can work with data everyday and turn it into something meaningful.
 
-Hiện tại mình là sinh viên ngành **Khoa học Dữ liệu (Data Science)** tại [Đại học Khoa học Tự nhiên, ĐHQG-HCM](https://www.hcmus.edu.vn/) (HCMUS). Tuy nhiên mình cũng yêu thích công nghệ, code và mình đang trên con đường học tập mỗi ngày để trở thành một **Data Engineer**.
+{{< image src="https://en.hcmus.edu.vn/wp-content/uploads/2023/08/NDH-2048x2048.png" height=800 width=2048 caption="University of Science Ho Chi Minh City" alt="University of Science HCMC" >}}
 
-![OG hồi cúi lớp 12 :))](about-avatar.jpg)
+# Learning is a journey
+The world of data is huge, indeed. And I am just at the beginning of my journey. I enjoy learning new things and diving deeper into data tools and technologies. Every day is a chance to grow and explore more of this exciting field, and I’m ready to take on the challenges ahead. There is a quote that motivate me during my journey:
 
+> __The most beautiful thing about learning is that no one can take it away from you__
 
-# Mình của hiện tại
-Đầu tiên quan trọng nhất chính là việc học tại HCMUS. Ngoài ra, mình còn tự học về các chủ đề liên quan như Data pipeline, Data Streaming,... Việc luyện tập, học hỏi cũng ăn sâu dô máu mình lúc nào không hay :))
+This quote is about the power of learning is truly your inside power and your instinct. Therefore, no one can take it away from you. And going along with the ability to learn more, you will have the power to change the world.
 
-Mình đã từng đọc thấy đâu đó rằng:
+When I’m not busy with school or coding, I enjoy playing badminton and getting lost in anime or manga. I’ve always been fascinated by Japanese culture, and exploring it through anime is one of my favorite ways to unwind. I believe that learning is a lifelong journey, and I’m always eager to pick up new skills, whether it’s in data science or in my personal hobbies.
 
-> **The most beautiful thing about learning is that no one take that away from you**
+{{< image src="https://education.jnto.go.jp/cms/wp-content/uploads/2019/03/kyoto-kiyomizudera_temple-sannenzaka.jpg" height=500 width=1000 alt="Japanese Culture" >}}
 
-Và điều đó đã truyền cảm hứng mình rất nhiều, thúc đẩy bản thân tự học mỗi ngày và tự làm mới bản thân từng chút một. 
-
-Tiếp đến chính là xây dựng trang web này và viết các bài blogs giúp cho các bạn có thể học thêm kiến thức ngành, biết thêm điều thú vị và thư giãn.
-
-> **Hiện tại thì OG vẫn còn ngồi trên ghế giảng đường, và vừa đặt những viên gạch đầu tiên trên con đường tự trưởng thành. Hãy luôn theo dõi OG nhé!**
+To me, learning isn’t just about getting better grades or landing a job—it’s about shaping my future. I truly believe that by continuously learning, I can create the life I want and make an impact in the world of data. And that’s what keeps me motivated every day.
 
 **-Mew-**
 
@@ -30,7 +28,5 @@ Contact me:
 - Facebook: [Phong Huynh](https://www.facebook.com/profile.php?id=100007553837967)
 - Instagram: [phong_huynh](https://www.instagram.com/phong_huynhh/)
 
-Hoặc bạn cũng có thể ghé thăm Github của mình:
+Visit my Github
 {{< friend name="PhongHuynh0394" url="https://github.com/PhongHuynh0394" avatar="https://avatars.githubusercontent.com/u/111982291?s=400&u=909cd3197c02deca63dedc9ab6172b440a743ae3&v=4" bio="Huỳnh Lưu Vĩnh Phong" >}}
-
-

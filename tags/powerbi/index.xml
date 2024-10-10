@@ -1,0 +1,26 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>PowerBI - Tag - OG Home</title>
+        <link>https://phonghuynh.netlify.app/tags/powerbi/</link>
+        <description>PowerBI - Tag - OG Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
+            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Sun, 10 Dec 2023 18:41:00 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/tags/powerbi/" rel="self" type="application/rss+xml" /><item>
+    <title>Spotify Analysis</title>
+    <link>https://phonghuynh.netlify.app/spotify_analysis/</link>
+    <pubDate>Sun, 10 Dec 2023 18:41:00 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/spotify_analysis/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://raw.githubusercontent.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/refs/heads/main/image/spotify-diagram.png" referrerpolicy="no-referrer">
+            </div>A End to End ELT data pipeline to Analyze Spotify Data and build recommendation system]]></description>
+</item><item>
+    <title>Spotify Analysis</title>
+    <link>https://phonghuynh.netlify.app/spotify_analysis_en/</link>
+    <pubDate>Sun, 10 Dec 2023 18:41:00 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/spotify_analysis_en/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://raw.githubusercontent.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/refs/heads/main/image/spotify-diagram.png" referrerpolicy="no-referrer">
+            </div>A End to End ELT data pipeline to Analyze Spotify Data and build recommendation system]]></description>
+</item></channel>
+</rss>

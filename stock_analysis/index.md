@@ -433,5 +433,4 @@ thực hiện training mô hình K-means clustering và cuối cùng là phân t
 
 {{< showcase "Football ETL Analysis" "A Data Engineer project building pipeline to analyze football data" "img/projects-football.jpg" "/football_etl/">}}
 
-{{< showcase "Stock Analysis P2" "Stock Analysis using PCA and K-means" "img/projects-stock.jpg" "/stock_analysis_2/">}}
-
+{{< showcase "Spotify Analysis" "Analyze data from Spotify platform utilizing the Spotify API and MongoDB, Apache Hadoop, Pyspark, Dremio and Power BI" "img/project-spotify.jpg" "/spotify_analysis/">}}

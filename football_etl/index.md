@@ -574,9 +574,8 @@ Chúc bạn một ngày tốt lành
 
 ---
 
-# Related Content
+# Related
 
 {{< showcase "Stock Analysis" "Basic Analyzing VN30 stock using PCA and K-Means" "img/projects-stock.jpg" "/stock_analysis/" >}}
 
-{{< showcase "Football ETL Analysis P2" "Continuous of Football ETL series" "img/projects-football.jpg" "/football_etl_2/" >}}
-
+{{< showcase "Spotify Analysis" "Analyze data from Spotify platform utilizing the Spotify API and MongoDB, Apache Hadoop, Pyspark, Dremio and Power BI" "img/project-spotify.jpg" "/spotify_analysis/">}}

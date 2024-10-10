@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Stock Analysis - Series - OG Page</title>
+        <title>Stock Analysis - Series - OG Home</title>
         <link>https://phonghuynh.netlify.app/series/stock-analysis/</link>
-        <description>Stock Analysis - Series - OG Page</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
-            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Tue, 05 Sep 2023 23:15:54 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/series/stock-analysis/" rel="self" type="application/rss+xml" /><item>
+        <description>Stock Analysis - Series - OG Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
+            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Tue, 05 Sep 2023 23:15:54 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/series/stock-analysis/" rel="self" type="application/rss+xml" /><item>
     <title>Stock Analysis P2</title>
     <link>https://phonghuynh.netlify.app/stock_analysis_2/</link>
     <pubDate>Tue, 05 Sep 2023 23:15:54 &#43;0700</pubDate><author>

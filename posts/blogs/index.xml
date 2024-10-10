@@ -1,10 +1,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Blogs - OG Page</title>
+        <title>All Blogs - OG Home</title>
         <link>https://phonghuynh.netlify.app/posts/blogs/</link>
-        <description>All Blogs | OG Page</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
-            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Mon, 31 Jul 2023 16:21:23 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/posts/blogs/" rel="self" type="application/rss+xml" /><item>
+        <description>All Blogs | OG Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
+            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Mon, 31 Jul 2023 16:21:23 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/posts/blogs/" rel="self" type="application/rss+xml" /><item>
+    <title>Bosch và cuộc hành trình mới</title>
+    <link>https://phonghuynh.netlify.app/workatbosch/</link>
+    <pubDate>Fri, 26 Jul 2024 23:08:36 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/workatbosch/</guid>
+    <description><![CDATA[Trải nghiệm làm Data Engineer tại Bosch]]></description>
+</item><item>
     <title>Nhìn lại 2023</title>
     <link>https://phonghuynh.netlify.app/recap2023/</link>
     <pubDate>Sun, 31 Dec 2023 14:30:10 &#43;0700</pubDate><author>
@@ -27,12 +34,5 @@ là hướng đến một tương lai với nhiều kế hoạch mới phía tr�
                     <name>OG</name>
                 </author><guid>https://phonghuynh.netlify.app/start_journey/</guid>
     <description><![CDATA[Ngành Data có gì hot mà mình lại dính]]></description>
-</item><item>
-    <title>Intro: Tui là ai ? Đây là đâu ?</title>
-    <link>https://phonghuynh.netlify.app/intro_blog/</link>
-    <pubDate>Wed, 30 Aug 2023 22:11:29 &#43;0700</pubDate><author>
-                    <name>OG</name>
-                </author><guid>https://phonghuynh.netlify.app/intro_blog/</guid>
-    <description><![CDATA[Giới thiệu về trang web đáng yêu này]]></description>
 </item></channel>
 </rss>

@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Data lú - Series - OG Page</title>
+        <title>Data lú - Series - OG Home</title>
         <link>https://phonghuynh.netlify.app/series/data-l%C3%BA/</link>
-        <description>Data lú - Series - OG Page</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
-            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Wed, 27 Sep 2023 22:04:36 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/series/data-l%C3%BA/" rel="self" type="application/rss+xml" /><item>
+        <description>Data lú - Series - OG Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
+            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Wed, 27 Sep 2023 22:04:36 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/series/data-l%C3%BA/" rel="self" type="application/rss+xml" /><item>
     <title>Linux - tiếng sét ái tình</title>
     <link>https://phonghuynh.netlify.app/linux/</link>
     <pubDate>Wed, 27 Sep 2023 22:04:36 &#43;0700</pubDate><author>

@@ -1,10 +1,28 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>projects - Category - OG Page</title>
+        <title>projects - Category - OG Home</title>
         <link>https://phonghuynh.netlify.app/categories/projects/</link>
-        <description>projects - Category - OG Page</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
-            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Thu, 31 Aug 2023 14:39:53 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/categories/projects/" rel="self" type="application/rss+xml" /><item>
+        <description>projects - Category - OG Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
+            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Sun, 10 Dec 2023 18:41:00 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/categories/projects/" rel="self" type="application/rss+xml" /><item>
+    <title>Spotify Analysis</title>
+    <link>https://phonghuynh.netlify.app/spotify_analysis/</link>
+    <pubDate>Sun, 10 Dec 2023 18:41:00 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/spotify_analysis/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://raw.githubusercontent.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/refs/heads/main/image/spotify-diagram.png" referrerpolicy="no-referrer">
+            </div>A End to End ELT data pipeline to Analyze Spotify Data and build recommendation system]]></description>
+</item><item>
+    <title>Stock Analysis P2</title>
+    <link>https://phonghuynh.netlify.app/stock_analysis_2/</link>
+    <pubDate>Tue, 05 Sep 2023 23:15:54 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/stock_analysis_2/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="img/projects-stock.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item><item>
     <title>Stock analysis</title>
     <link>https://phonghuynh.netlify.app/stock_analysis/</link>
     <pubDate>Thu, 31 Aug 2023 14:39:53 &#43;0700</pubDate><author>

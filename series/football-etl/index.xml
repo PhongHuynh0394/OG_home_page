@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Football ETL - Series - OG Page</title>
+        <title>Football ETL - Series - OG Home</title>
         <link>https://phonghuynh.netlify.app/series/football-etl/</link>
-        <description>Football ETL - Series - OG Page</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
-            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Tue, 01 Aug 2023 15:01:16 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/series/football-etl/" rel="self" type="application/rss+xml" /><item>
+        <description>Football ETL - Series - OG Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
+            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Tue, 01 Aug 2023 15:01:16 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/series/football-etl/" rel="self" type="application/rss+xml" /><item>
     <title>Football ETL Analysis P2</title>
     <link>https://phonghuynh.netlify.app/football_etl_2/</link>
     <pubDate>Tue, 01 Aug 2023 15:01:16 &#43;0700</pubDate><author>

@@ -1,0 +1,1079 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>Spotify Analysis - OG Home</title><meta name="Description" content="A End to End ELT data pipeline to Analyze Spotify Data and build recommendation system"><meta property="og:title" content="Spotify Analysis" />
+<meta property="og:description" content="A End to End ELT data pipeline to Analyze Spotify Data and build recommendation system" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://phonghuynh.netlify.app/spotify_analysis_en/" /><meta property="og:image" content="https://raw.githubusercontent.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/refs/heads/main/image/spotify-diagram.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-10T18:41:00+07:00" />
+<meta property="article:modified_time" content="2023-12-10T18:41:00+07:00" /><meta property="og:site_name" content="OG Home" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://raw.githubusercontent.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/refs/heads/main/image/spotify-diagram.png"/>
+
+<meta name="twitter:title" content="Spotify Analysis"/>
+<meta name="twitter:description" content="A End to End ELT data pipeline to Analyze Spotify Data and build recommendation system"/>
+<meta name="application-name" content="OG">
+<meta name="apple-mobile-web-app-title" content="OG">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://phonghuynh.netlify.app/spotify_analysis_en/" /><link rel="prev" href="https://phonghuynh.netlify.app/stock_analysis_2/" /><link rel="next" href="https://phonghuynh.netlify.app/spotify_analysis/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Spotify Analysis",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/phonghuynh.netlify.app\/spotify_analysis_en\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/phonghuynh.netlify.app\/img\/oggy.png",
+                            "width":  240 ,
+                            "height":  240 
+                        }],"genre": "posts","keywords": "streamlit, API, ELT, Data Engineer, Machine Learning, Distributed System, Hadoop, Spark, Docker, Terraform, Visualization, PowerBI","wordcount":  2475 ,
+        "url": "https:\/\/phonghuynh.netlify.app\/spotify_analysis_en\/","datePublished": "2023-12-10T18:41:00+07:00","dateModified": "2023-12-10T18:41:00+07:00","publisher": {
+            "@type": "Organization",
+            "name": "OG Page","logo": "https:\/\/phonghuynh.netlify.app\/favicon.icon"},"authors": [{
+                        "@type": "Person",
+                        "name": "OG"                    
+                    }],"description": "A End to End ELT data pipeline to Analyze Spotify Data and build recommendation system"
+    }
+    </script><script src="//instant.page/5.2.0" defer type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="OG Home">OG Home</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/blogs/" title="OG&#39;s blogs"> Blogs </a><a class="menu-item" href="/projects/" title="OG&#39;s Projects"> Projects </a><a class="menu-item" href="/tags/" title="Tags of blogs"> Tags </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://drive.google.com/file/d/1jIJxzyFMc7zy78tsBJc7ShFyV8sQTBS7/view?usp=sharing" title="Resume" rel="noopener noreferrer" target="_blank"> Resume 🔗 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="OG Home">OG Home</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/blogs/" title="OG&#39;s blogs">Blogs</a><a class="menu-item" href="/projects/" title="OG&#39;s Projects">Projects</a><a class="menu-item" href="/tags/" title="Tags of blogs">Tags</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://drive.google.com/file/d/1jIJxzyFMc7zy78tsBJc7ShFyV8sQTBS7/view?usp=sharing" title="Resume" rel="noopener noreferrer" target="_blank">Resume 🔗</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">Contents</h2>
+        <div class="toc-content always-active" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#data-schema">Data Schema</a></li>
+    <li><a href="#infrastructure">Infrastructure</a>
+      <ul>
+        <li><a href="#apache-hadoop">Apache Hadoop</a></li>
+        <li><a href="#prefect">Prefect</a></li>
+        <li><a href="#dremio">Dremio</a></li>
+        <li><a href="#mongodb-with-terraform">MongoDB with Terraform</a></li>
+      </ul>
+    </li>
+    <li><a href="#pipeline-1">Pipeline 1</a></li>
+    <li><a href="#pipeline-2">Pipeline 2</a>
+      <ul>
+        <li><a href="#pyspark">PySpark</a></li>
+        <li><a href="#data-processing">Data Processing</a></li>
+      </ul>
+    </li>
+    <li><a href="#analytic-layer">Analytic Layer</a></li>
+    <li><a href="#machine-learning-and-dashboard">Machine Learning and Dashboard</a></li>
+    <li><a href="#k-nearest-neighbors-knn">K-Nearest Neighbors (KNN)</a>
+      <ul>
+        <li><a href="#powerbi-dashboard">PowerBI Dashboard</a></li>
+      </ul>
+    </li>
+    <li><a href="#application">Application</a></li>
+    <li><a href="#final-thoughts">Final Thoughts</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Spotify Analysis</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class='author'><span class="author fas fa-user-circle fa-fw"></span><span class='screen-reader-text'>  </span><a href='https://phonghuynh.netlify.app/authors/og'>OG</a></span>
+                </span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="10 Dec 2023">10 Dec 2023</time>&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;12 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        
+        loading="eager"
+        src="/img/project-spotify.jpg"
+        srcset="/img/project-spotify.jpg, /img/project-spotify.jpg 1.5x, /img/project-spotify.jpg 2x"
+        sizes="auto"
+        alt="A End to End ELT data pipeline to Analyze Spotify Data and build recommendation system"
+        title="A End to End ELT data pipeline to Analyze Spotify Data and build recommendation system" height="auto"   width="auto" ></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#data-schema">Data Schema</a></li>
+    <li><a href="#infrastructure">Infrastructure</a>
+      <ul>
+        <li><a href="#apache-hadoop">Apache Hadoop</a></li>
+        <li><a href="#prefect">Prefect</a></li>
+        <li><a href="#dremio">Dremio</a></li>
+        <li><a href="#mongodb-with-terraform">MongoDB with Terraform</a></li>
+      </ul>
+    </li>
+    <li><a href="#pipeline-1">Pipeline 1</a></li>
+    <li><a href="#pipeline-2">Pipeline 2</a>
+      <ul>
+        <li><a href="#pyspark">PySpark</a></li>
+        <li><a href="#data-processing">Data Processing</a></li>
+      </ul>
+    </li>
+    <li><a href="#analytic-layer">Analytic Layer</a></li>
+    <li><a href="#machine-learning-and-dashboard">Machine Learning and Dashboard</a></li>
+    <li><a href="#k-nearest-neighbors-knn">K-Nearest Neighbors (KNN)</a>
+      <ul>
+        <li><a href="#powerbi-dashboard">PowerBI Dashboard</a></li>
+      </ul>
+    </li>
+    <li><a href="#application">Application</a></li>
+    <li><a href="#final-thoughts">Final Thoughts</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><div class="details admonition success open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-check-circle fa-fw"></i>Showout for our dedicated members<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">This project is contributed by: Ngọc Tuấn (Data Engineer), Duy Sơn (Data Scientist), Vĩ Thiên (Data Analyst)</div>
+        </div>
+    </div>
+<a target="_blank" href="https://github.com/PhongHuynh0394/Spotify-Analysis-with-PySpark" title="PhongHuynh0394" class="friend-link" rel="noopener noreferrer">
+    <div class="friend-link-div">
+        <div class="friend-link-avatar"><img
+        
+        loading="lazy"
+        src="/img/github-logo.png"
+        srcset="/img/github-logo.png, /img/github-logo.png 1.5x, /img/github-logo.png 2x"
+        sizes="auto"
+        alt="/img/github-logo.png"
+        title="/img/github-logo.png" height="560"   width="560" ></div>
+        <div class="friend-link-info">
+            <div class="friend-name-div">
+                <i class="fas fa-user-circle fa-fw"></i>
+                <i class="friend-name">PhongHuynh0394</i>
+            </div>
+            <p class="friend-bio">Spotify Analysis with PySpark</p>
+        </div>
+    </div>
+</a>
+<p><strong><a href="/spotify_analysis/" rel="">Vietnamese Version Available</a></strong></p>
+<p>Hello! Hello! It&rsquo;s OG again. This time we’ll be building an End-to-End ELT data pipeline and a Recommender System based on analytics from the Spotify API. Without further ado, let&rsquo;s get started.</p>
+<h2 id="introduction" class="headerLink">
+    <a href="#introduction" class="header-mark"></a>Introduction</h2><p>This project involves building a music analytics system from Spotify, as shown in the diagram below:</p>
+<figure><img src="https://raw.githubusercontent.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/refs/heads/main/image/spotify-diagram.png"/>
+</figure>
+
+<p>The diagram includes the following components:</p>
+<ol>
+<li><a href="#infrastructure" rel=""><strong>Infrastructure</strong></a>: We will use Docker to set up most of the frameworks used in the system and optionally use Terraform to set up MongoDB.</li>
+<li><a href="#pipeline-1" rel=""><strong>Pipeline 1</strong></a>: This pipeline performs incremental loading into MongoDB each time data is pulled from the Spotify API.</li>
+<li><a href="#pipeline-2" rel=""><strong>Pipeline 2</strong></a>: This data pipeline performs ELT (Extract, Load, Transform) to process and normalize JSON data from MongoDB. Most of the work dealing with the complex, nested JSON structure will be handled by PySpark (Python API for Apache Spark) on HDFS (Hadoop Distributed File System).</li>
+<li><a href="#analytic-layer" rel=""><strong>Analytic Layer</strong></a>: To analyze the data, we will apply an analytics layer on top of Hadoop. In this project, we will use Dremio for that.</li>
+<li><a href="#machine-learning-and-dashboard" rel=""><strong>Machine learning and Dashboard</strong></a>: This part involves training a machine learning model for the Spotify music recommendation system. Additionally, we can use PowerBI to create dashboards to analyze data from Dremio.</li>
+<li><a href="#application" rel=""><strong>Application</strong></a>: Finally, we will use Streamlit to build a simple web application for the music recommendation and search system. Users can also interact with the BI Dashboard at this layer.</li>
+</ol>
+<h2 id="data-schema" class="headerLink">
+    <a href="#data-schema" class="header-mark"></a>Data Schema</h2><p>Our data source comes from the <a href="https://developer.spotify.com/documentation/web-api" target="_blank" rel="noopener noreferrer">Spotify API</a>. We will also scrape a list of Spotify artists from <a href="https://kworb.net/spotify/artists.html#google_vignette" target="_blank" rel="noopener noreferrer">Sportify Artists</a>. The final processed data will have the following schema:</p>
+<figure><img src="https://raw.githubusercontent.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/refs/heads/main/image/schema.png"/>
+</figure>
+
+<h2 id="infrastructure" class="headerLink">
+    <a href="#infrastructure" class="header-mark"></a>Infrastructure</h2><p>We will primarily use Docker to configure most of the frameworks in the system via a <code>docker-compose.yml</code> file. MongoDB Atlas, however, can be set up in multiple ways.</p>
+<h3 id="apache-hadoop" class="headerLink">
+    <a href="#apache-hadoop" class="header-mark"></a>Apache Hadoop</h3><p>First, we will set up Apache Hadoop using Docker Compose. As we know, Hadoop is a Java-based framework introduced by Google in 2006 that leverages distributed system technology to store and process Big Data. Hadoop is built on three main components:</p>
+<ol>
+<li><strong>HDFS (Hadoop Distributed File System)</strong>: A distributed file system used for data storage.</li>
+<li><strong>YARN (Yet Another Resource Negotiator)</strong>: A resource management framework for running applications on Hadoop.</li>
+<li><strong>MapReduce</strong>: A parallel data processing framework in a distributed system environment.</li>
+</ol>
+<figure><img src="https://i.imgur.com/6svuJjx.jpeg"/><figcaption>
+            <h4>HDFS and YARN in Hadoop</h4>
+        </figcaption>
+</figure>
+
+<p>In this project, we will simplify the setup by omitting the MapReduce component in the Hadoop Cluster and only using HDFS and YARN (since we will use Apache Spark for processing). Additionally, as this is a PoC (Proof of Concept) project, we will simplify the Hadoop cluster to just one Master Node and one Worker Node.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">hadoop_datanode</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">hadoop_namenode</span><span class="p">:</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">namenode</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">namenode</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">apache/hadoop:3</span><span class="w">
+</span><span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l">namenode</span><span class="w">
+</span><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l">bash -c &#34;if [ ! -f /tmp/hadoop-root/dfs/name/.formatted ]; then hdfs namenode -format &amp;&amp; touch /tmp/hadoop-root/dfs/name/.formatted; fi &amp;&amp; hdfs namenode&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="m">9870</span><span class="p">:</span><span class="m">9870</span><span class="w">
+</span><span class="w">      </span>- <span class="m">8020</span><span class="p">:</span><span class="m">8020</span><span class="w">
+</span><span class="w">      </span>- <span class="m">9000</span><span class="p">:</span><span class="m">9000</span><span class="w">
+</span><span class="w">    </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l">root</span><span class="w">
+</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">hadoop_namenode:/tmp/hadoop-root/dfs/name</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">docker-net</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="nt">datanode</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">apache/hadoop:3</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">datanode</span><span class="w">
+</span><span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l">datanode </span><span class="w">
+</span><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;hdfs&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;datanode&#34;</span><span class="p">]</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="m">9864</span><span class="p">:</span><span class="m">9864</span><span class="w">
+</span><span class="w">      </span>- <span class="m">9866</span><span class="p">:</span><span class="m">9866</span><span class="w">
+</span><span class="w">    </span><span class="nt">expose</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="m">50010</span><span class="w">
+</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l">root</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">hadoop_datanode:/tmp/hadoop-root/dfs/data</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">docker-net</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="nt">resourcemanager</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">apache/hadoop:3</span><span class="w">
+</span><span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l">resourcemanager</span><span class="w">
+</span><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;yarn&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;resourcemanager&#34;</span><span class="p">]</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">       </span>- <span class="m">8088</span><span class="p">:</span><span class="m">8088</span><span class="w">
+</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">./test.sh:/opt/test.sh</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">docker-net</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="nt">nodemanager</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">apache/hadoop:3</span><span class="w">
+</span><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;yarn&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;nodemanager&#34;</span><span class="p">]</span><span class="w">
+</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="m">8188</span><span class="p">:</span><span class="m">8188</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">docker-net</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>We will primarily use HDFS as the Data Lake for this project. Additionally, you can access Hadoop services through:</p>
+<ul>
+<li>Namenode: <code>localhost:9870</code></li>
+<li>Datanode: <code>localhost:9864</code></li>
+<li>Resource Manager (YARN): <code>localhost:8088</code></li>
+</ul>
+<h3 id="prefect" class="headerLink">
+    <a href="#prefect" class="header-mark"></a>Prefect</h3><p>Prefect is an easy-to-use orchestration tool with an attractive interface that simplifies task scheduling, organization, and parallel (concurrent) task execution. We will set up a Prefect server and API using Docker:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="w">  </span><span class="nt">prefect-server</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l">./prefect</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">prefect</span><span class="w">
+</span><span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l">prefect-server</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">prefect-server</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">prefect:/root/.prefect</span><span class="w">
+</span><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l">prefect server start</span><span class="w">
+</span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">PREFECT_UI_URL=http://127.0.0.1:4200/api</span><span class="w">
+</span><span class="w">      </span>- <span class="l">PREFECT_API_URL=http://127.0.0.1:4200/api</span><span class="w">
+</span><span class="w">      </span>- <span class="l">PREFECT_SERVER_API_HOST=0.0.0.0</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="m">4200</span><span class="p">:</span><span class="m">4200</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">docker-net</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="nt">prefect</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">prefect:latest</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">prefect</span><span class="w">
+</span><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;./prefect/flows:/opt/prefect/flows&#34;</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;/etc/timezone:/etc/timezone:ro&#34;</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;/etc/localtime:/etc/localtime:ro&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">docker-net</span><span class="w">
+</span><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">prefect-server</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><figure><img src="https://i.imgur.com/x5kovYF.jpeg"/>
+</figure>
+
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Why separate Prefect Server and Prefect?<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">There are several reasons for separating Prefect Server from Prefect, but the most important is to allow customization of the flow environment without affecting the server. The Prefect Server acts as the backend, processing signals from other containers via the Prefect API. This improves system stability and makes it easier to maintain and debug.</div>
+        </div>
+    </div>
+<p>Instead of using the built-in image from <a href="https://hub.docker.com/r/prefecthq/prefect" target="_blank" rel="noopener noreferrer">PrefectHQ</a>, we will build a custom image to allow easier customization. In addition to the Python modules in <code>requirements.txt</code>, we will configure Java 11 for PySpark compatibility:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="k">ARG</span> <span class="nv">IMAGE_VARIANT</span><span class="o">=</span>slim-buster<span class="err">
+</span><span class="err"></span><span class="k">ARG</span> <span class="nv">OPENJDK_VERSION</span><span class="o">=</span><span class="m">11</span>
+<span class="k">ARG</span> <span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="m">3</span>.11.0<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="k">FROM</span><span class="s"> python:${PYTHON_VERSION}-${IMAGE_VARIANT} AS py3</span><span class="err">
+</span><span class="err"></span><span class="k">FROM</span><span class="s"> openjdk:${OPENJDK_VERSION}-${IMAGE_VARIANT}</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="k">COPY</span> --from<span class="o">=</span>py3 / /<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /opt/prefect</span><span class="err">
+</span><span class="err"></span><span class="k">COPY</span> requirements.txt .<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> pip install -r requirements.txt --trusted-host pypi.python.org --no-cache-dir<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="k">COPY</span> flows /opt/prefect/flows<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># Run our flow script when the container starts</span><span class="err">
+</span><span class="err"></span><span class="k">CMD</span> <span class="p">[</span><span class="s2">&#34;python&#34;</span><span class="p">,</span> <span class="s2">&#34;flows/main_flow.py&#34;</span><span class="p">]</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>We can access the Prefect UI at <code>localhost:4042</code> to trigger the pipeline.</p>
+</blockquote>
+<h3 id="dremio" class="headerLink">
+    <a href="#dremio" class="header-mark"></a>Dremio</h3><p>Now that we have a data lake in Hadoop HDFS, we need an Analytic Layer to analyze or query the data, as HDFS does not provide these capabilities. We have various options such as Trino or Hive, but in this project, we will use Dremio, a Lakehouse platform.</p>
+<p>Dremio is an open-source data-as-a-service platform that supports analytics and can easily connect with various data sources, including Hadoop. Dremio provides powerful query capabilities with its SQL engine and a user-friendly interface:</p>
+<figure><img src="https://docs.dremio.com/assets/images/simple-arch-f14219fc3923321c4f39dab0fd8cb002.png"/><figcaption>
+            <h4>Dremio Cluster</h4>
+        </figcaption>
+</figure>
+
+<p>We will configure a Dremio cluster using the <a href="https://hub.docker.com/r/dremio/dremio-oss" target="_blank" rel="noopener noreferrer">dremio-oss</a> image, which includes:</p>
+<ul>
+<li>Embedded Zookeeper</li>
+<li>Master Coordinator</li>
+<li>Executor</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">dremio</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">dremio/dremio-oss</span><span class="w">
+</span><span class="w">  </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l">dremio</span><span class="w">
+</span><span class="w">  </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">dremio</span><span class="w">
+</span><span class="w">  </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always</span><span class="w">
+</span><span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l">root</span><span class="w">
+</span><span class="w">  </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">dremio_data:/var/lib/dremio</span><span class="w">
+</span><span class="w">    </span>- <span class="l">dremio_data:/localFiles</span><span class="w">
+</span><span class="w">    </span>- <span class="l">dremio_data:/opt/dremio</span><span class="w">
+</span><span class="w">  </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="s2">&#34;9047:9047&#34;</span><span class="w">   </span><span class="c"># Web UI (HTTP)</span><span class="w">
+</span><span class="w">    </span>- <span class="s2">&#34;31010:31010&#34;</span><span class="w"> </span><span class="c"># ODBC/JDBC client</span><span class="w">
+</span><span class="w">    </span>- <span class="s2">&#34;32010:32010&#34;</span><span class="w"> </span><span class="c"># Apache Arrow Flight clients</span><span class="w">
+</span><span class="w">  </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">docker-net</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>After successfully deployed, we can access Dremio UI at <code>localhost:9047</code> with username=dremio and password=dremio123</p>
+</blockquote>
+<h3 id="mongodb-with-terraform" class="headerLink">
+    <a href="#mongodb-with-terraform" class="header-mark"></a>MongoDB with Terraform</h3><div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw"></i>Warning<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">In this setup step, you need to register for a <a href="https://www.mongodb.com/cloud/atlas/register" target="_blank" rel="noopener noreferrer">MongoDB Atlas account</a> and install <a href="https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli" target="_blank" rel="noopener noreferrer">Terraform</a>.</div>
+        </div>
+    </div>
+<p><strong>About Terraform</strong>: HashiCorp Terraform is an &ldquo;infrastructure as code&rdquo; tool that allows us to set up and configure resources, whether on-prem or in the cloud, simply by writing configuration files.</p>
+<p><strong>MongoDB Atlas</strong>: You can manually configure MongoDB without Docker Compose via this link. However, in this section, we will automate the setup using Terraform.</p>
+<figure><img src="https://webassets.mongodb.com/_com_assets/cms/Screenshot%202024-01-04%20at%209.03.59%E2%80%AFAM-38glhpd7xa.png"/>
+</figure>
+
+<p>First, you need a MongoDB Atlas account. The next step is to set up some variables in the <code>variable.tf</code> file. This file will store most of the environment variables, API keys, tokens, etc.</p>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">You can find details on how to set up the <code>variable.tf</code> file <a href="https://github.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/tree/main/mongo_terraform" target="_blank" rel="noopener noreferrer">here</a></div>
+        </div>
+    </div>
+<p>With Terraform, we&rsquo;ll primarily run the <code>main.tf</code> file because it contains all the configuration to deploy the cluster.</p>
+<p>We&rsquo;ll use the <a href="https://registry.terraform.io/providers/mongodb/mongodbatlas/latest" target="_blank" rel="noopener noreferrer">MongoDB Atlas Provider</a> and refer to the variables defined in <code>variable.tf</code> as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-HCL" data-lang="HCL"><span class="k">terraform</span> {
+  <span class="k">required_providers</span> {
+<span class="n">    mongodbatlas</span> <span class="o">=</span> {
+<span class="n">      source</span> <span class="o">=</span> <span class="s2">&#34;mongodb/mongodbatlas&#34;</span><span class="p">,</span>
+<span class="n">      version</span> <span class="o">=</span> <span class="s2">&#34;1.8.0&#34;</span>
+    }
+  }
+}
+
+<span class="k">provider</span> <span class="s2">&#34;mongodbatlas&#34;</span> {
+<span class="n">  public_key</span> <span class="o">=</span> <span class="k">var</span><span class="p">.</span><span class="k">public_key</span>
+<span class="n">  private_key</span> <span class="o">=</span> <span class="k">var</span><span class="p">.</span><span class="k">private_ke</span>
+}
+</code></pre></td></tr></table>
+</div>
+</div><div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">You can refer to detailed resources for the MongoDB Atlas provider <a href="https://registry.terraform.io/providers/mongodb/mongodbatlas/latest/docs" target="_blank" rel="noopener noreferrer">here</a>.</div>
+        </div>
+    </div>
+<p>Next, we’ll create a few resources to complete the setup:</p>
+<ul>
+<li><code>mongodbatlas_project</code>: This resource sets up the project.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-HCL" data-lang="HCL"><span class="k">resource</span> <span class="s2">&#34;mongodbatlas_project&#34; &#34;spotify_project&#34;</span> {
+<span class="n">  name</span> <span class="o">=</span> <span class="s2">&#34;spotify_project&#34;</span>
+<span class="n">  org_id</span> <span class="o">=</span> <span class="k">var</span><span class="p">.</span><span class="k">org_id</span>
+<span class="n">  is_collect_database_specifics_statistics_enabled</span> <span class="o">=</span> <span class="kt">true</span>
+<span class="n">  is_data_explorer_enabled</span> <span class="o">=</span> <span class="kt">true</span>
+<span class="n">  is_performance_advisor_enabled</span> <span class="o">=</span> <span class="kt">true</span>
+<span class="n">  is_realtime_performance_panel_enabled</span> <span class="o">=</span> <span class="kt">true</span>
+<span class="n">  is_schema_advisor_enabled</span> <span class="o">=</span> <span class="kt">true</span>
+}
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>mongodbatlas_cluster</code>: This resource sets up the MongoDB Atlas cluster. We will host it on GCP, but you can also choose Azure or AWS.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-HCL" data-lang="HCL"><span class="k">resource</span> <span class="s2">&#34;mongodbatlas_cluster&#34; &#34;spotify&#34;</span> {
+<span class="n">  name</span> <span class="o">=</span> <span class="k">var</span><span class="p">.</span><span class="k">cluster_name</span>
+<span class="n">  project_id</span> <span class="o">=</span> <span class="k">mongodbatlas_project</span><span class="p">.</span><span class="k">spotify_project</span><span class="p">.</span><span class="k">id</span>
+<span class="n">  backing_provider_name</span> <span class="o">=</span> <span class="s2">&#34;GCP&#34;</span>
+<span class="n">  provider_name</span> <span class="o">=</span> <span class="s2">&#34;TENANT&#34;</span>
+<span class="n">  provider_instance_size_name</span> <span class="o">=</span> <span class="k">var</span><span class="p">.</span><span class="k">cluster_size</span>
+<span class="n">  provider_region_name</span> <span class="o">=</span> <span class="k">var</span><span class="p">.</span><span class="k">region</span>
+}
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Deploy the Cluster</strong>
+Once the configuration is ready, you can run Terraform CLI commands to set up the plan:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">terraform init  <span class="c1"># set up provider for atlas</span>
+terraform plan
+</code></pre></td></tr></table>
+</div>
+</div><p>Then, type <code>yes</code> to proceed with the setup. To deploy the cluster, just enter <code>terraform apply</code>. The result will look like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Apply complete! Resources: <span class="m">4</span> added, <span class="m">0</span> changed, <span class="m">0</span> destroyed.
+
+Outputs:
+
+<span class="nv">password</span> <span class="o">=</span> <span class="s2">&#34;123&#34;</span>
+<span class="nv">srv_address</span> <span class="o">=</span> <span class="s2">&#34;mongodb+srv://spotify-cluster.kdglyul.mongodb.net&#34;</span>
+<span class="nv">user</span> <span class="o">=</span> <span class="s2">&#34;root&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Pay attention to the information in the last three lines: password, srv_address, and user. These details will be needed for the <code>.env</code> file to set up the connection with MongoDB Atlas later. These will be the <code>MONGODB_PASS</code>, <code>MONGODB_SRV</code> and <code>MONGODB_USER</code>.</p>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">To delete everything from MongoDB Atlas, including the cluster, you only need to run <code>terraform destroy</code>. Be cautious, as this command will remove the entire cluster and all data.</div>
+        </div>
+    </div>
+<h2 id="pipeline-1" class="headerLink">
+    <a href="#pipeline-1" class="header-mark"></a>Pipeline 1</h2><p>This data pipeline performs API pooling to crawl data from the Spotify API and incrementally loads it into MongoDB Atlas. To handle the rate limit issue, we configure this flow to automatically trigger every 2 minutes and 5 seconds, crawling a batch of information for 5 artists from the <code>artists.txt</code> file.</p>
+<figure><img src="https://raw.githubusercontent.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/refs/heads/main/image/pipline1-b.jpg"/>
+</figure>
+
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Incremental Load<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Unlike full load, which overwrites all data in the database, incremental load (or delta load) only loads updated or new data without reloading all historical data. This pipeline will always fetch and ingest the latest artist information from the <code>artists.txt</code> file by calling the Spotify API in batches and using a <code>log.txt</code> file to track the index and number of artists successfully crawled.</div>
+        </div>
+    </div>
+<h2 id="pipeline-2" class="headerLink">
+    <a href="#pipeline-2" class="header-mark"></a>Pipeline 2</h2><p>This is the main part of the project where most of the processing takes place. It follows an ELT (Extract - Load - Transform) pipeline model with raw data from MongoDB collections, which is then processed with Spark and stored in HDFS. We will also build a <strong>Medallion Architecture</strong> within HDFS to partition the data.</p>
+<div class="details admonition info">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw"></i>Medallion Architecture<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>This architecture, introduced by Databricks, is a &ldquo;data design pattern&rdquo; used to organize data in a Lakehouse to improve data quality through its layers (Bronze -&gt; Silver -&gt; Gold).</p>
+<figure><img src="https://www.databricks.com/sites/default/files/inline-images/building-data-pipelines-with-delta-lake-120823.png?v=1702318922"/>
+</figure>
+</div>
+        </div>
+    </div>
+<h3 id="pyspark" class="headerLink">
+    <a href="#pyspark" class="header-mark"></a>PySpark</h3><div class="details admonition question">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-question-circle fa-fw"></i>Where is Apache Spark set up?<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>You might wonder why Apache Spark is not set up. There are two reasons:</p>
+<ul>
+<li>Limited resources: With many services running simultaneously via Docker containers, setting up an additional Spark Cluster might exceed resource limits.</li>
+<li>Small dataset: The dataset size is relatively small (around 200K observations), so using Spark could be overkill. However, for learning purposes, we will use Spark in local mode rather than setting up a standalone cluster.</li>
+</ul>
+</div>
+        </div>
+    </div>
+<p>Apache Spark offers several running modes depending on project scale:</p>
+<ul>
+<li><code>local[*]</code>: Local mode, no need for a Spark Cluster setup.</li>
+<li><code>spark://{master-node-name}:7077</code>: Standalone mode, connecting to a Spark Cluster</li>
+<li><code>yarn-client</code>: Yarn-client mode</li>
+<li><code>yarn-cluster</code>: Yarn-cluster mode</li>
+<li><code>mesos://host:5050</code>: Mesos cluster</li>
+</ul>
+<p>For this project, we will use local mode to optimize resources. To simplify creating and stopping SparkSessions, we write a <code>SparkIO</code> using <code>contextlib</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">SparkSession</span>
+<span class="kn">from</span> <span class="nn">pyspark</span> <span class="kn">import</span> <span class="n">SparkConf</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">SparkIO</span><span class="p">(</span><span class="n">conf</span><span class="p">:</span> <span class="n">SparkConf</span> <span class="o">=</span> <span class="n">SparkConf</span><span class="p">()):</span>
+    <span class="n">app_name</span> <span class="o">=</span> <span class="n">conf</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;spark.app.name&#34;</span><span class="p">)</span>
+    <span class="n">master</span> <span class="o">=</span> <span class="n">conf</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;spark.master&#34;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Create SparkSession app </span><span class="si">{</span><span class="n">app_name</span><span class="si">}</span><span class="s1"> with </span><span class="si">{</span><span class="n">master</span><span class="si">}</span><span class="s1"> mode&#39;</span><span class="p">)</span>
+    <span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">conf</span><span class="o">=</span><span class="n">conf</span><span class="p">)</span><span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">spark</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Stop SparkSession app </span><span class="si">{</span><span class="n">app_name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">spark</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>This approach simplifies the creation and termination of SparkSessions, ensuring we don’t miss any steps.</p>
+<div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>Tip<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>We can do something similar for MongoDB connections by writing a <code>MongoDB_io</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">MongoClient</span>
+<span class="kn">from</span> <span class="nn">pymongo.errors</span> <span class="kn">import</span> <span class="n">ConnectionFailure</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">MongodbIO</span><span class="p">():</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;MONGODB_USER&#34;</span><span class="p">)</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;MONGODB_PASSWORD&#34;</span><span class="p">)</span>
+    <span class="n">cluster</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;MONGODB_SRV&#34;</span><span class="p">)</span>
+    <span class="n">cluster</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;//&#34;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">uri</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;mongodb+srv://</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">password</span><span class="si">}</span><span class="s2">@</span><span class="si">{</span><span class="n">cluster</span><span class="si">}</span><span class="s2">/?retryWrites=true&amp;w=majority&#34;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">client</span> <span class="o">=</span> <span class="n">MongoClient</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;MongoDB Connected&#34;</span><span class="p">)</span>
+        <span class="k">yield</span> <span class="n">client</span>
+    <span class="k">except</span> <span class="n">ConnectionFailure</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Failed to connect with MongoDB&#34;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">ConnectionFailure</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Close connection to MongoDB&#34;</span><span class="p">)</span>
+        <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<h3 id="data-processing" class="headerLink">
+    <a href="#data-processing" class="header-mark"></a>Data Processing</h3><p>We will organize HDFS using the Medallion architecture, dividing data quality into different zones (or directories):</p>
+<ul>
+<li><strong>Bronze Layer</strong>: Stores raw data.</li>
+<li><strong>Silver Layer</strong>: Stores partially processed data (handling data types, arrays, and complex nested structures) from the Bronze Layer.</li>
+<li><strong>Gold Layer</strong>: Stores cleaned data after standardizing and cleaning the tables from the Silver Layer.</li>
+</ul>
+<figure><img src="https://raw.githubusercontent.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/refs/heads/main/image/pipeline2-a.jpg"/>
+</figure>
+
+<h2 id="analytic-layer" class="headerLink">
+    <a href="#analytic-layer" class="header-mark"></a>Analytic Layer</h2><p>As previously set up, we will use Dremio as an analytic layer to analyze the clean data stored in the Gold Layer within HDFS. The process is straightforward: connect Dremio to HDFS through the Dremio UI at <code>localhost:9047</code>. Then, format the <code>.parquet</code> files in the <code>golde_layer</code> directory, and you&rsquo;ll be able to write SQL queries to start analyzing the data.</p>
+<figure><img src="https://raw.githubusercontent.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/refs/heads/main/image/dremio.jpg"/>
+</figure>
+
+<h2 id="machine-learning-and-dashboard" class="headerLink">
+    <a href="#machine-learning-and-dashboard" class="header-mark"></a>Machine Learning and Dashboard</h2><p>At this point, the responsibilities of a Data Engineer are largely complete. We will now move on to the tasks of a Data Scientist and Data Analyst, focusing on building machine learning models and generating reports.</p>
+<h2 id="k-nearest-neighbors-knn" class="headerLink">
+    <a href="#k-nearest-neighbors-knn" class="header-mark"></a>K-Nearest Neighbors (KNN)</h2><p>We will develop a model to recommend music based on the similarity of features between songs, such as loudness, melody, genre, tempo, energy level, and more. To achieve this, we will use a model that can return the top K most similar records from a list of hundreds of thousands of songs. This model is <strong>KNN</strong></p>
+<p>KNN is a simple machine learning model that helps us find the closest data points to the input data point based on their distance in vector space. The similarity metric we will use is cosine similarity:</p>
+<p>$$
+S_C(A,B) = cos(\theta) = \frac{A \cdot B}{\Vert A\Vert \Vert B \Vert} = \frac{\sum^n_{i=1}A_iB_i}{\sqrt{\sum^n_{i=1}A^2} \cdot \sqrt{\sum^n_{i=1}B^2} }
+$$</p>
+<p>We will build a model to recommend the top K songs most similar to a selected song as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">SongRecommendationSystem</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">options</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">client</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">options</span> <span class="o">=</span> <span class="n">options</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">knn_model</span> <span class="o">=</span> <span class="n">NearestNeighbors</span><span class="p">(</span><span class="n">metric</span><span class="o">=</span><span class="s1">&#39;cosine&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">):</span>   
+        <span class="n">matrix_table</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_table</span><span class="p">(</span><span class="n">table_name</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">knn_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">matrix_table</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">_get_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_name</span><span class="p">):</span>
+        <span class="n">sql</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;select * from </span><span class="si">{</span><span class="n">table_name</span><span class="si">}</span><span class="s2">&#34;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">recommend_songs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">track_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">table_name</span><span class="o">=</span><span class="s1">&#39;home.searchs&#39;</span><span class="p">,</span> <span class="n">num_recommendations</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+        <span class="n">song_library</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_table</span><span class="p">(</span><span class="n">table_name</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">track_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">song_library</span><span class="p">[</span><span class="s1">&#39;track_name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Track &#34;</span><span class="si">{</span><span class="n">track_name</span><span class="si">}</span><span class="s1">&#34; not found in the dataset.&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">None</span>
+            
+        <span class="n">features_matrix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_table</span><span class="p">(</span><span class="s1">&#39;home.model&#39;</span><span class="p">)</span>
+        <span class="n">track_index</span> <span class="o">=</span> <span class="n">song_library</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">song_library</span><span class="p">[</span><span class="s1">&#39;track_name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">track_name</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">knn_model</span><span class="o">.</span><span class="n">kneighbors</span><span class="p">([</span><span class="n">features_matrix</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">track_index</span><span class="p">]],</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="n">num_recommendations</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">song_library</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">indices</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">:],</span> <span class="p">:]</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>When testing the system to find songs similar to &ldquo;Something Just Like This&rdquo; (it&rsquo;s not perfect yet! 😅):</p>
+<figure><img src="https://i.imgur.com/WJAw1xZ.jpeg"/>
+</figure>
+
+<h3 id="powerbi-dashboard" class="headerLink">
+    <a href="#powerbi-dashboard" class="header-mark"></a>PowerBI Dashboard</h3><p>With a large amount of clean data, the next logical step is to derive valuable insights from that data. This is where PowerBI comes into play, allowing us to create a dashboard using data from Dremio.</p>
+<figure><img src="https://raw.githubusercontent.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/refs/heads/main/image/powerbi-dash.jpg"/>
+</figure>
+
+<h2 id="application" class="headerLink">
+    <a href="#application" class="header-mark"></a>Application</h2><p>Finally, we can build a simple application to implement the machine learning model and integrate the dashboard into this application, creating a comprehensive portal. We will use <strong>Streamlit</strong> to build a simple web app.</p>
+<figure><img src="https://raw.githubusercontent.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/refs/heads/main/image/ui.jpg"/>
+</figure>
+
+<h2 id="final-thoughts" class="headerLink">
+    <a href="#final-thoughts" class="header-mark"></a>Final Thoughts</h2><p>This project is primarily for learning purposes, so the dataset size and some architectural setups may not be fully complete. However, this marks an important milestone in OG&rsquo;s learning journey. Hopefully, it will be helpful as a reference for others! 😄</p>
+<p><strong>-Meww-</strong></p>
+<hr>
+<h1 id="related" class="headerLink">
+    <a href="#related" class="header-mark"></a>Related</h1>
+<div class="showcase-box column-2">
+    <div class="showcase-image">
+        <a href=/stock_analysis/><img
+        
+        loading="lazy"
+        src="/img/projects-stock.jpg"
+        srcset="/img/projects-stock.jpg, /img/projects-stock.jpg 1.5x, /img/projects-stock.jpg 2x"
+        sizes="auto"
+        alt="Stock Analysis"
+        title="Stock Analysis" height="200"   width="400" ></a>
+    </div>
+    <h2 class="showcase-title">
+        <a href=/stock_analysis/>Stock Analysis</a>
+    </h2>
+    <p class="showcase-summary">
+        Basic analyzing VN30 stock using PCA and K-Means
+    </p>
+    <a class="showcase-link" href=/stock_analysis/>
+        Read more...
+    </a>
+</div>
+
+<div class="showcase-box column-2">
+    <div class="showcase-image">
+        <a href=/football_etl/><img
+        
+        loading="lazy"
+        src="/img/projects-football.jpg"
+        srcset="/img/projects-football.jpg, /img/projects-football.jpg 1.5x, /img/projects-football.jpg 2x"
+        sizes="auto"
+        alt="Football ETL Analysis"
+        title="Football ETL Analysis" height="200"   width="400" ></a>
+    </div>
+    <h2 class="showcase-title">
+        <a href=/football_etl/>Football ETL Analysis</a>
+    </h2>
+    <p class="showcase-summary">
+        A Data Engineer project building pipeline to analyze football data
+    </p>
+    <a class="showcase-link" href=/football_etl/>
+        Read more...
+    </a>
+</div></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 10 Dec 2023</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><button title="Share on Facebook" data-sharer="facebook" data-url="https://phonghuynh.netlify.app/spotify_analysis_en/" data-hashtag="streamlit"><span class="fab fa-facebook-square fa-fw"></span></button><button title="Share on Linkedin" data-sharer="linkedin" data-url="https://phonghuynh.netlify.app/spotify_analysis_en/"><span class="fab fa-linkedin fa-fw"></span></button></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/streamlit/">streamlit</a>,&nbsp;<a href="/tags/api/">API</a>,&nbsp;<a href="/tags/elt/">ELT</a>,&nbsp;<a href="/tags/data-engineer/">data engineer</a>,&nbsp;<a href="/tags/machine-learning/">Machine Learning</a>,&nbsp;<a href="/tags/distributed-system/">Distributed System</a>,&nbsp;<a href="/tags/hadoop/">Hadoop</a>,&nbsp;<a href="/tags/spark/">Spark</a>,&nbsp;<a href="/tags/docker/">docker</a>,&nbsp;<a href="/tags/terraform/">Terraform</a>,&nbsp;<a href="/tags/visualization/">Visualization</a>,&nbsp;<a href="/tags/powerbi/">PowerBI</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/stock_analysis_2/" class="prev" rel="prev" title="Stock Analysis P2"><i class="fas fa-angle-left fa-fw"></i>Stock Analysis P2</a>
+            <a href="/spotify_analysis/" class="next" rel="next" title="Spotify Analysis">Spotify Analysis<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">OG</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="Back to Top">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"table":{"sort":true}};</script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

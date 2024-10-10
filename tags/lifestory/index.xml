@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>lifestory - Tag - OG Page</title>
+        <title>lifestory - Tag - OG Home</title>
         <link>https://phonghuynh.netlify.app/tags/lifestory/</link>
-        <description>lifestory - Tag - OG Page</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>PhongHuynh0394@gmail.com (OG)</managingEditor>
-            <webMaster>PhongHuynh0394@gmail.com (OG)</webMaster><lastBuildDate>Sun, 31 Dec 2023 14:30:10 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/tags/lifestory/" rel="self" type="application/rss+xml" /><item>
+        <description>lifestory - Tag - OG Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
+            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Sun, 31 Dec 2023 14:30:10 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/tags/lifestory/" rel="self" type="application/rss+xml" /><item>
     <title>Nhìn lại 2023</title>
     <link>https://phonghuynh.netlify.app/recap2023/</link>
     <pubDate>Sun, 31 Dec 2023 14:30:10 &#43;0700</pubDate><author>
