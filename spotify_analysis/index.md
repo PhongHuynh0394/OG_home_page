@@ -9,6 +9,8 @@ Project này có thể hoàn thiện cũng là sự đóng góp của các thàn
 
 {{< friend name="PhongHuynh0394" url="https://github.com/PhongHuynh0394/Spotify-Analysis-with-PySpark" avatar="/img/github-logo.png" bio="Spotify Analysis with PySpark">}}
 
+{{< friend name="OG and DATA" url="https://youtu.be/If9-ALcsc8E?si=bf6jUlHUk_okMcwx" avatar="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/YouTube_social_red_circle_%282017%29.svg/180px-YouTube_social_red_circle_%282017%29.svg.png" bio="Spotify Analysis with PySpark">}}
+
 **[English Version Available](/spotify_analysis_en/)**
 
 Hello ! Hello ! Lại là OG đây. Lần này mình sẽ cùng nhau xây dựng
@@ -459,6 +461,9 @@ Khi có rất nhiều data sạch, điều tiếp theo ta có thể nghĩ đến
 Cuối cùng, ta có thể xây dựng một ứng dụng đơn giản để ứng dụng mô hình machine learning cũng như như tích hợp Dashboard vào trong ứng dụng này như một portal toàn diện. Ta sẽ sử dụng Streamlit để xây dựng một web app đơn giản 
 
 {{< figure src="https://raw.githubusercontent.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/refs/heads/main/image/ui.jpg" >}}
+
+## Project Demo
+{{< youtube If9-ALcsc8E >}}
 
 ## Final Thoughts
 Project chỉ mang tính chất học tập, do đó độ lớn của data hay một số kiến trúc set up có thể chưa hoàn chỉnh. Tuy nhiên đây vẫn là một cột mốc đáng nhớ trong hành trình học tập của OG. Hy vọng nó sẽ giúp ích cho các bạn tham khảo :smile:

@@ -9,6 +9,7 @@ This project is contributed by: Ngọc Tuấn (Data Engineer), Duy Sơn (Data Sc
 
 {{< friend name="PhongHuynh0394" url="https://github.com/PhongHuynh0394/Spotify-Analysis-with-PySpark" avatar="/img/github-logo.png" bio="Spotify Analysis with PySpark">}}
 
+{{< friend name="OG and DATA" url="https://youtu.be/If9-ALcsc8E?si=bf6jUlHUk_okMcwx" avatar="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/YouTube_social_red_circle_%282017%29.svg/180px-YouTube_social_red_circle_%282017%29.svg.png" bio="Spotify Analysis with PySpark">}}
 
 **[Vietnamese Version Available](/spotify_analysis/)**
 
@@ -453,6 +454,9 @@ With a large amount of clean data, the next logical step is to derive valuable i
 Finally, we can build a simple application to implement the machine learning model and integrate the dashboard into this application, creating a comprehensive portal. We will use **Streamlit** to build a simple web app.
 
 {{< figure src="https://raw.githubusercontent.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/refs/heads/main/image/ui.jpg" >}}
+
+## Project Demo
+{{< youtube If9-ALcsc8E >}}
 
 ## Final Thoughts
 This project is primarily for learning purposes, so the dataset size and some architectural setups may not be fully complete. However, this marks an important milestone in OG's learning journey. Hopefully, it will be helpful as a reference for others! :smile:
