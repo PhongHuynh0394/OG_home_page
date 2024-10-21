@@ -3,7 +3,7 @@
 
 <!--more-->
 
-{{< admonition type=success title="Showout for our dedicated members">}}
+{{< admonition type=success title="Shout out for our dedicated members">}}
 This project is contributed by: Ngọc Tuấn (Data Engineer), Duy Sơn (Data Scientist), Vĩ Thiên (Data Analyst)
 {{< /admonition >}}
 

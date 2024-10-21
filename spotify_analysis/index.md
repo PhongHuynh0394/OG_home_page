@@ -3,7 +3,7 @@
 
 <!--more-->
 
-{{< admonition type=success title="Showout cho những member tâm huyết">}}
+{{< admonition type=success title="Shout out cho những member tâm huyết">}}
 Project này có thể hoàn thiện cũng là sự đóng góp của các thành viên trong team: Ngọc Tuấn (Data Engineer), Duy Sơn (Data Scientist), Vĩ Thiên (Data Analyst)
 {{< /admonition >}}
 
@@ -398,7 +398,7 @@ def MongodbIO():
 ta sẽ xây dựng hdfs theo kiến trúc meddalion bằng cách chia data quality thành cách vùng (hay directory):
 - **Bronze layer**: dùng để chỉ lưu raw data
 - **Silver layer**: lưu data đã xử lý một phần (xử lý kiểu dữ liệu, xử lý kiểu array và các cấu trúc lồng phức tạp) từ Bronze Layer
-- **Gold layer**: lưu data đã được làm sạch sau khi chuẩn hóa dữ liệu à làm sạch các bảng mới từ Silver Layer
+- **Gold layer**: lưu data đã được làm sạch sau khi chuẩn hóa dữ liệu và làm sạch các bảng mới từ Silver Layer
 
 {{< figure src="https://raw.githubusercontent.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/refs/heads/main/image/pipeline2-a.jpg" >}}
 
@@ -447,7 +447,7 @@ class SongRecommendationSystem:
         _, indices = self.knn_model.kneighbors([features_matrix.iloc[track_index]], n_neighbors=num_recommendations + 1)
         return song_library.loc[indices[0][1:], :]
 ```
-Khi thử tim các bài hát giống với "Something Just Like This" (có vẻ cũng chưa tốt lắm :joy:)
+Khi thử tìm các bài hát giống với "Something Just Like This" (có vẻ cũng chưa tốt lắm :joy:)
 {{< figure src="https://i.imgur.com/WJAw1xZ.jpeg" >}}
 
 ### PowerBI Dashboard

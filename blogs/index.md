@@ -9,7 +9,6 @@
 
 {{< showcase "Nhìn lại 2023" "Quả là một năm gian nan nhưng thật mừng vì mình đã không đầu hàng" "img/recap2023-title.png" "/recap2023/" 2 >}}
 
-<!-- {{< showcase "Bosch và cuộc hành trình mới" "Đây là câu chuyện về cuộc hành trình làm một Data Engineer của mình tại Bosch R&D Center" "https://mir-s3-cdn-cf.behance.net/project_modules/1400/dd754f84731929.5d664a86adb25.jpg" "/workatbosch/" 2 >}} -->
 {{< showcase "Bosch và cuộc hành trình mới" "Đây là câu chuyện về cuộc hành trình làm một Data Engineer của mình tại Bosch R&D Center" "img/bosch_pic2.jpg" "/workatbosch/" 2 >}}
 
 
