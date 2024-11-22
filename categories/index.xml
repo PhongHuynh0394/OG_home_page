@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - Category - OG Home</title>
+        <link>https://phonghuynh.netlify.app/categories/</link>
+        <description>Categories - Category - OG Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
+            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Wed, 20 Nov 2024 19:23:44 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Blogs</title>
+    <link>https://phonghuynh.netlify.app/categories/blogs/</link>
+    <pubDate>Wed, 20 Nov 2024 19:23:44 &#43;0700</pubDate><author>
+        <name>OG</name>
+    </author><guid>https://phonghuynh.netlify.app/categories/blogs/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Projects</title>
+    <link>https://phonghuynh.netlify.app/categories/projects/</link>
+    <pubDate>Sun, 10 Dec 2023 18:41:00 &#43;0700</pubDate><author>
+        <name>OG</name>
+    </author><guid>https://phonghuynh.netlify.app/categories/projects/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

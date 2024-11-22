@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" /><title>Tất tần tật về Data pipeline - OG Home</title><meta name="Description" content="Trở thành thợ ống nước data từ A đến Á với ETL/ELT, streaming và hơn thế nữa"><meta property="og:url" content="https://phonghuynh.netlify.app/alldatapipeline/">
+  <meta property="og:site_name" content="OG Home">
+  <meta property="og:title" content="Tất tần tật về Data pipeline">
+  <meta property="og:description" content="Trở thành thợ ống nước data từ A đến Á với ETL/ELT, streaming và hơn thế nữa">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-20T19:23:44+07:00">
+    <meta property="article:modified_time" content="2024-11-20T19:23:44+07:00">
+    <meta property="article:tag" content="Data Engineer">
+    <meta property="article:tag" content="Data Pipeline">
+    <meta property="og:image" content="https://i.imgur.com/WeJV4L9.png">
+      <meta property="og:see_also" content="https://phonghuynh.netlify.app/start_journey/">
+      <meta property="og:see_also" content="https://phonghuynh.netlify.app/linux/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://i.imgur.com/WeJV4L9.png">
+  <meta name="twitter:title" content="Tất tần tật về Data pipeline">
+  <meta name="twitter:description" content="Trở thành thợ ống nước data từ A đến Á với ETL/ELT, streaming và hơn thế nữa">
+<meta name="application-name" content="OG">
+<meta name="apple-mobile-web-app-title" content="OG">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<link rel="canonical" href="https://phonghuynh.netlify.app/alldatapipeline/" /><link rel="prev" href="https://phonghuynh.netlify.app/workatbosch/" />
+<link rel="stylesheet" href="/css/main.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">{"@context": "https://schema.org","@type": "BlogPosting",
+        "headline": "Tất tần tật về Data pipeline",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://phonghuynh.netlify.app/alldatapipeline/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https://phonghuynh.netlify.app/img/oggy.png",
+                            "width":  240 ,
+                            "height":  240 
+                        }],"genre": "posts","keywords":["Data Engineer","Data Pipeline"],"wordcount":  4280 ,
+        "url": "https://phonghuynh.netlify.app/alldatapipeline/","datePublished": "2024-11-20T19:23:44+07:00","dateModified": "2024-11-20T19:23:44+07:00","publisher": {
+            "@type": "Organization",
+            "name": "OG Page","logo": "https://phonghuynh.netlify.app/favicon.icon"},"author": [{
+                        "@type": "Person",
+                        "name": "OG",
+                        "url": "https://phonghuynh.netlify.app/authors/og"
+                    }],"description": "Trở thành thợ ống nước data từ A đến Á với ETL/ELT, streaming và hơn thế nữa"
+    }</script></head>
+
+
+<body data-instant-intensity="viewport" ><script type="text/javascript">
+        function setTheme(theme) {
+          document.body.setAttribute('theme', theme); 
+          document.documentElement.className = theme;
+          document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');
+          if (theme === 'light') {
+            document.documentElement.classList.remove('tw-dark')
+          } else {
+            document.documentElement.classList.add('tw-dark')
+          }
+          window.theme = theme;   
+          window.isDark = window.theme !== 'light' 
+        }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {
+            let theme = localStorage.getItem('theme');
+            if (theme === 'light' || theme === 'dark') {
+            setTheme(theme);
+            } else {
+                if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    setTheme('dark');
+                } else {
+                    setTheme('light');
+                }
+            }
+         } else { 
+            if ('auto' === 'light' || 'auto' === 'dark') 
+                setTheme('auto'), saveTheme('auto'); 
+            else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');
+        }
+        let metaColors = {'light': '#f8f8f8','dark': '#161b22'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop print:!tw-hidden" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="OG Home">OG Home</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item"
+                    href="/blogs/"  title="OG&#39;s blogs" > Blogs </a><a class="menu-item"
+                    href="/projects/"  title="OG&#39;s Projects" > Projects </a><a class="menu-item"
+                    href="/tags/"  title="Tags of blogs" > Tags </a><a class="menu-item"
+                    href="/about/" > About </a><a class="menu-item"
+                    href="https://drive.google.com/file/d/1jIJxzyFMc7zy78tsBJc7ShFyV8sQTBS7/view?usp=sharing"  title="Resume" 
+                    rel="noopener noreferrer" target="_blank" > Resume 🔗 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                    <input type="text"
+                        placeholder="Search titles or contents..."
+                        id="search-input-desktop">
+                    <button class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                    </button>
+                    <button class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+                    </button>
+                    <span class="search-button search-loading tw-animate-spin" id="search-loading-desktop">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
+                    </span>
+                </span><button class="menu-item theme-switch" aria-label="Switch Theme">
+                    <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
+                </button></div>
+        </div>
+    </div>
+</header><header class="mobile print:!tw-hidden" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="OG Home">OG Home</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                <div class="search mobile" id="search-mobile">
+                    <input type="text"
+                        placeholder="Search titles or contents..."
+                        id="search-input-mobile">
+                    <button class="search-button search-toggle tw-h-10" id="search-toggle-mobile" title="Search">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                    </button>
+                    <button class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+                    </button>
+                    <span class="search-button search-loading tw-animate-spin" id="search-loading-mobile">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
+                    </span>
+                </div>
+                <button class="search-cancel" id="search-cancel-mobile">
+                    Cancel
+                </button>
+            </div><a class="menu-item" href="/blogs/" title="OG&#39;s blogs" >Blogs</a><a class="menu-item" href="/projects/" title="OG&#39;s Projects" >Projects</a><a class="menu-item" href="/tags/" title="Tags of blogs" >Tags</a><a class="menu-item" href="/about/" title="" >About</a><a class="menu-item" href="https://drive.google.com/file/d/1jIJxzyFMc7zy78tsBJc7ShFyV8sQTBS7/view?usp=sharing" title="Resume" 
+                rel="noopener noreferrer" target="_blank" >Resume 🔗</a><button class="menu-item theme-switch tw-w-full" aria-label="Switch Theme">
+                <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
+            </button></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+            <div class="container"><div class="toc print:!tw-hidden" id="toc-auto">
+        <h2 class="toc-title">Contents</h2>
+        <div class="toc-content always-active" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#data-pipeline-là-gì-">Data Pipeline là gì ?</a></li>
+    <li><a href="#một-số-thiết-kế-data-pipeline-xử-lý-dữ-liệu">Một số thiết kế Data pipeline xử lý dữ liệu</a>
+      <ul>
+        <li><a href="#etlelt-data-pipeline">ETL/ELT Data pipeline</a>
+          <ul>
+            <li><a href="#e-t-l-là-gì-">E-T-L là gì ?</a></li>
+            <li><a href="#etl-pipeline">ETL pipeline</a></li>
+            <li><a href="#elt-pipeline">ELT pipeline</a></li>
+            <li><a href="#etl-vs-elt">ETL vs ELT</a></li>
+          </ul>
+        </li>
+        <li><a href="#streaming-pipeline">Streaming pipeline</a>
+          <ul>
+            <li><a href="#batch-processing-vs-stream-processing">Batch processing vs Stream processing</a></li>
+            <li><a href="#workflow">Workflow</a></li>
+          </ul>
+        </li>
+        <li><a href="#zero-etl">Zero ETL</a></li>
+      </ul>
+    </li>
+    <li><a href="#các-kiến-trúc-data-pipeline-phổ-biến">Các kiến trúc data pipeline phổ biến</a>
+      <ul>
+        <li><a href="#lambda-architecture">Lambda Architecture</a></li>
+        <li><a href="#kappa-architecture">Kappa Architecture</a></li>
+        <li><a href="#event-driven-architecture-eda">Event-Driven Architecture (EDA)</a></li>
+        <li><a href="#data-lake-pattern">Data Lake Pattern</a></li>
+        <li><a href="#fan-outfan-in-pattern">Fan-Out/Fan-In Pattern</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class="single-title" data-pagefind-meta="date:20 Nov 2024" data-pagefind-body>Tất tần tật về Data pipeline</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class='author'>
+        <span class='screen-reader-text'>  </span><a href='https://phonghuynh.netlify.app/authors/og'>OG</a></span>
+                </span>&nbsp;<span class="post-category">included in </span>&nbsp;<span class="post-category">category <a href="/categories/blogs/"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>Blogs</a></span>&nbsp;<span class="post-category">and</span>&nbsp;<span class="post-series">series <a href=""><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V86a6 6 0 0 1 6-6h404a6 6 0 0 1 6 6v340a6 6 0 0 1-6 6zm-42-92v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm0-96v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm0-96v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm-252 12c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36zm0 96c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36zm0 96c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36z"/></svg></a></span></div>
+            <div class="post-meta-line"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;<time datetime="20 Nov 2024">20 Nov 2024</time>&nbsp;
+                    <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;19 minutes&nbsp;</div>
+        </div><div class="details series-nav open">
+                                <div class="details-summary series-title">
+                                    <span>Series - Data Lú</span>
+                                    <span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+                                </div>
+                                <div class="details-content series-content">
+                                    <nav>
+                                        <ul>
+                                                    <li><a href="/start_journey/">Thằng nhóc thích code và data</a></li>
+                                                    <li><a href="/linux/">Linux - tiếng sét ái tình</a></li><li><span class="active">Tất tần tật về Data pipeline</span></li></ul>
+                                    </nav>
+                                </div>
+                            </div><div class="details toc print:!tw-block" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#data-pipeline-là-gì-">Data Pipeline là gì ?</a></li>
+    <li><a href="#một-số-thiết-kế-data-pipeline-xử-lý-dữ-liệu">Một số thiết kế Data pipeline xử lý dữ liệu</a>
+      <ul>
+        <li><a href="#etlelt-data-pipeline">ETL/ELT Data pipeline</a>
+          <ul>
+            <li><a href="#e-t-l-là-gì-">E-T-L là gì ?</a></li>
+            <li><a href="#etl-pipeline">ETL pipeline</a></li>
+            <li><a href="#elt-pipeline">ELT pipeline</a></li>
+            <li><a href="#etl-vs-elt">ETL vs ELT</a></li>
+          </ul>
+        </li>
+        <li><a href="#streaming-pipeline">Streaming pipeline</a>
+          <ul>
+            <li><a href="#batch-processing-vs-stream-processing">Batch processing vs Stream processing</a></li>
+            <li><a href="#workflow">Workflow</a></li>
+          </ul>
+        </li>
+        <li><a href="#zero-etl">Zero ETL</a></li>
+      </ul>
+    </li>
+    <li><a href="#các-kiến-trúc-data-pipeline-phổ-biến">Các kiến trúc data pipeline phổ biến</a>
+      <ul>
+        <li><a href="#lambda-architecture">Lambda Architecture</a></li>
+        <li><a href="#kappa-architecture">Kappa Architecture</a></li>
+        <li><a href="#event-driven-architecture-eda">Event-Driven Architecture (EDA)</a></li>
+        <li><a href="#data-lake-pattern">Data Lake Pattern</a></li>
+        <li><a href="#fan-outfan-in-pattern">Fan-Out/Fan-In Pattern</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content" data-pagefind-body><p>Trong bài lần này, ta sẽ đi qua tất tần tật mọi thứ về data pipeline, khi nào nên dùng loại nào và làm sao để xây dựng một kiến trúc data pipeline hiện đại, hiệu quả. Gét gô</p>
+<figure><img src="https://i.imgur.com/WeJV4L9.png">
+</figure>
+
+<h2 id="data-pipeline-là-gì-" class="headerLink">
+    <a href="#data-pipeline-l%c3%a0-g%c3%ac-" class="header-mark"></a>Data Pipeline là gì ?</h2><p>Data pipeline hay “đường ống dữ liệu” đề cập đến một chuỗi các quá trình chuyển data từ một hoặc nhiều nguồn nào đó đến đích, có thể là data warehouse, database hay app</p>
+<div class="details admonition info open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></svg></span>Info<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Một điều quan trọng là hầu hết data pipeline không phải là một quy trình tuyến tính từ source A đến source B. Nhưng nó là một chuỗi các quá trình xử lý phức tạp và phụ thuộc lẫn nhau. Chẳng hạn như data có thể được lấy từ nhiều nguồn, được biến đổi và join lại với nhau ở những thời điểm khác nhau trước khi load vài đích đến cuối cùng.</div></div></div>
+<p>Một kiến trúc data pipeline tốt là kiến trúc có thể giải quyết được 5 V của Big Data:</p>
+<ol>
+<li>Volume (Khối lượng)</li>
+<li>Velocity (Tốc độ)</li>
+<li>Veracity (Tính xác thực)</li>
+<li>Variety (Tính đa dạng)</li>
+<li>Value (Giá trị)</li>
+</ol>
+<p>Ngoài ra một hệ thống tốt cũng phải tối ưu về chi phí hay dễ bảo trì.</p>
+<h2 id="một-số-thiết-kế-data-pipeline-xử-lý-dữ-liệu" class="headerLink">
+    <a href="#m%e1%bb%99t-s%e1%bb%91-thi%e1%ba%bft-k%e1%ba%bf-data-pipeline-x%e1%bb%ad-l%c3%bd-d%e1%bb%af-li%e1%bb%87u" class="header-mark"></a>Một số thiết kế Data pipeline xử lý dữ liệu</h2><h3 id="etlelt-data-pipeline" class="headerLink">
+    <a href="#etlelt-data-pipeline" class="header-mark"></a>ETL/ELT Data pipeline</h3><p>ETL và ELT là hai trong những kiến trúc data pipeline nổi tiếng và thường được gặp nhiều nhất trong những hệ thống xử lý phức tạp và xử lý big data.</p>
+<h4 id="e-t-l-là-gì-" class="headerLink">
+    <a href="#e-t-l-l%c3%a0-g%c3%ac-" class="header-mark"></a>E-T-L là gì ?</h4><p><strong>Extract</strong>: là giai đoạn khai thác, trích xuất dữ liệu và cũng là giai đoạn đầu tiên trong hệ thống ETL/ELT. Dữ liệu có thể hoàn toàn thô và đa dạng nguồn (như flat files, APIs, hay các hệ thống IoT, sàn thương mại điện tử,…)</p>
+<tab-container default-tab="0" class="tw-my-4"><button class="
+        tab-button  
+        tw-transition 
+        tw-ease-in-out 
+        tw-duration-300
+        tw-bg-transparent
+        tw-px-4 
+        tw-py-2
+        tw-mr-1
+        tw-shadow-black
+        hover:tw-bg-bgColor-secondary
+        hover:tw-shadow-md
+        aria-selected:tw-font-bold
+        aria-selected:tw-border-b-4
+        aria-selected:tw-text-fgColor-link
+        aria-selected:tw-border-fgColor-link"
+        type="button" 
+        role="tab" 
+        id="tab-id-1">Extract</button>
+  <button class="
+        tab-button  
+        tw-transition 
+        tw-ease-in-out 
+        tw-duration-300
+        tw-bg-transparent
+        tw-px-4 
+        tw-py-2
+        tw-mr-1
+        tw-shadow-black
+        hover:tw-bg-bgColor-secondary
+        hover:tw-shadow-md
+        aria-selected:tw-font-bold
+        aria-selected:tw-border-b-4
+        aria-selected:tw-text-fgColor-link
+        aria-selected:tw-border-fgColor-link"
+        type="button" 
+        role="tab" 
+        id="tab-id-2">Transform</button>
+  <button class="
+        tab-button  
+        tw-transition 
+        tw-ease-in-out 
+        tw-duration-300
+        tw-bg-transparent
+        tw-px-4 
+        tw-py-2
+        tw-mr-1
+        tw-shadow-black
+        hover:tw-bg-bgColor-secondary
+        hover:tw-shadow-md
+        aria-selected:tw-font-bold
+        aria-selected:tw-border-b-4
+        aria-selected:tw-text-fgColor-link
+        aria-selected:tw-border-fgColor-link"
+        type="button" 
+        role="tab" 
+        id="tab-id-3">Load</button>
+  
+
+
+
+
+
+<div 
+    role="tabpanel" 
+    aria-labelledby="tab-id-1"
+    class="
+    tw-p-4 
+    tw-border-t-2
+    tw-border-[#f0f0f0]
+    dark:tw-border-[#363636]
+    ">
+    
+        <p>Extracting là giai đoạn khai thác, trích xuất dữ liệu và cũng là giai đoạn đầu tiên trong hệ thống ETL/ELT. Dữ liệu có thể hoàn toàn thô và đa dạng nguồn (như flat files, APIs, hay các hệ thống IoT, sàn thương mại điện tử,…)</p>
+<div class="details admonition note">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Các kỹ thuật Extract<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content"><ul>
+<li><strong>Update Notification</strong>: Data source sẽ thông báo ta khi có những records thay đổi (như webhook). Ta có thể chạy quy trình extraction cho sự thay đổi đó. Hầu hết các database hay web app cung cấp cơ chế cập nhật hỗ trợ cho phương pháp tích hợp này.</li>
+<li><strong>Incremental extraction</strong>: Vài nguồn data không cung cấp thông báo update nhưng có thể xác định data theo một khoảng thời gian. Ta có thể kiểm tra sự thay đổi đó định kỳ như hàng tuần, hàng tháng,… Và ta chỉ cần extract phần data đã thay đổi</li>
+<li><strong>Full extraction</strong>: Trường hợp nếu data source không thể thông báo hay xác định đâu là data mới. Ta chỉ còn cách load tất cả, phương pháp này đòi hỏi ta phải giữ copy của lần extract trước đó để biết đâu là data mới. Chỉ nên dùng với những bảng nhỏ</li>
+</ul>
+</div></div></div>
+
+    
+</div>
+
+
+
+
+
+
+<div 
+    role="tabpanel" 
+    aria-labelledby="tab-id-2"
+    class="
+    tw-p-4 
+    tw-border-t-2
+    tw-border-[#f0f0f0]
+    dark:tw-border-[#363636]
+    ">
+    
+        <p>Transforming là giai đoạn thực hiện xử lý, làm sạch, biến đổi dữ liệu.</p>
+<div class="details admonition note">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Các kỹ thuật Transformation<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content"><ul>
+<li><strong>Data cleaning</strong>: Chuyển đổi type, xử lý string, xử lý null, duplicate, normalizing, data structuring</li>
+<li><strong>Transforming</strong>:  filtering, joining, feature engineering, Anonymizing and Encrypting, sorting, aggregating,</li>
+</ul>
+</div></div></div>
+
+    
+</div>
+
+
+
+
+
+
+<div 
+    role="tabpanel" 
+    aria-labelledby="tab-id-3"
+    class="
+    tw-p-4 
+    tw-border-t-2
+    tw-border-[#f0f0f0]
+    dark:tw-border-[#363636]
+    ">
+    
+        <p>Loading là quá trình tải (load) tất cả các dữ liệu vào hệ thống đích. Hệ thống đích có thể là tệp đơn giản (csv, json,…) hay một cơ sở dữ liệu phức tạp như data warehouse, data lake,…</p>
+<div class="details admonition note">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Các kỹ thuật loading<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content"><ul>
+<li><strong>Full load</strong>: Thường dùng khi ta khởi chạy pipeline lần đầu hoặc đối với dữ liệu lớn không thay đổi thường xuyên, phương pháp này load toàn bộ data đến data source, tốn nhiều thời gian và tài nguyên.</li>
+<li><strong>Incremental load</strong>: Load chỉ sự khác nhau giữa warehouse và source một cách định kỳ. Nó sẽ lưu ngày extract trước, do đó chỉ add các bản ghi có ngày extract sau đó. Có 2 cách để incremental load:
+<ul>
+<li>Streaming incremental load: Nếu volume data nhỏ, ta có thể streaming sự thay đổi liên tục qua pipeline đến warehouse.</li>
+<li>Batch incremental load: nếu data volume lớn, ta có thể collect data theo các batches một cách định kỳ</li>
+</ul>
+</li>
+<li><strong>Scheduled loading</strong>: Tải dữ liệu theo lịch trình. Phù hợp với các ứng dụng có thời gian xử lý dữ liệu chậm hay dữ liệu không hay đổi thường xuyên</li>
+<li><strong>On-demand loading</strong>: Tải dữ liệu khi có yêu cầu từ người dùng hay ứng dụng. Cần có cơ chế phản hồi nhanh để đáp ứng yêu cầu load data</li>
+<li><strong>Parallel/serial</strong>: Là hai kỹ thuật xử lý dữ liệu trên đa luồng. Parallel xử lý data trên nhiều luồng song song, thích hợp cho ứng dụng xử lý big data hay phân tán. Trong khi serial xử lý data trên một luồng, thích hợp cho hệ thống xử lý đơn giản</li>
+</ul>
+</div></div></div>
+
+    
+</div>
+
+
+</tab-container>
+
+<h4 id="etl-pipeline" class="headerLink">
+    <a href="#etl-pipeline" class="header-mark"></a>ETL pipeline</h4><div class="details admonition info open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></svg></span>Một chút lịch sử<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">ETL (Extract-Transform-Load) xuất hiện từ những năm 1970, khi các cơ sở dữ liệu quan hệ (Relational Database) trở nên phổ biến. Trong thời kỳ này, dữ liệu giao dịch thô được lưu trữ trong các hệ thống OLTP (Online Transaction Processing) để hỗ trợ hoạt động giao dịch. Tuy nhiên, dữ liệu dạng này không phù hợp cho việc phân tích và ra quyết định kinh doanh. Vì thế, ETL được phát triển để chuyển đổi dữ liệu từ hệ thống giao dịch sang dạng quan hệ tối ưu cho phân tích trong các hệ thống OLAP (Online Analytical Processing).</div></div></div>
+<p>ETL (Extract-Transform-Load) là quy trình xử lý data từ nhiều nguồn với <strong>volume nhỏ</strong> trước khi tải vào hệ thống đích là một data warehouse theo chu kỳ hay định kỳ. Đúng như tên gọi, quy trình này thực hiện lần lượt các bước extract -&gt; transform -&gt; load cụ thể:</p>
+<ol>
+<li><strong>Extract</strong>: Như đã đề cập ở mục trước, bước này chủ yếu trích xuất dữ liệu thô từ nhiều nguồn, thường là các transaction database hay các flat files (csv, xlsx). Sau đó data được lưu vào một <strong>vùng trung gian (Staging Area/Landing Zone)</strong>. Vùng này có nhiệm vụ lưu trữ <strong>tạm thời</strong> và data sẽ bị xóa để giải phóng lưu trữ sau khi hoàn tất quá trình transforming</li>
+<li><strong>Transform</strong>: Xử lý và biến đổi dữ liệu, quá trình này thực hiện trong staging area để chuẩn bị clean data cho data warehouse. Đối với ETL pipeline, data thường sẽ được xử lý và chuẩn hóa trước khi load vào data warehouse. Hướng tiếp cận này gọi là <strong>Schema-on-write Approach</strong></li>
+</ol>
+<div class="details admonition note">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Schema-on-write Approach<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Là cách tiếp cận thường được sử dụng trong các pipeline ETL, khi mà data schema phải được xác định trước khi write vào storage. Data structure và format phải được định nghĩa từ trước và thường được dùng đối với các database truyền thống (relational database như MySQL, PostgreSQL, Oracle, SQL Server,…). Việc này đảm bảo tính toàn vẹn của data và chất lượng data. Tuy nhiên lại không phù hợp cho unstructure data hay semi-structure data khi có schema data đa dạng và thay đổi liên tục</div></div></div>
+<ol start="3">
+<li><strong>Load</strong>: Sau khi dữ liệu được làm sạch và chuẩn hóa ở staging area, bước cuối cùng là load vào một data warehouse có sức mạnh phân tích mạnh mẽ để bắt đầu phân tích.
+<figure><img src="https://cdn.prod.website-files.com/6130fa1501794e37c21867cf/63cf3084f1439f2401b8d477_0qBAzVjwAYTmqKX3Yb5RTDEt3tE_pKN3mWHfRgB1ruK9WCYnMBSUcFL_CwEa9eA4SpO3eYHKwMCzlZI7xwRWcQePNVZ10iOJrPa_AYbSLgcIc3p_VBpwh2sFUeIBtqDrh-Fx3XAdSmTI92UHXIHbNZW7yec8ZzAfc_iFcir6gxE1_qikjmFvnhB8ji0w.png"><figcaption>
+      <h4>ETL pipeline (Fivetran.com)</h4>
+    </figcaption>
+</figure>
+</li>
+</ol>
+<div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z"/></svg></span>Best practice<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">ETL rất phù hợp với dữ liệu có cấu trúc (structured data) và khối lượng vừa phải, vì quá trình transform đòi hỏi xác định schema trước và thường không tối ưu khi xử lý khối lượng dữ liệu khổng lồ. Điều này khiến ETL đặc biệt hữu ích cho các hệ thống SQL-only database hoặc các ứng dụng truyền thống yêu cầu chất lượng dữ liệu cao và truy vấn phức tạp (như OLAP)</div></div></div>
+<h4 id="elt-pipeline" class="headerLink">
+    <a href="#elt-pipeline" class="header-mark"></a>ELT pipeline</h4><div class="details admonition info open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></svg></span>Lịch sử ELT<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">ELT hay Extract-Load-Transform là một phương pháp xử lý dữ liệu được phát triển mạnh mẽ cùng với sự xuất hiện của các công nghệ cloud vào những năm 2000. Điểm khác biệt lớn nhất của ELT so với ETL truyền thống là việc dữ liệu thô được tải thẳng vào hệ thống đích (data warehouse hoặc data lake) trước khi thực hiện các thao tác biến đổi.</div></div></div>
+<p>ELT thay đổi quá trình load lên trước transform, điều này tạo ra sự khác biệt rõ rệt về mặt tốc độ và sự linh hoạt của hệ thống với big data. Quy trình như sau:</p>
+<ol>
+<li><strong>Extract</strong>: vẫn giống với ETL, ở ELT ta cũng extract dữ liệu từ nhiều nguồn. Và lần này đa dạng hơn, ngoài các cơ sở dữ liêu quan hệ (SQL), ta cũng có thể trích xuất dữ liệu từ API, tệp tin log, semi-structure data như JSON, hay thậm chí là unstructure data như ảnh và video.</li>
+<li><strong>Load</strong>: Dữ liệu sẽ được tải vào một data lake (HDFS, S3, Azure datalake,&hellip;) hoặc thẳng vào data warehouse (BigQuery, Snowflake, Redshift,&hellip;).</li>
+<li><strong>Transform</strong>: Việc biến đổi dữ liệu thường tận dụng các công cụ mạnh mẽ như SQL engine (Snowflake, BigQuery), Python-based frameworks (Databricks, Apache Spark), hoặc các công cụ chuyên biệt như dbt. Mục tiêu là chuyển đổi dữ liệu thô thành dữ liệu sẵn sàng để phân tích hoặc tích hợp với các hệ thống khác.</li>
+</ol>
+<div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Note<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Các hệ thống như object storage (HDFS, S3, Azure Data Lake) sử dụng phương pháp schema-on-read, giúp linh hoạt khi xử lý các loại dữ liệu không có cấu trúc hoặc bán cấu trúc. Ngược lại, cloud data warehouses như Snowflake hay BigQuery thường yêu cầu schema-on-write để đảm bảo hiệu năng phân tích, nhưng ngày nay, nhiều hệ thống đã tích hợp khả năng xử lý semi-structured data như JSON hay Avro.</div></div></div>
+<div class="details admonition info open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></svg></span>Schema-on-read Approach<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Schema chỉ được tạo ra khi ta đọc hay phân tích dữ liệu. Hướng tiếp cận này cho phép ta load dữ liệu vào nguồn đích mà không cần quan tâm đến cấu trúc hiện tại của dữ liệu. Khả năng này thường thấy ở các NoSQL database, object storage hay thậm chí là cloud data warehouse với khả năng tự nhận biết schema với semi-structure data (tuy nhiên bản thân những data warehouses này vẫn là Schema-on-write nhưng cho phép ứng dụng gần giống tiếp cận Schema-on-read).</div></div></div>
+<p><strong>Một số biến thể của ELT</strong></p>
+<tab-container default-tab="0" class="tw-my-4"><button class="
+        tab-button  
+        tw-transition 
+        tw-ease-in-out 
+        tw-duration-300
+        tw-bg-transparent
+        tw-px-4 
+        tw-py-2
+        tw-mr-1
+        tw-shadow-black
+        hover:tw-bg-bgColor-secondary
+        hover:tw-shadow-md
+        aria-selected:tw-font-bold
+        aria-selected:tw-border-b-4
+        aria-selected:tw-text-fgColor-link
+        aria-selected:tw-border-fgColor-link"
+        type="button" 
+        role="tab" 
+        id="tab-id-4">ELTL</button>
+  <button class="
+        tab-button  
+        tw-transition 
+        tw-ease-in-out 
+        tw-duration-300
+        tw-bg-transparent
+        tw-px-4 
+        tw-py-2
+        tw-mr-1
+        tw-shadow-black
+        hover:tw-bg-bgColor-secondary
+        hover:tw-shadow-md
+        aria-selected:tw-font-bold
+        aria-selected:tw-border-b-4
+        aria-selected:tw-text-fgColor-link
+        aria-selected:tw-border-fgColor-link"
+        type="button" 
+        role="tab" 
+        id="tab-id-5">ELLT</button>
+  <button class="
+        tab-button  
+        tw-transition 
+        tw-ease-in-out 
+        tw-duration-300
+        tw-bg-transparent
+        tw-px-4 
+        tw-py-2
+        tw-mr-1
+        tw-shadow-black
+        hover:tw-bg-bgColor-secondary
+        hover:tw-shadow-md
+        aria-selected:tw-font-bold
+        aria-selected:tw-border-b-4
+        aria-selected:tw-text-fgColor-link
+        aria-selected:tw-border-fgColor-link"
+        type="button" 
+        role="tab" 
+        id="tab-id-6">EL now, T later</button>
+  
+
+
+
+
+
+<div 
+    role="tabpanel" 
+    aria-labelledby="tab-id-4"
+    class="
+    tw-p-4 
+    tw-border-t-2
+    tw-border-[#f0f0f0]
+    dark:tw-border-[#363636]
+    ">
+    
+        <p>ELTL (Extract-Load-Transform-Load): Data được load vào một low-cost storage (như trước S3 hay Azure Blob) để phục vụ các mục đích khác (machine learning, data discovery). Sau đó được transform và chuẩn hóa để load vào một data warehouse để phân tích. Thường dùng khi data sources đa dạng và dataset lớn</p>
+
+    
+</div>
+
+
+
+
+
+
+<div 
+    role="tabpanel" 
+    aria-labelledby="tab-id-5"
+    class="
+    tw-p-4 
+    tw-border-t-2
+    tw-border-[#f0f0f0]
+    dark:tw-border-[#363636]
+    ">
+    
+        <p>ELLT (Extract-Load-Load-Transform): Data được load vào một low-cost storage. Sau đó có thêm bước &lsquo;Load thứ hai&rsquo; để đưa dữ liệu từ đó vào hệ thống phân tích mạnh như Snowflake hoặc BigQuery. Bước này tối ưu chi phí lưu trữ, đồng thời khai thác sức mạnh của các cloud data warehouses để thực hiện transform phức tạp.</p>
+
+    
+</div>
+
+
+
+
+
+
+<div 
+    role="tabpanel" 
+    aria-labelledby="tab-id-6"
+    class="
+    tw-p-4 
+    tw-border-t-2
+    tw-border-[#f0f0f0]
+    dark:tw-border-[#363636]
+    ">
+    
+        <p>Data được load vào data warehouse hay data lake trước, và được transform mỗi khi nó được gọi. Thường áp dụng cho dữ liệu thô và unstructured data. Mô hình này rất linh hoạt nhưng dễ gây ra vấn đề quản trị dữ liệu nếu không kiểm soát tốt. Việc để dữ liệu thô và chỉ biến đổi khi cần dùng có thể làm tăng thời gian truy vấn hoặc tạo ra các phiên bản dữ liệu khác nhau, gây khó khăn trong việc đồng nhất thông tin</p>
+
+    
+</div>
+
+
+</tab-container>
+
+<figure><img src="https://i.imgur.com/IqICT1B.jpeg"><figcaption>
+      <h4>ELTL pipeline (loomesoftware.com)</h4>
+    </figcaption>
+</figure>
+
+<h4 id="etl-vs-elt" class="headerLink">
+    <a href="#etl-vs-elt" class="header-mark"></a>ETL vs ELT</h4><p>Ok bây giờ cùng đưa lên bàn cân so sánh để hiểu rõ hơn sự khác biệt của 2 kiến trúc này</p>
+
+<div class="table-wrapper">
+  <table>
+    <thead>
+        <tr>
+            <th style="text-align: "><strong>Danh mục</strong></th>
+            <th style="text-align: "><strong>ETL (Extract-Transform-Load)</strong></th>
+            <th style="text-align: "><strong>ELT (Extract-Load-Transform)</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: "><strong>Định nghĩa</strong></td>
+            <td style="text-align: ">Dữ liệu được trích xuất từ hệ thống nguồn, chuyển đổi trên một máy chủ xử lý trung gian, và sau đó tải vào hệ thống đích.</td>
+            <td style="text-align: ">Dữ liệu được trích xuất từ hệ thống nguồn, tải vào hệ thống đích và chuyển đổi ngay trong hệ thống đích.</td>
+        </tr>
+        <tr>
+            <td style="text-align: "><strong>Trích xuất (Extract)</strong></td>
+            <td style="text-align: ">Dữ liệu thô được trích xuất bằng các kết nối API.</td>
+            <td style="text-align: ">Dữ liệu thô được trích xuất bằng các kết nối API.</td>
+        </tr>
+        <tr>
+            <td style="text-align: "><strong>Chuyển đổi (Transform)</strong></td>
+            <td style="text-align: ">Dữ liệu thô được chuyển đổi trên máy chủ xử lý trung gian.</td>
+            <td style="text-align: ">Dữ liệu thô được chuyển đổi ngay trong hệ thống đích.</td>
+        </tr>
+        <tr>
+            <td style="text-align: "><strong>Tải dữ liệu (Load)</strong></td>
+            <td style="text-align: ">Dữ liệu đã được chuyển đổi sẽ được tải vào hệ thống đích.</td>
+            <td style="text-align: ">Dữ liệu thô được tải trực tiếp vào hệ thống đích.</td>
+        </tr>
+        <tr>
+            <td style="text-align: "><strong>Tốc độ</strong></td>
+            <td style="text-align: ">Quá trình ETL tiêu tốn thời gian vì dữ liệu phải được chuyển đổi trước khi tải vào hệ thống đích.</td>
+            <td style="text-align: ">ELT nhanh hơn, vì dữ liệu được tải trực tiếp vào hệ thống đích và chuyển đổi song song.</td>
+        </tr>
+        <tr>
+            <td style="text-align: "><strong>Biến đổi mã (Code-Based Transformations)</strong></td>
+            <td style="text-align: ">Được thực hiện trên máy chủ trung gian, phù hợp với các chuyển đổi phức tạp và tiền xử lý.</td>
+            <td style="text-align: ">Chuyển đổi được thực hiện trong cơ sở dữ liệu đích, kết hợp tải và chuyển đổi đồng thời, tăng tốc và hiệu quả.</td>
+        </tr>
+        <tr>
+            <td style="text-align: "><strong>Lịch sử phát triển</strong></td>
+            <td style="text-align: ">ETL hiện đại đã tồn tại hơn 20 năm; quy trình và thực hành đã được chuẩn hóa và tài liệu hóa đầy đủ.</td>
+            <td style="text-align: ">ELT là dạng tích hợp dữ liệu mới hơn, tài liệu và kinh nghiệm ít hơn.</td>
+        </tr>
+        <tr>
+            <td style="text-align: "><strong>Bảo mật</strong></td>
+            <td style="text-align: ">Chuyển đổi trước khi tải có thể loại bỏ thông tin nhạy cảm như Personal Identifying Information (PII).</td>
+            <td style="text-align: ">Tải trực tiếp dữ liệu yêu cầu các biện pháp bảo mật bổ sung.</td>
+        </tr>
+        <tr>
+            <td style="text-align: "><strong>Bảo trì</strong></td>
+            <td style="text-align: ">Máy chủ xử lý trung gian làm tăng gánh nặng bảo trì.</td>
+            <td style="text-align: ">Ít hệ thống hơn nên giảm gánh nặng bảo trì.</td>
+        </tr>
+        <tr>
+            <td style="text-align: "><strong>Chi phí</strong></td>
+            <td style="text-align: ">Máy chủ riêng biệt có thể tạo ra vấn đề về chi phí.</td>
+            <td style="text-align: ">Hệ thống dữ liệu đơn giản hóa giúp giảm chi phí.</td>
+        </tr>
+        <tr>
+            <td style="text-align: "><strong>Khả năng yêu cầu lại dữ liệu</strong></td>
+            <td style="text-align: ">Dữ liệu được chuyển đổi trước khi vào hệ thống đích, vì vậy dữ liệu thô không thể được yêu cầu lại.</td>
+            <td style="text-align: ">Dữ liệu thô được tải trực tiếp vào hệ thống đích, có thể yêu cầu lại không giới hạn.</td>
+        </tr>
+        <tr>
+            <td style="text-align: "><strong>Tương thích với Data Lake</strong></td>
+            <td style="text-align: ">Không, ETL không hỗ trợ tương thích với Data Lake.</td>
+            <td style="text-align: ">Có, ELT tương thích với Data Lake.</td>
+        </tr>
+        <tr>
+            <td style="text-align: "><strong>Dữ liệu đầu ra</strong></td>
+            <td style="text-align: ">Thường là dữ liệu có cấu trúc.</td>
+            <td style="text-align: ">Dữ liệu có cấu trúc, bán cấu trúc, hoặc không cấu trúc.</td>
+        </tr>
+        <tr>
+            <td style="text-align: "><strong>Khối lượng dữ liệu</strong></td>
+            <td style="text-align: ">Lý tưởng cho bộ dữ liệu nhỏ, yêu cầu chuyển đổi phức tạp.</td>
+            <td style="text-align: ">Lý tưởng cho bộ dữ liệu lớn, yêu cầu tốc độ và hiệu quả.</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+<p>Có thể dễ dàng thấy rằng ELT có tốc độ xử lý nhanh hơn (vì không phải gửi data vào vùng trung gian) và linh hoạt hơn rất nhiều so với ETL.
+ELT tỏ ra vượt trội về khả năng mở rộng, linh hoạt, hiệu quả và đặc biệt là xử lý với lượng data rất lớn cả structure và unstructure data. Nhưng ngược lại,
+ETL lại có thế mạnh về những tính toán xử lý nặng và phức tạp và cũng khá thích hợp với các hệ thống cần phải xử lý data trước khi đưa vào hệ thống đích (chẳng hạn như xử lý các data nhạy cảm trước khi đẩy vào server)</p>
+<h3 id="streaming-pipeline" class="headerLink">
+    <a href="#streaming-pipeline" class="header-mark"></a>Streaming pipeline</h3><p><strong>Streaming data pipeline</strong> là một chuỗi các quá trình xử lý dữ liệu liên tục, trong đó dữ liệu được xử lý ngay khi nó được sinh ra hoặc gần như thời gian thực (near real-time). Điều này giúp đảm bảo rằng dữ liệu luôn được cập nhật và có thể phân tích, phản hồi một cách nhanh chóng.</p>
+<p>Streaming pipeline thường được sử dụng trong các tình huống yêu cầu <strong>phản hồi nhanh</strong> và <strong>phân tích dữ liệu thời gian thực</strong>, chẳng hạn như:</p>
+<ul>
+<li><strong>Tài chính</strong>: Giám sát thị trường chứng khoán hoặc phát hiện giao dịch gian lận.</li>
+<li><strong>Y tế</strong>: Theo dõi sức khỏe bệnh nhân qua thiết bị IoT.</li>
+<li><strong>E-commerce</strong>: Gợi ý sản phẩm theo thời gian thực dựa trên hành vi người dùng.</li>
+<li><strong>Internet of Things (IoT)</strong>: Thu thập và xử lý dữ liệu cảm biến liên tục từ thiết bị.</li>
+</ul>
+<h4 id="batch-processing-vs-stream-processing" class="headerLink">
+    <a href="#batch-processing-vs-stream-processing" class="header-mark"></a>Batch processing vs Stream processing</h4><p>Hiện có hai phương pháp xử lý chủ lực là Batch processing và Stream Processing. Tùy vào nhu cầu mà ta sẽ ứng dụng các phương pháp này sao cho phù hợp</p>
+<tab-container default-tab="0" class="tw-my-4"><button class="
+        tab-button  
+        tw-transition 
+        tw-ease-in-out 
+        tw-duration-300
+        tw-bg-transparent
+        tw-px-4 
+        tw-py-2
+        tw-mr-1
+        tw-shadow-black
+        hover:tw-bg-bgColor-secondary
+        hover:tw-shadow-md
+        aria-selected:tw-font-bold
+        aria-selected:tw-border-b-4
+        aria-selected:tw-text-fgColor-link
+        aria-selected:tw-border-fgColor-link"
+        type="button" 
+        role="tab" 
+        id="tab-id-7">Batch processing</button>
+  <button class="
+        tab-button  
+        tw-transition 
+        tw-ease-in-out 
+        tw-duration-300
+        tw-bg-transparent
+        tw-px-4 
+        tw-py-2
+        tw-mr-1
+        tw-shadow-black
+        hover:tw-bg-bgColor-secondary
+        hover:tw-shadow-md
+        aria-selected:tw-font-bold
+        aria-selected:tw-border-b-4
+        aria-selected:tw-text-fgColor-link
+        aria-selected:tw-border-fgColor-link"
+        type="button" 
+        role="tab" 
+        id="tab-id-8">Stream processing</button>
+  
+
+
+
+
+<div 
+    role="tabpanel" 
+    aria-labelledby="tab-id-7"
+    class="
+    tw-p-4 
+    tw-border-t-2
+    tw-border-[#f0f0f0]
+    dark:tw-border-[#363636]
+    ">
+    
+        <p>Batch Processing hay xử lý theo lô là việc xử lý một tập dữ liệu lớn trong một lô với khoảng thời gian cụ thể. Được dùng khi ta biết trước kích thước và có giới hạn. Tất nhiên cũng tốn nhiều thời gian để xử lý. Khi dữ liệu được collect qua thời gian sẽ được group lại theo lô và xử lý. Thông thường ta sẽ viết ETL pipeline để làm việc này và việc xử lý có độ trễ cao, và tốn thời gian.</p>
+
+    
+</div>
+
+
+
+
+
+
+<div 
+    role="tabpanel" 
+    aria-labelledby="tab-id-8"
+    class="
+    tw-p-4 
+    tw-border-t-2
+    tw-border-[#f0f0f0]
+    dark:tw-border-[#363636]
+    ">
+    
+        <p>Như cái tên của nó, là xử lý dữ liệu trong thời gian thực và đưa ra kết quả gần như ngay lập tức. Ta thường sẽ không biết trước kích thước data và data cũng không giới hạn, liên tục. Không như hệ thống ETL khi ta phải thu thập data, với streaming, nguồn data sẽ “gửi” data vào một Messaging system rồi luồng luân chuyển đến pipeline để transform. Có khá nhiều tool để xử lý streaming như Apache Flink hay Spark Streaming. Dữ liệu sau đó có thể được write vào một database có tốc độ phản hồi nhanh để phục vụ cho phân tích</p>
+
+    
+</div>
+
+</tab-container>
+
+<figure><img src="https://i.imgur.com/1DhvhaP.png"><figcaption>
+      <h4>Batch vs Stream</h4>
+    </figcaption>
+</figure>
+
+<h4 id="workflow" class="headerLink">
+    <a href="#workflow" class="header-mark"></a>Workflow</h4><figure><img src="https://www.montecarlodata.com/wp-content/uploads/2024/03/Data-pipeline-architecture-streaming-kafka-1536x459.jpg"><figcaption>
+      <h4>Streaming pipeline (montecarlodata.com)</h4>
+    </figcaption>
+</figure>
+
+<p><strong>Data Source</strong>: Dữ liệu được sinh ra từ các nguồn như thiết bị IoT, log server, ứng dụng hoặc hệ thống giao dịch.</p>
+<p><strong>Messaging System:</strong> Đóng vai trò như một trung gian để lưu trữ tạm thời và truyền dữ liệu. Có hai kiểu messaging chính:</p>
+<ul>
+<li><strong>Point-to-point (P2P)</strong>: Một message chỉ được tiêu thụ bởi một consumer. Dữ liệu sẽ bị xóa sau khi được đọc (RabbitMQ, Kafka).</li>
+<li><strong>Publish-Subscribe (Pub/Sub)</strong>: Một message có thể được tiêu thụ bởi nhiều consumer. Phù hợp khi nhiều hệ thống cần dữ liệu giống nhau (Apache Kafka, GCP Pub/Sub, Amazon SNS).</li>
+</ul>
+<p><strong>Processing Engine</strong>: Dữ liệu được xử lý thông qua các công cụ như Apache Flink, Spark Streaming, AWS Lambda, Apache Storm</p>
+<p><strong>Storage:</strong> Tùy vào nhu cầu, dữ liệu có thể được lưu vào hệ thống phản hồi nhanh (NoSQL như Cassandra, DynamoDB, MongoDB) hay batch storage cho việc phân tích (HDFS, S3, BigQuery,..)</p>
+<h3 id="zero-etl" class="headerLink">
+    <a href="#zero-etl" class="header-mark"></a>Zero ETL</h3><figure><img src="https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2024/07/18/dbblog3225001.jpg">
+</figure>
+
+<p>Được AWS giới thiệu vào năm 2022, zero-ETL là hệ thống tích hợp dữ liệu nhằm giảm thiểu nhu cầu di chuyển dữ liệu giữa các nền tảng. Zero-ETL cho phép truy vấn trục tiếp trên các data silos mà không cần phải di chuyển dữ liệu. Thậm chí điều này còn cho phép khả năng phân tích real-time và tiết kiệm chi phí.</p>
+<p>Zero-ETL đòi hỏi cả OLTP và OLAP database đều phải thuộc cùng một nền tảng cloud (như Amazon Aurora và Amazon Redshift). Nhưng lại dễ triển khai hơn vì hệ thống được đơn giản hóa.</p>
+<h2 id="các-kiến-trúc-data-pipeline-phổ-biến" class="headerLink">
+    <a href="#c%c3%a1c-ki%e1%ba%bfn-tr%c3%bac-data-pipeline-ph%e1%bb%95-bi%e1%ba%bfn" class="header-mark"></a>Các kiến trúc data pipeline phổ biến</h2><p>Trong thực tế, việc thiết kế hệ thống dữ liệu có thể được xử lý với nhiều chiến lược phức tạp, cùng điểm qua một số pattern để xây dựng
+được một hệ thống data pipeline hiệu quả nào</p>
+<h3 id="lambda-architecture" class="headerLink">
+    <a href="#lambda-architecture" class="header-mark"></a>Lambda Architecture</h3><p>Ta đã biết về batch processing và stream processing rồi. Liệu trong cùng một hệ thống có thể áp dụng đồng thời cả 2 kiểu xử lý data này không ? Câu trả lời
+là <strong>có</strong>. Và đó cũng là ý tưởng của kiến trúc Lambda.</p>
+<p>Lambda là một kiến trúc hybrid bao gồm một batch data pipeline truyền thống kết hợp với một stream data pipeline có tốc độ cao để xử lý dữ liệu real-time. Lambda cơ bản là
+gồm 3 layers:</p>
+<ol>
+<li><strong>Batch layer (Cold process)</strong>: Chính là các ETL xử lý chung data đầu vào để xây dựng master dataset (là toàn bộ data và đầy đủ hơn data cả ở speed layer). Quy trình của lớp này vẫn là chạy theo lịch xử lý để đưa data vào data warehouse.
+Kết quả của batch layer là tạo ra các batch view</li>
+<li><strong>Speed layer (Hot process, stream)</strong>: Layer này giải quyết các data hiện tại để tạo ra view real time hoàn chỉnh cho user. Đầu ra của speed layer chính là các real-time view</li>
+<li><strong>Serving layer</strong>: Đây là layer sẽ là nơi để query các batch view cũng như real time view cho user. Các view này cũng được đánh index để tối ưu cho việc truy vấn.</li>
+</ol>
+<figure><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240117220316/Layer-of-Lambda-Architecture.jpg"><figcaption>
+      <h4>Lambda Architecture (geeksforgeeks.org)</h4>
+    </figcaption>
+</figure>
+
+<p>Một số ưu điểm của Lambda Architecture:</p>
+<ul>
+<li>Khả năng xử lý real-time: Batch processing truyền thống không được thiết kế để đáp ứng real-time data. Tuy nhiên nhờ vào thiết kế hybrid, lambda có thể
+xử lý được cả các data real-time một cách hiệu quả ngay từ các transaction database ngay khi chúng được tạo ra</li>
+<li>Cân bằng giữa real time processing với historical data processing</li>
+</ul>
+<p>Nhược điểm:</p>
+<ul>
+<li>Độ phức tạp cao: độ phức tạp trong thiết kế cũng như duy trì 2 hệ thống song song làm cho kiến trúc này trở nên khó khăn trong việc bảo trì</li>
+<li>Chi phí tính toán cao: vì kết hợp cả 2 luồng cùng lúc, chi phí tính toán của cả hệ thống nhìn chung là có khả năng tăng lên nhiều.</li>
+</ul>
+<h3 id="kappa-architecture" class="headerLink">
+    <a href="#kappa-architecture" class="header-mark"></a>Kappa Architecture</h3><p>Kiến trúc Kappa là kiến trúc được đơn giản hóa từ Lambda bằng cách chỉ sử dụng streaming layer. Trong thiết kế này, ta giả định tất cả data
+đều được dùng như stream data và được process ngay khi nó đến. Kể cả dữ liệu quá khứ (historical data) cũng được process thông qua cùng một pipeline với realtime data.
+Kiến trúc này thường được dùng khi ứng dụng cần real-time processing và không yêu cầu một batch layer phức tạp như IoT data stream hay real time dashboard.</p>
+<p>Ưu điểm:</p>
+<ul>
+<li>Tính đơn giản: Kappa có thiết kế đơn giản hơn và dễ xây dựng hơn rất nhiều so với lambda</li>
+<li>Tính ứng dụng cao: Phù hợp hơn đối với trường hợp historical data không thực sự khác biệt so với live data</li>
+</ul>
+<p>Nhược điểm:</p>
+<ul>
+<li>Không phù hợp và giới hạn trong việc xử lý batch</li>
+</ul>
+<h3 id="event-driven-architecture-eda" class="headerLink">
+    <a href="#event-driven-architecture-eda" class="header-mark"></a>Event-Driven Architecture (EDA)</h3><div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Note<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Mục này chỉ mang tính giới thiệu &#x1f604;</div></div></div>
+<p>Trong Event-Driven Architecture hay kiến trúc hướng sự kiện, hệ thống tương tác với các
+events khi chúng xảy ra. Kiểu thiết kế này tập trung vào các thành phần rời nhau và sử dụng
+các messages hay events và xử lý data dựa trên việc kích hoạt hơn là chạy theo lịch</p>
+<p>Thiết kế này thường sử dụng message queue như RabbitMQ hay event buses như Kafka để trigger việc xử lý. Thường được dùng
+trong các hệ thống e-commerce cũ khi từng event (thực hiện order, thanh toán) sẽ trigger các hành động khác nhau.</p>
+<p>Ưu điểm:</p>
+<ul>
+<li>Khả năng mở rộng cao và linh hoạt khi được thiết kế theo microservices</li>
+<li>Độ trễ thấp và tốc độ phản hồi cao đến các event</li>
+</ul>
+<p>Nhược điểm:</p>
+<ul>
+<li>Độ phức tạp cao giữa các service và workflow</li>
+<li>Yêu cầu thiết kế cẩn thận để đảm bảo hệ thống có độ chịu lỗi và sự đồng nhất</li>
+</ul>
+<h3 id="data-lake-pattern" class="headerLink">
+    <a href="#data-lake-pattern" class="header-mark"></a>Data Lake Pattern</h3><div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z"/></svg></span>Tip<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Data lake là một kho lưu trữ được thiết kế để lưu lượng lớn raw data ở định dạng gốc của nó. Trong thực tế, data lake là một &ldquo;central hub&rdquo; cho data dạng các nguồn data khác nhau.</div></div></div>
+<p>Thiết kế này đơn giản là ứng dụng data lake vào để lưu raw data gồm cả strucure, semi-structure hay unstructure data. Data Lake thường là hệ thống
+phân tán như Hadoop HDFS hay cloud storage như AWS S3, Google Cloud Storage (GCS). Data ở đây sẽ được transform và xử lý sau đó nếu cần.</p>
+<p>Ưu điểm:</p>
+<ul>
+<li>Tính linh hoạt với việc lưu được đa dạng data types</li>
+<li>Tối ưu chi phí cho việc lưu trữ dữ liệu thô lâu dài</li>
+</ul>
+<p>Nhược điểm:</p>
+<ul>
+<li>Quản lý dữ liệu (Data gorvernance) có thể phức tạp</li>
+<li>Có thể trở thành một &ldquo;Vũng lầy data&rdquo; (Data Swamp) nếu không quản lý đúng cách</li>
+</ul>
+<div class="details admonition question open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z"/></svg></span>Data Swamp<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Là một data lake xuống cấp và không có tổ chức. Khi data lake không được quản lý, data trong đó trở nên
+lộn xộn và khó sử dụng.</div></div></div>
+<h3 id="fan-outfan-in-pattern" class="headerLink">
+    <a href="#fan-outfan-in-pattern" class="header-mark"></a>Fan-Out/Fan-In Pattern</h3><p>Fan-Out đề cập đến việc chia data stream thành nhiều tác vụ xử lý stream song song. Ngược lại, Fan-In sẽ gộp các kết quả lại
+với nhau. Kiểu thiết kế này thường hữu ích trong việc xử lý data có lưu lượng lớn</p>
+<p>Ưu điểm:</p>
+<ul>
+<li>Cải thiện tốc độ xử lý nhờ vào xử lý song song</li>
+<li>Giúp xử lý lượng lớn công việc một cách hiệu quả</li>
+</ul>
+<p>Nhược điểm:</p>
+<ul>
+<li>Phức tạp khi xử lý phân tán và gộp kết quả</li>
+<li>Khó khăn trong quản lý lỗi</li>
+</ul>
+<h2 id="conclusion" class="headerLink">
+    <a href="#conclusion" class="header-mark"></a>Conclusion</h2><p>Có rất nhiều các thế kế và xử lý data khác nhau, tùy vào từng trường hợp và nhu cầu mà ta có thể sẽ phải thiết kế hệ thống sao cho phù hợp
+và tối ưu nhất về mặt chi phí tính toán lưu trữ và hiệu quả về mặt hiệu năng. Hy vọng bài viết sẽ giúp bạn phần nào đó hiểu rõ cách mà các pipeline vận hành và cách thiết kế các kiến trúc
+pipeline hiện đại. Giờ thì end thoy &#x1f604; Hẹn gặp lại trong số blog sau.</p>
+<p><strong>-Mew-</strong></p>
+<hr>
+<h1 id="references" class="headerLink">
+    <a href="#references" class="header-mark"></a>References</h1><p><a href="https://www.geeksforgeeks.org/data-pipeline-design-patterns-system-design/" target="_blank" rel="noopener noreferrer">Data pipeline design pattern system design - GeeksforGeeks</a></p>
+<p><a href="https://aws.amazon.com/compare/the-difference-between-etl-and-elt/?nc1=h_ls" target="_blank" rel="noopener noreferrer">What is the Difference Between ETL and ELT? - AWS</a></p>
+<p><a href="https://www.montecarlodata.com/blog-data-pipeline-architecture-explained/" target="_blank" rel="noopener noreferrer">Data Pipeline Architecture Explained: 6 Diagrams and Best Practices - Montecarlo Data</a></p></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 20 Nov 2024</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line print:!tw-hidden">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><button title="Share on Facebook" data-sharer="facebook" data-url="https://phonghuynh.netlify.app/alldatapipeline/" data-hashtag="Data Engineer"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></button><button title="Share on Linkedin" data-sharer="linkedin" data-url="https://phonghuynh.netlify.app/alldatapipeline/"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></button></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg>&nbsp;<a href=""></a>,&nbsp;<a href=""></a></section>
+        <section class="print:!tw-hidden">
+            <span><button class="tw-text-fgColor-link-muted hover:tw-text-fgColor-link-muted-hover" onclick="window.history.back();">Back</button></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav print:tw-hidden"><a href="/workatbosch/" class="prev" rel="prev" title="Bosch và cuộc hành trình mới"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Bosch và cuộc hành trình mới</a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2023 - 2024<span class="author">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">OG</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons" class="print:!tw-hidden"><a href="#back-to-top" id="back-to-top-button" class="fixed-button tw-transition-opacity tw-opacity-0" title="Back to Top">
+            <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
+        </a></div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript>
+<script>window.config={"autocomplete.min.js":"/lib/autocomplete/autocomplete.min.js","comment":{},"data":{"id-1":"tab","id-2":"tab","id-3":"tab","id-4":"tab","id-5":"tab","id-6":"tab","id-7":"tab","id-8":"tab"},"fuse.min.js":"/lib/fuse/fuse.min.js","lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"table":{"sort":true}};</script><script
+    src="/lib/tablesort/tablesort.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lightgallery.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lg-thumbnail.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lg-zoom.min.js"
+    
+  ></script><script
+    src="/lib/sharer/sharer.min.js"
+    
+  ></script><script
+    src="/lib/katex/katex.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/lib/katex/auto-render.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/lib/katex/copy-tex.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/lib/katex/mhchem.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/js/katex.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/lib/tabs/tabs.min.js"
+    
+      defer
+    type="module"
+  ></script><script
+    src="/js/theme.min.js"
+    
+      defer
+    
+  ></script>
+    
+    <script type="speculationrules">
+        {
+          "prerender": [
+            {
+              "where": { "href_matches": "/*" },
+              "eagerness": "moderate"
+            }
+          ]
+        }
+    </script>
+      
+</body>
+
+</html>

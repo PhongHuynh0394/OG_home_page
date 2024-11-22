@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - OG Home</title>
+        <link>https://phonghuynh.netlify.app/tags/</link>
+        <description>Tags - Tag - OG Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
+            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Wed, 20 Nov 2024 19:23:44 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Data Engineer</title>
+    <link>https://phonghuynh.netlify.app/tags/data-engineer/</link>
+    <pubDate>Wed, 20 Nov 2024 19:23:44 &#43;0700</pubDate><author>
+        <name>OG</name>
+    </author><guid>https://phonghuynh.netlify.app/tags/data-engineer/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Data Pipeline</title>
+    <link>https://phonghuynh.netlify.app/tags/data-pipeline/</link>
+    <pubDate>Wed, 20 Nov 2024 19:23:44 &#43;0700</pubDate><author>
+        <name>OG</name>
+    </author><guid>https://phonghuynh.netlify.app/tags/data-pipeline/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Lifestory</title>
+    <link>https://phonghuynh.netlify.app/tags/lifestory/</link>
+    <pubDate>Sun, 31 Dec 2023 14:30:10 &#43;0700</pubDate><author>
+        <name>OG</name>
+    </author><guid>https://phonghuynh.netlify.app/tags/lifestory/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>API</title>
+    <link>https://phonghuynh.netlify.app/tags/api/</link>
+    <pubDate>Sun, 10 Dec 2023 18:41:00 &#43;0700</pubDate><author>
+        <name>OG</name>
+    </author><guid>https://phonghuynh.netlify.app/tags/api/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Distributed System</title>
+    <link>https://phonghuynh.netlify.app/tags/distributed-system/</link>
+    <pubDate>Sun, 10 Dec 2023 18:41:00 &#43;0700</pubDate><author>
+        <name>OG</name>
+    </author><guid>https://phonghuynh.netlify.app/tags/distributed-system/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Docker</title>
+    <link>https://phonghuynh.netlify.app/tags/docker/</link>
+    <pubDate>Sun, 10 Dec 2023 18:41:00 &#43;0700</pubDate><author>
+        <name>OG</name>
+    </author><guid>https://phonghuynh.netlify.app/tags/docker/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>ELT</title>
+    <link>https://phonghuynh.netlify.app/tags/elt/</link>
+    <pubDate>Sun, 10 Dec 2023 18:41:00 &#43;0700</pubDate><author>
+        <name>OG</name>
+    </author><guid>https://phonghuynh.netlify.app/tags/elt/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Hadoop</title>
+    <link>https://phonghuynh.netlify.app/tags/hadoop/</link>
+    <pubDate>Sun, 10 Dec 2023 18:41:00 &#43;0700</pubDate><author>
+        <name>OG</name>
+    </author><guid>https://phonghuynh.netlify.app/tags/hadoop/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Machine Learning</title>
+    <link>https://phonghuynh.netlify.app/tags/machine-learning/</link>
+    <pubDate>Sun, 10 Dec 2023 18:41:00 &#43;0700</pubDate><author>
+        <name>OG</name>
+    </author><guid>https://phonghuynh.netlify.app/tags/machine-learning/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>PowerBI</title>
+    <link>https://phonghuynh.netlify.app/tags/powerbi/</link>
+    <pubDate>Sun, 10 Dec 2023 18:41:00 &#43;0700</pubDate><author>
+        <name>OG</name>
+    </author><guid>https://phonghuynh.netlify.app/tags/powerbi/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

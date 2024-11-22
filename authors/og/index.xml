@@ -4,7 +4,14 @@
         <link>https://phonghuynh.netlify.app/authors/og/</link>
         <description>OG - Author - OG Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
-            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Fri, 26 Jul 2024 23:08:36 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/authors/og/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Wed, 20 Nov 2024 19:23:44 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/authors/og/" rel="self" type="application/rss+xml" /><item>
+    <title>Tất tần tật về Data pipeline</title>
+    <link>https://phonghuynh.netlify.app/alldatapipeline/</link>
+    <pubDate>Wed, 20 Nov 2024 19:23:44 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/alldatapipeline/</guid>
+    <description><![CDATA[Trở thành thợ ống nước data từ A đến Á với ETL/ELT, streaming và hơn thế nữa]]></description>
+</item><item>
     <title>Bosch và cuộc hành trình mới</title>
     <link>https://phonghuynh.netlify.app/workatbosch/</link>
     <pubDate>Fri, 26 Jul 2024 23:08:36 &#43;0700</pubDate><author>
@@ -19,7 +26,7 @@
                 </author><guid>https://phonghuynh.netlify.app/recap2023/</guid>
     <description><![CDATA[<p>Năm 2023 vừa qua thật sự là một cột mốc đáng nhớ đối với bản thân OG. Đó là một chặng đường rất dài thăng trầm buồn vui
 lẫn lộn. Vào những giây phút cuối cùng, OG sẽ dùng bài viết này để nhìn lại cuộc hành trình đã qua để rồi sau cuối chính
-là hướng đến một tương lai với nhiều kế hoạch mới phía trước ở năm mới 2024 ❤️</p>]]></description>
+là hướng đến một tương lai với nhiều kế hoạch mới phía trước ở năm mới 2024 &#x2764;&#xfe0f;</p>]]></description>
 </item><item>
     <title>Spotify Analysis</title>
     <link>https://phonghuynh.netlify.app/spotify_analysis/</link>
@@ -51,7 +58,48 @@ là hướng đến một tương lai với nhiều kế hoạch mới phía tr�
     <pubDate>Sun, 24 Sep 2023 23:27:49 &#43;0700</pubDate><author>
                     <name>OG</name>
                 </author><guid>https://phonghuynh.netlify.app/blogs/</guid>
-    <description><![CDATA[Data lú   #1 Thằng nhóc thích code và data  Ngành Data có gì hot mà mình lại dính Read more...     #2 Linux - Tiếng sét ái tình  Khi biết đến Linux, tôi đã yêu em lúc nào không hay Read more...   Câu chuyện đời sống   Nhìn lại 2023  Quả là một năm gian nan nhưng thật mừng vì mình đã không đầu hàng Read more.]]></description>
+    <description><![CDATA[<h1 id="data-lú" class="headerLink">
+    <a href="#data-l%c3%ba" class="header-mark"></a>Data lú</h1>
+<div class="showcase-box column-1">
+    <div class="showcase-image">
+        <a href=https://phonghuynh.netlify.app/start_journey/><img   src=https://phonghuynh.netlify.app/big-data-center-server-room-rack-engineering-process-teamwork-computer-technology-cloud-storage_39422-1032_2846973709447837960.jpg   alt="Thằng nhóc thích code và data" height="200" width="400"></a>
+    </div>
+    <h2 class="showcase-title">
+        <a href=https://phonghuynh.netlify.app/start_journey/>Thằng nhóc thích code và data</a>
+    </h2>
+    <p class="showcase-summary">
+        Ngành Data có gì hot mà mình lại dính
+    </p>
+    <a class="showcase-link" href=https://phonghuynh.netlify.app/start_journey/>
+        Read more...
+    </a>
+</div>
+
+<div class="showcase-box column-2">
+    <div class="showcase-image">
+        <a href=https://phonghuynh.netlify.app/linux/><img   src=https://phonghuynh.netlify.app/O5QX1fQ_18069294017579299688.jpg   alt="Linux - Tiếng sét ái tình" height="200" width="400"></a>
+    </div>
+    <h2 class="showcase-title">
+        <a href=https://phonghuynh.netlify.app/linux/>Linux - Tiếng sét ái tình</a>
+    </h2>
+    <p class="showcase-summary">
+        Khi biết đến Linux, tôi đã yêu em lúc nào không hay
+    </p>
+    <a class="showcase-link" href=https://phonghuynh.netlify.app/linux/>
+        Read more...
+    </a>
+</div>
+
+<div class="showcase-box column-2">
+    <div class="showcase-image">
+        <a href=https://phonghuynh.netlify.app/alldatapipeline/><img   src=https://phonghuynh.netlify.app/WeJV4L9_17677421279180424663.png   alt="Tất tần tật về Data pipeline" height="200" width="400"></a>
+    </div>
+    <h2 class="showcase-title">
+        <a href=https://phonghuynh.netlify.app/alldatapipeline/>Tất tần tật về Data pipeline</a>
+    </h2>
+    <p class="showcase-summary">
+        Trở thành thợ ống nước data từ A đến Á với ETL/ELT, streaming và hơn thế nữa
+    </p>]]></description>
 </item><item>
     <title>Stock Analysis P2</title>
     <link>https://phonghuynh.netlify.app/stock_analysis_2/</link>
@@ -67,9 +115,26 @@ là hướng đến một tương lai với nhiều kế hoạch mới phía tr�
     <pubDate>Thu, 31 Aug 2023 14:39:53 &#43;0700</pubDate><author>
                     <name>OG</name>
                 </author><guid>https://phonghuynh.netlify.app/stock_analysis/</guid>
-    <description><![CDATA[Warning  Đây là kiến thức tích góp từ nhiều nguồn và nghiên cứu của nhóm OG, tất nhiên không thể tránh khỏi sai sót. Hy vọng bài viết lần này thú vị và giúp bạn đọc thư giãn, tham khảo.   Source   PhongHuynh0394  Stock-Analysis
-  
-Hello! OG đây. Ở project lần này mình sẽ phân tích gia trị cổ phiếu phái sinh VN30 Index bằng cách sử dụng PCA và K-means.]]></description>
+    <description><![CDATA[<div class="details admonition warning open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></svg></span>Warning<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Đây là kiến thức tích góp từ nhiều nguồn và nghiên cứu của nhóm OG, tất nhiên không thể tránh khỏi sai sót.
+Hy vọng bài viết lần này thú vị và giúp bạn đọc thư giãn, tham khảo.</div></div></div>
+<p><strong>Source</strong>
+<a target="_blank" href="https://github.com/PhongHuynh0394/Stock-Analysis" title="PhongHuynh0394" class="friend-link" rel="noopener noreferrer">
+    <div class="friend-link-div">
+        <div class="friend-link-avatar"><img   src=https://phonghuynh.netlify.app/img/github-logo.png    height="560" width="560"></div>
+        <div class="friend-link-info">
+            <div class="friend-name-div">
+                <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg>
+                <i class="friend-name">PhongHuynh0394</i>
+            </div>
+            <p class="friend-bio">Stock-Analysis</p>]]></description>
 </item><item>
     <title>Thằng nhóc thích code và data</title>
     <link>https://phonghuynh.netlify.app/start_journey/</link>
@@ -77,12 +142,5 @@ Hello! OG đây. Ở project lần này mình sẽ phân tích gia trị cổ ph
                     <name>OG</name>
                 </author><guid>https://phonghuynh.netlify.app/start_journey/</guid>
     <description><![CDATA[Ngành Data có gì hot mà mình lại dính]]></description>
-</item><item>
-    <title>Football ETL Analysis P2</title>
-    <link>https://phonghuynh.netlify.app/football_etl_2/</link>
-    <pubDate>Tue, 01 Aug 2023 15:01:16 &#43;0700</pubDate><author>
-                    <name>OG</name>
-                </author><guid>https://phonghuynh.netlify.app/football_etl_2/</guid>
-    <description><![CDATA[Continuous of Football ETL series]]></description>
 </item></channel>
 </rss>

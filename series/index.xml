@@ -1,0 +1,29 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Series - Series - OG Home</title>
+        <link>https://phonghuynh.netlify.app/series/</link>
+        <description>Series - Series - OG Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
+            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Wed, 20 Nov 2024 19:23:44 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/series/" rel="self" type="application/rss+xml" /><item>
+    <title>Data Lú</title>
+    <link>https://phonghuynh.netlify.app/series/data-l%C3%BA/</link>
+    <pubDate>Wed, 20 Nov 2024 19:23:44 &#43;0700</pubDate><author>
+        <name>OG</name>
+    </author><guid>https://phonghuynh.netlify.app/series/data-l%C3%BA/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Stock Analysis</title>
+    <link>https://phonghuynh.netlify.app/series/stock-analysis/</link>
+    <pubDate>Tue, 05 Sep 2023 23:15:54 &#43;0700</pubDate><author>
+        <name>OG</name>
+    </author><guid>https://phonghuynh.netlify.app/series/stock-analysis/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Football ETL</title>
+    <link>https://phonghuynh.netlify.app/series/football-etl/</link>
+    <pubDate>Tue, 01 Aug 2023 15:01:16 &#43;0700</pubDate><author>
+        <name>OG</name>
+    </author><guid>https://phonghuynh.netlify.app/series/football-etl/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

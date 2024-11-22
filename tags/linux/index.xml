@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Linux - Tag - OG Home</title>
+        <link>https://phonghuynh.netlify.app/tags/linux/</link>
+        <description>Linux - Tag - OG Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
+            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Wed, 27 Sep 2023 22:04:36 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/tags/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux - tiếng sét ái tình</title>
+    <link>https://phonghuynh.netlify.app/linux/</link>
+    <pubDate>Wed, 27 Sep 2023 22:04:36 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/linux/</guid>
+    <description><![CDATA[Khi biết đến Linux, tôi đã yêu em lúc nào không hay]]></description>
+</item></channel>
+</rss>

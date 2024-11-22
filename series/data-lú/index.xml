@@ -1,10 +1,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Data lú - Series - OG Home</title>
+        <title>Data Lú - Series - OG Home</title>
         <link>https://phonghuynh.netlify.app/series/data-l%C3%BA/</link>
-        <description>Data lú - Series - OG Home</description>
+        <description>Data Lú - Series - OG Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
-            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Wed, 27 Sep 2023 22:04:36 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/series/data-l%C3%BA/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Wed, 20 Nov 2024 19:23:44 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/series/data-l%C3%BA/" rel="self" type="application/rss+xml" /><item>
+    <title>Thằng nhóc thích code và data</title>
+    <link>https://phonghuynh.netlify.app/start_journey/</link>
+    <pubDate>Wed, 30 Aug 2023 22:13:58 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/start_journey/</guid>
+    <description><![CDATA[Ngành Data có gì hot mà mình lại dính]]></description>
+</item><item>
     <title>Linux - tiếng sét ái tình</title>
     <link>https://phonghuynh.netlify.app/linux/</link>
     <pubDate>Wed, 27 Sep 2023 22:04:36 &#43;0700</pubDate><author>
@@ -12,11 +19,11 @@
                 </author><guid>https://phonghuynh.netlify.app/linux/</guid>
     <description><![CDATA[Khi biết đến Linux, tôi đã yêu em lúc nào không hay]]></description>
 </item><item>
-    <title>Thằng nhóc thích code và data</title>
-    <link>https://phonghuynh.netlify.app/start_journey/</link>
-    <pubDate>Wed, 30 Aug 2023 22:13:58 &#43;0700</pubDate><author>
+    <title>Tất tần tật về Data pipeline</title>
+    <link>https://phonghuynh.netlify.app/alldatapipeline/</link>
+    <pubDate>Wed, 20 Nov 2024 19:23:44 &#43;0700</pubDate><author>
                     <name>OG</name>
-                </author><guid>https://phonghuynh.netlify.app/start_journey/</guid>
-    <description><![CDATA[Ngành Data có gì hot mà mình lại dính]]></description>
+                </author><guid>https://phonghuynh.netlify.app/alldatapipeline/</guid>
+    <description><![CDATA[Trở thành thợ ống nước data từ A đến Á với ETL/ELT, streaming và hơn thế nữa]]></description>
 </item></channel>
 </rss>

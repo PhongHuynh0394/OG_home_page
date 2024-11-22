@@ -5,6 +5,13 @@
         <description>All Blogs | OG Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
             <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Mon, 31 Jul 2023 16:21:23 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/posts/blogs/" rel="self" type="application/rss+xml" /><item>
+    <title>Tất tần tật về Data pipeline</title>
+    <link>https://phonghuynh.netlify.app/alldatapipeline/</link>
+    <pubDate>Wed, 20 Nov 2024 19:23:44 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/alldatapipeline/</guid>
+    <description><![CDATA[Trở thành thợ ống nước data từ A đến Á với ETL/ELT, streaming và hơn thế nữa]]></description>
+</item><item>
     <title>Bosch và cuộc hành trình mới</title>
     <link>https://phonghuynh.netlify.app/workatbosch/</link>
     <pubDate>Fri, 26 Jul 2024 23:08:36 &#43;0700</pubDate><author>
@@ -19,7 +26,7 @@
                 </author><guid>https://phonghuynh.netlify.app/recap2023/</guid>
     <description><![CDATA[<p>Năm 2023 vừa qua thật sự là một cột mốc đáng nhớ đối với bản thân OG. Đó là một chặng đường rất dài thăng trầm buồn vui
 lẫn lộn. Vào những giây phút cuối cùng, OG sẽ dùng bài viết này để nhìn lại cuộc hành trình đã qua để rồi sau cuối chính
-là hướng đến một tương lai với nhiều kế hoạch mới phía trước ở năm mới 2024 ❤️</p>]]></description>
+là hướng đến một tương lai với nhiều kế hoạch mới phía trước ở năm mới 2024 &#x2764;&#xfe0f;</p>]]></description>
 </item><item>
     <title>Linux - tiếng sét ái tình</title>
     <link>https://phonghuynh.netlify.app/linux/</link>

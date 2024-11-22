@@ -1,0 +1,45 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Blogs - Category - OG Home</title>
+        <link>https://phonghuynh.netlify.app/categories/blogs/</link>
+        <description>Blogs - Category - OG Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
+            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Wed, 20 Nov 2024 19:23:44 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/categories/blogs/" rel="self" type="application/rss+xml" /><item>
+    <title>Tất tần tật về Data pipeline</title>
+    <link>https://phonghuynh.netlify.app/alldatapipeline/</link>
+    <pubDate>Wed, 20 Nov 2024 19:23:44 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/alldatapipeline/</guid>
+    <description><![CDATA[Trở thành thợ ống nước data từ A đến Á với ETL/ELT, streaming và hơn thế nữa]]></description>
+</item><item>
+    <title>Bosch và cuộc hành trình mới</title>
+    <link>https://phonghuynh.netlify.app/workatbosch/</link>
+    <pubDate>Fri, 26 Jul 2024 23:08:36 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/workatbosch/</guid>
+    <description><![CDATA[Trải nghiệm làm Data Engineer tại Bosch]]></description>
+</item><item>
+    <title>Nhìn lại 2023</title>
+    <link>https://phonghuynh.netlify.app/recap2023/</link>
+    <pubDate>Sun, 31 Dec 2023 14:30:10 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/recap2023/</guid>
+    <description><![CDATA[<p>Năm 2023 vừa qua thật sự là một cột mốc đáng nhớ đối với bản thân OG. Đó là một chặng đường rất dài thăng trầm buồn vui
+lẫn lộn. Vào những giây phút cuối cùng, OG sẽ dùng bài viết này để nhìn lại cuộc hành trình đã qua để rồi sau cuối chính
+là hướng đến một tương lai với nhiều kế hoạch mới phía trước ở năm mới 2024 &#x2764;&#xfe0f;</p>]]></description>
+</item><item>
+    <title>Linux - tiếng sét ái tình</title>
+    <link>https://phonghuynh.netlify.app/linux/</link>
+    <pubDate>Wed, 27 Sep 2023 22:04:36 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/linux/</guid>
+    <description><![CDATA[Khi biết đến Linux, tôi đã yêu em lúc nào không hay]]></description>
+</item><item>
+    <title>Thằng nhóc thích code và data</title>
+    <link>https://phonghuynh.netlify.app/start_journey/</link>
+    <pubDate>Wed, 30 Aug 2023 22:13:58 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/start_journey/</guid>
+    <description><![CDATA[Ngành Data có gì hot mà mình lại dính]]></description>
+</item></channel>
+</rss>

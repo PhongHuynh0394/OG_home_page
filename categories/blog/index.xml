@@ -1,0 +1,8 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Blog - Category - OG Home</title>
+        <link>http://localhost:1313/categories/blog/</link>
+        <description>Blog - Category - OG Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
+            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><atom:link href="http://localhost:1313/categories/blog/" rel="self" type="application/rss+xml" /></channel>
+</rss>

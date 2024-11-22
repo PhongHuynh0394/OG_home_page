@@ -9,7 +9,6 @@ biết đến hệ điều hành Linux, kể từ đó cuộc đời mình đổ
 
 Lets goo!
 
-
 ## Quá khứ bi đát
 Trước khi đến với người anh bạn cánh cụt cư tê kia, mình đã từng làm việc với chiếc laptop cùi bắp (intel pentium)
 win 8.1. Khi đó OG vừa bước chân vào giảng đường đại học, và cứ nghĩ rằng thế này đã đủ xài, có thể hơi chậm chạp nhưng có lẽ sẽ sống ổn.

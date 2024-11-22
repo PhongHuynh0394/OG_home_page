@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>docker - Tag - OG Home</title>
+        <title>Docker - Tag - OG Home</title>
         <link>https://phonghuynh.netlify.app/tags/docker/</link>
-        <description>docker - Tag - OG Home</description>
+        <description>Docker - Tag - OG Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
             <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Sun, 10 Dec 2023 18:41:00 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/tags/docker/" rel="self" type="application/rss+xml" /><item>
     <title>Spotify Analysis</title>

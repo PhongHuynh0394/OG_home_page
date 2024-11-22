@@ -36,6 +36,7 @@ Thực sự, mình rất thích cách mà mọi người, các anh chị tại B
 <div style="display: flex; justify-content: space-between;">
 
 ![bosch](img/bosch_family.jpg)
+
 ![bosch](img/bosch_pic3.jpg)
 
 </div>

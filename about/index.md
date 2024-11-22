@@ -3,8 +3,7 @@
 
 # Background
 Hey there! My name is Huynh Luu Vinh Phong, the author of this page. I am currently a final year student at [University of Science Ho Chi Minh City](https://en.hcmus.edu.vn/), majoring in Data Science. My love for math and solving problems is what first got me interested in data, but over time, I discovered that coding is what truly excites me. Now, my goal is to become a **Data Engineer**, where I can work with data everyday and turn it into something meaningful.
-
-{{< image src="https://en.hcmus.edu.vn/wp-content/uploads/2023/08/NDH-2048x2048.png" height=800 width=2048 caption="University of Science Ho Chi Minh City" alt="University of Science HCMC" >}}
+{{< figure src="https://hcmus.edu.vn/wp-content/uploads/2022/04/LogoHCMUS.png" width=500 height=400 >}}
 
 # Learning is a journey
 The world of data is huge, indeed. And I am just at the beginning of my journey. I enjoy learning new things and diving deeper into data tools and technologies. Every day is a chance to grow and explore more of this exciting field, and I’m ready to take on the challenges ahead. There is a quote that motivate me during my journey:
