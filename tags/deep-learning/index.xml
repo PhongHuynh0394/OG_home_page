@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Deep Learning - Tag - OG Home</title>
+        <link>https://phonghuynh.netlify.app/tags/deep-learning/</link>
+        <description>Deep Learning - Tag - OG Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
+            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Fri, 24 Nov 2023 15:47:58 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/tags/deep-learning/" rel="self" type="application/rss+xml" /><item>
+    <title>Youtube Comments Sentiment Analysis</title>
+    <link>https://phonghuynh.netlify.app/ytb_sentiment/</link>
+    <pubDate>Fri, 24 Nov 2023 15:47:58 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/ytb_sentiment/</guid>
+    <description><![CDATA[Sentiment Analysis on Youtube Comments using LSTM, MLP and CNN (1D)]]></description>
+</item></channel>
+</rss>

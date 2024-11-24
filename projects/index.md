@@ -7,3 +7,4 @@
 # Machine learning Basic
 {{< showcase "Stock Analysis" "Basic Analyzing VN30 stock using PCA and K-Means" "img/projects-stock.jpg" "/stock_analysis/" >}}
 
+{{< showcase "Youtube Comments Sentiment Analysis" "Sentiment Analysis on Youtube Comments using LSTM, MLP and CNN (1D)" "img/sentiment.jpg" "/ytb_sentiment/" >}}

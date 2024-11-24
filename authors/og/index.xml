@@ -46,6 +46,13 @@ là hướng đến một tương lai với nhiều kế hoạch mới phía tr�
                 <img src="https://raw.githubusercontent.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/refs/heads/main/image/spotify-diagram.png" referrerpolicy="no-referrer">
             </div>A End to End ELT data pipeline to Analyze Spotify Data and build recommendation system]]></description>
 </item><item>
+    <title>Youtube Comments Sentiment Analysis</title>
+    <link>https://phonghuynh.netlify.app/ytb_sentiment/</link>
+    <pubDate>Fri, 24 Nov 2023 15:47:58 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/ytb_sentiment/</guid>
+    <description><![CDATA[Sentiment Analysis on Youtube Comments using LSTM, MLP and CNN (1D)]]></description>
+</item><item>
     <title>Linux - tiếng sét ái tình</title>
     <link>https://phonghuynh.netlify.app/linux/</link>
     <pubDate>Wed, 27 Sep 2023 22:04:36 &#43;0700</pubDate><author>
@@ -135,12 +142,5 @@ Hy vọng bài viết lần này thú vị và giúp bạn đọc thư giãn, th
                 <i class="friend-name">PhongHuynh0394</i>
             </div>
             <p class="friend-bio">Stock-Analysis</p>]]></description>
-</item><item>
-    <title>Thằng nhóc thích code và data</title>
-    <link>https://phonghuynh.netlify.app/start_journey/</link>
-    <pubDate>Wed, 30 Aug 2023 22:13:58 &#43;0700</pubDate><author>
-                    <name>OG</name>
-                </author><guid>https://phonghuynh.netlify.app/start_journey/</guid>
-    <description><![CDATA[Ngành Data có gì hot mà mình lại dính]]></description>
 </item></channel>
 </rss>

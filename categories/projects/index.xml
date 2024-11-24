@@ -14,6 +14,13 @@
                 <img src="https://raw.githubusercontent.com/PhongHuynh0394/Spotify-Analysis-with-PySpark/refs/heads/main/image/spotify-diagram.png" referrerpolicy="no-referrer">
             </div>A End to End ELT data pipeline to Analyze Spotify Data and build recommendation system]]></description>
 </item><item>
+    <title>Youtube Comments Sentiment Analysis</title>
+    <link>https://phonghuynh.netlify.app/ytb_sentiment/</link>
+    <pubDate>Fri, 24 Nov 2023 15:47:58 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/ytb_sentiment/</guid>
+    <description><![CDATA[Sentiment Analysis on Youtube Comments using LSTM, MLP and CNN (1D)]]></description>
+</item><item>
     <title>Stock Analysis P2</title>
     <link>https://phonghuynh.netlify.app/stock_analysis_2/</link>
     <pubDate>Tue, 05 Sep 2023 23:15:54 &#43;0700</pubDate><author>
