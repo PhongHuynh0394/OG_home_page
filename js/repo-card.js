@@ -56,6 +56,7 @@ window.tarptaeya.reloadRepoCards = async function() {
     anchor.className = 'repo-card-link';
     anchor.style.textDecoration = 'none';
     anchor.style.display = 'block';
+    anchor.target = "_blank";
 
     // Create .repo-card div
     const repoCard = document.createElement('div');
