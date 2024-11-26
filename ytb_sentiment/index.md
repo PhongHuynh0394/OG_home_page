@@ -106,7 +106,7 @@ X_train = pad_sequences(X_train, padding='post', maxlen=maxlen)
 X_test = pad_sequences(X_test, padding='post', maxlen=maxlen)
 ```
 
-Now, it's time to build the word embedding matrix using Glove and map it to our vocabulary dictionary (the GloVe contain vector 100 dimension for each word). Map to our vocabulary dictionary, we suppose to have a matrix where each word corresponse to a vector from Glove.Now, it’s time to build the word embedding matrix using Glove and map it to our vocabulary dictionary (the GloVe contain vector 100 dimension for each word). Map to our vocabulary dictionary, we suppose to have a matrix where each word corresponse to a vector from Glove.
+Now, it's time to build the word embedding matrix using Glove and map it to our vocabulary dictionary (the GloVe contain vector 100 dimension for each word). Map to our vocabulary dictionary, we suppose to have a matrix where each word corresponse to a vector from Glove.
 
 ```python
 # Read glove embedding file
