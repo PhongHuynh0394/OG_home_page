@@ -2,7 +2,8 @@
 
 <!--more-->
 **Source**
-{{< friend name="PhongHuynh0394" url="https://github.com/PhongHuynh0394/Football_ETL_Analysis" avatar="/img/github-logo.png" bio="Football_ETL_Analysis">}}
+
+{{< github-repo username="PhongHuynh0394" repo="Football_ETL_Analysis" >}}
 
 ## Introduce
 Trong project này, OG sẽ build end-to-end ETL data pipeline hoàn chỉnh để phân tích football data từ Kaggle với data pipeline như sau:
@@ -238,7 +239,8 @@ Tất cả mọi việc xây dựng pipeline ta sẽ hoạt động ở đây
 dagster project scaffold --name etl_pipeline
 ```
 và thư mục mới tạo sẽ trông như thế này:
-![tree](./img/projects-tree.png)
+
+{{< figure src="img/projects-tree.png" >}}
 
 {{< admonition tip >}}
 Để chạy được lệnh dagster ở bước tạo dagster project, ta cần phải có `dagster package`, nếu chưa có hãy cài đặt bằng: `pip install dagster`

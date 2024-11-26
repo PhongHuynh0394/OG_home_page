@@ -6,7 +6,8 @@ Hy vọng bài viết lần này thú vị và giúp bạn đọc thư giãn, th
 {{< /admonition >}}
 
 **Source**
-{{< friend name="PhongHuynh0394" avatar="/img/github-logo.png" bio="Stock-Analysis" url="https://github.com/PhongHuynh0394/Stock-Analysis" >}}
+
+{{< github-repo username="PhongHuynh0394" repo="Stock-Analysis" >}}
 
 Hello! OG đây. Ở project lần này mình sẽ phân tích gia trị cổ phiếu phái sinh VN30 Index bằng cách sử dụng PCA và K-means. Xin vô cùng cảm ơn
 sự đóng góp của 5 thành viên team OG và thầy Minh Mẫn và thầy Hoàng Đức đã tận tình hướng dẫn để team có thể hoàn thành đồ án một cách tốt nhất.

@@ -5,7 +5,7 @@
 
 **Source**
 
-{{< friend name="PhongHuynh0394" url="https://github.com/PhongHuynh0394/Sentiment_Analysis" avatar="/img/github-logo.png" bio="Sentiment Analysis">}}
+{{< github-repo username="PhongHuynh0394" repo="Sentiment_Analysis" >}}
 
 ## Introduction
 

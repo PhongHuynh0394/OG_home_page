@@ -8,7 +8,9 @@
 Hy vọng bài viết lần này thú vị và giúp bạn đọc thư giãn, tham khảo.
 {{< /admonition >}}
 
-{{< friend name="PhongHuynh0394" avatar="/img/github-logo.png" bio="Stock-Analysis" url="https://github.com/PhongHuynh0394/Stock-Analysis" >}}
+**Source**
+
+{{< github-repo username="PhongHuynh0394" repo="Stock-Analysis" >}}
 
 Hé lô hé lô là OG đâyy, ở phần 1, ta đã giảm chiều dữ liệu bằng PCA rồi, tiếp đến phần này, chúng ta sẽ dùng K-means để phân cụm rồi tìm ra điểm
 chung của dữ liệu nhé, cuối cùng là phân tích các "sự kiện" đã diễn ra trong từng cụm. Lét gô !

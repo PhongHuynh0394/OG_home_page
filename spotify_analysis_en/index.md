@@ -7,7 +7,11 @@
 This project is contributed by: Ngọc Tuấn (Data Engineer), Duy Sơn (Data Scientist), Vĩ Thiên (Data Analyst)
 {{< /admonition >}}
 
-{{< friend name="PhongHuynh0394" url="https://github.com/PhongHuynh0394/Spotify-Analysis-with-PySpark" avatar="/img/github-logo.png" bio="Spotify Analysis with PySpark">}}
+**Source**
+
+{{< github-repo username="PhongHuynh0394" repo="Spotify-Analysis-with-PySpark" >}}
+
+Youtube Link:
 
 {{< friend name="OG and DATA" url="https://youtu.be/If9-ALcsc8E?si=bf6jUlHUk_okMcwx" avatar="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/YouTube_social_red_circle_%282017%29.svg/180px-YouTube_social_red_circle_%282017%29.svg.png" bio="Spotify Analysis with PySpark">}}
 
