@@ -27,9 +27,7 @@ Ngoài ra một hệ thống tốt cũng phải tối ưu về chi phí hay dễ
 
 ### ETL/ELT Data pipeline
 ETL và ELT là hai trong những kiến trúc data pipeline nổi tiếng và thường được gặp nhiều nhất trong những hệ thống xử lý phức tạp và xử lý big data.
-#### E-T-L là gì ?
-
-**Extract**: là giai đoạn khai thác, trích xuất dữ liệu và cũng là giai đoạn đầu tiên trong hệ thống ETL/ELT. Dữ liệu có thể hoàn toàn thô và đa dạng nguồn (như flat files, APIs, hay các hệ thống IoT, sàn thương mại điện tử,…)
+#### E-T-L là gì 
 
 {{< tabs >}}
 
