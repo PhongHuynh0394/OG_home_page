@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" /><title>The Analytics Setup Guidebook - OG Home</title>
+
+    <script src="/js/repo-card.js"></script><meta name="Description" content="How to build scalable analytics &amp; BI stacks in the modern cloud era"><meta property="og:url" content="https://phonghuynh.netlify.app/the-analytics-setup-guidebook/">
+  <meta property="og:site_name" content="OG Home">
+  <meta property="og:title" content="The Analytics Setup Guidebook">
+  <meta property="og:description" content="How to build scalable analytics &amp; BI stacks in the modern cloud era">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-30T17:55:40+07:00">
+    <meta property="article:modified_time" content="2024-11-30T17:55:40+07:00">
+    <meta property="article:tag" content="Business Intelligence">
+    <meta property="article:tag" content="Book">
+    <meta property="article:tag" content="Data Analytic">
+    <meta property="og:image" content="https://phonghuynh.netlify.app/img/book-cover1.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://phonghuynh.netlify.app/img/book-cover1.png">
+  <meta name="twitter:title" content="The Analytics Setup Guidebook">
+  <meta name="twitter:description" content="How to build scalable analytics &amp; BI stacks in the modern cloud era">
+<meta name="application-name" content="OG">
+<meta name="apple-mobile-web-app-title" content="OG">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<link rel="canonical" href="https://phonghuynh.netlify.app/the-analytics-setup-guidebook/" /><link rel="prev" href="https://phonghuynh.netlify.app/alldatapipeline/" />
+<link rel="stylesheet" href="/css/main.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">{"@context": "https://schema.org","@type": "BlogPosting",
+        "headline": "The Analytics Setup Guidebook",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://phonghuynh.netlify.app/the-analytics-setup-guidebook/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https://phonghuynh.netlify.app/img/oggy.png",
+                            "width":  240 ,
+                            "height":  240 
+                        }],"genre": "posts","keywords":["Business Intelligence","Book","Data Analytic"],"wordcount":  5099 ,
+        "url": "https://phonghuynh.netlify.app/the-analytics-setup-guidebook/","datePublished": "2024-11-30T17:55:40+07:00","dateModified": "2024-11-30T17:55:40+07:00","publisher": {
+            "@type": "Organization",
+            "name": "OG Page","logo": "https://phonghuynh.netlify.app/favicon.icon"},"author": [{
+                        "@type": "Person",
+                        "name": "OG",
+                        "url": "https://phonghuynh.netlify.app/authors/og"
+                    }],"description": "How to build scalable analytics \u0026 BI stacks in the modern cloud era"
+    }</script></head>
+
+
+
+
+<body data-instant-intensity="viewport" ><script type="text/javascript">
+        function setTheme(theme) {
+          document.body.setAttribute('theme', theme); 
+          document.documentElement.className = theme;
+          document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');
+          if (theme === 'light') {
+            document.documentElement.classList.remove('tw-dark')
+          } else {
+            document.documentElement.classList.add('tw-dark')
+          }
+          window.theme = theme;   
+          window.isDark = window.theme !== 'light' 
+        }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {
+            let theme = localStorage.getItem('theme');
+            if (theme === 'light' || theme === 'dark') {
+            setTheme(theme);
+            } else {
+                if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    setTheme('dark');
+                } else {
+                    setTheme('light');
+                }
+            }
+         } else { 
+            if ('auto' === 'light' || 'auto' === 'dark') 
+                setTheme('auto'), saveTheme('auto'); 
+            else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');
+        }
+        let metaColors = {'light': '#f8f8f8','dark': '#161b22'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop print:!tw-hidden" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="OG Home">OG Home</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item"
+                    href="/blogs/"  title="OG&#39;s blogs" > Blogs </a><a class="menu-item"
+                    href="/projects/"  title="OG&#39;s Projects" > Projects </a><a class="menu-item"
+                    href="/tags/"  title="Tags of blogs" > Tags </a><a class="menu-item"
+                    href="/about/" > About </a><a class="menu-item"
+                    href="https://drive.google.com/file/d/1aPe4GIils8NNqJ3ljlEbXkAnFRVRwlU-/view?usp=sharing"  title="Resume" 
+                    rel="noopener noreferrer" target="_blank" > Resume 🔗 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                    <input type="text"
+                        placeholder="Search titles or contents..."
+                        id="search-input-desktop">
+                    <button class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                    </button>
+                    <button class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+                    </button>
+                    <span class="search-button search-loading tw-animate-spin" id="search-loading-desktop">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
+                    </span>
+                </span><button class="menu-item theme-switch" aria-label="Switch Theme">
+                    <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
+                </button></div>
+        </div>
+    </div>
+</header><header class="mobile print:!tw-hidden" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="OG Home">OG Home</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                <div class="search mobile" id="search-mobile">
+                    <input type="text"
+                        placeholder="Search titles or contents..."
+                        id="search-input-mobile">
+                    <button class="search-button search-toggle tw-h-10" id="search-toggle-mobile" title="Search">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                    </button>
+                    <button class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+                    </button>
+                    <span class="search-button search-loading tw-animate-spin" id="search-loading-mobile">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
+                    </span>
+                </div>
+                <button class="search-cancel" id="search-cancel-mobile">
+                    Cancel
+                </button>
+            </div><a class="menu-item" href="/blogs/" title="OG&#39;s blogs" >Blogs</a><a class="menu-item" href="/projects/" title="OG&#39;s Projects" >Projects</a><a class="menu-item" href="/tags/" title="Tags of blogs" >Tags</a><a class="menu-item" href="/about/" title="" >About</a><a class="menu-item" href="https://drive.google.com/file/d/1aPe4GIils8NNqJ3ljlEbXkAnFRVRwlU-/view?usp=sharing" title="Resume" 
+                rel="noopener noreferrer" target="_blank" >Resume 🔗</a><button class="menu-item theme-switch tw-w-full" aria-label="Switch Theme">
+                <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
+            </button></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+            <div class="container"><div class="toc print:!tw-hidden" id="toc-auto">
+        <h2 class="toc-title">Contents</h2>
+        <div class="toc-content always-active" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#chapter-1-high-level-overview-of-an-analytics-setup">Chapter 1: High-level Overview of an Analytics Setup</a>
+      <ul>
+        <li><a href="#a-simple-setup-for-people-just-staring-out">A simple setup for people just staring out</a></li>
+        <li><a href="#a-modern-analytics-stack">A modern analytics stack</a></li>
+        <li><a href="#a-good-analytics-stack">A good analytics stack</a></li>
+      </ul>
+    </li>
+    <li><a href="#chapter-2-centralizing-data">Chapter 2: Centralizing data</a>
+      <ul>
+        <li><a href="#extract--load-process">Extract &amp; Load process</a></li>
+        <li><a href="#understand-data-warehouse">Understand Data warehouse</a></li>
+        <li><a href="#etlelt">ETL/ELT</a></li>
+      </ul>
+    </li>
+    <li><a href="#chapter-3-data-modeling-for-analytics">Chapter 3: Data Modeling for Analytics</a>
+      <ul>
+        <li><a href="#kimballs-dimensional-data-modeling">Kimball’s Dimensional Data Modeling</a></li>
+      </ul>
+    </li>
+    <li><a href="#chapter-4-using-data">Chapter 4: Using data</a>
+      <ul>
+        <li><a href="#daniel-story">Daniel Story</a></li>
+        <li><a href="#navigating-the-business-intelligence-tool-space">Navigating The Business Intelligence Tool Space</a></li>
+        <li><a href="#the-arc-of-adoption">The Arc of Adoption</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class="single-title" data-pagefind-meta="date:30 Nov 2024" data-pagefind-body>The Analytics Setup Guidebook</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class='author'>
+        <span class='screen-reader-text'>  </span><a href='https://phonghuynh.netlify.app/authors/og'>OG</a></span>
+                </span></div>
+            <div class="post-meta-line"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;<time datetime="30 Nov 2024">30 Nov 2024</time>&nbsp;
+                    <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;23 minutes&nbsp;</div>
+        </div><div class="details toc print:!tw-block" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#chapter-1-high-level-overview-of-an-analytics-setup">Chapter 1: High-level Overview of an Analytics Setup</a>
+      <ul>
+        <li><a href="#a-simple-setup-for-people-just-staring-out">A simple setup for people just staring out</a></li>
+        <li><a href="#a-modern-analytics-stack">A modern analytics stack</a></li>
+        <li><a href="#a-good-analytics-stack">A good analytics stack</a></li>
+      </ul>
+    </li>
+    <li><a href="#chapter-2-centralizing-data">Chapter 2: Centralizing data</a>
+      <ul>
+        <li><a href="#extract--load-process">Extract &amp; Load process</a></li>
+        <li><a href="#understand-data-warehouse">Understand Data warehouse</a></li>
+        <li><a href="#etlelt">ETL/ELT</a></li>
+      </ul>
+    </li>
+    <li><a href="#chapter-3-data-modeling-for-analytics">Chapter 3: Data Modeling for Analytics</a>
+      <ul>
+        <li><a href="#kimballs-dimensional-data-modeling">Kimball’s Dimensional Data Modeling</a></li>
+      </ul>
+    </li>
+    <li><a href="#chapter-4-using-data">Chapter 4: Using data</a>
+      <ul>
+        <li><a href="#daniel-story">Daniel Story</a></li>
+        <li><a href="#navigating-the-business-intelligence-tool-space">Navigating The Business Intelligence Tool Space</a></li>
+        <li><a href="#the-arc-of-adoption">The Arc of Adoption</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content" data-pagefind-body><p>Đây là chuyên mục đọc cùng OG. Trong chuyên mục này, OG sẽ tóm tắt lại những điều mà OG cho là giá trị nhất từ những quyển sách mà OG thấy hay. OG sẽ cố gắng tóm tắt lại từng phần hay đề mục quan trọng nhất từ quyển sách để bạn dễ hiểu. Hy vọng bạn sẽ thích chuyên mục này &#x1f604;</p>
+<div class="details admonition warning open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></svg></span>Warning<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Tất cả nội dung trong bài (và cả các hình ảnh) đều là các tóm tắt và trích dẫn của OG về nội dung cuốn sách. Để đọc nội dung chi tiết hơn, xin hãy đọc bản gốc ở đường link sách bên dưới. Tất nhiên có thể sẽ có thiếu sót, mong các hạ lượng thứ hehe &#x1f609;</div></div></div>
+<h1 id="giới-thiệu-chút-xíu" class="headerLink">
+    <a href="#gi%e1%bb%9bi-thi%e1%bb%87u-ch%c3%bat-x%c3%adu" class="header-mark"></a>Giới thiệu chút xíu</h1><div class="md-columns">
+<div class="markdown-inner">
+<p>Cuốn sách &ldquo;The Analytics Setup Guidebook&rdquo; được viết bởi <a href="https://www.holistics.io/" target="_blank" rel="noopener noreferrer">Holistics</a> là một cuốn sách tuyệt vời về Data Analytic mà OG đọc gần đây sau khi tham gia một workshop của Holistics. Ta có thể bắt gặp nhiều khái niệm &ldquo;vỡ lòng&rdquo; và rất chi tiết về Data Analytic từ các kiến trúc xử lý dữ liệu đến data modeling và business intelligence. Cuốn sách này vô cùng thích hợp với người muốn hiểu thêm về thế giới data. OG sẽ để link sách ở đây nhé. Đọc đi hay lắm &#x1f602; mà còn free nữa.</p>
+<blockquote>
+  <p>Link sách: <a href="https://www.holistics.io/books/setup-analytics/" target="_blank" rel="noopener noreferrer"><strong>The Analytics Setup Guidebook</strong></a></p>
+
+</blockquote><p>Ok, giới thiệu sơ sơ vậy thôi, giờ thì lets go !</p>
+</div>
+<div class="markdown-inner">
+<figure><img src="https://cdn.holistics.io/guidebook/book-cover-3.png" width="270">
+</figure>
+</div>
+</div>
+<h2 id="chapter-1-high-level-overview-of-an-analytics-setup" class="headerLink">
+    <a href="#chapter-1-high-level-overview-of-an-analytics-setup" class="header-mark"></a>Chapter 1: High-level Overview of an Analytics Setup</h2><p>Chapter này giới thiệu về quy trình mà một hệ thống phân tích hiện đại nên có cũng như là các ưu nhược điểm của từng loại thiết kế.</p>
+<h3 id="a-simple-setup-for-people-just-staring-out" class="headerLink">
+    <a href="#a-simple-setup-for-people-just-staring-out" class="header-mark"></a>A simple setup for people just staring out</h3><p>Thông thường với mọi hệ thống phân tích dữ liệu sẽ làm 3 điều cơ bản là:</p>
+<ol>
+<li>Ta sẽ phải load data vào một kho lưu trữ trung tâm, thường là một data warehouse</li>
+<li>Ta sẽ phải biến đổi data sao cho nó trở nên đẹp đẽ sạch sẽ để sẵn sàng đưa vào data warehouse</li>
+<li>Ta sẽ phải lấy data đó để đưa ra các quyết định để giải quyết bài toán doanh nghiệp</li>
+</ol>
+<p>Về cơ bản, để bắt đầu phân tích, ta đơn giản chỉ là kết nối công cụ BI (Business Intelligent tool) vào production database là được. Và do đó, khi tương tác với dashboard trong BI tool, data sẽ được truy vấn trực tiếp từ database, đồng nghĩa với việc dữ liệu sẽ được hiển thị ngay thời gian thực.</p>
+<p>Cách này vô cùng đơn giản, và tất nhiên là không ổn lắm. Đơn giản là ta sẽ dễ gặp vấn đề về hiệu suất khi production database giờ đây ngoài việc phục vụ cho application của chính nó, còn phải mang “trọng trách” thực hiện các truy vấn phân tích từ BI tool và người dùng app có thể gặp vấn đề về hiệu suất trải nghiệm.</p>
+<p>Cách giải quyết thay thế là ta sẽ kết nối với một database bản sao của production database, thế sẽ không ảnh hưởng đến trải nghiệm của người dùng.</p>
+<p>Thế nếu database là một NoSQL database (như MongoDB hay Cassandra) thì sao ? Liệu ta có thể tương tác tốt từ BI tool đến các database này được không ? Câu trả lời là khó. Vì hiện chưa có một công cụ phân tích tiêu chuẩn nào có khả năng tương tác với các loại NoSQL database khác nhau mà mỗi loại NoSQL database lại có một công cụ riêng chuyên biệt khác nhau. Hơn nữa hầu hết các NoSQL database không hỗ trợ mạnh mẽ việc phân tích mà thay vào đó là tốc độ đọc ghi. Thế phải làm thế nào ?</p>
+<p>→ Câu trả lời là ta sẽ cố gắng sử dụng một lại SQL data warehouse và load data từ NoSQL database vào warehouse này. Đây cũng chính là kiểu setup đúng đắn</p>
+<figure><img src="https://cdn.holistics.io/guidebook/analytics-setup/proper-analytics-setup.png">
+</figure>
+
+<h3 id="a-modern-analytics-stack" class="headerLink">
+    <a href="#a-modern-analytics-stack" class="header-mark"></a>A modern analytics stack</h3><p>Để bắt đầu xây dựng một hệ thống phân tích hiện đại. Ta cần hiểu rằng tất cả các hệ thống phải làm 3 bước quan trọng:</p>
+<ol>
+<li>Thu thập, hợp nhất và lưu trữ data ở một data warehouse</li>
+<li>Xử lý data như là biến đổi (transform), làm sạch, tổng hợp để đẩy data và warehouse</li>
+<li>Trực quan hóa dữ liệu, hoặc tải dữ liệu vào các dịch vụ khác để sử dụng</li>
+</ol>
+<figure><img src="https://cdn.holistics.io/guidebook/overview-of-an-analytics-setup.png">
+</figure>
+
+<tab-container default-tab="0" class="tw-my-4"><button class="
+        tab-button  
+        tw-transition 
+        tw-ease-in-out 
+        tw-duration-300
+        tw-bg-transparent
+        tw-px-4 
+        tw-py-2
+        tw-mr-1
+        tw-shadow-black
+        hover:tw-bg-bgColor-secondary
+        hover:tw-shadow-md
+        aria-selected:tw-font-bold
+        aria-selected:tw-border-b-4
+        aria-selected:tw-text-fgColor-link
+        aria-selected:tw-border-fgColor-link"
+        type="button" 
+        role="tab" 
+        id="tab-id-1">Step 1</button>
+  <button class="
+        tab-button  
+        tw-transition 
+        tw-ease-in-out 
+        tw-duration-300
+        tw-bg-transparent
+        tw-px-4 
+        tw-py-2
+        tw-mr-1
+        tw-shadow-black
+        hover:tw-bg-bgColor-secondary
+        hover:tw-shadow-md
+        aria-selected:tw-font-bold
+        aria-selected:tw-border-b-4
+        aria-selected:tw-text-fgColor-link
+        aria-selected:tw-border-fgColor-link"
+        type="button" 
+        role="tab" 
+        id="tab-id-2">Step 2</button>
+  <button class="
+        tab-button  
+        tw-transition 
+        tw-ease-in-out 
+        tw-duration-300
+        tw-bg-transparent
+        tw-px-4 
+        tw-py-2
+        tw-mr-1
+        tw-shadow-black
+        hover:tw-bg-bgColor-secondary
+        hover:tw-shadow-md
+        aria-selected:tw-font-bold
+        aria-selected:tw-border-b-4
+        aria-selected:tw-text-fgColor-link
+        aria-selected:tw-border-fgColor-link"
+        type="button" 
+        role="tab" 
+        id="tab-id-3">Step 3</button>
+  
+
+
+
+
+
+<div 
+    role="tabpanel" 
+    aria-labelledby="tab-id-1"
+    class="
+    tw-p-4 
+    tw-border-t-2
+    tw-border-[#f0f0f0]
+    dark:tw-border-[#363636]
+    ">
+    
+        <h4 id="collecting-consolidating-and-storing-data" class="headerLink">
+    <a href="#collecting-consolidating-and-storing-data" class="header-mark"></a><strong>Collecting, Consolidating and Storing Data</strong></h4><p>Trước khi phân tích dữ liệu, thường ta sẽ thu thập dữ liệu từ nhiều nguồn đến một trung tâm dữ liệu trước. Trong quá khứ, đây có thể là một “staging area” hay dạo những năm gần đây được gọi là “data lake”. Dù là gì đi nữa thì ý tưởng chung là nơi lưu trữ dữ liệu thô chuẩn bị cho quá trình hợp nhất data (data consolidating process).</p>
+<p>Staging area này cũng có thể là một analytical database hay một data warehouse vì nó cung cấp khả năng phân tích mạnh mẽ và tối ưu. Và quá trình hợp nhất thường gọi là quy trình ETL hay ELT cũng sẽ được thực hiện với dữ liệu thô được load vào trung tâm cơ sở dữ liệu.</p>
+<figure><img src="https://cdn.holistics.io/guidebook/analytics-setup/collect-consolidate-store-data.png">
+</figure>
+
+    
+</div>
+
+
+
+
+
+
+<div 
+    role="tabpanel" 
+    aria-labelledby="tab-id-2"
+    class="
+    tw-p-4 
+    tw-border-t-2
+    tw-border-[#f0f0f0]
+    dark:tw-border-[#363636]
+    ">
+    
+        <h4 id="processing-data-transform--model-data" class="headerLink">
+    <a href="#processing-data-transform--model-data" class="header-mark"></a><strong>Processing Data (Transform &amp; Model Data)</strong></h4><p>Dữ liệu thô chưa sẵn sàng cho việc làm báo cáo hay trực quan. Cần phải có bước xử lý. Các bước này liên quan đến 2 loại:</p>
+<ul>
+<li>Modeling data: Ứng dụng các công thức hay business logic vào data</li>
+<li>Transforming data: làm sạch data</li>
+</ul>
+<figure><img src="https://cdn.holistics.io/guidebook/analytics-setup/processing-data.png">
+</figure>
+
+    
+</div>
+
+
+
+
+
+
+<div 
+    role="tabpanel" 
+    aria-labelledby="tab-id-3"
+    class="
+    tw-p-4 
+    tw-border-t-2
+    tw-border-[#f0f0f0]
+    dark:tw-border-[#363636]
+    ">
+    
+        <h4 id="presenting--using-data" class="headerLink">
+    <a href="#presenting--using-data" class="header-mark"></a><strong>Presenting &amp; Using Data</strong></h4><p>Sau quá trình ở step 2, data giờ đã có thể phân tích. Giờ là lúc sử dụng chúng một cách khôn ngoan để giúp doanh nghiệp phát triển hoặc sử dụng data cho các mục đích khác nhau. Có thể là:</p>
+<ul>
+<li>Ad-hoc reporting</li>
+<li>Data reporting</li>
+<li>Data exploration</li>
+<li>Self-service utopia</li>
+</ul>
+<figure><img src="https://cdn.holistics.io/guidebook/analytics-setup/presenting-using-data.png">
+</figure>
+
+    
+</div>
+
+
+</tab-container>
+
+<h3 id="a-good-analytics-stack" class="headerLink">
+    <a href="#a-good-analytics-stack" class="header-mark"></a>A good analytics stack</h3><p>Mọi người sẽ có quan điểm riêng về một hệ thống phân tích tốt. Và ở đây là một số ngộ nhận từ quyển sách này:</p>
+<ol>
+<li>Sử dụng ELT hơn là ETL</li>
+<li>Sử dụng cloud data warehouse hơn là on-premis data warehouse. Ngoài ra Massively Parallel Processing (MPP) analytics database cũng được chuộng hơn hệ thống giống Hadoop</li>
+<li>Data modeling là quan trọng và không nên bị bỏ qua</li>
+<li>SQL base analytics sẽ hơn non-SQL base analytics</li>
+<li>Quy trình phân tích thì quan trọng hơn là chỉ tập trung vào trực quan hóa dữ liệu</li>
+</ol>
+<h2 id="chapter-2-centralizing-data" class="headerLink">
+    <a href="#chapter-2-centralizing-data" class="header-mark"></a>Chapter 2: Centralizing data</h2><p>Chapter này tập trung vào việc truy xuất, thu thập dữ liệu từ nhiều nguồn và quy trình ETL/ELT</p>
+<figure><img src="https://cdn.holistics.io/guidebook/consolidate-data-in-central-place.svg">
+</figure>
+
+<h3 id="extract--load-process" class="headerLink">
+    <a href="#extract--load-process" class="header-mark"></a>Extract &amp; Load process</h3><p>Dữ liệu có thể đến từ rất nhiều nguồn, nền tảng khác nhau. Đó có thể là từ:</p>
+<ul>
+<li>Các ứng dụng: nếu doanh nghiệp sở hữu các ứng dụng hay website, đây có thể là nơi chứa tất cả các transactional data quan trọng với doanh nghiệp. Đây có thể là một SQL (hay NoSQL) database connect trực tiếp đến các ứng dụng đó</li>
+<li>Các hệ thống Customer Relationship Management (CRM), Content Management System (CMS), Enterprise Resource Planning (ERP) hay hệ thống marketing: thông thường để kết nối, ta sẽ không thể kết nối trực tiếp mà thông qua API</li>
+<li>Data được tạo thủ công từ nhân viên hay các system khác như các file Excel, CSV, báo cáo PDF, text document</li>
+</ul>
+<p>Và bước đầu tiên trước khi đẩy các data này vào data warehouse chính là quy trình <strong>Extract &amp; Load</strong></p>
+<p>Cơ bản quá trình này chính là việc ta tạo ra một bản copy của các data nguồn bên trong data warehouse. Có thể thực hiện bằng nhiều cách</p>
+<ol>
+<li>Viết script thủ công: chẳng hạn như load data từ MySQL database đến warehouse. Việc này phức tạp và theo thời gian sẽ tốn chi phí duy trì cho các đoạn script.</li>
+<li>Dùng Data loading tool: Có nhiều tool hỗ trợ việc kết nối và tải dữ liệu như:
+<ol>
+<li>Trả phí: <a href="https://www.stitchdata.com/" target="_blank" rel="noopener noreferrer">StichData</a> hay <a href="https://www.talend.com/" target="_blank" rel="noopener noreferrer">Talend</a></li>
+<li>Miễn phí: <a href="https://airflow.apache.org/" target="_blank" rel="noopener noreferrer">Airflow</a> hay <a href="https://www.prefect.io/" target="_blank" rel="noopener noreferrer">Prefect</a></li>
+</ol>
+</li>
+</ol>
+<div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Incremental load<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content"><p>Khi load, thông thường sẽ có một kỹ thuật được sử dụng rộng rãi. Đó là Incremental load. Cơ bản kỹ thuật này đề cập đến việc chỉ load những updated data thay vì tất cả (full load) từ nguồn mỗi lần chạy quy trình EL.</p>
+<figure><img src="https://cdn.holistics.io/guidebook/analytics-setup/incremental-load-data.png">
+</figure></div></div></div>
+<h3 id="understand-data-warehouse" class="headerLink">
+    <a href="#understand-data-warehouse" class="header-mark"></a>Understand Data warehouse</h3><p>Ta đề cập rất nhiều về data warehouse, vậy nó là gì ? Về cơ bản data warehouse là một database chuyên về phân tích dữ liệu.</p>
+<div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Khi nào thì ta sẽ cần một data warehouse ?<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content"><p>TL;DR Câu trả lời là tùy. Việc này tùy và quy mô, số lượng data và cả ngân sách ta có. Ta cần phải trả lời các câu hỏi:</p>
+<ul>
+<li>Ta có cần phân tích dữ liệu từ nhiều nguồn không ?</li>
+<li>Ta có cần tách biệt transaction data với analytical data không ?</li>
+<li>Data thô của ta có phù hợp cho việc truy vấn không ?</li>
+<li>Ta có muốn tăng hiệu quả của các truy vấn phân tích không ?</li>
+</ul>
+<p>Tất nhiên ta vẫn có thể không cần một data warehouse như các thiết kế ở mục <a href="#a-simple-setup-for-people-just-staring-out" rel="">A simple setup for people just staring out</a>.</p>
+</div></div></div>
+<p>Có rất nhiều các data warehouse mà ta có thể tham khảo:</p>
+<ul>
+<li>Amazon Redshift</li>
+<li>Google BigQuery</li>
+<li>Snowflake</li>
+<li>ClickHouse (self-hosted)</li>
+<li>Presto (self-hosted)</li>
+</ul>
+<p>Khi đọc đến đây, bạn có thể sẽ thắc mắc rằng:</p>
+<blockquote>
+  <p>Chẳng phải data warehouse cũng chỉ là các cơ sở dữ liệu quan hệ (relational database) chứa analytical data thôi sao ? Thế tôi chỉ dùng MySQL, PostgreSQL, MSSQL hay Oracle như data warehouse được không ?</p>
+
+</blockquote><p>Câu trả lời ngắn gọn là được, nhưng còn tùy. Để hiểu được điều này ta phải hiểu sự khác nhau giữa &ldquo;Transactional workloads&rdquo; và &ldquo;Analytical workloads&rdquo;</p>
+<tab-container default-tab="0" class="tw-my-4"><button class="
+        tab-button  
+        tw-transition 
+        tw-ease-in-out 
+        tw-duration-300
+        tw-bg-transparent
+        tw-px-4 
+        tw-py-2
+        tw-mr-1
+        tw-shadow-black
+        hover:tw-bg-bgColor-secondary
+        hover:tw-shadow-md
+        aria-selected:tw-font-bold
+        aria-selected:tw-border-b-4
+        aria-selected:tw-text-fgColor-link
+        aria-selected:tw-border-fgColor-link"
+        type="button" 
+        role="tab" 
+        id="tab-id-4">Transactional workloads</button>
+  <button class="
+        tab-button  
+        tw-transition 
+        tw-ease-in-out 
+        tw-duration-300
+        tw-bg-transparent
+        tw-px-4 
+        tw-py-2
+        tw-mr-1
+        tw-shadow-black
+        hover:tw-bg-bgColor-secondary
+        hover:tw-shadow-md
+        aria-selected:tw-font-bold
+        aria-selected:tw-border-b-4
+        aria-selected:tw-text-fgColor-link
+        aria-selected:tw-border-fgColor-link"
+        type="button" 
+        role="tab" 
+        id="tab-id-5">Analytical workloads</button>
+  
+
+
+
+
+
+<div 
+    role="tabpanel" 
+    aria-labelledby="tab-id-4"
+    class="
+    tw-p-4 
+    tw-border-t-2
+    tw-border-[#f0f0f0]
+    dark:tw-border-[#363636]
+    ">
+    
+        <p>Có thể hiểu là khối lượng các truy vấn giải quyết các vấn đề cơ bản của app. Như khi người dùng load một trang sản phẩm thì truy vấn sẽ truy xuất thông tin sản phẩm từ database. Một số đặc điểm:</p>
+<ul>
+<li>Các truy vấn loại này thường trả về số lượng ít các record (ví dụ như 10 bài posts)</li>
+<li>Thường là các truy vấn đơn giản và mất rất ít thời gian thực thi</li>
+<li>Rất nhiều các truy vấn xảy ra cùng lúc, đồng thời</li>
+</ul>
+<p>Các transactional database phục vụ cho các loại truy vấn trên được thiết kế có tốc độ phản hồi nhanh và các tác vụ song song.</p>
+
+    
+</div>
+
+
+
+
+
+
+<div 
+    role="tabpanel" 
+    aria-labelledby="tab-id-5"
+    class="
+    tw-p-4 
+    tw-border-t-2
+    tw-border-[#f0f0f0]
+    dark:tw-border-[#363636]
+    ">
+    
+        <p>Là các truy vấn tập trung cho việc phân tích. Là thứ mà chúng ta hướng tới ở đây. Một số đặc điểm:</p>
+<ul>
+<li>Scan lượng lớn hoặc rất lớn số lượng record trong bảng</li>
+<li>Mỗi truy vấn có thể rất nặng và mất nhiều thời gian (hàng phút hoặc giờ)</li>
+<li>Không nhiều các truy vấn diễn ra đồng thời và cũng giới hạn chỉ những nhân viên nội bộ có thể truy cập</li>
+</ul>
+<p>Các analytical databases được thiết kế tối ưu cho việc xử lý trong thời gian dài, xử lý các truy vấn phức tạp.</p>
+
+    
+</div>
+
+
+</tab-container>
+
+<figure><img src="https://cdn.holistics.io/guidebook/analytics-setup/transactional-analytical-db.png">
+</figure>
+
+<p>Về cơ bản nếu số lượng data ít và việc phân tích không quá phức tạp, sẽ ổn khi chọn một SQL database bình thường để làm datawarehouse (MySQL, MSSQL,..). Cuốn sách gợi ý nên chọn PostgreSQL vì database này hỗ trợ nhiều các tính năng phân tích hơn cả. Tuy nhiên nếu có thể, hãy chọn một low-cost data warehouse như BigQuery hay Redshift sẽ mạnh mẽ hơn.</p>
+<h3 id="etlelt" class="headerLink">
+    <a href="#etlelt" class="header-mark"></a>ETL/ELT</h3><blockquote>
+  <p>OG đã có một bài viết rất chi tiết về ETL và ELT ở blog <a href="/alldatapipeline/" rel=""><strong>Tất tần tật về data pipeline</strong></a> bạn có thể đọc thêm</p>
+
+</blockquote><p>Về cơ bản ETL (Extract - Transform - Load) là quy trình thực hiện xử lý data trước khi đưa data vô data warehouse. Quy trình này tích xuất và <strong>xử lý data bên ngoài</strong> trước khi load cleaned data vào data warehouse. Việc xử lý data thường là ở “staging area”.</p>
+<p>Ngược lại ELT (Extract - Load - Transform) thực hiện việc load dữ liệu thô vào warehouse trước sau đó mới thực hiện transform trong warehouse. Việc này không cần thiết dùng một staging area và data warehouse sẽ là nơi chứa dữ liệu duy nhất.</p>
+<div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Chuyển đổi từ ETL sang ELT<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content"><p>Trước đây, mô hình ETL (Extract, Transform, Load) phù hợp do kho dữ liệu rất đắt đỏ và chỉ lưu trữ dữ liệu đã được xử lý. Tuy nhiên, ETL gây ra điểm nghẽn khi khối lượng dữ liệu tăng và phụ thuộc nhiều vào kỹ sư dữ liệu, làm chậm quy trình.</p>
+<p>Với sự phát triển của kho dữ liệu đám mây, bùng nổ dữ liệu lớn, và phương pháp Agile, ELT (Extract, Load, Transform) ra đời. ELT tải dữ liệu thô trực tiếp vào kho trước khi xử lý, tận dụng sức mạnh của kho dữ liệu hiện đại, tăng tốc độ và trao quyền cho nhà phân tích tự xử lý dữ liệu mà không cần kỹ sư hỗ trợ. ELT đang trở thành tiêu chuẩn mới cho phân tích dữ liệu.</p>
+</div></div></div>
+<h2 id="chapter-3-data-modeling-for-analytics" class="headerLink">
+    <a href="#chapter-3-data-modeling-for-analytics" class="header-mark"></a>Chapter 3: Data Modeling for Analytics</h2><p>Khi thao tác với data, ta thường không muốn tác động đến bản thân data một cách trực tiếp mà thay vào đó là tạo một đối tượng trừu tượng bên trên để thao tác với nó. Đây gọi là data model.</p>
+<figure><img src="https://cdn.holistics.io/guidebook/data-model-concept.png">
+</figure>
+
+<h3 id="kimballs-dimensional-data-modeling" class="headerLink">
+    <a href="#kimballs-dimensional-data-modeling" class="header-mark"></a>Kimball’s Dimensional Data Modeling</h3><p>Ý tưởng cho data modeling được đưa ra từ khá lâu về trước bởi Ralph Kimball và cộng sự của ông trong cuốn “The Data Warehouse Toolkit” năm 1996. Giới thiệu về một mô hình dữ liệu chiều (dimensional data modeling)</p>
+<div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Các mô hình khác<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Ngoài Kimball cũng có nhiều các cách tiếp cận với data modeling như Inmon data modeling của Bill Inmon vào năm 1990 (trước Kimball 6 năm). Cách của Inmon tập trung vào chuẩn hóa schema (normalize) hơn là denormalize như của Kimball. Ngoài ra còn có data modeling của Data Vault vào khoảng năm 2000</div></div></div>
+<p>🌟 <strong>Star Schema</strong></p>
+<p>Star schema là cách tổ chức data cho mục đích phân tích. Kiến trúc này bao gồm 2 loại bảng:</p>
+<ol>
+<li>Bảng Fact : bảng này chính là trung tâm của star schema. Bảng fact là chứa các thông tin độ đo, giao dịch hay “fact” của một doanh nghiệp</li>
+<li>Các bảng dim (dimension tables) kết nối với bảng fact: Mỗi bảng dim chứa thông tin về một khía cạnh, thuộc tính nào đó của bảng fact</li>
+</ol>
+<figure><img src="https://cdn.holistics.io/guidebook/star-schema.png">
+</figure>
+
+<p>Triết lý của Kimball:</p>
+<blockquote>
+  <p><strong>Do the hard work now, to make it easy to query later.</strong></p>
+
+</blockquote><p>Cách thiết kế của Kimball giúp ta đạt được tốc độ phân tích và độ hiệu quả cao hơn. Tuy nhiên hiện nay với sự phát triển công nghệ, mô hình Kimball vẫn hữu ích, nhưng không còn là điều bắt buộc.</p>
+<p>Chẳng hạn như sử dụng snapshot fact table để giải quyết vấn đề bảng dữ kiến lớn có thể không còn bắt buộc đối với các cloud data warehouse hiện đại, kiến trúc cột (columnar data architecture),… Hoặc với việc data thay đổi liên tục, Kimball thay đổi data bằng cách ghì đè (overwrite) lên bảng hiện tại. Đây là kỹ thuật <strong>Slowly Changing Dimensions (SCD)</strong> loại 1. Kimball đưa ra 3 loại SCDs:</p>
+<ul>
+<li>Type 1: Ghì đè cột dữ liệu cần thay đổi</li>
+<li>Type 2: Thêm hàng mới với dữ liệu mới vào bảng</li>
+<li>Type 3: Thêm cột mới dùng cho việc đánh dấu data mới</li>
+</ul>
+<blockquote>
+  <p><strong>Vậy hiện này chúng ta thực hiện SCD như thế nào ?</strong></p>
+
+</blockquote><p>Vào năm 2018, trong sự kiện <a href="https://www.youtube.com/watch?v=4Spo2QRTz1k&amp;t=989s" target="_blank" rel="noopener noreferrer">Functional Data Engineering - A Set of Best Practices | Lyft</a> tại Data Council, Senior Lyft data engineer Maxime Beauchemin đề xuất giải quyết SCD bằng cách sử dụng khả năng phân vùng bảng (table partitioning) của các data warehouse hiện đại để tạo bảng sao của toàn bộ dữ liệu theo lịch trình bằng các ETL tool thay vì áp dụng các kỹ thuật SCD phức tạp như type 2 hay type 3. Và cách tiếp cận này hiện được áp dụng tại Facebook (Meta), Airbnb và Lyft.</p>
+<p>Việc áp dụng modeling tùy thuộc vào hoàn cảnh và nhu cầu khi ta cần. Chẳng hạn như gặp khó khăn khi trích xuất các báo trực tiếp từ bảng dữ liệu thô với các chỉ số kinh doanh phức tạp. Việc sử dụng các công nghệ và điều chỉnh việc modeling khi cần thiết có thể giúp giảm bớt rất nhiều tác vụ thủ công và tối ưu chi phí. Điều quan trọng là chỉ nên <strong>mô hình hóa khi ta cần</strong> .</p>
+<h2 id="chapter-4-using-data" class="headerLink">
+    <a href="#chapter-4-using-data" class="header-mark"></a>Chapter 4: Using data</h2><p>Ở chương này ta sẽ tập chung vào lịch sử của công cụ phân tích dữ liệu và toàn cảnh thị trường báo cáo kinh doanh. Ngoài ra cũng sẽ nói thêm về các nhu cầu báo cáo trong doanh nghiệp. Chương này chủ yếu cung cấp cái nhìn tổng quan thay vì là đi sâu vào chi tiết. Ta sẽ nghe qua thử câu chuyện của một nhà phân tích dữ liệu giả tưởng Daniel và cách mà anh ta sử dụng các công cụ BI qua các thời kỳ</p>
+<h3 id="daniel-story" class="headerLink">
+    <a href="#daniel-story" class="header-mark"></a>Daniel Story</h3><p><strong>Cognos và sự chờ đợi dai dẳng</strong></p>
+<p>Vào những năm 1990, Daniel bắt đầu sự nghiệp của mình tại một ngân hàng, sử dụng Cognos và OLAP cubes. Quy trình làm việc khi đó rất cứng nhắc: Daniel phải dựa vào bộ phận IT để xây dựng hoặc cập nhật các cubes dữ liệu, một quy trình mất hàng tuần. Nếu yêu cầu công việc có sai sót hoặc không rõ ràng, mọi thứ phải bắt đầu lại từ đầu, gây ra sự trì hoãn và thất vọng.</p>
+<p>Dễ dàng thấy các công cụ BI đời đầu mang tính tập trung cao nhưng lại thiếu linh hoạt và các nhà phân tích dữ liệu phải phụ thuộc nặng nề vào bộ phận IT</p>
+<figure><img src="https://cdn.holistics.io/guidebook/job-1.png">
+</figure>
+
+<p><strong>Kỷ Nguyên Tableau: Tự Phục Vụ Nhưng Lạc Lối Với Metric</strong></p>
+<p>Đến năm 2006, Daniel chuyển sang làm việc tại một công ty phát trực tuyến video sử dụng Tableau và Microsoft SQL Server Analysis Services (SSAS). Tableau với giao diện kéo-thả đã trao quyền cho người dùng phi kỹ thuật, giúp họ tự tạo các biểu đồ và báo cáo.</p>
+<p>Tuy nhiên, cách tiếp cận này lại dẫn đến <code>metrics drift</code>—các phòng ban khác nhau tính toán các chỉ số giống nhau theo những cách khác nhau. Sự thiếu tiêu chuẩn hóa này gây ra báo cáo mâu thuẫn, quyết định sai lầm và những nỗ lực sửa sai căng thẳng. Giải pháp? Tập trung hóa định nghĩa các chỉ số dưới sự quản lý của đội BI.</p>
+<figure><img src="https://cdn.holistics.io/guidebook/job-2.png">
+</figure>
+
+<p><strong>Lớp Mô Hình Dữ Liệu: Looker và Logic Tập Trung</strong></p>
+<p>Đến năm 2016, Daniel gia nhập một startup sử dụng Amazon Redshift và Looker. Looker mang đến một sự thay đổi lớn với việc cho phép đội dữ liệu định nghĩa logic kinh doanh trong một lớp mô hình (LookML). Những mô hình này có thể được tái sử dụng trên toàn tổ chức, ngăn chặn tình trạng metrics drift và thúc đẩy sự hợp tác giữa các nhân viên kỹ thuật và phi kỹ thuật.</p>
+<p>Đối với Daniel, đây là một bước tiến lớn. Khác với quy trình phân tán của Tableau, Looker tập trung hóa logic và đơn giản hóa việc báo cáo. Tuy nhiên, với kinh nghiệm của mình, Daniel hiểu rằng không có quy trình nào là hoàn hảo và anh sẵn sàng đối mặt với những thách thức mới mà phương pháp này mang lại.</p>
+<p>Lúc này công cụ BI hiện đại nhấn mạnh vào việc tập trung hóa mô hình và tính linh hoạt, giảm mâu thuẫn và giúp tổ chức mở rộng khả năng phân tích dữ liệu hiệu quả.</p>
+<figure><img src="https://cdn.holistics.io/guidebook/job-3.png">
+</figure>
+
+<div class="details admonition note">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Frank Bien’s Three Waves<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content"><p>Giống với câu chuyện của Daniel. Vào năm 2017, CEO của Looker - Frank Bien - đã viết cuốn sách <a href="https://looker.com/blog/catching-the-third-wave-of-business-intelligence" target="_blank" rel="noopener noreferrer">Catching the Third Wave of Business Intelligence</a> để diễn tả chính xác 3 làn sóng phát triển của công cụ BI (Business Intelligence). Ông nhấn mạnh rằng các làn sóng này không phân định rõ ràng như sóng trên bãi biển mà thực tế phức tạp hơn nhiều.</p>
+<p><strong>Làn sóng thứ nhất (1990s)</strong></p>
+<p>Các công cụ BI như Cognos hoạt động trên nền tảng hệ thống đơn khối (monolithic stacks) bao gồm tất cả các chức năng từ data warehouse, data transformer, data cube solution, trực quan hóa dữ liệu. Do hẹn chế về phần cứng (RAM đắt đỏ), các công cụ này phải sử dụng OLAP cubes để xử lý dữ liệu, gây phụ thuộc vào đội IT và làm chậm việc phân tích</p>
+<p><strong>Làn sóng thứ hai (2000s)</strong></p>
+<p>Đây là khi Tableau xuất hiện và mang lại khả năng &ldquo;tự phục vụ&rdquo; cho người dùng non-tech với giao diện kéo thả thuận tiện. Tuy nhiên điều này lại dân đến sự không đồng nhất giữa các chỉ số và định nghĩa giữa các phòng ban (metric drift). Gây xung đột và nhầm lẫn trong dữ liệu</p>
+<p><strong>Làn sóng thứ ba (2010s)</strong></p>
+<p>Công nghệ khi dữ liệu MPP (Massively Parallel Processing) và lưu trữ dạng cột (columnar storage) đã giúp tăng hiệu suất và giảm chi phí đáng kể. Trong đó, Looker đi tiên phong trong việc tận dụng các kho dữ liệu hiện đại, tạo mô hình tập trung hóa logic mà không cần các OLAP cubes cũ.</p>
+<p>Dù có các làn sóng mới nhưng các công cụ từ làn sóng cũ vẫn tiếp tục tồn tại và được sử dụng và tạo nên sự đa dạng trong hệ sinh thái BI hiện nay. Việc hiểu rõ lịch sử và các ý tưởng từ những làn sóng sẽ giúp ta có cái nhìn rõ ràng và đánh giá tốt hơn giữa các công cụ BI, tránh bị cuốn vào các chiêu trò tiếp thị.</p>
+</div></div></div>
+<h3 id="navigating-the-business-intelligence-tool-space" class="headerLink">
+    <a href="#navigating-the-business-intelligence-tool-space" class="header-mark"></a>Navigating The Business Intelligence Tool Space</h3><p>Trên thị trường có rất nhiều loại công cụ BI tool và mục này sẽ giúp ta phân biệt giữa chúng. Việc phân loại sẽ giúp ta nhanh chóng định vị loại công cụ phù hợp khi nghiên cứu thị trường.</p>
+<p><strong>SQL vs Non-SQL</strong></p>
+<p>Một vài công cụ yêu cầu có kiến thức về SQL, một vài thì không. Chẳng hạn với Non-SQL có thể kể để Tableau và PowerBI dành cho người dùng không chuyên. Ngược lại một số loại khác có thể yêu cầu một chút kiến thức SQL như Houlistics, Looker, Mode, Cluvio hay Redash. Và hiện nay, SQL đang trở thành tiêu chuẩn nhờ tính phổ biến và dễ quản lý cũng như mở rộng của nó, do đó các công cụ BI có hỗ trợ SQL lại càng cung cấp khả năng phân tích mạnh mẽ và linh hoạt cho người phân tích dữ liệu.</p>
+<p><strong>Embedded Datastore vs External Datastore</strong></p>
+<p>Các công cụ BI ở thời kỳ đầu là các embedded datastores, nghĩa là các công cụ gắn liền chung với cả hệ thống (bao gồm luôn cả data storage và các thành phần khác). Chẳng hạn như Sisense hay Cognos. Tuy nhiên ngày nay có một chút thay đổi, đa số các công cụ BI hiện đại cho phép kết nối với nhiều đa dạng các loại database hay data warehouse hiện đại khác nhau và có tính linh hoạt tốt hơn rất nhiều như Metabase hay Houlistics. Các công cụ hiện đại cũng uu tiên kết nối với các kho dữ liệu đám mây mạnh mẽ cũng như bất kỳ loại SQL database nào có trên thị trường.</p>
+<div class="details admonition note">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Thế nào là một data warehouse hiện đại ?<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content"><p>Ta đề cập rất nhiều đến &ldquo;Data warehouse hiện đại&rdquo;. BI tool có thể kết nối với MySQL, PostgreSQL hay BigQuery, Snowflake,&hellip; thì những warehouse này là warehouse hiện đại đúng không ? Tất nhiên là <strong>không</strong>.</p>
+<p>Như đã đề cập nhiều ở phần <a href="#understand-data-warehouse" rel="">Understand Data warehouse</a>, một data warehouse hiện đại có 2 đặc tính:</p>
+<ol>
+<li>Chúng là các database hướng cột (Column-oriented database): Ngược lại với các database hướng hàng (row-oriented database), loại database này dùng để thích nghi với analytical workloads và thích hợp với OLAP cubes</li>
+<li>Chúng có thiết kế MPP (Massively Parallel Processing): Ngược lại với việc chạy trên một máy hay một cluster nhỏ. Kiến trúc MPP đề cập đến việc các data warehouse có thể tùy ý tùy chỉnh quy mô (scale up-down) của tài nguyên tính toàn dựa trên độ phức tạp của câu truy vấn. Điều này nghĩa là ta sẽ không phải trả phí trước mà tùy vào lượng tính toán mà ta sử dụng.</li>
+</ol>
+</div></div></div>
+<p><strong>In-Memory vs In-Database</strong></p>
+<p>Sự khác biệt ở đây là đối với In-memory, một số công cụ BI yêu cầu tải dữ liệu về máy cá nhân để phân tích (như Tableau hay PowerBI). Thì công cụ In-Database như Looker hay Houlistics có thể thực hiện xử lý trực tiếp trên cơ sở dữ liệu vaft ận dụng tối đa sức mạnh tính toán của chúng.</p>
+<p><strong>Modeling vs Non-Modeling</strong></p>
+<p>Cuối cùng là các loại BI hỗ trợ tích hợp lớp mô hình hóa (Modeling) như Houlistics và Looker để giúp quản lý logic tập trung, nâng cao tính thống nhất. Ngoài ra cũng có các công cụ không hỗ trợ việc đó như ReDash hay Mode.</p>
+<p>Việc phân loại các công cụ BI giúp ta dễ định hướng và lựa chọn sản phẩm phù hợp với nhu cầu hơn. Ngoài ra các yếu tố như giá cả, open-source và khả năng triển khai (on-premis hay cloud) cũng là những yếu tố quan trọng có thể cân nhắc.</p>
+<h3 id="the-arc-of-adoption" class="headerLink">
+    <a href="#the-arc-of-adoption" class="header-mark"></a>The Arc of Adoption</h3><p>Sau khi đã hiểu về quá trình phát triển cũng như là các loại BI tool, đã đến lúc nghĩ đến việc triển khai các công cụ nào vào các dự án của tổ chức. Đa số các tổ chức sẽ trải qua các giai đoạn chính sau trong quá trình tiếp cận và sử dụng dữ liệu</p>
+<ol>
+<li><strong>Ad-hoc Queries</strong></li>
+</ol>
+<p>Mọi chuyện bắt đầu với các câu hỏi từ bộ phận kinh doanh khi họ tìm cách hỗ trợ các quyết định bằng dữ liệu. Lúc này ta sẽ nghĩ đến việc sử dụng các công cụ truy vấn nhanh SQL hoặc phân tích thủ công từ các nguồn dữ liệu phân tán.</p>
+<ol start="2">
+<li><strong>Static Report/ Dashboards</strong></li>
+</ol>
+<p>Khi nhu cầu dữ liệu tăng lên, đội data sẽ tạo các bảng báo cáo bằng dashboard cố định để tự động hóa quy trình. Quá trình này có thể sử dụng PowerBI hay Tableau để cung cấp dữ liệu lặp lại cho cả nhóm.</p>
+<ol start="3">
+<li><strong>Self-Service</strong></li>
+</ol>
+<p>Khi việc sử dụng dashboard tăng lên, nhu cầu dựa trên dữ liệu ngày càng phổ biến, dẫn đến việc các truy vấn càng trở nên phức tạp hơn từ các bộ phận. Một số công ty hướng dẫn nhân viên sử dụng SQL trong khi số khác triển khai các công cụ dễ dùng hơn để hỗ trợ phân tích tự phục vụ (self-service). Tuy nhiên điều này dễ dẫn đến vấn đề mâu thuẫn và hiểu nhầm trong các quyết định.</p>
+<p>Có ý tưởng về &ldquo;mô hình trưởng thành dữ liệu&rdquo; (the maturity model) là các mô hình thường được các nhà tư vấn dùng để đánh giá mức độ hoàn thiện dữ liệu về hành vi của một tổ chức. Chẳng hạn như theo <a href="https://about.gitlab.com/blog/2019/11/04/three-levels-data-analysis/" target="_blank" rel="noopener noreferrer">Emily Schario</a> của Gitlab cho rằng tất cả các tổ chức đều qua ba level phân tích dữ liệu:</p>
+<ul>
+<li>Reporting: thu thập và báo cáo dữ liệu cơ bản</li>
+<li>Insights: Kết hợp với dữ liệu nguồn để rút ra hiểu biết sâu sắc</li>
+<li>Predictions: Sử dụng phân tích thống kê và máy học (machine learning) để dự đoán và định hướng chiến lược.</li>
+</ul>
+<p>Và các tổ chức cần phải nâng cấp các công cụ BI để phù hợp với nhu cầu tiêu thụ ngày càng phức tạp của mình. Chẳng hạn như để giải quyết vấn đề self-service, ta cần phải định nghĩa các model tại data warehouse để giúp giảm các mâu thuẩn số liệu và tăng tính thống nhất. Các công cụ như Looker hay Houlistics sử dụng cách tiếp cận này để hỗ trợ self-service mà không làm tổn thương đến chất lượng dữ liệu.</p>
+<h2 id="conclusion" class="headerLink">
+    <a href="#conclusion" class="header-mark"></a>Conclusion</h2><p>OK đã rất rất dài rồi. Phù&hellip; &#x1f605; Cuối cùng đã đến đoạn kết. Phần này đơn giản là đút kết cơ bản tất cả những gì ở phía trên lại một cách ngắn gọn lại thôi. Qua cuốn sách này ta đã học được gì.</p>
+<p>Đầu tiên là ba bước cơ bản của một hệ thống phân tích. Nó bao gồm:</p>
+<ul>
+<li>Thu Tập và lưu trữ dữ liệu</li>
+<li>Xử lý Dữ liệu</li>
+<li>Trình bày và trực quan dữ liệu</li>
+</ul>
+<p>Ta cũng đã hiểu được sự phát triển của ETL và tầm quan trọng của nó cùng với sự vươn lên của các data warehouse hiện đại. Tiếp đó chính là các công cụ BI hiện nay và xu hướng tiêu chuẩn hóa SQL trong ngành. Trong tương lai, ngành phân tích dữ liệu sẽ liên tục đổi mới, các công cụ và ý tưởng sẽ tiếp tục phát triển và xuất hiện không ngừng. Và trong đó, SQL sẽ là xu hướng trung tâm, mọi thứ sẽ xoay quay SQL và tận dụng sức mạnh của các data warehouse hiện đại để tiếp tục phát triển. Tuy các công cụ và phương pháp mới liên tục thay đổi, sự phát triển và chuyển đổi của các doanh nghiệp lớn sang công nghệ đám mây vẫn sẽ mất hàng thập kỷ. Tuy nhiên, ta vẫn cần phải nắm và hiểu biết các cách tiếp cận từ cả ba &ldquo;làn sóng&rdquo; BI vì các phương pháp cũ vẫn sẽ tồn tại trong các doanh nghiệp lớn. Cuối cùng, mọi thứ ta học ngày hôm nay, sẽ chính là nền tảng, là kiến thức giúp chính bản thân ta thích nghi với sự chuyển đổi ngày mai và sau này.</p>
+<p>Cuốn sách này mang lại nhiều giá trị đặc biệt ở lĩnh vực data Analyst cho người mới và tổng quát hóa hầu hết các khái niệm quan trọng kèm theo nhiều câu chuyện rất thú vị. Nếu có thể, OG hy vọng bạn có thể vào link (ở đầu bài) để đọc để hiểu sâu hơn nữa những gửi gắm của tác giả. Còn giờ thì hẹn gặp bạn đọc vào số tiếp theo &#x1f609;</p>
+<p><strong>-Mew-</strong></p>
+<hr>
+<h1 id="related" class="headerLink">
+    <a href="#related" class="header-mark"></a>Related</h1>
+<div class="showcase-box column-2">
+    <div class="showcase-image">
+        <a href=/alldatapipeline/><img   src=/WeJV4L9_17677421279180424663.png   alt="Tất tần tật về Data pipeline" height="200" width="400"></a>
+    </div>
+    <h2 class="showcase-title">
+        <a href=/alldatapipeline/>Tất tần tật về Data pipeline</a>
+    </h2>
+    <p class="showcase-summary">
+        Trở thành thợ ống nước data từ A đến Á với ETL/ELT, streaming và hơn thế nữa
+    </p>
+    <a class="showcase-link" href=/alldatapipeline/>
+        Read more...
+    </a>
+</div>
+
+<div class="showcase-box column-2">
+    <div class="showcase-image">
+        <a href=/start_journey/><img   src=/big-data-center-server-room-rack-engineering-process-teamwork-computer-technology-cloud-storage_39422-1032_2846973709447837960.jpg   alt="Thằng nhóc thích code và data" height="200" width="400"></a>
+    </div>
+    <h2 class="showcase-title">
+        <a href=/start_journey/>Thằng nhóc thích code và data</a>
+    </h2>
+    <p class="showcase-summary">
+        Ngành Data có gì hot mà mình lại dính
+    </p>
+    <a class="showcase-link" href=/start_journey/>
+        Read more...
+    </a>
+</div></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 30 Nov 2024</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line print:!tw-hidden">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><button title="Share on Facebook" data-sharer="facebook" data-url="https://phonghuynh.netlify.app/the-analytics-setup-guidebook/" data-hashtag="Business Intelligence"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></button><button title="Share on Linkedin" data-sharer="linkedin" data-url="https://phonghuynh.netlify.app/the-analytics-setup-guidebook/"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></button></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg>&nbsp;<a href=""></a>,&nbsp;<a href="/tags/book/">Book</a>,&nbsp;<a href=""></a></section>
+        <section class="print:!tw-hidden">
+            <span><button class="tw-text-fgColor-link-muted hover:tw-text-fgColor-link-muted-hover" onclick="window.history.back();">Back</button></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav print:tw-hidden"><a href="/alldatapipeline/" class="prev" rel="prev" title="Tất tần tật về Data pipeline"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Tất tần tật về Data pipeline</a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2023 - 2024<span class="author">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">OG</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons" class="print:!tw-hidden"><a href="#back-to-top" id="back-to-top-button" class="fixed-button tw-transition-opacity tw-opacity-0" title="Back to Top">
+            <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
+        </a></div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript>
+<script>window.config={"autocomplete.min.js":"/lib/autocomplete/autocomplete.min.js","comment":{},"data":{"id-1":"tab","id-2":"tab","id-3":"tab","id-4":"tab","id-5":"tab"},"fuse.min.js":"/lib/fuse/fuse.min.js","lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"table":{"sort":true}};</script><script
+    src="/lib/tablesort/tablesort.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lightgallery.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lg-thumbnail.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lg-zoom.min.js"
+    
+  ></script><script
+    src="/lib/sharer/sharer.min.js"
+    
+  ></script><script
+    src="/lib/katex/katex.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/lib/katex/auto-render.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/lib/katex/copy-tex.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/lib/katex/mhchem.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/js/katex.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/lib/tabs/tabs.min.js"
+    
+      defer
+    type="module"
+  ></script><script
+    src="/js/theme.min.js"
+    
+      defer
+    
+  ></script>
+    
+    <script type="speculationrules">
+        {
+          "prerender": [
+            {
+              "where": { "href_matches": "/*" },
+              "eagerness": "moderate"
+            }
+          ]
+        }
+    </script>
+      
+</body>
+
+</html>

@@ -2,17 +2,21 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://phonghuynh.netlify.app/authors/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/categories/blogs/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/categories/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/tags/data-engineer/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/series/data-l%C3%BA/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/tags/data-pipeline/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/authors/og/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/posts/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/series/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/tags/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://phonghuynh.netlify.app/alldatapipeline/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/authors/</loc><lastmod>2024-11-30T17:55:40&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/tags/book/</loc><lastmod>2024-11-30T17:55:40&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/tags/business-intelligence/</loc><lastmod>2024-11-30T17:55:40&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/tags/data-analytic/</loc><lastmod>2024-11-30T17:55:40&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/authors/og/</loc><lastmod>2024-11-30T17:55:40&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/posts/</loc><lastmod>2024-11-30T17:55:40&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/tags/</loc><lastmod>2024-11-30T17:55:40&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/the-analytics-setup-guidebook/</loc><lastmod>2024-11-30T17:55:40&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/categories/blogs/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/categories/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/tags/data-engineer/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/series/data-l%C3%BA/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/tags/data-pipeline/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/series/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://phonghuynh.netlify.app/alldatapipeline/</loc><lastmod>2024-11-20T19:23:44&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://phonghuynh.netlify.app/workatbosch/</loc><lastmod>2024-07-26T23:08:36&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://phonghuynh.netlify.app/tags/lifestory/</loc><lastmod>2023-12-31T14:30:10&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://phonghuynh.netlify.app/recap2023/</loc><lastmod>2023-12-31T14:30:10&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

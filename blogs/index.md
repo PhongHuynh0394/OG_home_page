@@ -14,4 +14,6 @@
 
 {{< showcase "Bosch và cuộc hành trình mới" "Đây là câu chuyện về cuộc hành trình làm một Data Engineer của mình tại Bosch R&D Center" "img/bosch_pic2.jpg" "/workatbosch/" 2 >}}
 
+# Sách hay cùng OG
 
+{{< showcase "The Analytics Setup Guidebook - Holistics" "How to build scalable analytics & BI stacks in the modern cloud era" "img/book-cover1.png" "/the-analytics-setup-guidebook/" 2 >}}

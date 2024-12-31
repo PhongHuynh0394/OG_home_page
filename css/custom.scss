@@ -1,0 +1,28 @@
+// {{< columns >}}
+.gdoc-columns {
+  margin: $padding-16 0;
+
+  &--regular > :first-child {
+    flex: 1;
+  }
+
+  &--small > :first-child {
+    flex: 0.35;
+    min-width: $body-min-width * 0.35;
+  }
+
+  &--large > :first-child {
+    flex: 1.65;
+    min-width: $body-min-width * 1.65;
+  }
+
+  &__content {
+    flex: 1 1;
+    min-width: $body-min-width * 0.66;
+    padding: 0;
+  }
+
+  .gdoc-page__anchor {
+    display: none;
+  }
+}

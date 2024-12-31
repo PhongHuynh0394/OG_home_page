@@ -7,6 +7,13 @@
             <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Sun, 30 Jul 2023 20:06:43 &#43;0700</lastBuildDate>
             <atom:link href="https://phonghuynh.netlify.app/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>The Analytics Setup Guidebook</title>
+    <link>https://phonghuynh.netlify.app/the-analytics-setup-guidebook/</link>
+    <pubDate>Sat, 30 Nov 2024 17:55:40 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/the-analytics-setup-guidebook/</guid>
+    <description><![CDATA[How to build scalable analytics & BI stacks in the modern cloud era]]></description>
+</item><item>
     <title>Tất tần tật về Data pipeline</title>
     <link>https://phonghuynh.netlify.app/alldatapipeline/</link>
     <pubDate>Wed, 20 Nov 2024 19:23:44 &#43;0700</pubDate><author>
@@ -86,12 +93,5 @@ là hướng đến một tương lai với nhiều kế hoạch mới phía tr�
         <div class="admonition-content">Đây là kiến thức tích góp từ nhiều nguồn và nghiên cứu của nhóm OG, tất nhiên không thể tránh khỏi sai sót.
 Hy vọng bài viết lần này thú vị và giúp bạn đọc thư giãn, tham khảo.</div></div></div>
 <p><strong>Source</strong></p>]]></description>
-</item><item>
-    <title>Thằng nhóc thích code và data</title>
-    <link>https://phonghuynh.netlify.app/start_journey/</link>
-    <pubDate>Wed, 30 Aug 2023 22:13:58 &#43;0700</pubDate><author>
-                    <name>OG</name>
-                </author><guid>https://phonghuynh.netlify.app/start_journey/</guid>
-    <description><![CDATA[Ngành Data có gì hot mà mình lại dính]]></description>
 </item></channel>
 </rss>

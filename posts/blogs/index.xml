@@ -5,6 +5,13 @@
         <description>All Blogs | OG Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
             <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Mon, 31 Jul 2023 16:21:23 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/posts/blogs/" rel="self" type="application/rss+xml" /><item>
+    <title>The Analytics Setup Guidebook</title>
+    <link>https://phonghuynh.netlify.app/the-analytics-setup-guidebook/</link>
+    <pubDate>Sat, 30 Nov 2024 17:55:40 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/the-analytics-setup-guidebook/</guid>
+    <description><![CDATA[How to build scalable analytics & BI stacks in the modern cloud era]]></description>
+</item><item>
     <title>Tất tần tật về Data pipeline</title>
     <link>https://phonghuynh.netlify.app/alldatapipeline/</link>
     <pubDate>Wed, 20 Nov 2024 19:23:44 &#43;0700</pubDate><author>

@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Data Analytic - Tag - OG Home</title>
+        <link>https://phonghuynh.netlify.app/tags/data-analytic/</link>
+        <description>Data Analytic - Tag - OG Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>phonghuynh9403@gmail.com (OG)</managingEditor>
+            <webMaster>phonghuynh9403@gmail.com (OG)</webMaster><lastBuildDate>Sat, 30 Nov 2024 17:55:40 &#43;0700</lastBuildDate><atom:link href="https://phonghuynh.netlify.app/tags/data-analytic/" rel="self" type="application/rss+xml" /><item>
+    <title>The Analytics Setup Guidebook</title>
+    <link>https://phonghuynh.netlify.app/the-analytics-setup-guidebook/</link>
+    <pubDate>Sat, 30 Nov 2024 17:55:40 &#43;0700</pubDate><author>
+                    <name>OG</name>
+                </author><guid>https://phonghuynh.netlify.app/the-analytics-setup-guidebook/</guid>
+    <description><![CDATA[How to build scalable analytics & BI stacks in the modern cloud era]]></description>
+</item></channel>
+</rss>
