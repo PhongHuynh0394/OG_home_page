@@ -137,7 +137,7 @@ Cơ bản quá trình này chính là việc ta tạo ra một bản copy của 
     1. Trả phí: [StichData](https://www.stitchdata.com/) hay [Talend](https://www.talend.com/)
     2. Miễn phí: [Airflow](https://airflow.apache.org/) hay [Prefect](https://www.prefect.io/)
 
-{{< admonition title="Incremental load" >}}
+{{< admonition title="Incremental load" open=false >}}
 
 Khi load, thông thường sẽ có một kỹ thuật được sử dụng rộng rãi. Đó là Incremental load. Cơ bản kỹ thuật này đề cập đến việc chỉ load những updated data thay vì tất cả (full load) từ nguồn mỗi lần chạy quy trình EL.
 
